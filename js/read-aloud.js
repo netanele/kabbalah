@@ -9,7 +9,7 @@
 
   /* ---------- what is a unit ---------- */
   var CARDS = 'article.method, li.shelf-i, .deep .stage, .card, .pillar';
-  var SKIP = 'script, style, svg, button, input, select, textarea, template, dialog, nav, .eras, .peek, .ra-player, ' +
+  var SKIP = 'script, style, svg, button, input, select, textarea, template, dialog, nav, .eras, .peek, .peek-go, .ra-player, .fd-panel, .fd-fab, ' +
              '.books, .bk, .read, .toolbar, .legend, .finder, details.toc, details.idx, .count, .totop, .lb, ' +
              '.num, .n, .stage-n, .sr, .shelf-ms, [aria-hidden="true"], [hidden]';
   var STOP = 'h1, h2, h3, h4, h5, h6, ' + CARDS + ', .deep-kicker, .extra-kicker, .book-kicker, footer.colophon';
@@ -101,6 +101,12 @@
 
   /* ---------- the button ---------- */
   var SPK = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9.5h3.2L12 5.6v12.8l-4.8-3.9H4z" fill="currentColor"/><path d="M15.2 9.2a3.6 3.6 0 0 1 0 5.6M17.6 6.8a7 7 0 0 1 0 10.4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>';
+  function seekIcon(fwd) {   // a circular arrow with "5"
+    var arc = fwd ? 'M12 6a7 7 0 1 0 6.06 3.5' : 'M12 6a7 7 0 1 1-6.06 3.5', head = fwd ? 'M9.6 3.6 12 6l-2.4 2.4' : 'M14.4 3.6 12 6l2.4 2.4';
+    return '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="' + arc + '" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>' +
+           '<path d="' + head + '" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>' +
+           '<text x="12" y="16.3" text-anchor="middle" font-size="8" font-weight="700" fill="currentColor" font-family="Heebo,Arial,sans-serif">5</text></svg>';
+  }
   var STOPI = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="7" y="7" width="10" height="10" rx="1.6" fill="currentColor"/></svg>';
   var PAUSEI = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="7" y="6" width="3.6" height="12" rx="1" fill="currentColor"/><rect x="13.4" y="6" width="3.6" height="12" rx="1" fill="currentColor"/></svg>';
   var PLAYI = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.8v12.4L18 12z" fill="currentColor"/></svg>';
@@ -200,8 +206,12 @@
   try { var sv = parseFloat(localStorage.getItem('ra-speed')); if (SPEEDS.indexOf(sv) >= 0) speed = sv; } catch (e) {}
   var bar = document.createElement('div');
   bar.className = 'ra-player'; bar.hidden = true; bar.setAttribute('role', 'region'); bar.setAttribute('aria-label', 'הקראה');
-  bar.innerHTML = '<button type="button" class="ra-pp" aria-label="השהיה">' + PAUSEI + '</button>' +
-                  '<button type="button" class="ra-x" aria-label="עצירה">' + STOPI + '</button>' +
+  bar.innerHTML = '<span class="ra-tr" dir="ltr">' +
+                    '<button type="button" class="ra-back" aria-label="5 שניות אחורה" title="5 שניות אחורה">' + seekIcon(false) + '</button>' +
+                    '<button type="button" class="ra-pp" aria-label="השהיה">' + PAUSEI + '</button>' +
+                    '<button type="button" class="ra-fwd" aria-label="5 שניות קדימה" title="5 שניות קדימה">' + seekIcon(true) + '</button>' +
+                  '</span>' +
+                  '<button type="button" class="ra-x" aria-label="עצירה" title="עצירה">' + STOPI + '</button>' +
                   '<span class="ra-t" aria-live="polite"></span>' +
                   '<button type="button" class="ra-sp" aria-label="מהירות ההקראה"></button>';
   var ppB = bar.querySelector('.ra-pp'), tEl = bar.querySelector('.ra-t'), spB = bar.querySelector('.ra-sp');
@@ -210,12 +220,27 @@
   showSpeed();
 
   var Q = [], qi = 0, cur = null, token = 0, paused = false, nowEl = null;
+  /* where we are: Q[qi], from character `off`; the voice reports word starts (lastB), else time tells */
+  var off = 0, lastB = -1, t0 = 0, pausedMs = 0, pauseT0 = 0;
+  var CPS = { he: 13, en: 14 };                    // characters a second at speed 1; learned while reading
+  function now() { return (window.performance && performance.now) ? performance.now() : Date.now(); }
+  function elapsed() { if (!t0) return 0; return Math.max(0, ((paused ? pauseT0 : now()) - t0 - pausedMs) / 1000); }
+  function position() {
+    var it = Q[qi]; if (!it) return 0;
+    var p = lastB >= 0 ? lastB : Math.round(elapsed() * CPS[it.lang] * speed);
+    return Math.max(0, Math.min(it.text.length, off + p));
+  }
+  function learn(lang, chars) {
+    var d = elapsed(); if (!t0 || d < 0.8 || chars < 15) return;
+    var c = chars / d / speed; if (c > 4 && c < 40) CPS[lang] = CPS[lang] * 0.6 + c * 0.4;
+  }
+  function wordStart(text, p) { if (p <= 0) return 0; var sp = text.lastIndexOf(' ', p - 1); return sp < 0 ? 0 : sp + 1; }
   function clearMarks() {
     document.querySelectorAll('.ra-reading, .ra-now').forEach(function (e) { e.classList.remove('ra-reading', 'ra-now'); });
     document.querySelectorAll('.ra-btn.ra-active').forEach(function (b) { b.classList.remove('ra-active'); b.innerHTML = SPK; b.setAttribute('aria-pressed', 'false'); });
   }
   function stop() {
-    token++; if (synth.paused) synth.resume(); synth.cancel(); clearMarks(); cur = null; Q = []; qi = 0; paused = false; bar.hidden = true;
+    token++; if (synth.paused) synth.resume(); synth.cancel(); clearMarks(); cur = null; Q = []; qi = 0; off = 0; lastB = -1; t0 = 0; paused = false; bar.hidden = true;
   }
   function setNow(el) {
     if (nowEl === el) return;
@@ -225,12 +250,21 @@
   function speakNext() {
     var my = token;
     if (qi >= Q.length) { stop(); return; }
-    var it = Q[qi], u = new SpeechSynthesisUtterance(it.text);
+    var it = Q[qi], text = it.text.slice(off), u = new SpeechSynthesisUtterance(text);
     var v = V[it.lang] || (it.lang === 'he' ? null : V.en);
     u.lang = it.lang === 'he' ? 'he-IL' : 'en-US'; if (v) u.voice = v;
     u.rate = speed;
-    u.onend = function () { if (my !== token) return; qi++; speakNext(); };
-    u.onerror = function (e) { if (my !== token) return; if (e && (e.error === 'interrupted' || e.error === 'canceled')) return; qi++; speakNext(); };
+    lastB = -1; t0 = 0; pausedMs = 0;
+    u.onstart = function () { if (my !== token) return; t0 = now(); };
+    u.onboundary = function (e) {
+      if (my !== token) return;
+      if (e && typeof e.charIndex === 'number' && (!e.name || e.name === 'word')) {
+        lastB = e.charIndex;
+        var d = elapsed(); if (d > 1.2 && lastB > 20) { var c = lastB / d / speed; if (c > 4 && c < 40) CPS[it.lang] = CPS[it.lang] * 0.85 + c * 0.15; }   // learn the voice's pace
+      }
+    };
+    u.onend = function () { if (my !== token) return; learn(it.lang, text.length); qi++; off = 0; speakNext(); };
+    u.onerror = function (e) { if (my !== token) return; if (e && (e.error === 'interrupted' || e.error === 'canceled')) return; qi++; off = 0; speakNext(); };
     setNow(it.el);
     synth.speak(u);
   }
@@ -243,24 +277,55 @@
       return;
     }
     bar.classList.remove('ra-msg');
-    Q = queueFor(u); qi = 0; cur = u; token++;
+    Q = queueFor(u); qi = 0; off = 0; cur = u; token++;
     if (!Q.length) return;
     var my = token;
-    u.btn.classList.add('ra-active'); u.btn.innerHTML = STOPI; u.btn.setAttribute('aria-pressed', 'true');
-    if (u.kind === 'card') u.root.classList.add('ra-reading');
+    [u.btn, u.src && u.src.btn].forEach(function (bt) { if (bt) { bt.classList.add('ra-active'); bt.innerHTML = STOPI; bt.setAttribute('aria-pressed', 'true'); } });
+    if (u.kind === 'card' && !u.src) u.root.classList.add('ra-reading');
     tEl.textContent = title(u); ppB.innerHTML = PAUSEI; ppB.setAttribute('aria-label', 'השהיה'); bar.hidden = false;
     setTimeout(function () { if (my === token) speakNext(); }, 80);
   }
   ppB.addEventListener('click', function () {
     if (!cur) { bar.hidden = true; return; }
-    if (paused) { synth.resume(); paused = false; ppB.innerHTML = PAUSEI; ppB.setAttribute('aria-label', 'השהיה'); }
-    else { synth.pause(); paused = true; ppB.innerHTML = PLAYI; ppB.setAttribute('aria-label', 'המשך'); }
+    if (paused) { synth.resume(); pausedMs += now() - pauseT0; paused = false; ppB.innerHTML = PAUSEI; ppB.setAttribute('aria-label', 'השהיה'); }
+    else { synth.pause(); pauseT0 = now(); paused = true; ppB.innerHTML = PLAYI; ppB.setAttribute('aria-label', 'המשך'); }
   });
   bar.querySelector('.ra-x').addEventListener('click', stop);
+  function restartAt(i, p) {
+    token++; if (synth.paused) synth.resume(); synth.cancel();
+    paused = false; ppB.innerHTML = PAUSEI; ppB.setAttribute('aria-label', 'השהיה');
+    qi = i; off = p; lastB = -1; t0 = 0;
+    var my = token; setTimeout(function () { if (my === token) speakNext(); }, 80);
+  }
+  /* jump by seconds: walk through the sentences by their estimated length in time */
+  function seek(sec) {
+    if (!cur || !Q.length) return;
+    var i = qi, p = position(), t = Math.abs(sec), it, r, left;
+    if (sec > 0) {
+      while (i < Q.length) {
+        it = Q[i]; r = CPS[it.lang] * speed; left = (it.text.length - p) / r;
+        if (left > t) { p += Math.round(t * r); break; }
+        t -= left; i++; p = 0;
+      }
+      if (i >= Q.length) { stop(); return; }                 // past the end
+    } else {
+      while (true) {
+        it = Q[i]; r = CPS[it.lang] * speed; left = p / r;
+        if (left > t) { p -= Math.round(t * r); break; }
+        t -= left; if (i === 0) { p = 0; break; }
+        i--; p = Q[i].text.length;
+      }
+    }
+    p = wordStart(Q[i].text, p);
+    if (p >= Q[i].text.length) { i++; p = 0; if (i >= Q.length) { stop(); return; } }
+    restartAt(i, p);
+  }
+  bar.querySelector('.ra-back').addEventListener('click', function () { seek(-5); });
+  bar.querySelector('.ra-fwd').addEventListener('click', function () { seek(5); });
   spB.addEventListener('click', function () {
     speed = SPEEDS[(SPEEDS.indexOf(speed) + 1) % SPEEDS.length]; showSpeed();
     try { localStorage.setItem('ra-speed', String(speed)); } catch (e) {}
-    if (cur && !paused) { token++; synth.cancel(); var my = token; setTimeout(function () { if (my === token) speakNext(); }, 80); }   // say the current sentence again at the new speed
+    if (cur && !paused && Q[qi]) restartAt(qi, wordStart(Q[qi].text, position()));   // go on from the current word at the new speed
   });
 
   /* ---------- events ---------- */
@@ -268,7 +333,14 @@
     var b = ev.target.closest && ev.target.closest('.ra-btn'); if (!b) return;
     ev.preventDefault(); ev.stopPropagation();
     var u = units[+b.getAttribute('data-ra-btn')]; if (!u) return;
-    if (cur === u) stop(); else play(u);
+    if (cur && (cur === u || cur.src === u)) { stop(); return; }
+    var pk = b.closest('.peek');
+    if (pk) {   // the card shown in the popup: read the copy in the popup, so the highlight is where the eye is
+      var root = b.closest(CARDS) || pk;
+      play({ id: u.id, kind: 'card', root: root, head: b.parentNode, btn: b, src: u });
+      return;
+    }
+    play(u);
   }, true);
   var shown = null;
   document.addEventListener('mouseover', function (ev) {
@@ -296,16 +368,18 @@
     '.ra-reading{outline:2px solid rgba(201,167,90,.55);outline-offset:4px;border-radius:6px}' +
     'article.ra-reading,.card.ra-reading,.pillar.ra-reading,li.ra-reading.shelf-i,.stage.ra-reading{outline-offset:2px;border-radius:16px}' +
     '.ra-now{background:rgba(201,167,90,.16);border-radius:6px;box-shadow:0 0 0 4px rgba(201,167,90,.16)}' +
-    '.peek .ra-btn{display:none}' +
+    '.peek .ra-btn{opacity:1}' +
     '.ra-player{position:fixed;z-index:40;inset-inline:0;bottom:calc(env(safe-area-inset-bottom,0px) + 18px);margin:0 auto;width:max-content;max-width:calc(100vw - 110px);' +
     'display:flex;align-items:center;gap:8px;padding:6px 8px;border-radius:999px;background:var(--dark,#26221c);color:#f4ecdc;box-shadow:0 10px 30px rgba(30,27,23,.35);font-size:.92rem}' +
     '.ra-player[hidden]{display:none}' +
     '.ra-player button{display:grid;place-items:center;min-width:34px;height:34px;padding:0 8px;border:0;border-radius:999px;background:rgba(255,255,255,.08);color:var(--gold2,#c9a75a);cursor:pointer;font:600 .85rem inherit;font-family:inherit}' +
     '.ra-player button:hover{background:rgba(255,255,255,.18)}' +
     '.ra-player button svg{width:18px;height:18px}' +
+    '.ra-tr{display:flex;align-items:center;gap:4px}' +
+    '.ra-player .ra-back svg,.ra-player .ra-fwd svg{width:22px;height:22px}' +
     '.ra-t{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:46vw;padding:0 6px}' +
     '.ra-player.ra-msg .ra-t{white-space:normal;max-width:70vw}' +
-    '.ra-player.ra-msg .ra-pp,.ra-player.ra-msg .ra-sp{display:none}' +
+    '.ra-player.ra-msg .ra-tr,.ra-player.ra-msg .ra-sp{display:none}' +
     '@media print{.ra-btn,.ra-player{display:none!important}}';
   var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
 
