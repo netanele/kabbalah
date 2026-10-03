@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ספריית הקבלה</title>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#f4f0e6;--paper:#fffdf8;--ink:#26221c;--muted:#6f665a;--gold:#9c7a33;--gold2:#c9a75a;--line:#dcd2c0;--dark:#26221c;--high:#5f7a4a;--med:#b08a43;--low:#9b5f58;--lost:#6b6f8a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);direction:rtl;color:var(--ink);font-family:"Heebo","Noto Sans Hebrew",Arial,sans-serif;line-height:1.8;font-size:16.5px}
+h1,h2,h3,.serif{font-family:"Frank Ruhl Libre","David Libre","Times New Roman",serif}
+a{color:#6d511d}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+
+/* hero (as in the Abulafia page) */
+header.hero{background:radial-gradient(1200px 500px at 80% -10%,#5a4a33 0%,#2b2620 55%,#1e1b17 100%);color:#f4ecdc;padding:64px 22px 56px;text-align:center}
+.hero .emblem{width:64px;height:64px;color:var(--gold2);display:block;margin:0 auto 8px}
+.hero .kicker{color:var(--gold2);letter-spacing:.14em;font-size:.85rem;font-weight:500}
+.hero h1{font-size:clamp(2.4rem,6vw,4.4rem);margin:8px 0 14px;line-height:1.15;font-weight:900}
+.hero p{max-width:820px;margin:0 auto;color:#e6dcc8;font-size:1.15rem}
+.hero .dates{margin-top:18px;color:var(--gold2);font-size:1rem}
+
+nav.top{position:sticky;top:0;z-index:20;background:#fffdf8f2;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:6px 10px;display:flex;gap:2px;flex-wrap:wrap;justify-content:center}
+nav.top a{color:#5a4423;text-decoration:none;font-size:.84rem;padding:4px 8px;border-radius:999px;border:1px solid transparent}
+nav.top a:hover{border-color:var(--line);background:#f3ecdf}
+nav.top a.here{color:var(--gold);font-weight:700}
+
+.container{max-width:1180px;margin:auto;padding:26px 18px 60px}
+section{margin-top:44px}
+section>h2{font-size:2.1rem;border-bottom:2px solid var(--gold2);padding-bottom:8px;margin:0 0 6px;line-height:1.3}
+section>.lead{color:var(--muted);margin:0 0 18px;font-size:1.05rem}
+
+/* two pages, as two book covers */
+.books{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:22px}
+.book{background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:0 4px 16px #3a2c1010;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s}
+.book:hover{box-shadow:0 10px 30px #3a2c1022;transform:translateY(-2px)}
+.cover{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;text-decoration:none;color:#f4ecdc;padding:26px 24px 24px;background:radial-gradient(700px 300px at 85% -20%,#5a4a33 0%,#2b2620 60%,#1e1b17 100%);border-bottom:4px solid var(--gold2)}
+.cover .k{display:block;color:var(--gold2);letter-spacing:.14em;font-size:.8rem;font-weight:500}
+.cover h3{margin:4px 0 4px;font-size:clamp(1.8rem,3.4vw,2.3rem);line-height:1.15;font-weight:900;color:#f4ecdc}
+.cover .s{display:block;color:var(--gold2);font-family:"Frank Ruhl Libre",serif;font-size:1.08rem}
+.cover .d{display:block;margin-top:6px;color:#cfc3ac;font-size:.9rem}
+.cover svg{width:96px;height:96px;color:var(--gold2);flex:none}
+.cover svg.ring{width:112px;height:112px}
+.ring-l{transform-origin:60px 60px}
+@media (prefers-reduced-motion:no-preference){
+  .book:hover .ring-l{animation:turn 14s linear infinite}
+  @keyframes turn{to{transform:rotate(-360deg)}}
+  .flame .body{transform-origin:50% 90%;animation:flick 3.6s ease-in-out infinite}
+  @keyframes flick{0%,100%{transform:scaleY(1) skewX(0)}40%{transform:scaleY(1.035) skewX(-1.2deg)}70%{transform:scaleY(.985) skewX(1deg)}}
+}
+.book-in{padding:20px 24px 22px;display:flex;flex-direction:column;flex:1}
+.book-in>p{margin:0 0 12px}
+.meta{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 14px}
+.tag{background:#efe7d6;padding:2px 10px;border-radius:999px;font-size:.78rem;color:#4b3b22}
+.tag.g{background:#e6ecd9;color:#3a4d2a}
+.tag.p{background:#e4e8f1;color:#2f3a55}
+.tag.c{background:#f5e5c8;color:#6a4b12}
+.book h4{font-size:.98rem;margin:4px 0 6px;color:#8a6a2a;font-weight:700}
+.toc{list-style:none;margin:0 0 18px;padding:0;columns:2;column-gap:22px}
+.toc li{break-inside:avoid;padding:2px 0}
+.toc a{text-decoration:none;color:#3a2e1d;border-bottom:1px solid transparent}
+.toc a::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gold2);margin-left:8px;vertical-align:middle}
+.toc a:hover{border-bottom-color:var(--gold2)}
+.go{margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:10px;text-decoration:none;background:var(--dark);color:#f4ecdc;font-weight:500;padding:10px 20px;border-radius:999px;transition:background .15s}
+.go b{color:var(--gold2);font-size:1.15rem;line-height:1}
+.go:hover{background:#3d352b}
+
+/* between the two pages */
+table{width:100%;border-collapse:collapse;background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:.95rem}
+th,td{padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top;text-align:right}
+th{background:#efe7d6;color:#4b3b22;font-weight:700}
+tr:last-child td{border-bottom:none}
+td a{color:#6d511d;font-weight:500}
+td .n{display:inline-block;background:var(--dark);color:var(--gold2);min-width:30px;height:30px;line-height:30px;text-align:center;border-radius:50%;font-family:"Frank Ruhl Libre",serif;margin-left:8px;font-size:.9rem}
+td small{display:block;color:var(--muted);font-size:.85rem}
+
+footer{background:var(--dark);color:#d9d0c1;padding:34px 18px;margin-top:60px}
+footer .container{padding-top:0;padding-bottom:0}
+footer h2{color:#f2e8d4;font-size:1.6rem;margin:0 0 8px}
+footer a{color:var(--gold2)}
+footer ul{margin:0;padding-right:20px}
+footer li{margin:5px 0}
+footer small{color:#a8a08f}
+
+@media(max-width:700px){
+  header.hero{padding:44px 18px 36px}
+  .books{grid-template-columns:1fr}
+  .cover{grid-template-columns:1fr;text-align:right}
+  .cover svg{display:none}
+  .toc{columns:1}
+  th:first-child,td:first-child{width:auto}
+}
+@media print{nav.top{display:none}.book{break-inside:avoid;box-shadow:none}body{background:#fff}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <svg class="emblem" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 6.4C10 4.9 7.3 4.3 3.6 4.6v13.2c3.7-.3 6.4.3 8.4 1.8 2-1.5 4.7-2.1 8.4-1.8V4.6c-3.7-.3-6.4.3-8.4 1.8z" fill="currentColor" fill-opacity=".14"/><path d="M12 6.4C10 4.9 7.3 4.3 3.6 4.6v13.2c3.7-.3 6.4.3 8.4 1.8m0-13.2c2-1.5 4.7-2.1 8.4-1.8v13.2c-3.7-.3-6.4.3-8.4 1.8m0-13.2v13.2" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/><path d="M5.8 8.2c1.8-.1 3.2.2 4.4.8M5.8 11c1.8-.1 3.2.2 4.4.8M5.8 13.8c1.8-.1 3.2.2 4.4.8M13.8 9c1.2-.6 2.6-.9 4.4-.8M13.8 11.8c1.2-.6 2.6-.9 4.4-.8M13.8 14.6c1.2-.6 2.6-.9 4.4-.8" fill="none" stroke="currentColor" stroke-width=".7" stroke-linecap="round" stroke-opacity=".7"/></svg>
+  <div class="kicker">דפי לימוד ועיון</div>
+  <h1>ספריית הקבלה</h1>
+  <p>חיבוריו של רבי אברהם אבולעפיה, ושיטות ההתבוננות והמדיטציה מספרי הרב אריה קפלן ומספרי רבותינו.</p>
+  <div class="dates">2 דפים · 35 חיבורים · 120 שיטות · 57 ספרי מקור</div>
+</header>
+
+<nav class="top" aria-label="ניווט">
+  <a class="here" href="#pages">הדפים</a>
+  <a href="abulafia.html">כתבי רבי אברהם אבולעפיה</a>
+  <a href="meditation.html">שיטות המדיטציה היהודית</a>
+  <a href="#between">בין שני הדפים</a>
+</nav>
+
+<main class="container">
+
+<section id="pages">
+<h2>הדפים</h2>
+<p class="lead">לחיצה על הכותרת פותחת את הדף; הקישורים שברשימה פותחים אותו ישר בפרק.</p>
+<div class="books">
+
+<article class="book">
+  <a class="cover" href="abulafia.html">
+    <span>
+      <span class="k">הקבלה הנבואית</span>
+      <h3>כתבי רבי אברהם אבולעפיה</h3>
+      <span class="s">הספרים, הפירושים, האיגרות והחיבורים הנבואיים</span>
+      <span class="d">סרגוסה, ה'א (1240) — אחרי ה'נ"א (1291)</span>
+    </span>
+    <svg class="ring" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-opacity=".55"/><circle cx="60" cy="60" r="36" fill="none" stroke="currentColor" stroke-opacity=".55"/><g class="ring-l" font-family="Frank Ruhl Libre, serif" font-size="12" text-anchor="middle" dominant-baseline="central" fill="currentColor"><text x="60.0" y="14.0" transform="rotate(0.0 60.0 14.0)">א</text><text x="73.0" y="15.9" transform="rotate(16.4 73.0 15.9)">ב</text><text x="84.9" y="21.3" transform="rotate(32.7 84.9 21.3)">ג</text><text x="94.8" y="29.9" transform="rotate(49.1 94.8 29.9)">ד</text><text x="101.8" y="40.9" transform="rotate(65.5 101.8 40.9)">ה</text><text x="105.5" y="53.5" transform="rotate(81.8 105.5 53.5)">ו</text><text x="105.5" y="66.5" transform="rotate(98.2 105.5 66.5)">ז</text><text x="101.8" y="79.1" transform="rotate(114.5 101.8 79.1)">ח</text><text x="94.8" y="90.1" transform="rotate(130.9 94.8 90.1)">ט</text><text x="84.9" y="98.7" transform="rotate(147.3 84.9 98.7)">י</text><text x="73.0" y="104.1" transform="rotate(163.6 73.0 104.1)">כ</text><text x="60.0" y="106.0" transform="rotate(180.0 60.0 106.0)">ל</text><text x="47.0" y="104.1" transform="rotate(196.4 47.0 104.1)">מ</text><text x="35.1" y="98.7" transform="rotate(212.7 35.1 98.7)">נ</text><text x="25.2" y="90.1" transform="rotate(229.1 25.2 90.1)">ס</text><text x="18.2" y="79.1" transform="rotate(245.5 18.2 79.1)">ע</text><text x="14.5" y="66.5" transform="rotate(261.8 14.5 66.5)">פ</text><text x="14.5" y="53.5" transform="rotate(278.2 14.5 53.5)">צ</text><text x="18.2" y="40.9" transform="rotate(294.5 18.2 40.9)">ק</text><text x="25.2" y="29.9" transform="rotate(310.9 25.2 29.9)">ר</text><text x="35.1" y="21.3" transform="rotate(327.3 35.1 21.3)">ש</text><text x="47.0" y="15.9" transform="rotate(343.6 47.0 15.9)">ת</text></g><circle cx="60" cy="60" r="4" fill="currentColor"/></svg>
+  </a>
+  <div class="book-in">
+    <p>מפה מרוכזת של חיבורי מייסד "הקבלה הנבואית": לכל חיבור, על מה הוא, למה נכתב ועיקר הרעיון שבו, עם עובדות על המבנה, כתבי־היד והמהדורות.</p>
+    <div class="meta"><span class="tag c">35 חיבורים, כל אחד בכרטיס</span><span class="tag g">רמת הוודאות של כל ייחוס</span><span class="tag p">ציר חיים</span><span class="tag">16 מושגים במילון</span></div>
+    <h4>בדף</h4>
+    <ul class="toc">
+      <li><a href="abulafia.html#bio">ציר חיים</a></li>
+      <li><a href="abulafia.html#torah">תורתו בתמצית</a></li>
+      <li><a href="abulafia.html#books">הספרים והחיבורים</a></li>
+      <li><a href="abulafia.html#disciples">תלמידיו וממשיכי דרכו</a></li>
+      <li><a href="abulafia.html#synthesis">סינתזה</a></li>
+      <li><a href="abulafia.html#glossary">מילון מושגים</a></li>
+      <li><a href="abulafia.html#reception">גורל הספרים והשפעתם</a></li>
+      <li><a href="abulafia.html#sources">מקורות המחקר</a></li>
+    </ul>
+    <a class="go" href="abulafia.html">לדף <b aria-hidden="true">←</b></a>
+  </div>
+</article>
+
+<article class="book">
+  <a class="cover" href="meditation.html">
+    <span>
+      <span class="k">התבוננות ותרגול</span>
+      <h3>שיטות המדיטציה היהודית</h3>
+      <span class="s">מספרי הרב אריה קפלן ומספרי רבותינו</span>
+      <span class="d">מהנביאים ועד תנועת המוסר ובני זמננו</span>
+    </span>
+    <svg class="flame" viewBox="0 0 120 180" aria-hidden="true" focusable="false">
+      <defs>
+        <radialGradient id="h-halo" cx="50%" cy="52%" r="50%"><stop offset="55%" stop-color="#c9a75a" stop-opacity="0"/><stop offset="78%" stop-color="#c9a75a" stop-opacity=".5"/><stop offset="100%" stop-color="#c9a75a" stop-opacity="0"/></radialGradient>
+        <linearGradient id="h-fl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fffdf2"/><stop offset=".45" stop-color="#ffd95a"/><stop offset=".8" stop-color="#e2562c"/><stop offset="1" stop-color="#5a3a1a"/></linearGradient>
+      </defs>
+      <ellipse cx="60" cy="86" rx="58" ry="80" fill="url(#h-halo)"/>
+      <g class="body">
+        <path d="M60 14 C82 52 96 84 78 118 C70 132 50 132 42 118 C24 84 38 52 60 14Z" fill="url(#h-fl)"/>
+        <path d="M60 86 C68 100 70 112 60 122 C50 112 52 100 60 86Z" fill="#2b2620" opacity=".85"/>
+      </g>
+      <rect x="58.5" y="118" width="3" height="16" rx="1.5" fill="#e6dcc8"/>
+      <rect x="40" y="134" width="40" height="40" rx="4" fill="#e6dcc8" opacity=".92"/>
+    </svg>
+  </a>
+  <div class="book-in">
+    <p>50 שיטות מספרי הרב קפלן בסדר היסטורי, ועוד 70 שיטות מספרי רבותינו שאינן מפורטות בספריו. לכל שיטה: התמצית, ואיך מבצעים אותה שלב אחר שלב.</p>
+    <div class="meta"><span class="tag c">120 שיטות</span><span class="tag g">3 רמות: לכל אחד, למתקדמים, בהדרכת מורה בלבד</span><span class="tag p">חיפוש וסינון לפי רמה, סוג וזמן</span><span class="tag">57 ספרי מקור</span></div>
+    <h4>בדף</h4>
+    <ul class="toc">
+      <li><a href="meditation.html#path">מאיפה מתחילים</a></li>
+      <li><a href="meditation.html#finder">חיפוש ומפתחות</a></li>
+      <li><a href="meditation.html#part1">חלק ראשון: מספרי הרב קפלן</a></li>
+      <li><a href="meditation.html#extra">חלק שני: מעבר לספרי הרב קפלן</a></li>
+      <li><a href="meditation.html#bmt">בני מחשבה טובה</a></li>
+      <li><a href="meditation.html#deep-hitbodedut">נספח: התבודדות פנימית</a></li>
+      <li><a href="meditation.html#books">ספרי המקור</a></li>
+    </ul>
+    <a class="go" href="meditation.html">לדף <b aria-hidden="true">←</b></a>
+  </div>
+</article>
+
+</div>
+</section>
+
+<section id="between">
+<h2>בין שני הדפים</h2>
+<p class="lead">ארבע שיטות בדף המדיטציה באות מתורתו של רבי אברהם אבולעפיה ומתלמידי דרכו.</p>
+<table>
+<tr><th style="width:52%">השיטה בדף המדיטציה</th><th>ההקשר בדף כתבי רבי אברהם אבולעפיה</th></tr>
+<tr><td><a href="meditation.html#m27"><span class="n">כז</span>צירוף אותיות</a><small>רבי אברהם אבולעפיה</small></td><td><a href="abulafia.html#torah">תורתו בתמצית: חכמת הצירוף</a></td></tr>
+<tr><td><a href="meditation.html#m28"><span class="n">כח</span>הזכרת השם בנשימות ובתנועות ראש</a><small>רבי אברהם אבולעפיה · אור השכל</small></td><td><a href="abulafia.html#guides">מדריכי ההשגה הנבואית: אור השכל</a></td></tr>
+<tr><td><a href="meditation.html#m29"><span class="n">כט</span>דרך השמות</a><small>שערי צדק, מתלמידי אבולעפיה</small></td><td><a href="abulafia.html#gen1">תלמידיו הישירים: ר' נתן בן סעדיה חראר, מחבר "שערי צדק"</a></td></tr>
+<tr><td><a href="meditation.html#m32"><span class="n">לב</span>דילוג וקפיצה</a><small>רבי יהודה אלבוטיני, סולם העלייה</small></td><td><a href="abulafia.html#gen3">ירושלים וצפת: ר' יהודה אלבוטיני</a></td></tr>
+</table>
+</section>
+
+</main>
+
+<footer>
+<div class="container">
+<h2>ספריית הקבלה</h2>
+<ul>
+<li><a href="abulafia.html">כתבי רבי אברהם אבולעפיה</a></li>
+<li><a href="meditation.html">שיטות המדיטציה היהודית</a></li>
+</ul>
+<p><small>עודכן: אוקטובר 2026</small></p>
+</div>
+</footer>
+</body>
+</html>
