@@ -414,7 +414,8 @@ details.toc summary,details.idx summary{color:#4b3b22}
 .peek-go{position:sticky; bottom:0; margin:14px -22px -18px; padding:12px 22px 16px; background:linear-gradient(to top,var(--surface) 72%,rgba(255,253,248,0)); border-radius:0 0 16px 16px}
 .peek-go a{display:inline-flex; align-items:center; gap:8px; text-decoration:none; background:var(--dark); color:#f4ecdc; font-weight:500; font-size:.9rem; padding:7px 16px; border-radius:999px}
 .peek-go a:hover{background:#3d352b}
-.shelf-ms a.peek-on{border-color:var(--gold); color:#6d511d; background:#f3ecdf}
+a.peek-on{background:#f3ecdf; box-shadow:0 0 0 3px #f3ecdf; border-radius:4px}
+.shelf-ms a.peek-on{border-color:var(--gold); color:#6d511d; background:#f3ecdf; box-shadow:none; border-radius:999px}
 @media (prefers-reduced-motion:no-preference){ .peek{animation:peek-in .14s ease-out} @keyframes peek-in{from{opacity:0; transform:translateY(4px)}} }
 @media print{ .peek{display:none!important} }
 </style>
@@ -2211,10 +2212,11 @@ details.toc summary,details.idx summary{color:#4b3b22}
 })();
 </script>
 <script>
-// "ספרי המקור": hovering a method number shows that method's card (mouse only; a click still jumps to the card)
+// hovering any link to a method card shows that card (mouse only; a click still jumps to the card)
 (function(){
   if(!window.matchMedia || !matchMedia('(hover:hover) and (pointer:fine)').matches) return;
-  var SEL='.shelf-ms a[href^="#m"]';
+  var RX=/^#m\d+$/;
+  function methodLink(el){ var a=el && el.closest && el.closest('a[href^="#m"]'); return (a && RX.test(a.getAttribute('href')) && !peek.contains(a))? a : null; }
   var peek=document.createElement('div'); peek.className='peek'; peek.hidden=true; peek.setAttribute('role','region');
   document.body.appendChild(peek);
   var cur=null, tOpen=0, tClose=0, mute=false;
@@ -2234,6 +2236,17 @@ details.toc summary,details.idx summary{color:#4b3b22}
     var r=a.getBoundingClientRect(), vw=document.documentElement.clientWidth, vh=window.innerHeight, gap=8, m=12;
     var below=vh-r.bottom-gap-m, above=r.top-gap-Math.max(m,navBottom()+m);
     var w=peek.offsetWidth, h=peek.offsetHeight, top;
+    if(a.closest('details.toc') || a.closest('.path')){
+      var top0=navBottom()+m, avail=vh-top0-m;
+      if(h>avail){ peek.style.maxHeight=avail+'px'; h=peek.offsetHeight; }
+      var L=r.left-gap-w, R=r.right+gap, x=(L>=m)? L : ((R+w<=vw-m)? R : null);
+      if(x!==null){
+        var y=Math.min(Math.max(r.top-24,top0),vh-m-h);
+        peek.style.left=(x+window.scrollX)+'px'; peek.style.top=(y+window.scrollY)+'px'; peek.style.visibility='';
+        return;
+      }
+      peek.style.maxHeight=''; h=peek.offsetHeight;
+    }
     if(h<=below || (h>above && below>=above)){
       if(h>below) peek.style.maxHeight=Math.max(below,200)+'px';
       top=r.bottom+gap;
@@ -2257,25 +2270,25 @@ details.toc summary,details.idx summary{color:#4b3b22}
   }
   function hideSoon(){ clearTimeout(tOpen); clearTimeout(tClose); tClose=setTimeout(hide,220); }
   document.addEventListener('mouseover',function(ev){
-    var a=ev.target.closest && ev.target.closest(SEL);
+    var a=methodLink(ev.target);
     if(a){ clearTimeout(tClose); clearTimeout(tOpen); tOpen=setTimeout(function(){ show(a); }, peek.hidden? 220 : 80); return; }
     if(peek.contains(ev.target)) clearTimeout(tClose);
   });
   document.addEventListener('mouseout',function(ev){
-    var a=ev.target.closest && ev.target.closest(SEL);
+    var a=methodLink(ev.target);
     if(!a && !peek.contains(ev.target)) return;
     var to=ev.relatedTarget;
-    if(to && (peek.contains(to) || (cur && to.closest && to.closest(SEL)===cur))) return;
+    if(to && (peek.contains(to) || (cur && methodLink(to)===cur))) return;
     hideSoon();
   });
   document.addEventListener('focusin',function(ev){
     if(mute) return;
-    var a=ev.target.closest && ev.target.closest(SEL);
+    var a=methodLink(ev.target);
     if(a){ clearTimeout(tClose); show(a); } else if(!peek.contains(ev.target) && !peek.hidden) hideSoon();
   });
   document.addEventListener('click',function(ev){
     var a=ev.target.closest && ev.target.closest('a,button');
-    if(a && (peek.contains(a) || a.matches(SEL))) setTimeout(hide,0);
+    if(a && (peek.contains(a) || methodLink(a))) setTimeout(hide,0);
   });
   document.addEventListener('keydown',function(ev){ if(ev.key==='Escape' && !peek.hidden){ var c=cur; hide(); if(c){ mute=true; c.focus({preventScroll:true}); mute=false; } } });
   window.addEventListener('resize',hide);
