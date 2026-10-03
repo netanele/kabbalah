@@ -88,10 +88,20 @@ a.anchor{color:#6d511d}
 nav.top a.nav-home{color:var(--gold);font-weight:700}
 [hidden]:not([hidden=until-found i]){display:none!important}
 img{max-width:100%}
+.card .read{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin-top:14px;padding-top:12px;border-top:1px dashed var(--line)}
+.card .read>a{display:inline-flex;align-items:center;gap:7px;text-decoration:none;background:var(--dark);color:#f4ecdc;font-size:.88rem;font-weight:500;padding:6px 15px 6px 12px;border-radius:999px;transition:background .15s}
+.card .read>a:hover{background:#3d352b}
+.card .read .ico{width:18px;height:18px;color:var(--gold2);flex:none}
+.card .read small{color:var(--muted);font-size:.82rem;line-height:1.5}
+.card .read small a{color:#6d511d}
+.note.read-note{border-right-color:var(--high);background:#f4f6ee}
+.note.read-note a{color:#6d511d;font-weight:500}
+@media print{.card .read>a{display:none}}
 </style>
 </head>
 <body>
 <div dir="rtl" lang="he">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-book" viewBox="0 0 24 24"><path d="M12 6.4C10 4.9 7.3 4.3 3.6 4.6v13.2c3.7-.3 6.4.3 8.4 1.8 2-1.5 4.7-2.1 8.4-1.8V4.6c-3.7-.3-6.4.3-8.4 1.8z" fill="currentColor" fill-opacity=".16"/><path d="M12 6.4C10 4.9 7.3 4.3 3.6 4.6v13.2c3.7-.3 6.4.3 8.4 1.8m0-13.2c2-1.5 4.7-2.1 8.4-1.8v13.2c-3.7-.3-6.4.3-8.4 1.8m0-13.2v13.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/><path d="M5.8 8.2c1.8-.1 3.2.2 4.4.8M5.8 11c1.8-.1 3.2.2 4.4.8M5.8 13.8c1.8-.1 3.2.2 4.4.8" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-opacity=".6"/></symbol></svg>
 
 
 <header class="hero">
@@ -105,6 +115,7 @@ img{max-width:100%}
 <a href="#bio">ביוגרפיה</a>
 <a href="#torah">תורתו בתמצית</a>
 <a href="#books">הספרים</a>
+<a href="#read">ספרים לקריאה</a>
 <a href="#guides">מדריכי ההשגה</a>
 <a href="#yetzirah">ספר יצירה</a>
 <a href="#moreh">מורה נבוכים</a>
@@ -129,6 +140,10 @@ img{max-width:100%}
 
 <div class="note info">
 <strong>מה יש בדף הזה:</strong> הדף ממזג שני מסמכי מחקר קודמים ומרחיב אותם, ומוסיף פרק על תלמידיו וממשיכי דרכו וספריהם, על סמך מחקריהם של גרשם שלום, משה אידל, אליוט וולפסון והארווי היימס, ועל סמך הטקסטים העבריים עצמם (מהדורות אמנון גרוס, ירושלים תשנ"ט–תשס"ג). לכל חיבור מובאים: <b>על מה הספר</b>, <b>למה רבי אברהם אבולעפיה כתב אותו</b>, <b>עיקר התמצית</b> ועובדות על המבנה, כתבי־היד והמהדורות. תאריכים שנויים במחלוקת מסומנים במפורש.
+</div>
+
+<div class="note read-note" id="read">
+<strong>הספרים לקריאה:</strong> בבלוג <a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">"לדעת ברוח" של אמנון גרוס (abuelafia.blogspot.com)</a> אפשר להוריד חינם, כקובצי PDF, את מהדורותיו לספרי רבי אברהם אבולעפיה ולספרי תלמידיו (ברשימה "לחץ על הספר שאתה רוצה להוריד" בצד הבלוג), וגם את "אוצרות אבולעפיה", קטעים נבחרים מכל ספריו. בכל כרטיס של ספר שיש לו קובץ שם יש כפתור "לקריאת הספר"; בספרים שנדפסו יחד, הכפתור פותח את הכרך המשותף.
 </div>
 
 <!-- ===================== ביוגרפיה ===================== -->
@@ -214,6 +229,7 @@ img{max-width:100%}
 <li><b>האזהרות:</b> לא לשנות אות או נקודה ממקומה (טעות פוגעת באיבר המקביל בגוף); בסיום "שוב לענייני הגוף... ואכול מעט ושתה מעט והרח ריח טוב"; ענווה, ללא כעס וגאווה.</li>
 </ul>
 <h4>עובדות</h4><p>כתב־יד מאויר מפורסם: אוסף ברגינסקי 251 (איטליה, ~1400) עם כ־10 מעגלים גדולים וכ־128 קטנים. החיד"א ראה כתב־יד על קלף "בעיגול שם ע"ב" והחזיר לרבי אברהם אבולעפיה את כבודו; ר' חיים ויטאל ציטטו ב"שערי קדושה" חלק ד'. נדפס לראשונה במלואו במהדורת גרוס (ירושלים תשנ"ט, עם "וזאת ליהודה"). חלקים תורגמו ללטינית בידי פלביוס מיתרידטס עבור פיקו דלה מירנדולה.</p>
+<div class="read"><a href="https://drive.google.com/file/d/1QsO0ysMl-Zg_P0B3wQ6oh4Qc1SxdQXLI/view?usp=sharing" target="_blank" rel="noopener" aria-label="חיי העולם הבא: לקריאת הספר (PDF)"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-book"/></svg><span>לקריאת הספר</span></a><small>PDF: חיי העולם הבא עם ביאור, ו"וזאת ליהודה" · מתוך <a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">הבלוג "לדעת ברוח"</a></small></div>
 </article>
 
 <article class="card conf-high" data-cat="מדריך להשגה נבואית" data-conf="high">
@@ -230,6 +246,7 @@ img{max-width:100%}
 <li><b>משל המרגלית</b> (חלק שאידל ניתח ב־2020): הבן האמיתי הוא מי שיודע את השם — יסוד לאוניברסליזם האינטלקטואלי שלו.</li>
 </ul>
 <h4>עובדות</h4><p>ר' משה קורדובירו ציטט ממנו באריכות ב"פרדס רימונים" (שער כ"א פרק א', בשם "ספר הניקוד") וקרא לדבריו "דברי קבלה מפה אל פה או דברי מגיד". כתבי־יד רבים (ותיקן 233, ותיקן 597, מינכן). מהדורות: ספרין תשנ"ט; גרוס תשס"א (עם "שומר מצוה").</p>
+<div class="read"><a href="https://drive.google.com/file/d/1lHNsraqi1BTqMgeeYLQhAE03_jxdZERS/view?usp=sharing" target="_blank" rel="noopener" aria-label="אור השכל: לקריאת הספר (PDF)"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-book"/></svg><span>לקריאת הספר</span></a><small>PDF: אור השכל ושומר מצוה · מתוך <a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">הבלוג "לדעת ברוח"</a></small></div>
 </article>
 
 <article class="card conf-med" data-cat="מדריך להשגה נבואית" data-conf="med">
@@ -245,6 +262,7 @@ img{max-width:100%}
 <li><b>האדם השלם</b> כ"מציאות הכרחית" בכל דור; סיום משיחי: "כי יום נקם בלבי ושנת גאולי באה".</li>
 </ul>
 <h4>עובדות</h4><p>כתב־יד יחיד: ניו־יורק, בית המדרש לרבנים 1801. מהדורות: ספרין תשנ"ט; גרוס תשס"ב (עם "מפתח הרעיון" ו"ספר המלמד").</p>
+<div class="read"><a href="https://drive.google.com/file/d/1YrKvFCURRcEauyQ4mcggqi5o1qocPHUk/view?usp=sharing" target="_blank" rel="noopener" aria-label="ספר החשק: לקריאת הספר (PDF)"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-book"/></svg><span>לקריאת הספר</span></a><small>PDF: מפתח הרעיון, ספר החשק וספר המלמד · מתוך <a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">הבלוג "לדעת ברוח"</a></small></div>
 </article>
 
 <article class="card conf-high" data-cat="מדריך להשגה נבואית" data-conf="high">
@@ -260,6 +278,7 @@ img{max-width:100%}
 <li><b>ביבליוגרפיה עצמית:</b> ארבעת "המעולים" — אור השכל, גן נעול, ספר החשק, פרדס הספר.</li>
 </ul>
 <h4>עובדות</h4><p>קטע נדפס בידי ילינק (1854). מהדורת גרוס תשנ"ט. האנציקלופדיה היהודית קראה לו "אולי החיבור המובן ביותר שלו". תרגומים לאנגלית (דל טין 2018; הילטון).</p>
+<div class="read"><a href="https://drive.google.com/file/d/1tLl-s3KOF_H6oeSynzeSB_5OL6ruXhuw/view?usp=sharing" target="_blank" rel="noopener" aria-label="אמרי שפר: לקריאת הספר (PDF)"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-book"/></svg><span>לקריאת הספר</span></a><small>PDF: אמרי שפר · מתוך <a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">הבלוג "לדעת ברוח"</a></small></div>
 </article>
 
 <article class="card conf-lost" data-cat="מדריך להשגה נבואית" data-conf="lost">
@@ -289,6 +308,7 @@ img{max-width:100%}
 <li>גימטריות על משה, ישו ומוחמד; "הנתיב השביעי = קודש הקודשים".</li>
 </ul>
 <h4>עובדות</h4><p>כתב־יד היסוד: אוקספורד, בודליאנה 1580. האוטוביוגרפיה נדפסה בידי ילינק (בית המדרש ג'). מהדורת גרוס תש"ס. hebrewbooks 49643.</p>
+<div class="read"><a href="https://drive.google.com/file/d/1YS5zq72inyC7VMFOTnJdI92FUzGcBSLk/view?usp=sharing" target="_blank" rel="noopener" aria-label="אוצר עדן גנוז: לקריאת הספר (PDF)"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-book"/></svg><span>לקריאת הספר</span></a><small>PDF: אוצר עדן גנוז · מתוך <a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">הבלוג "לדעת ברוח"</a></small></div>
 </article>
 
 <article class="card conf-high" data-cat="פירוש לספר יצירה" data-conf="high">
@@ -300,6 +320,7 @@ img{max-width:100%}
 <blockquote>"שכבר קמו עלי אנשים רבים שהם חכמים גדולים מחכמי ישראל... אבל מי שיצא שכלו בה מן הכוח אל הפועל הנבואי אי אפשר לו להכחיש דבר ממנה."</blockquote>
 <p>הצירוף כהשבת האותיות "לחומרן הראשון"; הקבלה מתגלה רק לנביאים; אזהרה שלא לבטוח במי שטוען לסודות ואינו בקי בל"ב נתיבות ספר יצירה.</p>
 <h4>עובדות</h4><p>כתב־יד מינכן 58. "ספר הפליאה" (ביזנטיון, סוף המאה ה־14) העתיק לתוכו כמעט את כל "גן נעול" בלי ציון מקור — וגרוס נעזר בו לשחזור הנוסח. מהדורת גרוס תשנ"ט (עם "שבע נתיבות התורה").</p>
+<div class="read"><a href="https://drive.google.com/file/d/1SkZ0aOSgHaJR0e3oKbGQIOCKSDo2jfis/view?usp=sharing" target="_blank" rel="noopener" aria-label="גן נעול: לקריאת הספר (PDF)"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-book"/></svg><span>לקריאת הספר</span></a><small>PDF: גן נעול ושבע נתיבות התורה · מתוך <a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">הבלוג "לדעת ברוח"</a></small></div>
 </article>
 
 <article class="card conf-low" data-cat="פירוש לספר יצירה" data-conf="low">
@@ -336,6 +357,7 @@ img{max-width:100%}
 <li>הדין בתשרי וביצועו בניסן (שימש את היימס לכרונולוגיה של 1291); לשון המשלים ומדרגות הידיעה הנבואית.</li>
 </ul>
 <h4>עובדות</h4><p>כתב־יד מינכן 408. מהדורת גרוס תשס"א (עם האיגרת "מצרף לכסף").</p>
+<div class="read"><a href="https://drive.google.com/file/d/1TO0d32ctnS20LpgOjDdc44ahwfN7wMLA/view?usp=sharing" target="_blank" rel="noopener" aria-label="חיי הנפש: לקריאת הספר (PDF)"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-book"/></svg><span>לקריאת הספר</span></a><small>PDF: חיי הנפש, ובו "מצרף לכסף וכור לזהב" · מתוך <a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">הבלוג "לדעת ברוח"</a></small></div>
 </article>
 
 <article class="card conf-high" data-cat="פירוש למורה נבוכים" data-conf="high">
@@ -350,6 +372,7 @@ img{max-width:100%}
 <li>הדבקות בשכל הפועל בנוסח אבן־רושד (דרך ר' הלל מוורונה); גאולה אוניברסלית.</li>
 </ul>
 <h4>עובדות</h4><p>כתב־יד היסוד: פריז 774. תורגם ללטינית בידי מיתרידטס (1486, ותיקן עבר' 190) עבור פיקו דלה מירנדולה — וירשובסקי הראה שה"תזות הקבליות" של פיקו על השמות ו"אמנות הצירוף" נובעות ממנו. מהדורת גרוס תשס"ב; hebrewbooks 49764.</p>
+<div class="read"><a href="https://drive.google.com/file/d/1VTn2xC96Xhpihfr4DQI9VPCueQu58YyL/view?usp=sharing" target="_blank" rel="noopener" aria-label="סתרי תורה: לקריאת הספר (PDF)"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-book"/></svg><span>לקריאת הספר</span></a><small>PDF: סתרי תורה · מתוך <a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">הבלוג "לדעת ברוח"</a></small></div>
 </article>
 
 </div>
@@ -366,6 +389,7 @@ img{max-width:100%}
 <h4>למה רבי אברהם אבולעפיה כתב אותו?</h4><p>לפתוח את סיפורי בראשית ב"מפתחות" של שמות ואותיות ולא רק דרך הסיפור הפשוט; ולהעיד — בשנה שלפני הקץ המשוער — מי הם תלמידיו.</p>
 <h4>עיקר התמצית</h4><p>"הנתיב השביעי" ראוי "לחדש עולם, לשון והבנה" — בהפניה ל"אוצר עדן גנוז"; נוצרים אוהדים נקראים "חסידי אומות העולם".</p>
 <h4>עובדות</h4><p>כתב־יד מוסקבה גינצבורג 133. מהדורת גרוס תשס"א (עם "מפתח השמות").</p>
+<div class="read"><a href="https://drive.google.com/file/d/1Y-W5acq-7NM95N8Tw3FD6fggIbDSJ8zL/view?usp=sharing" target="_blank" rel="noopener" aria-label="מפתח החכמות: לקריאת הספר (PDF)"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-book"/></svg><span>לקריאת הספר</span></a><small>PDF: מפתח החכמות ומפתח השמות · מתוך <a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">הבלוג "לדעת ברוח"</a></small></div>
 </article>
 
 <article class="card conf-high" data-cat="פירוש לתורה (ספר המפתחות)" data-conf="high">
@@ -377,6 +401,7 @@ img{max-width:100%}
 <blockquote>"צריך שייקח כל אות ואות... ויניענה בתנועת נשימתו ארוכה שלא ינשום בין שתי אותיות כי אם נשימה אחת ארוכה... ואחר כך ינוח בשיעור נשימה אחת."</blockquote>
 <p>אידל ניתח מכאן את "שלוש הנשימות": מנוחה, הפסקה, הארכה. הגלות מסתיימת ב־1290 = אמ"ת; סיציליה = אריה = "אי הר"י" (219) — "מקום שאפשר להתנבא בו"; מסינה = ענן = ניסן (170), פלרמו = עפר (350).</p>
 <h4>עובדות</h4><p>כתבי־יד: ניו־יורק, בית המדרש לרבנים 843 ו־1897. מהדורת גרוס תשס"א.</p>
+<div class="read"><a href="https://drive.google.com/file/d/1Y-W5acq-7NM95N8Tw3FD6fggIbDSJ8zL/view?usp=sharing" target="_blank" rel="noopener" aria-label="מפתח השמות: לקריאת הספר (PDF)"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-book"/></svg><span>לקריאת הספר</span></a><small>PDF: מפתח החכמות ומפתח השמות · מתוך <a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">הבלוג "לדעת ברוח"</a></small></div>
 </article>
 
 <article class="card conf-lost" data-cat="פירוש לתורה (ספר המפתחות)" data-conf="lost">
@@ -392,6 +417,7 @@ img{max-width:100%}
 <h4>למה רבי אברהם אבולעפיה כתב אותו?</h4><p>לברר את מושג הספירות מתוך מסגרתו הלשונית־מספרית, ולהראות כיצד המספרים והשמות הם כלי אחד.</p>
 <h4>עיקר התמצית</h4><p>אידל (המחקר על החוויה המיסטית, פרק ד') מצביע כאן על דימויים ארוטיים של "זרע" ו"שפע" לתיאור ירידת השכל הפועל על המשיג — הדבקות כזיווג בין השכל האנושי לשכל הפועל.</p>
 <h4>עובדות</h4><p>כתב־יד מילאנו, אמברוזיאנה 53. מהדורת גרוס, אדר תשס"א (עם "מפתח התוכחות").</p>
+<div class="read"><a href="https://drive.google.com/file/d/1zLcLUryufjsT-SLG1GQ8uUxsaKRRWQYZ/view?usp=sharing" target="_blank" rel="noopener" aria-label="מפתח הספירות: לקריאת הספר (PDF)"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-book"/></svg><span>לקריאת הספר</span></a><small>PDF: מפתח הספירות ומפתח התוכחות · מתוך <a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">הבלוג "לדעת ברוח"</a></small></div>
 </article>
 
 <article class="card conf-high" data-cat="פירוש לתורה (ספר המפתחות)" data-conf="high">
@@ -406,6 +432,7 @@ img{max-width:100%}
 <li>עדות אישית: רבי אברהם אבולעפיה "צלוב על עץ החיים והמוות שמונה־עשרה שנה, ונותרו שתיים" (מ־1270 עד 1290).</li>
 </ul>
 <h4>עובדות</h4><p>מהדורת גרוס תשס"א.</p>
+<div class="read"><a href="https://drive.google.com/file/d/1zLcLUryufjsT-SLG1GQ8uUxsaKRRWQYZ/view?usp=sharing" target="_blank" rel="noopener" aria-label="מפתח התוכחות: לקריאת הספר (PDF)"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-book"/></svg><span>לקריאת הספר</span></a><small>PDF: מפתח הספירות ומפתח התוכחות · מתוך <a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">הבלוג "לדעת ברוח"</a></small></div>
 </article>
 
 </div>
@@ -431,6 +458,7 @@ img{max-width:100%}
 <li><b>"נתיב מיוחד וכולל כל הנתיבות והוא קודש הקודשים... ראוי לנביאים לבדם"</b> — השפע מן השכל הפועל על הכוח הדברי, הנמסר בעל־פה בלבד עם שם מ"ב ושם ע"ב.</li>
 </ol>
 <h4>עובדות</h4><p>נדפס: ילינק, Philosophie und Kabbala (לייפציג 1854); גרוס תשנ"ט (עם "גן נעול"). אידל עשה בה שימוש כמפתח להרמנויטיקה של רבי אברהם אבולעפיה (Language, Torah and Hermeneutics, פרק ד').</p>
+<div class="read"><a href="https://drive.google.com/file/d/1SkZ0aOSgHaJR0e3oKbGQIOCKSDo2jfis/view?usp=sharing" target="_blank" rel="noopener" aria-label="שבע נתיבות התורה: לקריאת הספר (PDF)"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-book"/></svg><span>לקריאת הספר</span></a><small>PDF: גן נעול ושבע נתיבות התורה · מתוך <a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">הבלוג "לדעת ברוח"</a></small></div>
 </article>
 
 <article class="card conf-high" data-cat="איגרת" data-conf="high">
@@ -446,6 +474,7 @@ img{max-width:100%}
 <li>"התרת הקשרים" (דניאל ה, יב) כתיאור הטכניקה; קינה: "צוד צדוני כציפור אויבי חינם".</li>
 </ul>
 <h4>עובדות</h4><p>כתבי־יד רבים; תקציר לטיני של מיתרידטס (Summa brevis cabale). נדפס: ילינק, Auswahl kabbalistischer Mystik (לייפציג 1853); גרוס תשנ"ט. תשובת הרשב"א חלק א' סימן תקמ"ח מכנה אותו "נבל, שם רשעים ירקב... שעשה עצמו נביא ומשיח בסיציליה".</p>
+<div class="read"><a href="https://drive.google.com/file/d/1QsO0ysMl-Zg_P0B3wQ6oh4Qc1SxdQXLI/view?usp=sharing" target="_blank" rel="noopener" aria-label="וזאת ליהודה: לקריאת הספר (PDF)"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-book"/></svg><span>לקריאת הספר</span></a><small>PDF: חיי העולם הבא עם ביאור, ו"וזאת ליהודה" · מתוך <a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">הבלוג "לדעת ברוח"</a></small></div>
 </article>
 
 <article class="card conf-med" data-cat="איגרת" data-conf="med">
@@ -455,6 +484,7 @@ img{max-width:100%}
 <h4>למה רבי אברהם אבולעפיה כתב אותו?</h4><p>בלשונו: לתת לנמען "מפתח לפתוח בו שערי חן וחסד ורחמים עליונים נבואיים" — ולחשוף את טעותו של "זה התלמיד" המתפאר במסורת ספירתית שאינה אלא רשימת שמות עשר הספירות "מבלתי שום ציור" ("אסתירא בלגינא קיש קיש קריא").</p>
 <h4>עיקר התמצית</h4><p>סוד העיבור; גימטריית חיטה/חוח (22); ה"יהודי" כמי שמודה (הודאה); ההתבודדות והצורך להיות ראוי "כמו הכהן הגדול" לפני קבלת השפע הנבואי. הזיכוך הרוחני מוצג כתהליך שבו התודעה עוברת בירור והכנה.</p>
 <h4>עובדות</h4><p>נדפס בידי גרוס כנספח ל"חיי הנפש" (תשס"א).</p>
+<div class="read"><a href="https://drive.google.com/file/d/1TO0d32ctnS20LpgOjDdc44ahwfN7wMLA/view?usp=sharing" target="_blank" rel="noopener" aria-label="מצרף לכסף וכור לזהב: לקריאת הספר (PDF)"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-book"/></svg><span>לקריאת הספר</span></a><small>PDF: חיי הנפש, ובו "מצרף לכסף וכור לזהב" · מתוך <a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">הבלוג "לדעת ברוח"</a></small></div>
 </article>
 
 </div>
@@ -470,6 +500,7 @@ img{max-width:100%}
 <h4>על מה הספר?</h4><p>לפי שלום, "הראשון בין חיבוריו בקבלה הנבואית". חיבור על שמות האל ומעמדם. שמו מוסבר: רבי אברהם אבולעפיה "נותן גט" לכל השמות הקדושים מלבד שם הוי"ה — השם המיוחד לבדו מולך על כל השמות האחרים. הערה: המסמך הקודם שיבץ אותו בין "המסופקים"; למעשה ייחוסו ודאי — רבי אברהם אבולעפיה עצמו מפנה אליו ב"ספר המלמד" ובפירוש "ספר העדות". הספק נוגע רק ל"נר אלהים" שנדפס עמו.</p>
 <h4>למה רבי אברהם אבולעפיה כתב אותו?</h4><p>להבהיר את תפקיד השמות האלוהיים בתהליך ההשגה. בפתיחה הוא מצהיר שלא יגלה סודות הקבלה האמיתית — עדות לזהירותו בשלב המוקדם, לפני 1276, כשהשם עדיין "בלתי ניתן להגייה" בעיניו.</p>
 <h4>עובדות</h4><p>כתב־יד אוקספורד 1582. קורדובירו משתמש בשיטתו. מהדורת גרוס תשס"ב (עם "נר אלהים").</p>
+<div class="read"><a href="https://drive.google.com/file/d/1t5tJVNP2k1MJ7uhZHfheXLcsgdQdUNk6/view?usp=sharing" target="_blank" rel="noopener" aria-label="גט השמות: לקריאת הספר (PDF)"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-book"/></svg><span>לקריאת הספר</span></a><small>PDF: נר אלהים וגט השמות · מתוך <a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">הבלוג "לדעת ברוח"</a></small></div>
 </article>
 
 <article class="card conf-high" data-cat="חיבור קצר / מוקדם" data-conf="high">
@@ -478,6 +509,7 @@ img{max-width:100%}
 <h4>על מה הספר?</h4><p>מסה מוקדמת על לשון, מחשבה והשגה: דקדוק והיגיון בשירות ידיעת האל והבריאה; שמות כ"ב האותיות; שם הוי"ה ככולל את כל השמות; מעמדה הטבעי/המוסכם של הלשון והעברית כאם הלשונות. פותח בשירים על השם, ופונה ל"בני שם" ולכל האומות.</p>
 <h4>למה רבי אברהם אבולעפיה כתב אותו?</h4><p>לתת מפתח מושגי לקשר בין מחשבה, שכל, לשון ונבואה — כהכנה לפירושי המורה. "ספר הגאולה" (1273) מפנה אליו כאל חיבור שנכתב זה עתה, "שבו דנתי בשמות כל אותיות האלף־בית".</p>
 <h4>עובדות</h4><p>כתבי־יד ותיקן 291, אוקספורד Heb. e.123. קטוע; גרוס השלים מכתב־יד שני. "אלף־בית שהועתק מספר מפתח הרעיון" הנספח — מסופק. מהדורת גרוס תשס"ב.</p>
+<div class="read"><a href="https://drive.google.com/file/d/1YrKvFCURRcEauyQ4mcggqi5o1qocPHUk/view?usp=sharing" target="_blank" rel="noopener" aria-label="מפתח הרעיון: לקריאת הספר (PDF)"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-book"/></svg><span>לקריאת הספר</span></a><small>PDF: מפתח הרעיון, ספר החשק וספר המלמד · מתוך <a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">הבלוג "לדעת ברוח"</a></small></div>
 </article>
 
 <article class="card conf-high" data-cat="חיבור קצר / מוקדם" data-conf="high">
@@ -486,6 +518,7 @@ img{max-width:100%}
 <h4>על מה הספר?</h4><p>חיבור בן ל"ב שערים שממנו שרדו רק שערים כ"ה–ל"ב בכתב־יד יחיד (פריז 680). עוסק בשם המפורש, בשנים־עשר השמות בני 48 אותיות ("שבע ביום הללתיך"), בברכת כהנים ובאלפא־ביתות; קובע כרמב"ם שהאל אינו הגלגל ולא כוח בו; דן בבריאה מול קדמות, באדם ובלשון ה"טבעית", ובשתי המידות — דין ורחמים (86/26).</p>
 <h4>למה רבי אברהם אבולעפיה כתב אותו?</h4><p>הוראה שיטתית של דרכי העבודה עם שמות ואותיות תוך קישורן למסורות מקראיות, וכן הבהרת סוגיות מן המורה. נכתב חודשיים לפני החזון המכריע של כסלו–טבת ה'לז (דצמבר 1276) — לפי היימס נקודת המפנה למשיחיות.</p>
 <h4>עובדות</h4><p>מפנה ל"גט השמות". מהדורת גרוס תשס"ב (עם "מפתח הרעיון" ו"ספר החשק").</p>
+<div class="read"><a href="https://drive.google.com/file/d/1YrKvFCURRcEauyQ4mcggqi5o1qocPHUk/view?usp=sharing" target="_blank" rel="noopener" aria-label="ספר המלמד: לקריאת הספר (PDF)"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-book"/></svg><span>לקריאת הספר</span></a><small>PDF: מפתח הרעיון, ספר החשק וספר המלמד · מתוך <a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">הבלוג "לדעת ברוח"</a></small></div>
 </article>
 
 <article class="card conf-high" data-cat="חיבור קצר / מוקדם" data-conf="high">
@@ -495,6 +528,7 @@ img{max-width:100%}
 <h4>למה רבי אברהם אבולעפיה כתב אותו?</h4><p>לבקשת "הבחור הנחמד המשכיל ר' שלמה הכהן ב"ר משה הכהן ז"ל הגלילי אשר מארץ הצבי" — כהן מארץ ישראל — כדי "שידע מה הוא עושה כשהוא מברך את העם ולא יהיה כקורח". אידל משער שר' שלמה זה היה צינור להעברת הקבלה הנבואית לארץ ישראל.</p>
 <h4>עיקר התמצית</h4><p>מצווה אחת שקולה כנגד כל התורה; ספר/ספור/סיפור כשלוש דרכי הנבואה; ארבע הסיבות (חומר, צורה, פועל, תכלית) של המצווה; כף זכות וכף חובה בנשיאת כפיים. כך רבי אברהם אבולעפיה קושר את קיום המצוות לדרך הרוחנית ואינו משאיר את השיטה המיסטית מנותקת מחיי התורה.</p>
 <h4>עובדות</h4><p>מהדורת גרוס תשס"א (עם "אור השכל").</p>
+<div class="read"><a href="https://drive.google.com/file/d/1lHNsraqi1BTqMgeeYLQhAE03_jxdZERS/view?usp=sharing" target="_blank" rel="noopener" aria-label="שומר מצוה: לקריאת הספר (PDF)"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-book"/></svg><span>לקריאת הספר</span></a><small>PDF: אור השכל ושומר מצוה · מתוך <a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">הבלוג "לדעת ברוח"</a></small></div>
 </article>
 
 <article class="card conf-med" data-cat="חיבור קצר / מוקדם" data-conf="med">
@@ -523,6 +557,7 @@ img{max-width:100%}
 <li>סיום: "דרשו את ה'... זכרו את שמו". שני רבדים — האפוקליפטי־דמיוני והשכלי.</li>
 </ul>
 <h4>עובדות</h4><p>שמונה כתבי־יד (ותיקן 240 מנוקד, ותיקן 245 העתיק ביותר, מוסקבה גינצבורג 732, פרמה 3494, מינכן 409, אוקספורד רג'יו 55, בר־אילן 583 — מקורו של ילינק, אנג'ליקה Or. 5). מהדורה ראשונה: ילינק, בספר היובל לגרץ (ברסלאו 1887), תחת הכותרת המזלזלת "אפוקליפסה של נביא־שקר ומשיח־שקר". מהדורת גרוס תשס"א (ב"מצרף השכל"); מהדורה ביקורתית: קרבצ'יק. תרגום אנגלי: יוסף דן, The Heart and the Fountain (2002).</p>
+<div class="read"><a href="https://drive.google.com/file/d/1RnhWTrcWsRbs6THXQQxA97S7tNFp6UPh/view?usp=sharing" target="_blank" rel="noopener" aria-label="ספר האות: לקריאת הספר (PDF)"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-book"/></svg><span>לקריאת הספר</span></a><small>PDF: מצרף השכל וספר האות · מתוך <a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">הבלוג "לדעת ברוח"</a></small></div>
 </article>
 
 <article class="card conf-high" data-cat="ספר נבואי" data-conf="high">
@@ -532,6 +567,7 @@ img{max-width:100%}
 <h4>למה רבי אברהם אבולעפיה כתב אותו?</h4><p>בתחבולה ספרותית: המחבר מציג עצמו כ"אבוברהים הקטן" (=266 = אברהם 248 + ח"י), תלמיד בן 13 שנה של "רזיאל", שנצטווה בחלום לבאר את ספרי רבו "על דעת הנסתר לא דרך הפשט כלל". שלום: "התלמיד יודע את סודות רבו יותר מדי" — הרב והתלמיד הם אותו אדם ("אם הוא אני, אני הוא").</p>
 <h4>עיקר התמצית</h4><p>כאן נמצא המשפט המפורסם "המילה משיח משותפת לשלושה עניינים" (בפירוש ספר המליץ), רוב העדויות האוטוביוגרפיות (בפירוש ספר העדות), רשימת תלמידי מסינה בכינויים תיאופוריים (בפירוש ספר איש אדם), ודיון בגמול ובעונש בהקדמה.</p>
 <h4>עובדות</h4><p>כתבי־יד: רומא אנג'ליקה 38 (העיקרי), מינכן 285, מינכן 43, פרמה. מהדורות: גרוס, "מצרף השכל וספר האות" (אלול תשס"א; hebrewbooks 49748); רפאל כהן, מהדורה מדעית של פירושי ספרי הנבואה. השערת גרוס ש"הנבואות" מעולם לא נכתבו ורק הפירושים היו קיימים סותרת את דברי רבי אברהם אבולעפיה עצמו (למשל בקשתו שיקראו את ההפטרה בבית הכנסת).</p>
+<div class="read"><a href="https://drive.google.com/file/d/1RnhWTrcWsRbs6THXQQxA97S7tNFp6UPh/view?usp=sharing" target="_blank" rel="noopener" aria-label="מצרף השכל — פירושי רבי אברהם אבולעפיה לספרי נבואתו: לקריאת הספר (PDF)"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-book"/></svg><span>לקריאת הספר</span></a><small>PDF: מצרף השכל וספר האות · מתוך <a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">הבלוג "לדעת ברוח"</a></small></div>
 </article>
 
 <article class="card conf-lost" data-cat="ספר נבואי" data-conf="lost">
@@ -599,6 +635,7 @@ img{max-width:100%}
 <div class="meta"><span class="tag date">סוף המאה ה־13 / ראשית ה־14</span><span class="tag place">איטליה, אולי סיציליה</span><span class="tag">חיבור האסכולה / ייחוס מסופק</span><span class="tag conf low">אנונימי, מחוגו</span></div>
 <h4>על מה הספר?</h4><p>אחד משני החיבורים האנונימיים החשובים ביותר של הקבלה הנבואית (עם "נר אלהים"). עוסק בצירוף אותיות ושמות — תמורה, החלפה ויצירת רצפים לשוניים לריכוז ולהשגה; "מיתת נשיקה"; דימוי המעגל והסולם. שלום נטה לראותו כשל רבי אברהם אבולעפיה; אידל הראה במחקר פילולוגי שהמינוח הנאופלטוני שבו "שולי בכתביו האותנטיים" ושהוא הושפע מטקסט של חוג "ספר העיון". שתי מהדורות־נוסח וכתבי־יד רבים (פריז 774, ששון 290, ניו־יורק 839). הערה: המסמך הקודם ייחסו אולי לג'יקטילה — לא נמצא לכך ביסוס במחקר.</p>
 <h4>עובדות</h4><p>תורגם ללטינית בידי מיתרידטס עבור פיקו. גרוס הדפיסו (תשס"ג) בכותרת "המיוחס ל..." והצהיר שלא בדק את ייחוסו. מהדורות אנגליות מודרניות מדפיסות אותו בטעות בשם רבי אברהם אבולעפיה.</p>
+<div class="read"><a href="https://drive.google.com/file/d/10-A-Vu4Vmu_N1s4AaqHHV8KjoQc-n5ay/view?usp=sharing" target="_blank" rel="noopener" aria-label="ספר הצירוף: לקריאת הספר (PDF)"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-book"/></svg><span>לקריאת הספר</span></a><small>PDF: ספר הצירוף · מתוך <a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">הבלוג "לדעת ברוח"</a></small></div>
 </article>
 
 <article class="card conf-low" data-cat="חיבור האסכולה / ייחוס מסופק" data-conf="low">
@@ -606,6 +643,7 @@ img{max-width:100%}
 <div class="meta"><span class="tag date">ראשית המאה ה־14</span><span class="tag place">איטליה / סיציליה</span><span class="tag">חיבור האסכולה / ייחוס מסופק</span><span class="tag conf low">אנונימי, מחוגו</span></div>
 <h4>על מה הספר?</h4><p>לפי אידל: "החיבור האנונימי מחוגו של רבי אברהם אבולעפיה... שיוחס בטעות לו עצמו, אמנם קרוב מאוד לדעותיו, אך בנושאים אחדים ניכרת נטייה מסוימת לדעות המצויות בספר שערי צדק" (תורת ה"מלבוש", טבלאות אותיות מרובעות). היימס קבע שהוא של ר' נתן בן סעדיה חראר — הפלגה מדברי אידל, שציין קרבה בלבד. תוכנו: צירוף אותיות וטכניקות לנבואה; סוד ברכת כהנים; התלי כיום הכיפורים; טעמי המצוות; ספר יצירה כבסיס לחוויה הנבואית; ברית הלשון וברית המילה; עמדה פרטיקולריסטית — הדת האמיתית תתגלה בבוא אליהו.</p>
 <h4>עובדות</h4><p>כתב־יד מינכן 10. מהדורת גרוס תשס"ב עם "גט השמות" (גרוס: "לא ברור ייחוסו").</p>
+<div class="read"><a href="https://drive.google.com/file/d/1t5tJVNP2k1MJ7uhZHfheXLcsgdQdUNk6/view?usp=sharing" target="_blank" rel="noopener" aria-label="נר אלהים: לקריאת הספר (PDF)"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-book"/></svg><span>לקריאת הספר</span></a><small>PDF: נר אלהים וגט השמות · מתוך <a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">הבלוג "לדעת ברוח"</a></small></div>
 </article>
 
 
@@ -716,6 +754,7 @@ img{max-width:100%}
 <h4>למה המחבר כתב אותו?</h4><p>לפי ההקדמה — לחלק "לשערים מפוזרים" את ניסיונו האישי כדי "לעורר לבבות משנת הסכלות". ובמרכזו <b>הווידוי האוטוביוגרפי המפורסם</b>: "ואני הצעיר אספר לכם את אשר קרני בעניין זה: דעו רבותי כי בראשונה היה לי חשק בלימוד התורה..." — שנתיים תלמוד בחו"ל, אחר כך פילוסוף יהודי שלימדו "מעט מן המורה", היגיון וטבע, עד ש"שלח לי ה' איש אלוהי, מקובל [= רבי אברהם אבולעפיה], שלימדני דרך הקבלה בראשי פרקים... ואמר לי: זו היא דרך השמות". אחרי ארבעה חודשי צירוף ראה את האותיות "גדלות לעיניי כהרים גדולים", רעד, "ויצא כמו דיבור מלבי"; הוראת המורה: "בני, אין זו הכוונה שתעמוד על שום צורה מוגבלת... עד אשר תגיע אל פעולת הכוח אשר איננו ברשותך"; ובניסיון ליל שבת עם השם המפורש "יצא ממני קול ואומר: מות תמות ולא תחיה, ומי הביאך לנגוע בשם".</p>
 <h4>עיקר התמצית</h4><blockquote>"ואם יש ביכולתו להכריח ולהמשיך יותר, תצא מפנימיותו לחוץ ותצטייר לו בכוח הדמיוני הזך בצורת מראה זכה, וזהו להט החרב המתהפכת... כדמות אורים ותומים... עד שתיבדל ותתלבש בצורה דמיונית זכה, ובו מחברת האותיות חיבור תמים מסודר ומוכן, וכמדומה לי שזאת הצורה נקראת אצל המקובלים מלבוש."</blockquote><p>אידל רואה בפסקה זו את מקור תורת ה"מלבוש" (לבוש האותיות שקדם לאדם קדמון) של ישראל סרוג ושל צפת, ואת המקור לפרק הדבקות ב"שערי קדושה" חלק ד'. <b>ההמשך:</b> נאמנות מלאה לטכניקה ולאידאל הנבואי של רבי אברהם אבולעפיה. <b>השינוי:</b> מינוח נאופלטוני שאצל רבי אברהם אבולעפיה שולי, ויסודות סופיים.</p>
 <h4>עובדות</h4><p>ארבעה כתבי־יד: ירושלים 8°148 (חסר; מיוחס ל"ר' שם טוב ספרדי... שחיברו בגליל העליון"), ליידן Warner 24, לונדון BL 10809, ועוד אחד. שלום פרסם את הווידוי (קרית ספר א', תרפ"ה; "זרמים ראשיים" עמ' 146–155, כתלמיד אנונימי); קורדובירו ייחסו לרבי אברהם אבולעפיה עצמו; אידל זיהה את ר' נתן מן החתימה המוצפנת "ינהתונה שם מקיף בשמי... חיבור כולל ענאל בן חקיאל" (שלם ז', תשס"ב). מהדורה מלאה: ר' יוסף אלעזר אלימלך פורוש, מכון שערי זיו / ישיבת שער השמים, ירושלים תשמ"ט (עם "סולם העלייה", עדיין בשער "ר' שם טוב ספרדי"); איטלקית: Le porte della giustizia, אידל–מוטולזה, אדלפי 2001, 544 עמ'. השפיע על ר' יצחק דמן עכו, אלבוטיני, קורדובירו (הספירות בצורת אל"ף, פרדס פרק ו'), ויטאל וסרוג.</p>
+<div class="read"><a href="https://drive.google.com/file/d/1K7Ad_5sMPhj1twUjxXel0MtIi7588h8M/view?usp=sharing" target="_blank" rel="noopener" aria-label="שערי צדק: לקריאת הספר (PDF)"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-book"/></svg><span>לקריאת הספר</span></a><small>PDF: שערי צדק וסולם העלייה, בעריכת אמנון גרוס · מתוך <a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">הבלוג "לדעת ברוח"</a></small></div>
 </article>
 
 <article class="card conf-lost" data-conf="lost">
@@ -872,6 +911,7 @@ img{max-width:100%}
 <li>חידושים: פירוש "שלוש השבועות" — בעלי השמות נשבעו שלא להחיש את הגאולה בטכניקות; אין הכרח <i>להגות</i> את השמות — "העיקר הוא ידיעת השמות, מציאותם, מהותם ועניינם"; הכנות גופניות (מיעוט אכילה, טבילה, טהרה).</li>
 </ul>
 <h4>עובדות</h4><p>כתבי־יד: ירושלים 8°334, 8°1302 + ניו־יורק 1816; עותק היה בידי מקובל בית־אל ר' ששון בכור משה פרסיאדו (נפטר 1903) שביקש להדפיסו. שלום פרסם את ההקדמה (קרית ספר ב'), פרק י' ("כתבי יד בקבלה", 1930) ופרקים ז–ט (קרית ספר כ"ב, 1945). מהדורה מלאה: פורוש, ירושלים תשמ"ט (עם "שערי צדק") — פרסום חיבורי האסכולה ולא חיבורי רבי אברהם אבולעפיה עצמו היה הצעד שפרץ את "החרם הבלתי רשמי" (הוס). אנגלית: גלייזר–שוהם (2007); קפלן (1982). לשונו מהדהדת ב"מגיד מישרים" של ר' יוסף קארו ומצוטט ב"שערי קדושה" ד'.</p>
+<div class="read"><a href="https://drive.google.com/file/d/1K7Ad_5sMPhj1twUjxXel0MtIi7588h8M/view?usp=sharing" target="_blank" rel="noopener" aria-label="סולם העלייה: לקריאת הספר (PDF)"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-book"/></svg><span>לקריאת הספר</span></a><small>PDF: שערי צדק וסולם העלייה, בעריכת אמנון גרוס · מתוך <a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">הבלוג "לדעת ברוח"</a></small></div>
 </article>
 </div>
 </div>
@@ -933,6 +973,7 @@ img{max-width:100%}
 <h4>למה המחבר כתב אותו?</h4><p>לאסוף את כל הדרכים המעשיות לרוח הקודש שהכיר — ורבי אברהם אבולעפיה הוא הראשון שבהן. קפלן: "אחת ההפתעות הגדולות בחלק זה שלא נדפס היא שהוא פותח בהמלצה על שיטת רבי אברהם אבולעפיה כפי שנלמדה ב'חיי העולם הבא'. אחרי הדיון בשיטה זו ויטאל מצטט קטע ארוך מ'ספר החשק' בלי לציין את שמו" (דפים 12א–13ב = ספר החשק, כתב־יד ניו־יורק 1801, דפים 9א–11א).</p>
 <h4>עיקר התמצית</h4><blockquote>"התבודד בבית מיוחד ועצום עיניך, ואם תתעטף בטלית ותניח תפילין — טוב יותר; ואחר שתפנה מחשבותיך לגמרי ותטהרן, צרף במחשבתך כל תיבה שתרצה בכל צירופיה... למשל: א"ר ז', א"ז ר', ר"א ז', ר"ז א', ז"א ר', ז"ר א'..."</blockquote><p>עוד בו: "שער הכוונה למקובלים הראשונים" (ר' עזריאל) במלואו; "איגרת המוסר" לרמב"ן; קטע ההשתוות של ר' יצחק דמן עכו במלואו ("להיות עלוב ולא עולב... מיד תשרה עליו השכינה"); שאלת החלום מפי הרמ"ק דרך די וידאש ("יתבודד מעט בשכלו בלי הרהורים אחרים כלל"); "ברית מנוחה", רקנאטי, חייט, "שערי אורה" כסולם; טכניקת המשנה; ייחודים. אידל: "תיאורי ההתבודדות הללו תואמים בפרטים רבים את הטכניקה של רבי אברהם אבולעפיה... אך נוספו גישות מאוחרות — דבקות נשמת המתבודד בנשמת התנא, או עליית הנשמה". <b>ההמשך:</b> ויטאל ממסגר את שיטת רבי אברהם אבולעפיה כאחת מן "הדרכים" לרוח הקודש, לצד הייחודים הלוריאניים.</p>
 <h4>עובדות — ההשמטה וההדפסה</h4><p>בסוף הספר הנדפס: <b>"אמר המדפיס: החלק הזה לא בא להעתקה ולא נדפס כלל, כי מאחר שהכול שמות וצירופים וסודות נעלמים אשר לא כדת להביאו על מזבח הדפוס"</b> (דפוס ראשון קושטא 1734; חלב 1866 — הספר העברי הראשון שנדפס שם; יותר משלושים מהדורות בלעדיו). קפלן: ההמלצה על רבי אברהם אבולעפיה — שנאסר בידי הרשב"א, חייט ויש"ר מקנדיה — "הייתה אולי אחת הסיבות הנסתרות לכך שהחלק הרביעי לא נדפס מעולם". כתבי־יד: לונדון BL 749; מוסקבה גינצבורג 691. הדפסה ראשונה: "כתבים חדשים לרבנו חיים ויטאל" (ירושלים: אהבת שלום, תשמ"ח), מהדיר ר' נתנאל ספרין (משושלת קומרנא), שהצדיק בהקדמתו את הדפסת דברי רבי אברהם אבולעפיה בציטוט החיד"א; מאז "שערי קדושה השלם" עם החלק הרביעי. אנגלית: קפלן (1982); מרקל (2018); מגיד.</p>
+<div class="read"><a href="https://drive.google.com/file/d/18lqdMFtZ46X3T-CT0kMgK5DzUOA1bsXZ/view?usp=sharing" target="_blank" rel="noopener" aria-label="שערי קדושה — החלק הרביעי: לקריאת הספר (PDF)"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-book"/></svg><span>לקריאת הספר</span></a><small>PDF: שערי קדושה השלם, על כל ארבעת חלקיו · מתוך <a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">הבלוג "לדעת ברוח"</a></small></div>
 </article>
 <article class="card conf-med" data-conf="med">
 <h3>שער רוח הקודש — הייחודים</h3><div class="en">Sha'ar Ruaḥ ha-Kodesh</div>
@@ -1017,7 +1058,7 @@ img{max-width:100%}
 <article class="card conf-high" data-conf="high">
 <h3>אמנון גרוס: ההדפסה הכמעט־מלאה (ירושלים תשנ"ט–תשס"ג)</h3><div class="en">Amnon Gross — the 13-volume edition</div>
 <div class="meta"><span class="tag date">1999–2004</span><span class="tag place">בית שמש / ירושלים</span></div>
-<h4>מי הוא ומה עשה?</h4><p>חסיד ברסלב מבית שמש, שעבד ללא גיבוי מוסדי (תומר פרסיקו). הדפיס 13 כרכים של כתבי רבי אברהם אבולעפיה ואסכולתו (הרשימה המלאה בפרק "המהדורות"), וב"ספר הצירוף" (תשס"ג) צירף חיבור משלו — <b>"מחשבת חושב"</b> (עמ' 155–177). בהקדמה ל"חיי העולם הבא" הצדיק את ההדפסה בחיד"א ובוויטאל, וכתב למתרגלים: "ללומדי חכמת צירוף האותיות והמשתוקקים לדרך — ספר זה הוא גרם המעלות העולה אל מזבחות הנבואה"; בהקדמת "ספר החשק" הציג את ההדפסה כ"ביטול גזרה" בעל משמעות משיחית. אידל (2002): גרוס "מתכוון לאפשר את שיבת הנבואה לישראל בימינו". בלוג: abuelafia.blogspot.com — "לדעת ברוח: קבלת האותיות על פי דרכו של הרב אברהם אבולעפיה", עם קובצי PDF חינם; פרסיקו תיעד תרגול עמו (צירוף, נשימה, תנועות ראש). גרוס מכחיש שהוא נביא.</p>
+<h4>מי הוא ומה עשה?</h4><p>חסיד ברסלב מבית שמש, שעבד ללא גיבוי מוסדי (תומר פרסיקו). הדפיס 13 כרכים של כתבי רבי אברהם אבולעפיה ואסכולתו (הרשימה המלאה בפרק "המהדורות"), וב"ספר הצירוף" (תשס"ג) צירף חיבור משלו — <b>"מחשבת חושב"</b> (עמ' 155–177). בהקדמה ל"חיי העולם הבא" הצדיק את ההדפסה בחיד"א ובוויטאל, וכתב למתרגלים: "ללומדי חכמת צירוף האותיות והמשתוקקים לדרך — ספר זה הוא גרם המעלות העולה אל מזבחות הנבואה"; בהקדמת "ספר החשק" הציג את ההדפסה כ"ביטול גזרה" בעל משמעות משיחית. אידל (2002): גרוס "מתכוון לאפשר את שיבת הנבואה לישראל בימינו". בלוג: <a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">abuelafia.blogspot.com</a> — "לדעת ברוח: קבלת האותיות על פי דרכו של הרב אברהם אבולעפיה", עם קובצי PDF חינם; פרסיקו תיעד תרגול עמו (צירוף, נשימה, תנועות ראש). גרוס מכחיש שהוא נביא.</p>
 </article>
 
 <article class="card conf-high" data-conf="high">
@@ -1131,7 +1172,7 @@ img{max-width:100%}
 <div class="card"><h3>המאה ה־16: צפת וירושלים</h3><p>ר' יהודה אלבוטיני ("סולם העלייה", ירושלים ~1519). <b>ר' משה קורדובירו</b>, "פרדס רימונים" (1548): שער כ"א מצטט באריכות את טכניקת ההגייה מ"אור השכל" וקורא לה "דברי קבלה מפה אל פה או דברי מגיד"; שער ל' — "שער הצירוף". <b>ר' חיים ויטאל</b>, "שערי קדושה" חלק ד': מביא את "חיי העולם הבא" כדרך לגיטימית לרוח הקודש — החלק שהמדפיסים השמיטו כמעט בכל המהדורות.</p></div>
 <div class="card"><h3>המאה ה־18–19: שיקום</h3><p>מקובלי בית־אל בירושלים קראו את מדריכיו; עקבות אצל שבתי צבי, יוסף חמיץ, ר' פנחס הורוביץ, ר' מנחם מנדל משקלוב ובחסידות פולין (אידל). <b>החיד"א</b> ("שם הגדולים", 1774) שיקם את כבודו: "בישראל גדול שמו ואחרי דבריו לא ישנו" — נגד הרשב"א ונגד יש"ר מקנדיה ("מצרף לחכמה"). לנדאואר (1845) "גילה" אותו מחדש וייחס לו בטעות את הזוהר; ילינק הפריך והדפיס את האיגרות (1853–54) ואת "ספר האות" (1887).</p></div>
 <div class="card"><h3>המאה ה־20–21: המחקר</h3><p><b>גרשם שלום</b> — הפרק הרביעי ב"זרמים ראשיים במיסטיקה היהודית" (1941) והרצאותיו "הקבלה של ספר התמונה ושל אברהם אבולעפיה" (1965). <b>משה אידל</b> — עבודת הדוקטור "כתבי ר' אברהם אבולעפיה ומשנתו" (1976, הקטלוג הבסיסי של כתבי־היד); The Mystical Experience in Abraham Abulafia (1988); Studies in Ecstatic Kabbalah (1988); Language, Torah and Hermeneutics (1989); Messianic Mystics (1998); Abraham Abulafia's Esotericism: Secrets and Doubts (2020, גישה פתוחה). <b>אליוט וולפסון</b> — Abraham Abulafia: Kabbalist and Prophet (2000), הטוען שנשמרו אצלו יסודות תיאוסופיים ופרטיקולריזם — ואידל חולק. <b>הארווי היימס</b> — Like Angels on Jacob's Ladder (2007): רבי אברהם אבולעפיה, הפרנציסקנים והיואכימיזם.</p></div>
-<div class="card"><h3>המהדורות העבריות (אמנון גרוס, ירושלים תשנ"ט–תשס"ג)</h3><p>13 כרכים, ההדפסה הכמעט־מלאה הראשונה, בשער "שהיה נקרא בפי כל 'אברהם הרואה'": תשנ"ט — חיי העולם הבא + וזאת ליהודה; אמרי שפר; גן נעול + שבע נתיבות. תש"ס — אוצר עדן גנוז. תשס"א — מפתח החכמות + מפתח השמות; מפתח הספירות + מפתח התוכחות; אור השכל + שומר מצוה; חיי הנפש + מצרף לכסף; מצרף השכל + ספר האות; סתרי תורה. תשס"ב — מפתח הרעיון + ספר החשק + ספר המלמד; נר אלהים + גט השמות. תשס"ג — ספר הצירוף (המיוחס). במקביל: ספרין (אור השכל, ספר החשק, תשנ"ט); רפאל כהן (ספר הגאולה, ספר הברית החדשה, סוד ירושלים, תשס"א; מהדורה מדעית של פירושי ספרי הנבואה). מקוון: hebrewbooks, ויקיטקסט (חיי העולם הבא), הבלוג abuelafia.blogspot.com.</p></div>
+<div class="card"><h3>המהדורות העבריות (אמנון גרוס, ירושלים תשנ"ט–תשס"ג)</h3><p>13 כרכים, ההדפסה הכמעט־מלאה הראשונה, בשער "שהיה נקרא בפי כל 'אברהם הרואה'": תשנ"ט — חיי העולם הבא + וזאת ליהודה; אמרי שפר; גן נעול + שבע נתיבות. תש"ס — אוצר עדן גנוז. תשס"א — מפתח החכמות + מפתח השמות; מפתח הספירות + מפתח התוכחות; אור השכל + שומר מצוה; חיי הנפש + מצרף לכסף; מצרף השכל + ספר האות; סתרי תורה. תשס"ב — מפתח הרעיון + ספר החשק + ספר המלמד; נר אלהים + גט השמות. תשס"ג — ספר הצירוף (המיוחס). במקביל: ספרין (אור השכל, ספר החשק, תשנ"ט); רפאל כהן (ספר הגאולה, ספר הברית החדשה, סוד ירושלים, תשס"א; מהדורה מדעית של פירושי ספרי הנבואה). מקוון: hebrewbooks, ויקיטקסט (חיי העולם הבא), הבלוג <a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">abuelafia.blogspot.com</a>.</p></div>
 </div>
 </section>
 
@@ -1162,6 +1203,7 @@ img{max-width:100%}
 <ul>
 <li>אמנון גרוס (מהדיר), כתבי רבי אברהם אבולעפיה, 13 כרכים, ירושלים תשנ"ט–תשס"ג. חלקם ב־<a href="https://www.hebrewbooks.org/49703" target="_blank" rel="noopener">hebrewbooks 49703</a> (חיי העולם הבא / וזאת ליהודה), <a href="https://hebrewbooks.org/49643" target="_blank" rel="noopener">49643</a> (אוצר עדן גנוז), <a href="https://www.hebrewbooks.org/49748" target="_blank" rel="noopener">49748</a> (מצרף השכל / ספר האות), <a href="https://www.hebrewbooks.org/49764" target="_blank" rel="noopener">49764</a> (סתרי תורה).</li>
 <li><a href="https://he.wikisource.org/wiki/ספר_חיי_העולם_הבא" target="_blank" rel="noopener">ספר חיי העולם הבא — ויקיטקסט</a>.</li>
+<li><a href="https://abuelafia.blogspot.com/" target="_blank" rel="noopener">הבלוג "לדעת ברוח" של אמנון גרוס — abuelafia.blogspot.com</a>: מהדורות גרוס לספרי רבי אברהם אבולעפיה ולספרי תלמידיו, כקובצי PDF להורדה.</li>
 <li>רפאל כהן (מהדיר), פירושי ספרי הנבואה, ספר הגאולה, ספר הברית החדשה, סוד ירושלים, ירושלים תשס"א ואילך; <a href="https://archive.org/details/abraham-abulafia-prophetic-writings" target="_blank" rel="noopener">archive.org</a>.</li>
 <li>אברהם ילינק: Auswahl kabbalistischer Mystik (לייפציג 1853, "וזאת ליהודה"); Philosophie und Kabbala (לייפציג 1854, "שבע נתיבות התורה", קטע מ"אמרי שפר"); "ספר האות" בספר היובל לגרץ (ברסלאו 1887).</li>
 <li>ר' משה קורדובירו, פרדס רימונים, שער כ"א פרק א' ושער ל' — <a href="https://www.sefaria.org/Pardes_Rimmonim" target="_blank" rel="noopener">ספריא</a>; ר' חיים ויטאל, שערי קדושה חלק ד'; החיד"א, שם הגדולים, ערך "ר' אברהם אבולעפיה"; שו"ת הרשב"א חלק א' סימן תקמ"ח.</li>
