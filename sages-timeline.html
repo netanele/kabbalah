@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>ציר הזמן של חכמי ישראל, 1474–1889</title>
+<title>ציר הזמן של חכמי ישראל, 1380–2012</title>
 <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:light;--bg:#f4f0e6;--paper:#fffdf8;--ink:#26221c;--muted:#6f665a;--gold:#9c7a33;--gold2:#c9a75a;--line:#dcd2c0;--dark:#26221c;
   /* group colours, from the site palette */
   --h:#5f7a4a;--a:#6b6f8a;--s:#a8823a;--x:#958b7c;
-  --band:rgba(111,102,90,.12);--sel:rgba(201,167,90,.18);--ev:rgba(38,34,28,.2);
+  --band:rgba(111,102,90,.12);--band2:rgba(155,95,88,.15);--sel:rgba(201,167,90,.18);--ev:rgba(38,34,28,.2);
   --navh:44px;--axh:96px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -29,17 +29,15 @@ header.hero{background:radial-gradient(1200px 500px at 80% -10%,#5a4a33 0%,#2b26
 
 /* top menu: one line, scrolls sideways on a narrow screen */
 nav.top{position:sticky;top:0;z-index:20;background:#fffdf8f2;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-nav.top .in{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;padding:6px 10px;max-width:1180px;margin:auto}
+nav.top .in{display:flex;flex-wrap:wrap;justify-content:center;gap:2px;padding:6px 10px;max-width:1180px;margin:auto}
 nav.top .in::-webkit-scrollbar{display:none}
-nav.top .in>:first-child{margin-inline-start:auto}
-nav.top .in>:last-child{margin-inline-end:auto}
 nav.top a{flex:none;color:#5a4423;text-decoration:none;font-size:.84rem;padding:4px 8px;border-radius:999px;border:1px solid transparent;white-space:nowrap}
 nav.top a:hover{border-color:var(--line);background:#f3ecdf}
 nav.top a.nav-home{color:var(--gold);font-weight:700}
-@media(max-width:700px){nav.top::after{content:"";position:absolute;inset-block:0;left:0;width:30px;pointer-events:none;background:linear-gradient(to right,#fffdf8,transparent)}}
+@media(max-width:700px){nav.top .in{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scrollbar-width:none}nav.top::after{content:"";position:absolute;inset-block:0;left:0;width:30px;pointer-events:none;background:linear-gradient(to right,#fffdf8,transparent)}}
 
 .container{max-width:1180px;margin:auto;padding:26px 18px 60px}
-section.block{margin-top:44px}
+section.block{margin-top:44px;scroll-margin-top:calc(var(--navh) + 8px)}
 section.block>h2{font-size:2.1rem;border-bottom:2px solid var(--gold2);padding-bottom:8px;margin:0 0 6px;line-height:1.3}
 section.block>.lead{color:var(--muted);margin:0 0 18px;font-size:1.05rem}
 
@@ -64,6 +62,8 @@ section.block>.lead{color:var(--muted);margin:0 0 18px;font-size:1.05rem}
 .ticks,.evs{position:relative;height:18px;font-size:.75rem;color:var(--muted);line-height:18px}
 .ticks span{position:absolute;transform:translateX(50%);top:0;font-variant-numeric:tabular-nums}
 .evs{height:22px;margin-top:4px}
+.evs-m{display:none}
+@media(max-width:640px){.ticks span.h50{display:none}.axis .evs{display:none}.evs-m{display:block;margin:10px 0 4px}}
 .evs span{position:absolute;transform:translateX(50%);top:1px;width:20px;height:20px;border-radius:50%;background:var(--dark);color:var(--gold2);font-family:"Frank Ruhl Libre",serif;font-size:.74rem;font-weight:700;display:grid;place-items:center;line-height:1;cursor:default}
 
 .chart{position:relative}
@@ -71,6 +71,7 @@ section.block>.lead{color:var(--muted);margin:0 0 18px;font-size:1.05rem}
 .grid i{position:absolute;top:0;bottom:0}
 .grid .gl{border-right:1px dashed var(--line)}
 .grid .band{background:var(--band)}
+.grid .band2{background:var(--band2)}
 .grid .ev{border-right:2px solid var(--ev)}
 .grid .selband{background:var(--sel);border-left:1px solid var(--gold2);border-right:1px solid var(--gold2)}
 
@@ -125,19 +126,24 @@ footer small{color:#a8a08f}
   <svg class="emblem" viewBox="0 0 120 80" aria-hidden="true" focusable="false"><rect x="30" y="2" width="40" height="76" fill="currentColor" fill-opacity=".12"/><path d="M30 2v76M70 2v76" stroke="currentColor" stroke-opacity=".6" stroke-width=".8"/><path d="M20 2v76M50 2v76M80 2v76M110 2v76" stroke="currentColor" stroke-opacity=".25" stroke-width=".8" stroke-dasharray="2 3"/><g fill="currentColor"><rect x="62" y="7" width="50" height="6" rx="3" fill-opacity=".45"/><rect x="44" y="19" width="56" height="6" rx="3" fill-opacity=".6"/><rect x="30" y="31" width="40" height="6" rx="3"/><rect x="22" y="43" width="44" height="6" rx="3" fill-opacity=".6"/><rect x="10" y="55" width="38" height="6" rx="3" fill-opacity=".45"/><rect x="4" y="67" width="26" height="6" rx="3" fill-opacity=".3"/></g></svg>
   <div class="kicker">דורות החכמים</div>
   <h1>חכמי ישראל</h1>
-  <p>שבעה דורות, מדור גירוש ספרד ועד דור רבי ישראל סלנטר. הקישו על שם כדי לראות מי חי באותן שנים.</p>
-  <div class="dates">1474–1889 · 7 דורות · 81 חכמים · 7 אירועים בציר</div>
+  <p>שנים־עשר דורות, מדור גזרות קנ״א ועד דור השואה והתקומה. הקישו על שם כדי לראות מי חי באותן שנים.</p>
+  <div class="dates">1380–2012 · 12 דורות · 150 חכמים · 17 אירועים בציר</div>
 </header>
 
 <nav class="top" aria-label="ניווט"><div class="in">
   <a class="nav-home" href="index.html">ספריית הקבלה</a>
-  <a href="#gen1">גירוש ספרד וצפת</a>
-  <a href="#gen2">האר״י ותלמידיו</a>
-  <a href="#gen3">דור שבתאי צבי</a>
-  <a href="#gen4">אחרי השבתאות</a>
-  <a href="#gen5">הבעש״ט והרמח״ל</a>
-  <a href="#gen6">אחרי הרמח״ל</a>
-  <a href="#gen7">הדור הבא</a>
+  <a href="#g1374">תרומת הדשן</a>
+  <a href="#g1425">האברבנאל</a>
+  <a href="#g1474">גירוש ספרד וצפת</a>
+  <a href="#g1525">האר״י ותלמידיו</a>
+  <a href="#g1565">נושאי הכלים</a>
+  <a href="#g1650">אחרי השבתאות</a>
+  <a href="#g1690">הבעש״ט והרמח״ל</a>
+  <a href="#g1725">תלמידי המגיד והגר״א</a>
+  <a href="#g1763">רבי נחמן ורבי ישראל סלנטר</a>
+  <a href="#g1814">החפץ חיים והבן איש חי</a>
+  <a href="#g1847">רבי חיים והרב קוק</a>
+  <a href="#g1880">השואה והתקומה</a>
   <a href="#events">אירועים בציר</a>
 </div></nav>
 
@@ -151,6 +157,7 @@ footer small{color:#a8a08f}
     <div class="ticks" dir="rtl" id="ticks"></div>
     <div class="evs" dir="rtl" id="evs"></div>
   </div>
+  <div class="evs evs-m" dir="rtl" id="evs-m" aria-hidden="true"></div>
   <div class="chart" id="chart">
     <div class="grid" dir="rtl" id="grid"></div>
     <div id="sections"></div>
@@ -162,7 +169,7 @@ footer small{color:#a8a08f}
   <ol id="evlist"></ol>
 </section>
 
-<p class="note">הסימן ~ מציין שנה משוערת. הרצועה האפורה מסמנת את ימי חייו של שבתאי צבי.</p>
+<p class="note">הסימן ~ מציין שנה משוערת או שנויה במחלוקת. הרצועה האפורה מסמנת את ימי חייו של שבתאי צבי, והרצועה האדמדמה את שנות השואה (1939–1945). החלוקה לקבוצות היא לפי מקום הפעולה העיקרי: חכמי איטליה בקבוצת אשכנז, חכמי ארץ ישראל בדורות הראשונים בקבוצת ספרד, המזרח וארץ ישראל, ובדורות האחרונים לפי עדתם. השנים לפי ספריא, ויקיפדיה העברית, האנציקלופדיה היהודית ואנציקלופדיה יודאיקה.</p>
 
 </main>
 
@@ -181,70 +188,109 @@ footer small{color:#a8a08f}
 
 <script>
 (function(){
-const MIN=1470, MAX=1890;
+const MIN=1370, MAX=2020;
 const pos=y=>(y-MIN)/(MAX-MIN)*100;
-const HEB='אבגדהוזחטי';
+const HEB=["א", "ב", "ג", "ד", "ה", "ו", "ז", "ח", "ט", "י", "יא", "יב", "יג", "יד", "טו", "טז", "יז"];
 
 const CATS={
   h:{name:'חסידות'},
   a:{name:'אשכנז ואיטליה'},
-  s:{name:'ספרד וארץ ישראל'},
+  s:{name:'ספרד, המזרח וארץ ישראל'},
   x:{name:'השבתאות'}
 };
 
 // [שם, לידה, פטירה, קבוצה, משוער]
 const D=[
-['רבי יעקב בירב',1474,1546,'s'],
+['מהר״י וייל',1380,1456,'a',1],
+['רבי יוסף אלבו',1380,1444,'s',1],
+['בעל תרומת הדשן',1390,1460,'a',1],
+['הרשב״ש',1400,1467,'s'],
+['מהר״י ברונא',1400,1480,'a',1],
+['מהר״י מינץ',1405,1508,'a',1],
+['מהר״ם מינץ',1415,1480,'a',1],
+['בעל עקדת יצחק',1420,1494,'s',1],
+['המהרי״ק',1420,1480,'a',1],
+['רבי משה קפשאלי',1420,1495,'s',1],
+['רבי יצחק אבוהב',1433,1493,'s'],
+['רבי יצחק אברבנאל',1437,1508,'s'],
+['בעל צרור המור',1440,1508,'s',1],
+['רבי יוסף יעבץ',1440,1505,'s',1],
+['הרא״ם',1445,1525,'s',1],
+['רבי עובדיה מברטנורא',1445,1515,'s',1],
+['בעל עין יעקב',1450,1516,'s',1],
+['רבי אברהם זכות',1452,1515,'s',1],
+['רבי יצחק קארו',1458,1535,'s',1],
+['רבי אברהם בן אליעזר הלוי',1460,1530,'s',1],
+['רבי יוסף סרגוסי',1460,1507,'s',1],
+['רבי יעקב פולק',1460,1541,'a',1],
+['רבי יוסף טאיטאצאק',1465,1546,'s'],
+['מהר״ם אלשקר',1466,1542,'s'],
+['רבי עובדיה ספורנו',1470,1550,'a',1],
+['רבי יעקב בירב',1474,1541,'s',1],
 ['הרדב״ז',1479,1573,'s',1],
+['הרלב״ח',1485,1545,'s',1],
 ['רבי יוסף קארו',1488,1575,'s'],
+['המבי״ט',1505,1585,'s',1],
+['המהרשד״ם',1505,1589,'s',1],
 ['רבי שלמה אלקבץ',1505,1584,'s',1],
-['רבי משה אלשיך',1508,1593,'s',1],
+['רבי משה אלשיך',1508,1600,'s',1],
 ['המהרש״ל',1510,1573,'a'],
-['בעל ראשית חכמה',1518,1592,'s',1],
+['בעל ראשית חכמה',1518,1587,'s',1],
+['בעל השיטה מקובצת',1520,1592,'s',1],
 ['המהר״ל מפראג',1520,1609,'a',1],
 ['הרמ״ק',1522,1570,'s'],
-['הרמ״א',1530,1572,'a',1],
 ['בעל הלבושים',1530,1612,'a',1],
+['הרמ״א',1530,1572,'a',1],
 ['רבי אלעזר אזכרי',1533,1600,'s'],
 ['האר״י הקדוש',1534,1572,'s'],
-['רבי חיים ויטאל',1543,1620,'s'],
+['רבי חיים ויטאל',1542,1620,'s'],
 ['רבי מנחם עזריה מפאנו',1548,1620,'a'],
-['הסמ״ע',1555,1614,'a',1],
 ['המהרש״א',1555,1631,'a'],
-['רבי ישראל נג׳ארה',1555,1625,'s',1],
+['הסמ״ע',1555,1614,'a',1],
+['רבי ישראל נג׳ארה',1555,1628,'s',1],
 ['הב״ח',1561,1640,'a'],
 ['השל״ה הקדוש',1565,1630,'a',1],
+['בעל חסד לאברהם',1570,1643,'s'],
 ['בעל תוספות יום טוב',1579,1654,'a'],
+['בעל מגלה עמוקות',1585,1633,'a',1],
 ['הט״ז',1586,1667,'a',1],
 ['בעל כנסת הגדולה',1603,1673,'s'],
 ['רבי יעקב ששפורטש',1610,1698,'s'],
+['רבי שלום שבזי',1619,1720,'s',1],
 ['רבי יעקב חגיז',1620,1674,'s'],
-['הש״ך',1621,1662,'a'],
+['הש״ך',1621,1662,'a',1],
 ['הרמ״ז (רבי משה זכות)',1625,1697,'a',1],
 ['שבתאי צבי',1626,1676,'x'],
 ['בעל מגן אברהם',1635,1682,'a',1],
+['בעל חוות יאיר',1638,1702,'a'],
 ['נתן העזתי',1643,1680,'x',1],
-['הפרי חדש',1659,1698,'s'],
-['חכם צבי',1660,1718,'a'],
-['רבי משה חאגיז',1671,1751,'s',1],
-['רבי יונתן אייבשיץ',1690,1764,'a'],
+['בעל משנה למלך',1657,1727,'s'],
+['חכם צבי',1658,1718,'a',1],
+['בעל שבט מוסר',1659,1729,'s',1],
+['הפרי חדש',1659,1698,'s',1],
+['רבי משה חגיז',1671,1750,'s',1],
+['רבי יצחק למפרונטי',1679,1756,'a'],
+['בעל פני יהושע',1680,1756,'a'],
+['רבי יונתן אייבשיץ',1690,1764,'a',1],
 ['בעל שאגת אריה',1695,1785,'a',1],
 ['אור החיים הקדוש',1696,1743,'s'],
 ['רבי יעקב עמדין',1697,1776,'a'],
 ['הבעש״ט',1698,1760,'h',1],
 ['המגיד ממזריטש',1704,1772,'h',1],
 ['הרמח״ל',1707,1746,'a'],
-['רבי יעקב יוסף מפולנאה',1710,1784,'h',1],
+['רבי יעקב יוסף מפולנאה',1710,1781,'h',1],
+['המהרי״ץ',1713,1805,'s'],
 ['הנודע ביהודה',1713,1793,'a'],
 ['רבי אלימלך מליז׳נסק',1717,1787,'h'],
 ['הגאון מווילנא',1720,1797,'a'],
-['הרש״ש',1720,1777,'s'],
+['הרש״ש',1720,1777,'s',1],
 ['החיד״א',1724,1806,'s'],
 ['רבי שמעלקא מניקלשבורג',1726,1778,'h'],
+['בעל פרי מגדים',1727,1792,'a'],
 ['רבי מנחם מנדל מוויטבסק',1730,1788,'h'],
 ['בעל ההפלאה',1731,1805,'a'],
-['המגיד מקוז׳ניץ',1733,1814,'h',1],
-['רבי אהרן מקרלין',1736,1772,'h'],
+['רבי אהרן הגדול מקרלין',1736,1772,'h'],
+['המגיד מקוז׳ניץ',1737,1814,'h',1],
 ['רבי לוי יצחק מברדיצ׳ב',1740,1809,'h'],
 ['המגיד מדובנא',1741,1804,'a'],
 ['בעל התניא',1745,1812,'h'],
@@ -252,22 +298,23 @@ const D=[
 ['החוזה מלובלין',1745,1815,'h'],
 ['בעל חיי אדם',1748,1820,'a'],
 ['רבי חיים מוולוז׳ין',1749,1821,'a'],
-['בעל נתיבות המשפט',1760,1832,'a'],
+['בעל נתיבות המשפט',1760,1832,'a',1],
 ['רבי עקיבא איגר',1761,1837,'a'],
 ['החתם סופר',1762,1839,'a'],
 ['רבי צבי הירש מזידיטשוב',1763,1831,'h'],
-['רבי שמחה בונים מפשיסחא',1765,1827,'h'],
+['רבי שמחה בונים מפשיסחא',1765,1827,'h',1],
 ['היהודי הקדוש מפשיסחא',1766,1813,'h'],
 ['רבי ישראל משקלוב',1770,1839,'a',1],
 ['רבי נחמן מברסלב',1772,1810,'h'],
-['רבי נתן מברסלב',1780,1844,'h'],
 ['רבי יצחק מוולוז׳ין',1780,1849,'a'],
-['בעל בני יששכר',1783,1841,'h'],
+['רבי נתן מברסלב',1780,1844,'h'],
+['בעל תפארת ישראל',1782,1860,'a'],
+['בעל בני יששכר',1783,1841,'h',1],
 ['בעל פלא יועץ',1785,1827,'s',1],
+['רבי חיים פלאג׳י',1787,1868,'s'],
 ['רבי מנחם מנדל מקוצק',1787,1859,'h'],
-['רבי חיים פלאג׳י',1788,1868,'s'],
 ['הצמח צדק',1789,1866,'h'],
-['בעל דברי חיים מצאנז',1793,1876,'h'],
+['בעל דברי חיים מצאנז',1793,1876,'h',1],
 ['רבי ישראל מרוז׳ין',1796,1850,'h'],
 ['בעל ערוך לנר',1798,1871,'a'],
 ['בעל חידושי הרי״ם',1799,1866,'h'],
@@ -276,28 +323,74 @@ const D=[
 ['רבי שמשון רפאל הירש',1808,1888,'a'],
 ['המלבי״ם',1809,1879,'a'],
 ['רבי ישראל סלנטר',1810,1883,'a'],
-['רבי עבדאללה סומך',1813,1889,'s']
+['רבי עבדאללה סומך',1813,1889,'s'],
+['הכתב סופר',1815,1871,'a'],
+['הנצי״ב מוולוז׳ין',1816,1893,'a'],
+['רבי יצחק אלחנן ספקטור',1817,1896,'a'],
+['רבי צדוק הכהן מלובלין',1823,1900,'h'],
+['הסבא מקלם',1824,1898,'a'],
+['בעל ערוך השולחן',1829,1908,'a'],
+['בעל שדי חמד',1832,1904,'s'],
+['הבן איש חי',1835,1909,'s',1],
+['החפץ חיים',1839,1933,'a',1],
+['בעל אור שמח',1843,1926,'a'],
+['השפת אמת',1847,1905,'h'],
+['רבי חיים מבריסק',1853,1918,'a'],
+['רבי יהודה פתיה',1859,1942,'s'],
+['הרבי הרש״ב',1860,1920,'h'],
+['הרב קוק',1865,1935,'a'],
+['בעל כף החיים',1870,1939,'s',1],
+['החזון איש',1878,1953,'a'],
+['הרב בן ציון עוזיאל',1880,1953,'s'],
+['בעל הסולם',1884,1954,'h',1],
+['הרבי מסאטמר',1887,1979,'h'],
+['האדמו״ר מפיאסצנה',1889,1943,'h'],
+['הבאבא סאלי',1889,1984,'s'],
+['רבי משה פיינשטיין',1895,1986,'a'],
+['הרב יצחק כדורי',1898,2006,'s',1],
+['הרב שך',1899,2001,'a'],
+['הרבי מליובאוויטש',1902,1994,'h'],
+['הרב אלישיב',1910,2012,'a'],
+['רבי שלמה זלמן אויערבך',1910,1995,'a'],
+['בעל נתיבות שלום',1911,2000,'h']
 ].map((r,i)=>({id:i,name:r[0],b:r[1],d:r[2],c:r[3],approx:!!r[4]}));
 
 const GENS=[
-  {t:'דור גירוש ספרד וחכמי צפת',sub:'נולדו עד 1524',from:0,to:1524},
-  {t:'דור האר״י ותלמידיו',sub:'נולדו 1525–1564',from:1525,to:1564},
-  {t:'דור שבתאי צבי',sub:'נולדו 1565–1649',from:1565,to:1649},
-  {t:'הדור שאחרי השבתאות',sub:'נולדו 1650–1689',from:1650,to:1689},
-  {t:'דור הבעש״ט והרמח״ל',sub:'נולדו 1690–1724',from:1690,to:1724},
-  {t:'הדור שאחרי הרמח״ל',sub:'נולדו 1725–1762',from:1725,to:1762},
-  {t:'הדור הבא',sub:'נולדו 1763–1813',from:1763,to:9999}
+  {id:'g1374',t:'דור בעל תרומת הדשן ורבי יוסף אלבו',sub:'נולדו 1374–1424',from:0,to:1424},
+  {id:'g1425',t:'דור האברבנאל ורבי עובדיה מברטנורא',sub:'נולדו 1425–1473',from:1425,to:1473},
+  {id:'g1474',t:'דור גירוש ספרד וחכמי צפת',sub:'נולדו 1474–1524',from:1474,to:1524},
+  {id:'g1525',t:'דור האר״י ותלמידיו',sub:'נולדו 1525–1564',from:1525,to:1564},
+  {id:'g1565',t:'דור נושאי הכלים ושבתאי צבי',sub:'נולדו 1565–1649',from:1565,to:1649},
+  {id:'g1650',t:'הדור שאחרי השבתאות',sub:'נולדו 1650–1689',from:1650,to:1689},
+  {id:'g1690',t:'דור הבעש״ט והרמח״ל',sub:'נולדו 1690–1724',from:1690,to:1724},
+  {id:'g1725',t:'דור תלמידי המגיד והגר״א',sub:'נולדו 1725–1762',from:1725,to:1762},
+  {id:'g1763',t:'דור רבי נחמן מברסלב ורבי ישראל סלנטר',sub:'נולדו 1763–1813',from:1763,to:1813},
+  {id:'g1814',t:'דור החפץ חיים והבן איש חי',sub:'נולדו 1814–1846',from:1814,to:1846},
+  {id:'g1847',t:'דור רבי חיים מבריסק והרב קוק',sub:'נולדו 1847–1879',from:1847,to:1879},
+  {id:'g1880',t:'דור השואה והתקומה',sub:'נולדו 1880–1913',from:1880,to:9999}
 ];
 
 const EVENTS=[
+  [1391,'גזרות קנ״א בספרד'],
+  [1475,'פירוש רש״י לתורה נדפס ברג׳ו די קלבריה, הספר העברי המודפס הראשון הנושא תאריך'],
   [1492,'גירוש ספרד'],
+  [1497,'גזרת השמד בפורטוגל'],
+  [1520,'התלמוד הבבלי נדפס לראשונה בשלמותו, בוונציה'],
   [1538,'רבי יעקב בירב מחדש את הסמיכה בצפת'],
   [1565,'השולחן ערוך נדפס לראשונה, בוונציה'],
   [1666,'שבתאי צבי ממיר את דתו'],
   [1751,'פורצת המחלוקת בין רבי יעקב עמדין לרבי יונתן אייבשיץ'],
   [1772,'החרם הראשון על החסידים בווילנה'],
-  [1803,'רבי חיים מוולוז׳ין מייסד את ישיבת וולוז׳ין']
+  [1803,'רבי חיים מוולוז׳ין מייסד את ישיבת וולוז׳ין'],
+  [1882,'הסופות בנגב ותחילת העלייה הראשונה'],
+  [1892,'השלטונות סוגרים את ישיבת וולוז׳ין'],
+  [1921,'ייסוד הרבנות הראשית לארץ ישראל, בראשות הרב קוק והרב יעקב מאיר'],
+  [1923,'רבי מאיר שפירא מייסד את הדף היומי, בכנסייה הגדולה בווינה'],
+  [1939,'השואה וחורבן קהילות ישראל באירופה, עד 1945'],
+  [1948,'הקמת מדינת ישראל']
 ];
+
+const BANDS=[[1626,1676,'band'],[1939,1945,'band2']];
 
 const active=new Set(['h','a','s','x']);
 let sel=null;
@@ -317,24 +410,48 @@ Object.entries(CATS).forEach(([k,v])=>{
   chips.appendChild(b);
 });
 
-// scale + event badges
+// scale: a label every 50 years (every 100 on a phone)
 const ticks=document.getElementById('ticks');
-for(let y=1500;y<=1850;y+=50){
-  const s=document.createElement('span');s.style.right=pos(y)+'%';s.textContent=y;ticks.appendChild(s);
+for(let y=1400;y<=2000;y+=50){
+  const s=document.createElement('span');s.style.right=pos(y)+'%';s.textContent=y;
+  if(y%100) s.className='h50';
+  ticks.appendChild(s);
 }
-const evs=document.getElementById('evs');
+
+// event badges, stacked in rows where they would overlap
+// two copies: in the sticky scale (wide screens) and above the chart (phones, where the scale stays slim)
+const evBoxes=[document.getElementById('evs'),document.getElementById('evs-m')];
 const evlist=document.getElementById('evlist');
+const badges=evBoxes.map(()=>[]);
 EVENTS.forEach(([y,t],i)=>{
-  const s=document.createElement('span');s.style.right=pos(y)+'%';s.textContent=HEB[i];s.title=`${y}: ${t}`;evs.appendChild(s);
+  evBoxes.forEach((box,k)=>{
+    const s=document.createElement('span');s.style.right=pos(y)+'%';s.textContent=HEB[i];s.title=`${y}: ${t}`;box.appendChild(s);
+    badges[k].push([y,s]);
+  });
   const li=document.createElement('li');
   li.innerHTML=`<span class="n">${HEB[i]}</span><span class="y">${y}</span><span>${t}</span>`;
   evlist.appendChild(li);
 });
+function layoutEvents(){
+  evBoxes.forEach((box,k)=>{
+    const w=box.clientWidth; if(!w) return;
+    const list=badges[k], size=list[0][1].offsetWidth||20, step=size+3;
+    const lanes=[];
+    list.forEach(([y,s])=>{
+      const x=pos(y)/100*w;
+      let L=lanes.findIndex(last=>x-last>=step);
+      if(L<0){L=lanes.length;lanes.push(x);} else lanes[L]=x;
+      s.style.top=(L*step+1)+'px';
+    });
+    box.style.height=(lanes.length*step+2)+'px';
+  });
+}
 
 const grid=document.getElementById('grid');
 function drawGrid(){
-  let h=`<i class="band" style="right:${pos(1626)}%;width:${pos(1676)-pos(1626)}%"></i>`;
-  for(let y=1500;y<=1850;y+=50) h+=`<i class="gl" style="right:${pos(y)}%"></i>`;
+  let h='';
+  BANDS.forEach(([a,b,c])=>{h+=`<i class="${c}" style="right:${pos(a)}%;width:${pos(b)-pos(a)}%"></i>`;});
+  for(let y=1400;y<=2000;y+=50) h+=`<i class="gl" style="right:${pos(y)}%"></i>`;
   EVENTS.forEach(([y])=>{h+=`<i class="ev" style="right:${pos(y)}%"></i>`;});
   if(sel!==null){const p=D[sel];h+=`<i class="selband" style="right:${pos(p.b)}%;width:${pos(p.d)-pos(p.b)}%"></i>`;}
   grid.innerHTML=h;
@@ -352,10 +469,10 @@ function drawStatus(){
 const sections=document.getElementById('sections');
 function render(){
   let html='';
-  GENS.forEach((g,gi)=>{
+  GENS.forEach(g=>{
     const rows=D.filter(p=>p.b>=g.from&&p.b<=g.to&&active.has(p.c));
     if(!rows.length) return;
-    html+=`<section class="gen" id="gen${gi+1}"><h3>${g.t}</h3><p class="sub">${g.sub}</p>`;
+    html+=`<section class="gen" id="${g.id}"><h3>${g.t}</h3><p class="sub">${g.sub}</p>`;
     rows.forEach(p=>{
       let cls='row';
       if(sel!==null){
@@ -388,10 +505,11 @@ function setOffsets(){
   r.setProperty('--navh',nav.offsetHeight+'px');
   r.setProperty('--axh',axis.offsetHeight+'px');
 }
-setOffsets();
-window.addEventListener('resize',setOffsets);
+function relayout(){layoutEvents();setOffsets();}
+relayout();
+window.addEventListener('resize',relayout);
 if(window.ResizeObserver) new ResizeObserver(setOffsets).observe(axis);
-if(document.fonts&&document.fonts.ready) document.fonts.ready.then(setOffsets);
+if(document.fonts&&document.fonts.ready) document.fonts.ready.then(relayout);
 })();
 </script>
 </body>
