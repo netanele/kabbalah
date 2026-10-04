@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ציר הזמן של חכמי ישראל, 1474–1889</title>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#f4f0e6;--paper:#fffdf8;--ink:#26221c;--muted:#6f665a;--gold:#9c7a33;--gold2:#c9a75a;--line:#dcd2c0;--dark:#26221c;
+  /* group colours, from the site palette */
+  --h:#5f7a4a;--a:#6b6f8a;--s:#a8823a;--x:#958b7c;
+  --band:rgba(111,102,90,.12);--sel:rgba(201,167,90,.18);--ev:rgba(38,34,28,.2);
+  --navh:44px;--axh:96px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);direction:rtl;color:var(--ink);font-family:"Heebo","Noto Sans Hebrew",Arial,sans-serif;line-height:1.7;font-size:16.5px}
+h1,h2,h3,.serif{font-family:"Frank Ruhl Libre","David Libre","Times New Roman",serif}
+a{color:#6d511d}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+/* hero (as in the Abulafia page) */
+header.hero{background:radial-gradient(1200px 500px at 80% -10%,#5a4a33 0%,#2b2620 55%,#1e1b17 100%);color:#f4ecdc;padding:58px 22px 50px;text-align:center}
+.hero .emblem{width:108px;height:72px;color:var(--gold2);display:block;margin:0 auto 10px}
+.hero .kicker{color:var(--gold2);letter-spacing:.14em;font-size:.85rem;font-weight:500}
+.hero h1{font-size:clamp(2.4rem,6vw,4.4rem);margin:8px 0 14px;line-height:1.15;font-weight:900}
+.hero p{max-width:760px;margin:0 auto;color:#e6dcc8;font-size:1.15rem}
+.hero .dates{margin-top:18px;color:var(--gold2);font-size:1rem}
+
+/* top menu: one line, scrolls sideways on a narrow screen */
+nav.top{position:sticky;top:0;z-index:20;background:#fffdf8f2;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav.top .in{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;padding:6px 10px;max-width:1180px;margin:auto}
+nav.top .in::-webkit-scrollbar{display:none}
+nav.top .in>:first-child{margin-inline-start:auto}
+nav.top .in>:last-child{margin-inline-end:auto}
+nav.top a{flex:none;color:#5a4423;text-decoration:none;font-size:.84rem;padding:4px 8px;border-radius:999px;border:1px solid transparent;white-space:nowrap}
+nav.top a:hover{border-color:var(--line);background:#f3ecdf}
+nav.top a.nav-home{color:var(--gold);font-weight:700}
+@media(max-width:700px){nav.top::after{content:"";position:absolute;inset-block:0;left:0;width:30px;pointer-events:none;background:linear-gradient(to right,#fffdf8,transparent)}}
+
+.container{max-width:1180px;margin:auto;padding:26px 18px 60px}
+section.block{margin-top:44px}
+section.block>h2{font-size:2.1rem;border-bottom:2px solid var(--gold2);padding-bottom:8px;margin:0 0 6px;line-height:1.3}
+section.block>.lead{color:var(--muted);margin:0 0 18px;font-size:1.05rem}
+
+/* group filter */
+.filters{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 16px}
+.filters .lbl{font-size:.9rem;color:var(--muted);margin-left:4px}
+.chip{font:inherit;font-size:.92rem;display:inline-flex;align-items:center;gap:8px;padding:5px 14px;border-radius:999px;border:1px solid var(--line);background:var(--paper);color:var(--ink);cursor:pointer;transition:opacity .15s,background .15s}
+.chip:hover{background:#f3ecdf}
+.chip .dot{width:12px;height:12px;border-radius:3px;flex:none;background:var(--c)}
+.chip .c{color:var(--muted);font-size:.8rem;font-variant-numeric:tabular-nums}
+.chip[aria-pressed="false"]{opacity:.5}
+.chip[aria-pressed="false"] .dot{background:transparent;box-shadow:inset 0 0 0 2px var(--c)}
+
+/* the board: sticky scale + generations */
+.board{background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:0 4px 16px #3a2c1010;padding:0 20px 18px}
+.axis{position:sticky;top:var(--navh);z-index:5;background:#fffdf8f5;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);margin:0 -20px 4px;padding:12px 20px 6px;border-bottom:1px solid var(--line);border-radius:16px 16px 0 0}
+.status{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:.92rem;min-height:30px;margin-bottom:6px;line-height:1.4}
+.status span{color:var(--muted)}
+.status b{color:var(--ink);font-family:"Frank Ruhl Libre",serif;font-size:1.06rem}
+.clear{font:inherit;font-size:.82rem;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:2px 12px;cursor:pointer;flex:none}
+.clear:hover{background:#efe7d6}
+.ticks,.evs{position:relative;height:18px;font-size:.75rem;color:var(--muted);line-height:18px}
+.ticks span{position:absolute;transform:translateX(50%);top:0;font-variant-numeric:tabular-nums}
+.evs{height:22px;margin-top:4px}
+.evs span{position:absolute;transform:translateX(50%);top:1px;width:20px;height:20px;border-radius:50%;background:var(--dark);color:var(--gold2);font-family:"Frank Ruhl Libre",serif;font-size:.74rem;font-weight:700;display:grid;place-items:center;line-height:1;cursor:default}
+
+.chart{position:relative}
+.grid{position:absolute;inset:0;pointer-events:none}
+.grid i{position:absolute;top:0;bottom:0}
+.grid .gl{border-right:1px dashed var(--line)}
+.grid .band{background:var(--band)}
+.grid .ev{border-right:2px solid var(--ev)}
+.grid .selband{background:var(--sel);border-left:1px solid var(--gold2);border-right:1px solid var(--gold2)}
+
+.gen{position:relative;padding-top:10px;scroll-margin-top:calc(var(--navh) + var(--axh) + 6px)}
+.gen+.gen{margin-top:14px;border-top:1px solid var(--line);padding-top:16px}
+.gen h3{font-size:1.4rem;margin:0;color:#3a2e1d;line-height:1.3}
+.gen .sub{font-size:.85rem;color:var(--gold);margin:2px 0 8px;font-weight:500}
+.row{display:block;width:100%;text-align:right;font:inherit;line-height:1.45;color:inherit;background:none;border:0;padding:5px 0 6px;cursor:pointer;border-radius:6px}
+.row:hover .nm{color:#6d511d}
+.nm{font-family:"Frank Ruhl Libre",serif;font-weight:500;font-size:1.03rem}
+.yr{font-size:.8rem;color:var(--muted);margin-inline-start:8px;unicode-bidi:isolate;font-variant-numeric:tabular-nums}
+.track{display:block;position:relative;height:10px;margin-top:3px}
+.bar{position:absolute;top:0;height:100%;border-radius:5px}
+.row.dim{opacity:.22}
+.row.on .nm{font-weight:700}
+.row.on .bar{box-shadow:0 0 0 2px var(--paper),0 0 0 3.5px var(--ink)}
+@media (prefers-reduced-motion:no-preference){.row{transition:opacity .2s}}
+
+/* events */
+.events ol{list-style:none;margin:0;padding:0;background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.events li{display:flex;gap:14px;align-items:center;padding:10px 16px;border-bottom:1px solid var(--line)}
+.events li:last-child{border-bottom:0}
+.events .n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--dark);color:var(--gold2);font-family:"Frank Ruhl Libre",serif;display:grid;place-items:center;font-size:.92rem;line-height:1}
+.events .y{flex:none;font-weight:700;color:#4b3b22;min-width:3.2em;font-variant-numeric:tabular-nums}
+
+.note{background:#fff9ec;border:1px solid var(--line);border-right:5px solid var(--gold);padding:14px 18px;border-radius:12px;margin:26px 0 0;color:var(--muted);font-size:.95rem}
+
+footer{background:var(--dark);color:#d9d0c1;padding:34px 18px;margin-top:60px}
+footer .container{padding-top:0;padding-bottom:0}
+footer h2{color:#f2e8d4;font-size:1.6rem;margin:0 0 8px}
+footer a{color:var(--gold2)}
+footer ul{margin:0;padding-right:20px}
+footer li{margin:5px 0}
+footer small{color:#a8a08f}
+
+@media(max-width:700px){
+  header.hero{padding:40px 16px 34px}
+  .container{padding:20px 16px 48px}
+  .board{padding:0 12px 14px;border-radius:12px}
+  .axis{margin:0 -12px 4px;padding:10px 12px 6px;border-radius:12px 12px 0 0}
+  .evs span{width:17px;height:17px;font-size:.66rem}
+  .filters{gap:6px}
+  .filters .lbl{flex-basis:100%;margin:0}
+  .chip{font-size:.86rem;padding:4px 12px;gap:6px}
+  section.block>h2{font-size:1.75rem}
+}
+@media print{nav.top{display:none}.axis{position:static}.board{box-shadow:none}body{background:#fff}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <svg class="emblem" viewBox="0 0 120 80" aria-hidden="true" focusable="false"><rect x="30" y="2" width="40" height="76" fill="currentColor" fill-opacity=".12"/><path d="M30 2v76M70 2v76" stroke="currentColor" stroke-opacity=".6" stroke-width=".8"/><path d="M20 2v76M50 2v76M80 2v76M110 2v76" stroke="currentColor" stroke-opacity=".25" stroke-width=".8" stroke-dasharray="2 3"/><g fill="currentColor"><rect x="62" y="7" width="50" height="6" rx="3" fill-opacity=".45"/><rect x="44" y="19" width="56" height="6" rx="3" fill-opacity=".6"/><rect x="30" y="31" width="40" height="6" rx="3"/><rect x="22" y="43" width="44" height="6" rx="3" fill-opacity=".6"/><rect x="10" y="55" width="38" height="6" rx="3" fill-opacity=".45"/><rect x="4" y="67" width="26" height="6" rx="3" fill-opacity=".3"/></g></svg>
+  <div class="kicker">דורות החכמים</div>
+  <h1>חכמי ישראל</h1>
+  <p>שבעה דורות, מדור גירוש ספרד ועד דור רבי ישראל סלנטר. הקישו על שם כדי לראות מי חי באותן שנים.</p>
+  <div class="dates">1474–1889 · 7 דורות · 81 חכמים · 7 אירועים בציר</div>
+</header>
+
+<nav class="top" aria-label="ניווט"><div class="in">
+  <a class="nav-home" href="index.html">ספריית הקבלה</a>
+  <a href="#gen1">גירוש ספרד וצפת</a>
+  <a href="#gen2">האר״י ותלמידיו</a>
+  <a href="#gen3">דור שבתאי צבי</a>
+  <a href="#gen4">אחרי השבתאות</a>
+  <a href="#gen5">הבעש״ט והרמח״ל</a>
+  <a href="#gen6">אחרי הרמח״ל</a>
+  <a href="#gen7">הדור הבא</a>
+  <a href="#events">אירועים בציר</a>
+</div></nav>
+
+<main class="container">
+
+<div class="filters" role="group" aria-label="סינון לפי קבוצה"><span class="lbl">סינון לפי קבוצה:</span><span id="chips" style="display:contents"></span></div>
+
+<div class="board">
+  <div class="axis" id="axis">
+    <div class="status" id="status" aria-live="polite"><span>לא נבחר חכם</span></div>
+    <div class="ticks" dir="rtl" id="ticks"></div>
+    <div class="evs" dir="rtl" id="evs"></div>
+  </div>
+  <div class="chart" id="chart">
+    <div class="grid" dir="rtl" id="grid"></div>
+    <div id="sections"></div>
+  </div>
+</div>
+
+<section class="block events" id="events">
+  <h2>אירועים בציר</h2>
+  <ol id="evlist"></ol>
+</section>
+
+<p class="note">הסימן ~ מציין שנה משוערת. הרצועה האפורה מסמנת את ימי חייו של שבתאי צבי.</p>
+
+</main>
+
+<footer>
+<div class="container">
+<h2>ספריית הקבלה</h2>
+<ul>
+<li><a href="index.html">דף הבית</a></li>
+<li><a href="abulafia.html">כתבי רבי אברהם אבולעפיה</a></li>
+<li><a href="meditation.html">שיטות המדיטציה היהודית</a></li>
+<li><a href="sages-timeline.html" aria-current="page">ציר הזמן של חכמי ישראל</a></li>
+</ul>
+<p><small>עודכן: אוקטובר 2026</small></p>
+</div>
+</footer>
+
+<script>
+(function(){
+const MIN=1470, MAX=1890;
+const pos=y=>(y-MIN)/(MAX-MIN)*100;
+const HEB='אבגדהוזחטי';
+
+const CATS={
+  h:{name:'חסידות'},
+  a:{name:'אשכנז ואיטליה'},
+  s:{name:'ספרד וארץ ישראל'},
+  x:{name:'השבתאות'}
+};
+
+// [שם, לידה, פטירה, קבוצה, משוער]
+const D=[
+['רבי יעקב בירב',1474,1546,'s'],
+['הרדב״ז',1479,1573,'s',1],
+['רבי יוסף קארו',1488,1575,'s'],
+['רבי שלמה אלקבץ',1505,1584,'s',1],
+['רבי משה אלשיך',1508,1593,'s',1],
+['המהרש״ל',1510,1573,'a'],
+['בעל ראשית חכמה',1518,1592,'s',1],
+['המהר״ל מפראג',1520,1609,'a',1],
+['הרמ״ק',1522,1570,'s'],
+['הרמ״א',1530,1572,'a',1],
+['בעל הלבושים',1530,1612,'a',1],
+['רבי אלעזר אזכרי',1533,1600,'s'],
+['האר״י הקדוש',1534,1572,'s'],
+['רבי חיים ויטאל',1543,1620,'s'],
+['רבי מנחם עזריה מפאנו',1548,1620,'a'],
+['הסמ״ע',1555,1614,'a',1],
+['המהרש״א',1555,1631,'a'],
+['רבי ישראל נג׳ארה',1555,1625,'s',1],
+['הב״ח',1561,1640,'a'],
+['השל״ה הקדוש',1565,1630,'a',1],
+['בעל תוספות יום טוב',1579,1654,'a'],
+['הט״ז',1586,1667,'a',1],
+['בעל כנסת הגדולה',1603,1673,'s'],
+['רבי יעקב ששפורטש',1610,1698,'s'],
+['רבי יעקב חגיז',1620,1674,'s'],
+['הש״ך',1621,1662,'a'],
+['הרמ״ז (רבי משה זכות)',1625,1697,'a',1],
+['שבתאי צבי',1626,1676,'x'],
+['בעל מגן אברהם',1635,1682,'a',1],
+['נתן העזתי',1643,1680,'x',1],
+['הפרי חדש',1659,1698,'s'],
+['חכם צבי',1660,1718,'a'],
+['רבי משה חאגיז',1671,1751,'s',1],
+['רבי יונתן אייבשיץ',1690,1764,'a'],
+['בעל שאגת אריה',1695,1785,'a',1],
+['אור החיים הקדוש',1696,1743,'s'],
+['רבי יעקב עמדין',1697,1776,'a'],
+['הבעש״ט',1698,1760,'h',1],
+['המגיד ממזריטש',1704,1772,'h',1],
+['הרמח״ל',1707,1746,'a'],
+['רבי יעקב יוסף מפולנאה',1710,1784,'h',1],
+['הנודע ביהודה',1713,1793,'a'],
+['רבי אלימלך מליז׳נסק',1717,1787,'h'],
+['הגאון מווילנא',1720,1797,'a'],
+['הרש״ש',1720,1777,'s'],
+['החיד״א',1724,1806,'s'],
+['רבי שמעלקא מניקלשבורג',1726,1778,'h'],
+['רבי מנחם מנדל מוויטבסק',1730,1788,'h'],
+['בעל ההפלאה',1731,1805,'a'],
+['המגיד מקוז׳ניץ',1733,1814,'h',1],
+['רבי אהרן מקרלין',1736,1772,'h'],
+['רבי לוי יצחק מברדיצ׳ב',1740,1809,'h'],
+['המגיד מדובנא',1741,1804,'a'],
+['בעל התניא',1745,1812,'h'],
+['בעל קצות החושן',1745,1812,'a',1],
+['החוזה מלובלין',1745,1815,'h'],
+['בעל חיי אדם',1748,1820,'a'],
+['רבי חיים מוולוז׳ין',1749,1821,'a'],
+['בעל נתיבות המשפט',1760,1832,'a'],
+['רבי עקיבא איגר',1761,1837,'a'],
+['החתם סופר',1762,1839,'a'],
+['רבי צבי הירש מזידיטשוב',1763,1831,'h'],
+['רבי שמחה בונים מפשיסחא',1765,1827,'h'],
+['היהודי הקדוש מפשיסחא',1766,1813,'h'],
+['רבי ישראל משקלוב',1770,1839,'a',1],
+['רבי נחמן מברסלב',1772,1810,'h'],
+['רבי נתן מברסלב',1780,1844,'h'],
+['רבי יצחק מוולוז׳ין',1780,1849,'a'],
+['בעל בני יששכר',1783,1841,'h'],
+['בעל פלא יועץ',1785,1827,'s',1],
+['רבי מנחם מנדל מקוצק',1787,1859,'h'],
+['רבי חיים פלאג׳י',1788,1868,'s'],
+['הצמח צדק',1789,1866,'h'],
+['בעל דברי חיים מצאנז',1793,1876,'h'],
+['רבי ישראל מרוז׳ין',1796,1850,'h'],
+['בעל ערוך לנר',1798,1871,'a'],
+['בעל חידושי הרי״ם',1799,1866,'h'],
+['בעל קיצור שולחן ערוך',1804,1886,'a'],
+['רבי יעקב אבוחצירא',1806,1880,'s'],
+['רבי שמשון רפאל הירש',1808,1888,'a'],
+['המלבי״ם',1809,1879,'a'],
+['רבי ישראל סלנטר',1810,1883,'a'],
+['רבי עבדאללה סומך',1813,1889,'s']
+].map((r,i)=>({id:i,name:r[0],b:r[1],d:r[2],c:r[3],approx:!!r[4]}));
+
+const GENS=[
+  {t:'דור גירוש ספרד וחכמי צפת',sub:'נולדו עד 1524',from:0,to:1524},
+  {t:'דור האר״י ותלמידיו',sub:'נולדו 1525–1564',from:1525,to:1564},
+  {t:'דור שבתאי צבי',sub:'נולדו 1565–1649',from:1565,to:1649},
+  {t:'הדור שאחרי השבתאות',sub:'נולדו 1650–1689',from:1650,to:1689},
+  {t:'דור הבעש״ט והרמח״ל',sub:'נולדו 1690–1724',from:1690,to:1724},
+  {t:'הדור שאחרי הרמח״ל',sub:'נולדו 1725–1762',from:1725,to:1762},
+  {t:'הדור הבא',sub:'נולדו 1763–1813',from:1763,to:9999}
+];
+
+const EVENTS=[
+  [1492,'גירוש ספרד'],
+  [1538,'רבי יעקב בירב מחדש את הסמיכה בצפת'],
+  [1565,'השולחן ערוך נדפס לראשונה, בוונציה'],
+  [1666,'שבתאי צבי ממיר את דתו'],
+  [1751,'פורצת המחלוקת בין רבי יעקב עמדין לרבי יונתן אייבשיץ'],
+  [1772,'החרם הראשון על החסידים בווילנה'],
+  [1803,'רבי חיים מוולוז׳ין מייסד את ישיבת וולוז׳ין']
+];
+
+const active=new Set(['h','a','s','x']);
+let sel=null;
+
+// filter chips
+const chips=document.getElementById('chips');
+Object.entries(CATS).forEach(([k,v])=>{
+  const b=document.createElement('button');
+  b.className='chip';b.type='button';b.setAttribute('aria-pressed','true');
+  b.style.setProperty('--c',`var(--${k})`);
+  b.innerHTML=`<span class="dot"></span>${v.name}<span class="c">${D.filter(p=>p.c===k).length}</span>`;
+  b.onclick=()=>{
+    if(active.has(k)){active.delete(k);b.setAttribute('aria-pressed','false');}
+    else{active.add(k);b.setAttribute('aria-pressed','true');}
+    render();
+  };
+  chips.appendChild(b);
+});
+
+// scale + event badges
+const ticks=document.getElementById('ticks');
+for(let y=1500;y<=1850;y+=50){
+  const s=document.createElement('span');s.style.right=pos(y)+'%';s.textContent=y;ticks.appendChild(s);
+}
+const evs=document.getElementById('evs');
+const evlist=document.getElementById('evlist');
+EVENTS.forEach(([y,t],i)=>{
+  const s=document.createElement('span');s.style.right=pos(y)+'%';s.textContent=HEB[i];s.title=`${y}: ${t}`;evs.appendChild(s);
+  const li=document.createElement('li');
+  li.innerHTML=`<span class="n">${HEB[i]}</span><span class="y">${y}</span><span>${t}</span>`;
+  evlist.appendChild(li);
+});
+
+const grid=document.getElementById('grid');
+function drawGrid(){
+  let h=`<i class="band" style="right:${pos(1626)}%;width:${pos(1676)-pos(1626)}%"></i>`;
+  for(let y=1500;y<=1850;y+=50) h+=`<i class="gl" style="right:${pos(y)}%"></i>`;
+  EVENTS.forEach(([y])=>{h+=`<i class="ev" style="right:${pos(y)}%"></i>`;});
+  if(sel!==null){const p=D[sel];h+=`<i class="selband" style="right:${pos(p.b)}%;width:${pos(p.d)-pos(p.b)}%"></i>`;}
+  grid.innerHTML=h;
+}
+
+const status=document.getElementById('status');
+function drawStatus(){
+  if(sel===null){status.innerHTML='<span>לא נבחר חכם</span>';return;}
+  const p=D[sel];
+  const n=D.filter(o=>o.id!==p.id&&active.has(o.c)&&o.b<=p.d&&o.d>=p.b).length;
+  status.innerHTML=`<span><b>${p.name}</b> (${p.approx?'~':''}${p.b}–${p.d}). חיו בזמנו: ${n}</span><button class="clear" type="button">ניקוי</button>`;
+  status.querySelector('.clear').onclick=()=>{sel=null;render();};
+}
+
+const sections=document.getElementById('sections');
+function render(){
+  let html='';
+  GENS.forEach((g,gi)=>{
+    const rows=D.filter(p=>p.b>=g.from&&p.b<=g.to&&active.has(p.c));
+    if(!rows.length) return;
+    html+=`<section class="gen" id="gen${gi+1}"><h3>${g.t}</h3><p class="sub">${g.sub}</p>`;
+    rows.forEach(p=>{
+      let cls='row';
+      if(sel!==null){
+        const s=D[sel];
+        if(p.id===s.id) cls+=' on';
+        else if(!(p.b<=s.d&&p.d>=s.b)) cls+=' dim';
+      }
+      html+=`<button type="button" class="${cls}" data-id="${p.id}" aria-pressed="${p.id===sel}">
+        <span class="nm">${p.name}</span><span class="yr">${p.approx?'~':''}${p.b}–${p.d}</span>
+        <span class="track" dir="rtl"><span class="bar" style="right:${pos(p.b)}%;width:${pos(p.d)-pos(p.b)}%;background:var(--${p.c})"></span></span>
+      </button>`;
+    });
+    html+='</section>';
+  });
+  sections.innerHTML=html;
+  sections.querySelectorAll('.row').forEach(b=>{
+    b.onclick=()=>{
+      const id=+b.dataset.id;sel=(sel===id)?null:id;render();
+      const f=sections.querySelector(`.row[data-id="${id}"]`);if(f)f.focus({preventScroll:true});
+    };
+  });
+  drawGrid();drawStatus();
+}
+render();
+
+// sticky offsets: the menu and the scale stay on top, jumps land below them
+const nav=document.querySelector('nav.top'), axis=document.getElementById('axis');
+function setOffsets(){
+  const r=document.documentElement.style;
+  r.setProperty('--navh',nav.offsetHeight+'px');
+  r.setProperty('--axh',axis.offsetHeight+'px');
+}
+setOffsets();
+window.addEventListener('resize',setOffsets);
+if(window.ResizeObserver) new ResizeObserver(setOffsets).observe(axis);
+if(document.fonts&&document.fonts.ready) document.fonts.ready.then(setOffsets);
+})();
+</script>
+</body>
+</html>
