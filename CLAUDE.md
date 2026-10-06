@@ -7,6 +7,7 @@
   - a link in the footer list,
   - update the page count in the hero `.dates` line (and the hero summary sentence if relevant),
   - add a row for it in `README.md`.
+- Every page except `index.html` links back to the home page: `<a class="nav-home" href="index.html">ספריית הקבלה</a>` as the first item of its top nav, styled gold and bold (`nav.top a.nav-home{color:var(--gold);font-weight:700}`).
 - All HTML pages and "artifacts" are created as local files in this repo. Never publish them as claude.ai Artifacts.
 
 ## Style and content
