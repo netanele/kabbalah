@@ -72,9 +72,13 @@ section>.lead{color:var(--muted);margin:0 0 18px;font-size:1.05rem}
 .book.wide .cover{flex:0 0 42%;border-bottom:0;border-left:4px solid var(--gold2);align-content:center}
 .book.wide .book-in{flex:1}
 .cover svg.bars{width:120px;height:80px}
+.cover svg.seal{width:104px;height:104px}
+.seal-g{transform-origin:50px 50px}
 @media (prefers-reduced-motion:no-preference){
   .bars .sw{transition:transform .8s ease}
   .book:hover .bars .sw{transform:translateX(-16px)}
+  .seal-g{transition:transform 1.2s ease}
+  .book:hover .seal-g{transform:rotate(60deg)}
 }
 @media(max-width:900px){
   .book.wide{flex-direction:column}
@@ -114,8 +118,8 @@ footer small{color:#a8a08f}
   <svg class="emblem" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 6.4C10 4.9 7.3 4.3 3.6 4.6v13.2c3.7-.3 6.4.3 8.4 1.8 2-1.5 4.7-2.1 8.4-1.8V4.6c-3.7-.3-6.4.3-8.4 1.8z" fill="currentColor" fill-opacity=".14"/><path d="M12 6.4C10 4.9 7.3 4.3 3.6 4.6v13.2c3.7-.3 6.4.3 8.4 1.8m0-13.2c2-1.5 4.7-2.1 8.4-1.8v13.2c-3.7-.3-6.4.3-8.4 1.8m0-13.2v13.2" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/><path d="M5.8 8.2c1.8-.1 3.2.2 4.4.8M5.8 11c1.8-.1 3.2.2 4.4.8M5.8 13.8c1.8-.1 3.2.2 4.4.8M13.8 9c1.2-.6 2.6-.9 4.4-.8M13.8 11.8c1.2-.6 2.6-.9 4.4-.8M13.8 14.6c1.2-.6 2.6-.9 4.4-.8" fill="none" stroke="currentColor" stroke-width=".7" stroke-linecap="round" stroke-opacity=".7"/></svg>
   <div class="kicker">דפי לימוד ועיון</div>
   <h1>ספריית הקבלה</h1>
-  <p>חיבוריו של רבי אברהם אבולעפיה, שיטות ההתבוננות והמדיטציה מספרי הרב אריה קפלן ומספרי רבותינו, וציר הזמן של חכמי ישראל מדור גזרות קנ״א ועד דור השואה והתקומה.</p>
-  <div class="dates">3 דפים · 35 חיבורים · 120 שיטות · 57 ספרי מקור · 151 חכמים</div>
+  <p>חיבוריו של רבי אברהם אבולעפיה, שיטות ההתבוננות והמדיטציה מספרי הרב אריה קפלן ומספרי רבותינו, ציר הזמן של חכמי ישראל מדור גזרות קנ״א ועד דור השואה והתקומה, ועליית נשמה בשיטת הרב יוסף שני.</p>
+  <div class="dates">4 דפים · 35 חיבורים · 120 שיטות · 57 ספרי מקור · 151 חכמים</div>
 </header>
 
 <nav class="top" aria-label="ניווט">
@@ -123,6 +127,7 @@ footer small{color:#a8a08f}
   <a href="abulafia.html">כתבי רבי אברהם אבולעפיה</a>
   <a href="meditation.html">שיטות המדיטציה היהודית</a>
   <a href="sages-timeline.html">ציר הזמן של חכמי ישראל</a>
+  <a href="yosef-shani-aliyat-neshama.html">עליית נשמה בשיטת הרב יוסף שני</a>
   <a href="#between">בין שני הדפים</a>
 </nav>
 
@@ -234,6 +239,36 @@ footer small{color:#a8a08f}
   </div>
 </article>
 
+<article class="book wide">
+  <a class="cover" href="yosef-shani-aliyat-neshama.html">
+    <span>
+      <span class="k">מסע נפש</span>
+      <h3>עליית נשמה בשיטת הרב יוסף שני</h3>
+      <span class="s">מסע נפש, עליית נשמה וקמיע "חותם שלמה"</span>
+      <span class="d">ירושלים · מתועד בסרטונים 2018–2023</span>
+    </span>
+    <svg class="seal" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-opacity=".45"/><g class="seal-g" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M50 10 L84 70 L16 70 Z"/><path d="M50 90 L16 30 L84 30 Z"/></g><circle cx="50" cy="50" r="7" fill="none" stroke="currentColor" stroke-width="2.4"/></svg>
+  </a>
+  <div class="book-in">
+    <p>איך הרב יוסף שבתאי (שני) מירושלים מעלה אנשים לגן עדן: השיטה שלב אחר שלב, בלשונו, עם מקור (סרטון ודקה) לכל פרט. ועוד: מחקר על קמיע "חותם שלמה" בספרי ישראל, מאיפה משיגים קמיע כזה, רשימת מקורות מלאה ותמלולי הסרטונים.</p>
+    <div class="meta"><span class="tag c">מקור לכל פרט</span><span class="tag g">מחקר: חותם שלמה</span><span class="tag p">5 תמלולים מלאים</span><span class="tag">מקורות יהודיים בלבד</span></div>
+    <h4>בדף</h4>
+    <ul class="toc">
+      <li><a href="yosef-shani-aliyat-neshama.html#summary">תקציר</a></li>
+      <li><a href="yosef-shani-aliyat-neshama.html#who">מי הוא הרב יוסף שני</a></li>
+      <li><a href="yosef-shani-aliyat-neshama.html#method">השיטה שלב אחר שלב</a></li>
+      <li><a href="yosef-shani-aliyat-neshama.html#stories">ההדגמות והסיפורים המתועדים</a></li>
+      <li><a href="yosef-shani-aliyat-neshama.html#torah">המקורות בספרי ישראל</a></li>
+      <li><a href="yosef-shani-aliyat-neshama.html#seal">חותם שלמה – מחקר</a></li>
+      <li><a href="yosef-shani-aliyat-neshama.html#obtain">מאיפה משיגים קמיע כזה</a></li>
+      <li><a href="yosef-shani-aliyat-neshama.html#start">איך מתחילים</a></li>
+      <li><a href="yosef-shani-aliyat-neshama.html#sources">רשימת מקורות מלאה</a></li>
+      <li><a href="yosef-shani-aliyat-neshama.html#transcripts">תמלולים מלאים</a></li>
+    </ul>
+    <a class="go" href="yosef-shani-aliyat-neshama.html">לדף <b aria-hidden="true">←</b></a>
+  </div>
+</article>
+
 </div>
 </section>
 
@@ -258,6 +293,7 @@ footer small{color:#a8a08f}
 <li><a href="abulafia.html">כתבי רבי אברהם אבולעפיה</a></li>
 <li><a href="meditation.html">שיטות המדיטציה היהודית</a></li>
 <li><a href="sages-timeline.html">ציר הזמן של חכמי ישראל</a></li>
+<li><a href="yosef-shani-aliyat-neshama.html">עליית נשמה בשיטת הרב יוסף שני</a></li>
 </ul>
 <p><small>עודכן: אוקטובר 2026</small></p>
 </div>
