@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" width="300" height="420">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5a2a22"/><stop offset=".55" stop-color="#43201a"/><stop offset="1" stop-color="#2a1410"/></linearGradient>
+<linearGradient id="s" x1="0" x2="1"><stop offset="0" stop-color="#000" stop-opacity=".45"/><stop offset="1" stop-color="#000" stop-opacity="0"/></linearGradient>
+<style>.t{font-family:"Frank Ruhl Libre","David Libre","David","Times New Roman",serif;font-weight:700;fill:#e9cf8a;text-anchor:middle;direction:rtl}.b{font-family:"Assistant","Arial Hebrew",Arial,sans-serif;font-size:14px;fill:#ecd9c8;text-anchor:middle;direction:rtl}</style>
+</defs>
+<rect width="300" height="420" rx="6" fill="url(#g)"/>
+<rect x="276" width="24" height="420" fill="url(#s)" transform="rotate(180 288 210)"/>
+<rect x="18" y="18" width="264" height="384" rx="3" fill="none" stroke="#c9a85a" stroke-width="2"/>
+<rect x="27" y="27" width="246" height="366" rx="2" fill="none" stroke="#c9a85a" stroke-width=".8" stroke-opacity=".7"/>
+<path d="M112 120 V78 Q150 44 188 78 V120" fill="none" stroke="#c9a85a" stroke-width="1.6"/>
+<path d="M124 120 V84 Q150 60 176 84 V120" fill="none" stroke="#c9a85a" stroke-width=".8" stroke-opacity=".7"/>
+<path d="M100 120 h100" stroke="#c9a85a" stroke-width="1.4"/>
+<text x="150" y="190" class="t" font-size="38">שערי</text>
+<text x="150" y="238" class="t" font-size="38">השגה</text>
+<text x="150" y="282" class="b">מכתבי רבי חיים ויטאל</text>
+<text x="150" y="304" class="b">ליקט: הרב שמואל יצחק גד הכהן יודייקין</text>
+<path d="M120 336 h60 M135 346 h30" stroke="#c9a85a" stroke-width="1.4"/>
+<circle cx="150" cy="358" r="3" fill="#c9a85a"/>
+</svg>
