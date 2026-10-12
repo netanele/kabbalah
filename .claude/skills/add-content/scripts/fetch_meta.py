@@ -7,7 +7,7 @@ For every unit with kind youtube/video and "new": true:
   - runs `yt-dlp -J` into meta/<id>.json (reused when it exists, unless --force)
   - sets title, duration, duration_string, url and date (d.m.yyyy from upload_date, the page's own format)
     in project.json, and prints any value it changed; a "topic" set by hand is never touched
-  - appends a "## <unit_label> N: title" block with the description to meta/descriptions.md
+  - appends a "## <display>: title" block (display = the unit's "label", else "<unit_label> N") with the description to meta/descriptions.md
     (skipped when that id already has a block)
 yt-dlp comes from PATH or ~/.local/bin/yt-dlp. On HTTP 403 it retries with the android player client.
 Exit 1 when any unit failed.
@@ -61,7 +61,7 @@ def main() -> int:
     for u in sorted(units, key=lambda x: int(x["n"])):
         n, vid = int(u["n"]), u.get("id")
         if not vid:
-            print("%s %d: no id, skipped" % (cfg.unit_label, n))
+            print("%s: no id, skipped" % C.unit_display(cfg, u))
             failed += 1
             continue
         mf = cfg.meta / ("%s.json" % vid)
@@ -74,7 +74,7 @@ def main() -> int:
                 C.write_text(mf, json.dumps(d, ensure_ascii=False, indent=1) + "\n")
                 src = "fetched"
         except Exception as e:  # noqa: BLE001
-            print("%s %d (%s): FAILED: %s" % (cfg.unit_label, n, vid, e))
+            print("%s (%s): FAILED: %s" % (C.unit_display(cfg, u), vid, e))
             failed += 1
             continue
         new = {
@@ -92,14 +92,14 @@ def main() -> int:
             if u.get(k) not in (None, "") and u.get(k) != v:
                 changes.append("%s: %r -> %r" % (k, u.get(k), v))
             u[k] = v
-        print("%s %d (%s): %s · %s · %s · %s%s" % (
-            cfg.unit_label, n, vid, src, new["title"], new["duration_string"], new["date"],
+        print("%s (%s): %s · %s · %s · %s%s" % (
+            C.unit_display(cfg, u), vid, src, new["title"], new["duration_string"], new["date"],
             "" if u.get("topic") else " · no topic yet"))
         for c in changes:
             print("   changed " + c)
         if ("- מזהה: %s\n" % vid) not in desc:
             views = d.get("view_count")
-            block = ["", "## %s %d: %s" % (cfg.unit_label, n, new["title"]),
+            block = ["", "## %s: %s" % (C.unit_display(cfg, u), new["title"]),
                      "- מזהה: %s" % vid,
                      "- קישור: %s" % (d.get("webpage_url") or C.unit_url(u)),
                      "- אורך: %s · פורסם: %s%s" % (new["duration_string"], d.get("upload_date") or "?",

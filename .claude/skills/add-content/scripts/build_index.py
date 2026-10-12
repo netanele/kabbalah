@@ -12,12 +12,15 @@ Modes:
     stays byte-identical.
 
 It never reads manifests (old units on existing pages have none). One row per card, sorted by unit then card number:
-  - unit:  the card's unit number (from its id t<n>-<k>) as a dark tag <span class="tag d">n</span>
+  - unit:  a dark tag <span class="tag d">n</span> with the card's unit number (from its id t<n>-<k>), or the unit's
+           "label" from project.json when it has one; rows always sort by the number
   - title: the card's h3 (tags stripped except <bdi>), linking to #t<n>-<k>
   - type:  the FIRST plain header tag after the unit tag, any word (קמיע, תפילה, השבעה, …). The unit tag (tag d),
            colored tags, and the status tags נמסר במלואו / נמסר בחלקו / הוזכר בלבד / סופר כמעשה are never types.
            Empty when the card has no such tag (counted as "ללא סוג"). TYPE_ORDER in _common.py only orders the counts.
-  - why:   the first sentence of the card's <dt>מטרה</dt> <dd>, without its timestamp chips; empty without one
+  - why:   the first sentence of the card's <dt>מטרה</dt> <dd>, without its chips. A card without one (often a
+           "הוזכר בלבד" card) falls back to the first sentence of its first <p> after the tags, else of its first
+           <li>, trimmed to about 140 characters at a word boundary. Kept rows in a merge are never re-derived.
 A counts-by-type line precedes the table. When the part exists already,
 its h2 and lead are kept; the rest is regenerated, in the same structure and classes as the turgeman page.
 Checks (exit 1 on any PROBLEM): duplicate card ids, card ids that are not t<n>-<k>, the full Name, raw "&t=",
@@ -60,6 +63,40 @@ def first_sentence(dd: str) -> str:
     return s
 
 
+WHY_MAX = 140
+
+
+def trim_words(s: str, limit: int = WHY_MAX) -> str:
+    """Cut s to about `limit` visible characters at a word boundary and add "…"; <bdi> stays balanced."""
+    if len(C.strip_tags(s)) <= limit:
+        return s
+    out, n = [], 0
+    for w in s.split(" "):
+        vis = len(C.strip_tags(w)) + (1 if out else 0)
+        if out and n + vis > limit:
+            break
+        out.append(w)
+        n += vis
+    t = " ".join(out).rstrip(" ,;:–-")
+    if t.count("<bdi>") != t.count("</bdi>"):
+        t = trim_words(C.strip_tags(s), limit)
+        return t if t.endswith("…") else t + "…"
+    return t + "…"
+
+
+def fallback_why(body: str) -> str:
+    """No מטרה field: the first sentence of the first <p> after the tags, else of the first <li>, trimmed."""
+    tg = re.search(r'<div class="tags">.*?</div>', body, re.S)
+    rest = body[tg.end():] if tg else body
+    for rx in (r"<p\b[^>]*>(.*?)</p>", r"<li\b[^>]*>(.*?)</li>"):
+        m = re.search(rx, rest, re.S)
+        if m:
+            s = first_sentence(m.group(1))
+            if s:
+                return trim_words(s)
+    return ""
+
+
 def counts(cnt: Counter):
     order = [t for t in C.TYPE_ORDER if t in cnt] + sorted(t for t in cnt if t not in C.TYPE_ORDER and t != "ללא סוג")
     if "ללא סוג" in cnt:
@@ -67,10 +104,18 @@ def counts(cnt: Counter):
     return order, " · ".join("%s <bdi>%d</bdi>" % (C.esc(t), cnt[t]) for t in order)
 
 
-def row_html(r) -> str:
+def unit_tag(cfg, n: int) -> str:
+    """The dark tag in the unit column: the unit's "label" when set (e.g. פרק ב'), else its number (as before)."""
+    for u in cfg.units:
+        if int(u["n"]) == int(n) and (u.get("label") or "").strip():
+            return C.esc(u["label"].strip())
+    return "%d" % int(n)
+
+
+def row_html(cfg, r) -> str:
     n, k, tid, title, types, why = r
-    return ('<tr><td><span class="tag d">%d</span></td><td><a href="#%s">%s</a></td><td>%s</td><td>%s</td></tr>'
-            % (n, tid, title, " / ".join(C.esc(t) for t in types), why))
+    return ('<tr><td><span class="tag d">%s</span></td><td><a href="#%s">%s</a></td><td>%s</td><td>%s</td></tr>'
+            % (unit_tag(cfg, n), tid, title, " / ".join(C.esc(t) for t in types), why))
 
 
 def text_checks(t: str) -> list:
@@ -92,7 +137,7 @@ def primary_type(cell: str) -> str:
     return t or "ללא סוג"
 
 
-def merge(out_path: Path, rows: list, errs: list) -> int:
+def merge(cfg, out_path: Path, rows: list, errs: list) -> int:
     old = C.read_text(out_path)
     tb = re.search(r"(<tbody\b[^>]*>)(.*?)(</tbody>)", old, re.S)
     if not tb:
@@ -124,7 +169,7 @@ def merge(out_path: Path, rows: list, errs: list) -> int:
     added = [r for r in rows if r[2] not in seen]
     final = list(kept)
     for r in added:
-        seg = indent + row_html(r) + "\n"
+        seg = indent + row_html(cfg, r) + "\n"
         pos = next((i for i, x in enumerate(final) if x[0] is not None and x[0] > (r[0], r[1])), len(final))
         final.insert(pos, ((r[0], r[1]), seg, r[2], r[4][0] if r[4] else "ללא סוג"))
     # rebuild tbody: text before the first row, the rows, text after the last row (all original bytes kept)
@@ -186,7 +231,7 @@ def main() -> int:
             plain = [t for c, t in C.header_tags(body) if c == "" and t not in C.STATUS_TAGS]
             types = plain[:1]
             goal = re.search(r"<dt>מטרה</dt>\s*<dd>(.*?)</dd>", body, re.S)
-            why = first_sentence(goal.group(1)) if goal else ""
+            why = first_sentence(goal.group(1)) if goal else fallback_why(body)
             rows.append((cd["unit"], cd["k"], cd["id"], title, types, why))
     dup = sorted(k for k, v in seen.items() if v > 1)
     if dup:
@@ -194,7 +239,7 @@ def main() -> int:
     rows.sort(key=lambda r: (r[0], r[1]))
 
     if cfg.mode == "existing" and out_path.exists() and not args.rebuild:
-        return merge(out_path, rows, errs)
+        return merge(cfg, out_path, rows, errs)
 
     cnt = Counter((r[4][0] if r[4] else "ללא סוג") for r in rows)
     order, counts_line = counts(cnt)
@@ -220,7 +265,7 @@ def main() -> int:
            '    <thead><tr><th>%s</th><th>שם השיטה</th><th>סוג</th><th>למה</th></tr></thead>' % cfg.unit_label,
            '    <tbody>']
     for r in rows:
-        out.append("      " + row_html(r))
+        out.append("      " + row_html(cfg, r))
     out += ["    </tbody>", "  </table>", "  </div>", "</section>"]
     t = "\n".join(out) + "\n"
 
@@ -229,7 +274,7 @@ def main() -> int:
     print("wrote %s (%.1f KB), %d rows from %d units" % (out_path.name, len(t.encode("utf-8")) / 1024, len(rows),
                                                        len({r[0] for r in rows})))
     print("by type:", ", ".join("%s %d" % (x, cnt[x]) for x in order) or "-")
-    print("rows without a why (no מטרה field): %d" % sum(1 for r in rows if not r[5]))
+    print("rows without a why: %d" % sum(1 for r in rows if not r[5]))
     for e in errs:
         print("PROBLEM:", e)
     return 1 if errs else 0

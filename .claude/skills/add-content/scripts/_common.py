@@ -95,6 +95,19 @@ class Config:
     def section_id(self, n: int) -> str:
         return "%s-%d" % (self.section_prefix, int(n))
 
+    def display(self, n: int) -> str:
+        """unit_display() for unit number n; '<unit_label> n' when n is not in the config."""
+        for u in self.units:
+            if int(u["n"]) == int(n):
+                return unit_display(self, u)
+        return "%s %d" % (self.unit_label, int(n))
+
+
+def unit_display(cfg, unit: dict) -> str:
+    """How chips, tags and summaries name a unit: its "label" when set (e.g. "מבוא", "פרק ב'"), else "<unit_label> N"."""
+    label = (unit.get("label") or "").strip()
+    return label if label else "%s %d" % (cfg.unit_label, int(unit["n"]))
+
 
 def arg_parser(doc: str) -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(description=(doc or "").strip().splitlines()[0] if doc else None,
@@ -244,10 +257,10 @@ def page_href(unit: dict, page: int) -> str:
 
 
 def chip_src(cfg: Config, unit: dict, ts: str) -> str:
-    """a.src chip. The label shows the timestamp exactly as written in the template (like the original renderer)."""
+    """a.src chip: '<display> · <bdi>hh:mm:ss</bdi>'. The timestamp is shown exactly as written in the template."""
     ts = ts.strip()
-    return '<a class="src" href="%s" target="_blank" rel="noopener">%s %d · <bdi>%s</bdi></a>' % (
-        time_href(unit, to_secs(ts)), cfg.unit_label, int(unit["n"]), ts)
+    return '<a class="src" href="%s" target="_blank" rel="noopener">%s · <bdi>%s</bdi></a>' % (
+        time_href(unit, to_secs(ts)), unit_display(cfg, unit), ts)
 
 
 def chip_ts(unit: dict, ts: str) -> str:
@@ -256,8 +269,9 @@ def chip_ts(unit: dict, ts: str) -> str:
 
 
 def chip_page(cfg: Config, unit: dict, page: int) -> str:
-    return '<a class="src" href="%s" target="_blank" rel="noopener">%s %d · עמ\' <bdi>%d</bdi></a>' % (
-        page_href(unit, page), cfg.unit_label, int(unit["n"]), page)
+    """a.src page chip for text units: '<display> · עמ' <bdi>12</bdi>'."""
+    return '<a class="src" href="%s" target="_blank" rel="noopener">%s · עמ\' <bdi>%d</bdi></a>' % (
+        page_href(unit, page), unit_display(cfg, unit), page)
 
 
 # ---- holy names (transcripts) -------------------------------------------------------------------

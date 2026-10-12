@@ -60,9 +60,9 @@ def render_video(cfg, unit: dict, data: dict, count_names: dict):
     title = unit.get("title") or data.get("title") or unit["id"]
     dur = unit.get("duration_string") or data.get("duration_string") or ""
     out = ['<details class="tr" id="tr-%d">' % n,
-           '  <summary><span class="serif">%s %d · %s</span> '
+           '  <summary><span class="serif">%s · %s</span> '
            '<span class="n"><bdi>%s</bdi> · %s קטעים · תמלול אוטומטי</span></summary>'
-           % (cfg.unit_label, n, html.escape(title, quote=False), dur, heb_num(count)),
+           % (C.unit_display(cfg, unit), html.escape(title, quote=False), dur, heb_num(count)),
            '  <p class="lead">מקור: <a href="%s" target="_blank" rel="noopener"><bdi>%s</bdi></a> · '
            'תמלול אוטומטי: %s · לחיצה על חותמת הזמן פותחת את הסרטון באותה דקה.</p>'
            % (C.attr(C.unit_url(unit)), html.escape(short_url(unit), quote=False), credit),
@@ -99,8 +99,8 @@ def render_text(cfg, unit: dict, md: str, count_names: dict):
     title = unit.get("title") or unit["id"]
     pages = unit.get("pages")
     out = ['<details class="tr" id="tr-%d">' % n,
-           '  <summary><span class="serif">%s %d · %s</span> <span class="n">%s%s קטעים · טקסט המקור</span></summary>'
-           % (cfg.unit_label, n, html.escape(title, quote=False),
+           '  <summary><span class="serif">%s · %s</span> <span class="n">%s%s קטעים · טקסט המקור</span></summary>'
+           % (C.unit_display(cfg, unit), html.escape(title, quote=False),
               "<bdi>%d</bdi> עמ' · " % int(pages) if pages else "", heb_num(count)),
            '  <p class="lead">מקור: <a href="%s" target="_blank" rel="noopener"><bdi>%s</bdi></a> · '
            'לחיצה על מספר העמוד פותחת את המקור באותו עמוד.</p>'
@@ -175,7 +175,7 @@ def main() -> int:
     for u in units:
         n = int(u["n"])
         if n in have:
-            print("%s %d: tr-%d already in %s, skipped" % (cfg.unit_label, n, n, part_file.name))
+            print("%s: tr-%d already in %s, skipped" % (C.unit_display(cfg, u), n, part_file.name))
             continue
         jf = cfg.transcripts / ("%s.json" % u["id"])
         mf = cfg.transcripts / ("%s.md" % u["id"])
@@ -185,13 +185,13 @@ def main() -> int:
         elif C.is_text(u) and mf.is_file():
             block, count = render_text(cfg, u, C.read_text(mf), names)
         else:
-            print("warning: missing transcript for %s %d (%s): %s" % (cfg.unit_label, n, u["id"], jf), file=sys.stderr)
+            print("warning: missing transcript for %s (%s): %s" % (C.unit_display(cfg, u), u["id"], jf), file=sys.stderr)
             if not append_mode:
                 blocks.append((n, "<!-- transcript missing: %s %d (%s) -->" % (cfg.section_prefix, n, u["id"])))
             continue
         blocks.append((n, block))
         total_segments += count
-        print("%s %d  %s  %5d segments" % (cfg.unit_label, n, u["id"], count))
+        print("%s  %s  %5d segments" % (C.unit_display(cfg, u), u["id"], count))
 
     if append_mode:
         before = len(TR_BLOCK.findall(part))

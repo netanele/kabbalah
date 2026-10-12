@@ -3,7 +3,7 @@
 
 Usage:  python3 -I coverage.py --config <ws>/project.json [--all]
 
-Per unit, one line:
+Per unit, one line, starting with the unit's display name ("label" when set, else "<unit_label> N"):
   - technique blocks (### headings in notes section "## 3.", up to "## 4." or the end) vs article.card.tech
     cards with id t<N>-<k> in the part
   - video units: distinct timestamps (h:mm:ss) in the notes vs distinct timestamps in the part (t=…s in links to
@@ -53,7 +53,7 @@ def main() -> int:
     bad = 0
     for u in units:
         n = int(u["n"])
-        label = "%s %d" % (cfg.unit_label, n)
+        label = C.unit_display(cfg, u)
         nf = cfg.notes / ("%s.md" % u["id"])
         pf = C.part_files(cfg.parts, cfg.section_id(n))
         if not nf.exists():

@@ -8,7 +8,8 @@ Each <!-- @@SECTION:name @@ --> in the skeleton is replaced by the part whose fi
 <!-- missing: parts/NN-name.html --> in its place.
 
 [?] wrapping (only when the skeleton's CSS defines .unc): every literal "[?]" in text nodes before the transcripts
-section becomes <span class="unc" title="קריאה לא ודאית בתמלול">[?]</span>. Tags, attributes, comments, <style>,
+section becomes <span class="unc" title="קריאה לא ודאית בתמלול">[?]</span>, or title "קריאה לא ודאית בטקסט" when
+every unit is a text source (pdf/web/doc). Tags, attributes, comments, <style>,
 <script>, text already inside a .unc span, and the transcripts section are never touched, so it is idempotent.
 
 Checks: duplicate ids (ERROR), the full Name (ERROR), dangling #anchors, raw "&t=", missing sections, parts that
@@ -25,7 +26,9 @@ sys.dont_write_bytecode = True
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import _common as C  # noqa: E402
 
-UNC = '<span class="unc" title="קריאה לא ודאית בתמלול">[?]</span>'
+UNC = '<span class="unc" title="%s">[?]</span>'
+UNC_TITLE_TRANSCRIPT = "קריאה לא ודאית בתמלול"
+UNC_TITLE_TEXT = "קריאה לא ודאית בטקסט"        # pages whose units are all text sources (pdf/web/doc)
 TAG_SPLIT = re.compile(r"(<!--.*?-->|<[^>]*>)", re.S)
 UNC_OPEN = re.compile(r'<span\b[^>]*\bclass="[^"]*\bunc\b')
 UNC_CSS = re.compile(r"\.unc(?![\w-])")
@@ -35,7 +38,7 @@ def has_unc_css(skel: str) -> bool:
     return any(UNC_CSS.search(m.group(1)) for m in re.finditer(r"<style\b[^>]*>(.*?)</style\s*>", skel, re.S | re.I))
 
 
-def wrap_unc(doc: str, transcripts_id: str):
+def wrap_unc(doc: str, transcripts_id: str, title: str = UNC_TITLE_TRANSCRIPT):
     """Wrap each literal [?] in text nodes before the transcripts section. Idempotent: text that already sits
     inside <span class="unc"> is left alone, and tags/attributes/comments/style/script are never touched."""
     cut = C.section_start(doc, transcripts_id)
@@ -60,7 +63,7 @@ def wrap_unc(doc: str, transcripts_id: str):
         if raw or "[?]" not in tok or UNC_OPEN.match(prev_tag):
             continue
         n += tok.count("[?]")
-        toks[i] = tok.replace("[?]", UNC)
+        toks[i] = tok.replace("[?]", UNC % title)
     return "".join(toks) + tail, n
 
 
@@ -111,8 +114,10 @@ def main() -> int:
         report.append("warning: parts without a placeholder in the skeleton (not in the page): %s" % ", ".join(orphans))
 
     if has_unc_css(skel):
-        out, n_unc = wrap_unc(out, cfg.transcripts_section)
-        unc_note = "uncertain-reading markers [?] wrapped in .unc: %d" % n_unc
+        all_text = bool(cfg.units) and all(C.is_text(u) for u in cfg.units)
+        title = UNC_TITLE_TEXT if all_text else UNC_TITLE_TRANSCRIPT
+        out, n_unc = wrap_unc(out, cfg.transcripts_section, title)
+        unc_note = 'uncertain-reading markers [?] wrapped in .unc: %d (title "%s")' % (n_unc, title)
     else:
         unc_note = "[?] wrapping: off (the skeleton's CSS has no .unc)"
 

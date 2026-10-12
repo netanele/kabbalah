@@ -13,10 +13,11 @@ Codes:
           בינה מלאכותית; whole words, so מסוכן never matches) · split-bdi (</bdi>–<bdi>) · status-tags (a technique
           card without exactly one of נמסר במלואו / נמסר בחלקו / הוזכר בלבד / סופר כמעשה) · red-tags (a red tag other
           than לא נמסר בשיעור / הרב לא מגלה / נדחה לשיעור נפרד / לא ברור בתמלול / לא פורסם) · duplicate-id ·
-          dangling-anchor · yt-t-beyond-duration · chip-unit-mismatch (the chip's "<unit_label> N" is not the unit of
-          its video id) · chip-time-mismatch (the chip's hh:mm:ss differs from its t=)
-  WARN    unc-in-h3-inl ("[?]" inside an h3 or .inl element) · unit-tag (a card without <span class="tag d"><unit_label>
-          N</span>) · card-sequence (card numbers not 1..k, or ids that are not t<n>-<k>) · raw-ampersand ("&t=" in an
+          dangling-anchor · yt-t-beyond-duration · chip-unit-mismatch (the chip's unit name is not the unit of
+          its video id or text source) · chip-time-mismatch (the chip's hh:mm:ss differs from its t=)
+  WARN    unc-in-h3-inl ("[?]" inside an h3 or .inl element) · unit-tag (a card without <span class="tag d"><display></span>,
+          display = the unit's "label", else "<unit_label> N") · card-sequence (card numbers not 1..k, or ids that are
+          not t<n>-<k>) · raw-ampersand ("&t=" in an
           href) · inline-style / img-iframe-script (inside sections) · chip-no-bdi · time-without-bdi (authored text)
   REVIEW  plain-name (שדי / אהיה / אדני written plainly in the authored text, i.e. before the transcripts section)
           · name-permutation (other orders of the Name's letters as a word; והיה is skipped) · religion (מוסלמ*,
@@ -146,7 +147,7 @@ def main() -> int:
         for c, t in tags:
             if c == "r" and t not in C.RED_TAGS:
                 R.add("ERROR", "red-tags", "%s: red tag %r · %s" % (cd["id"], t, loc.where(cd["start"])))
-        want = "%s %d" % (cfg.unit_label, cd["unit"])
+        want = cfg.display(cd["unit"])
         if not any(c == "d" and t == want for c, t in tags):
             R.add("WARN", "unit-tag", "%s: no <span class=\"tag d\">%s</span> · %s" % (cd["id"], want, loc.where(cd["start"])))
     for n, lst in sorted(per_unit.items()):
@@ -177,6 +178,16 @@ def main() -> int:
     yt_total = 0
     cross = 0
     label_rx = re.compile(re.escape(cfg.unit_label) + r"\s*(\d+)")
+    displays = sorted(((C.unit_display(cfg, x), int(x["n"])) for x in cfg.units), key=lambda d: -len(d[0]))
+
+    def claimed_unit(label):
+        """The unit a chip label names: the longest config display it starts with, else '<unit_label> N'."""
+        lab = label.strip()
+        for disp, num in displays:
+            if lab.startswith(disp) and not re.match(r"[\w'\"\u05f3\u05f4]", lab[len(disp):len(disp) + 1]):
+                return num
+        lm = label_rx.match(lab)
+        return int(lm.group(1)) if lm else None
     sec_rx = re.compile(r"^%s-(\d+)$" % re.escape(cfg.section_prefix))
     for m in re.finditer(r'<a\b([^>]*)>(.*?)</a>', doc, re.S):
         hm = re.search(r'\bhref="(https?://(?:www\.|m\.)?(?:youtube\.com|youtu\.be)[^"]*)"', m.group(1))
@@ -198,9 +209,9 @@ def main() -> int:
             R.add("ERROR", "yt-t-beyond-duration", "%s (t=%s > %s) · %s" % (url, tm.group(1), dur, loc.where(m.start())))
         label_html = m.group(2)
         label = C.strip_tags(label_html)
-        lm = label_rx.search(label)
-        if lm and int(lm.group(1)) != int(u["n"]):
-            R.add("ERROR", "chip-unit-mismatch", "label %r but %s is %s %s · %s" % (label[:40], vid, cfg.unit_label, u["n"], loc.where(m.start())))
+        claim = claimed_unit(label)
+        if claim is not None and claim != int(u["n"]):
+            R.add("ERROR", "chip-unit-mismatch", "label %r but %s is %s · %s" % (label[:40], vid, C.unit_display(cfg, u), loc.where(m.start())))
         tl = re.search(r"(\d{1,2}):(\d{2}):(\d{2})", label)
         if tl and tm:
             secs = int(tl.group(1)) * 3600 + int(tl.group(2)) * 60 + int(tl.group(3))
@@ -211,6 +222,22 @@ def main() -> int:
         sm = sec_rx.match(loc.section(m.start()))
         if sm and int(sm.group(1)) != int(u["n"]):
             cross += 1
+
+    # ---- page chips of text units (pdf/web/doc): the label must name the unit of the linked source ----
+    text_urls = {}                       # one book's chapters often share a single PDF link
+    for x in cfg.units:
+        if C.is_text(x) and C.unit_url(x):
+            text_urls.setdefault(C.attr(C.unit_url(x)), []).append(x)
+    if text_urls:
+        for m in re.finditer(r'<a\b([^>]*)>(.*?)</a>', doc, re.S):
+            hm = re.search(r'\bhref="([^"#]*)(?:#[^"]*)?"', m.group(1))
+            if not hm or hm.group(1) not in text_urls:
+                continue
+            us = text_urls[hm.group(1)]
+            claim = claimed_unit(C.strip_tags(m.group(2)))
+            if claim is not None and claim not in {int(x["n"]) for x in us}:
+                R.add("ERROR", "chip-unit-mismatch", "label %r but the link is %s · %s" % (
+                    C.strip_tags(m.group(2))[:40], " / ".join(C.unit_display(cfg, x) for x in us), loc.where(m.start())))
 
     # ---- markup hygiene ----
     for m in re.finditer(r'href="[^"]*&t=', doc):
@@ -244,11 +271,11 @@ def main() -> int:
         n = int(u["n"])
         rng = C.find_section(doc, cfg.section_id(n))
         if not rng:
-            R.add("INFO", "stats", "%s %d: no section %s" % (cfg.unit_label, n, cfg.section_id(n)))
+            R.add("INFO", "stats", "%s: no section %s" % (C.unit_display(cfg, u), cfg.section_id(n)))
             continue
         s = doc[rng[0]:rng[1]]
-        R.add("INFO", "stats", "%s %d%s: cards %d · chips %d · [?] %d · %.1f KB" % (
-            cfg.unit_label, n, " (new)" if u.get("new") else "", len(per_unit.get(n, [])),
+        R.add("INFO", "stats", "%s%s: cards %d · chips %d · [?] %d · %.1f KB" % (
+            C.unit_display(cfg, u), " (new)" if u.get("new") else "", len(per_unit.get(n, [])),
             s.count('class="src"') + s.count('class="ts"'), s.count("[?]"), len(s.encode("utf-8")) / 1024))
 
     # ---- output ----

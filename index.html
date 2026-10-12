@@ -74,8 +74,10 @@ section>.lead{color:var(--muted);margin:0 0 18px;font-size:1.05rem}
 .cover svg.bars{width:120px;height:80px}
 .cover svg.seal{width:104px;height:104px}
 .cover svg.amulet{width:104px;height:104px}
+.cover svg.sight{width:104px;height:104px}
 .seal-g{transform-origin:50px 50px}
 .amulet-lots{transform-origin:50px 50px}
+.sight-p{transform-origin:50px 24px}
 @media (prefers-reduced-motion:no-preference){
   .bars .sw{transition:transform .8s ease}
   .book:hover .bars .sw{transform:translateX(-16px)}
@@ -83,6 +85,8 @@ section>.lead{color:var(--muted);margin:0 0 18px;font-size:1.05rem}
   .book:hover .seal-g{transform:rotate(60deg)}
   .amulet-lots{transition:transform 1.2s ease}
   .book:hover .amulet-lots{transform:rotate(90deg)}
+  .sight-p{transition:transform 1.2s ease}
+  .book:hover .sight-p{transform:scale(1.5)}
 }
 @media(max-width:900px){
   .book.wide{flex-direction:column}
@@ -122,8 +126,8 @@ footer small{color:#a8a08f}
   <svg class="emblem" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 6.4C10 4.9 7.3 4.3 3.6 4.6v13.2c3.7-.3 6.4.3 8.4 1.8 2-1.5 4.7-2.1 8.4-1.8V4.6c-3.7-.3-6.4.3-8.4 1.8z" fill="currentColor" fill-opacity=".14"/><path d="M12 6.4C10 4.9 7.3 4.3 3.6 4.6v13.2c3.7-.3 6.4.3 8.4 1.8m0-13.2c2-1.5 4.7-2.1 8.4-1.8v13.2c-3.7-.3-6.4.3-8.4 1.8m0-13.2v13.2" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/><path d="M5.8 8.2c1.8-.1 3.2.2 4.4.8M5.8 11c1.8-.1 3.2.2 4.4.8M5.8 13.8c1.8-.1 3.2.2 4.4.8M13.8 9c1.2-.6 2.6-.9 4.4-.8M13.8 11.8c1.2-.6 2.6-.9 4.4-.8M13.8 14.6c1.2-.6 2.6-.9 4.4-.8" fill="none" stroke="currentColor" stroke-width=".7" stroke-linecap="round" stroke-opacity=".7"/></svg>
   <div class="kicker">דפי לימוד ועיון</div>
   <h1>ספריית הקבלה</h1>
-  <p>חיבוריו של רבי אברהם אבולעפיה, שיטות ההתבוננות והמדיטציה מספרי הרב אריה קפלן ומספרי רבותינו, ציר הזמן של חכמי ישראל מדור גזרות קנ״א ועד דור השואה והתקומה, עליית נשמה בשיטת הרב יוסף שני, ויסודות הקבלה המעשית בשיעורי הרב יהודה אוהד תורג'מן.</p>
-  <div class="dates">5 דפים · 35 חיבורים · 123 שיטות · 58 ספרי מקור · 151 חכמים · 183 כרטיסי שיטות</div>
+  <p>חיבוריו של רבי אברהם אבולעפיה, שיטות ההתבוננות והמדיטציה מספרי הרב אריה קפלן ומספרי רבותינו, ציר הזמן של חכמי ישראל מדור גזרות קנ״א ועד דור השואה והתקומה, עליית נשמה בשיטת הרב יוסף שני, יסודות הקבלה המעשית בשיעורי הרב יהודה אוהד תורג'מן, ותרגילי הראיה הרוחנית שבספר "דרכי השגה" על פי שיעורי ר' אברהם יאראוויטש.</p>
+  <div class="dates">6 דפים · 35 חיבורים · 123 שיטות · 58 ספרי מקור · 151 חכמים · 183 כרטיסי שיטות · 36 כרטיסי תרגילים</div>
 </header>
 
 <nav class="top" aria-label="ניווט">
@@ -133,6 +137,7 @@ footer small{color:#a8a08f}
   <a href="sages-timeline.html">ציר הזמן של חכמי ישראל</a>
   <a href="yosef-shani-aliyat-neshama.html">עליית נשמה בשיטת הרב יוסף שני</a>
   <a href="turgeman-practical-kabbalah.html">יסודות בקבלה מעשית</a>
+  <a href="darkey-hasaga.html">דרכי השגה</a>
   <a href="#between">בין שני הדפים</a>
 </nav>
 
@@ -316,6 +321,38 @@ footer small{color:#a8a08f}
   </div>
 </article>
 
+<article class="book wide">
+  <a class="cover" href="darkey-hasaga.html">
+    <span>
+      <span class="k">השגה רוחנית</span>
+      <h3>דרכי השגה</h3>
+      <span class="s">על פי שיעורי ר' אברהם יאראוויטש · בעריכת ר' אמנון גרוס</span>
+      <span class="d">37 עמודים · מבוא ושלושה פרקים</span>
+    </span>
+    <svg class="sight" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path d="M22 24Q50 4 78 24Q50 44 22 24Z" fill="currentColor" fill-opacity=".12" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><circle cx="50" cy="24" r="7.4" fill="none" stroke="currentColor" stroke-width="2.2"/><circle class="sight-p" cx="50" cy="24" r="3.2" fill="currentColor"/><path d="M50 40V96" stroke="currentColor" stroke-width="1.6" stroke-opacity=".45" stroke-linecap="round"/><g fill="currentColor"><circle cx="50" cy="43" r="2.7"/><circle cx="50" cy="51.5" r="2.7"/><circle cx="50" cy="60" r="2.7"/><circle cx="50" cy="68.5" r="2.7"/><circle cx="50" cy="77" r="2.7" fill-opacity=".8"/><circle cx="50" cy="85.5" r="2.7" fill-opacity=".65"/><circle cx="50" cy="94" r="2.7" fill-opacity=".5"/></g><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M41 93C27 81 23 58 32 42M59 93C73 81 77 58 68 42" stroke-opacity=".6"/><path d="M33 97C13 82 9 54 19 36M67 97C87 82 91 54 81 36" stroke-opacity=".3"/></g></svg>
+  </a>
+  <div class="book-in">
+    <p>התרגילים המעשיים שבספר "דרכי השגה", על פי שיעורי ר' אברהם יאראוויטש בעריכת ר' אמנון גרוס, שעל ידם בא האדם לראיה רוחנית: הצלם והלבוש המתלבשים בגוף, בירור הרגשות בשבע הספירות שלאורך עמוד השדרה ובאותיות בג"ד כפר"ת, ותרגילי נשימה להלבנת המח ולתיקון הצלם. רוב התרגילים כתובים שלב אחר שלב, כלשון הספר, עם מקור (פרק ועמוד) לכל פרט. ועוד: העקרונות החוזרים, הספרים והמקורות שהוזכרו, ורקע על המחבר והמלקט.</p>
+    <div class="meta"><span class="tag c">36 כרטיסי תרגילים, רובם שלב אחר שלב</span><span class="tag g">מקור (פרק ועמוד) לכל פרט</span><span class="tag p">כ־1,550 הפניות לפרק ולעמוד</span><span class="tag">מקורות יהודיים בלבד</span></div>
+    <h4>בדף</h4>
+    <ul class="toc">
+      <li><a href="darkey-hasaga.html#summary">תקציר</a></li>
+      <li><a href="darkey-hasaga.html#who">המחבר והמלקט</a></li>
+      <li><a href="darkey-hasaga.html#before">לפני שמתחילים</a></li>
+      <li><a href="darkey-hasaga.html#series">מפת הספר</a></li>
+      <li><a href="darkey-hasaga.html#techniques">כל התרגילים</a></li>
+      <li><a href="darkey-hasaga.html#part-1">מבוא: מעשים והרגלים שעל ידם באים לראיה רוחנית</a></li>
+      <li><a href="darkey-hasaga.html#part-2">פרק א': הצלם והלבוש, וההארה הרוחנית שבכל פעולה ובאכילה</a></li>
+      <li><a href="darkey-hasaga.html#part-3">פרק ב': רוחני, גשמי והאדם המשותף; שבירת הצלם ותיקונו</a></li>
+      <li><a href="darkey-hasaga.html#part-4">פרק ג': הכרת הצלם בז' הספירות, בג"ד כפר"ת ותרגילי בירור ותיקון</a></li>
+      <li><a href="darkey-hasaga.html#principles">עקרונות וכללים</a></li>
+      <li><a href="darkey-hasaga.html#books">ספרים ומקורות שהוזכרו</a></li>
+      <li><a href="darkey-hasaga.html#research">רקע ומקורות</a></li>
+    </ul>
+    <a class="go" href="darkey-hasaga.html">לדף <b aria-hidden="true">←</b></a>
+  </div>
+</article>
+
 </div>
 </section>
 
@@ -342,6 +379,7 @@ footer small{color:#a8a08f}
 <li><a href="sages-timeline.html">ציר הזמן של חכמי ישראל</a></li>
 <li><a href="yosef-shani-aliyat-neshama.html">עליית נשמה בשיטת הרב יוסף שני</a></li>
 <li><a href="turgeman-practical-kabbalah.html">יסודות בקבלה מעשית</a></li>
+<li><a href="darkey-hasaga.html">דרכי השגה</a></li>
 </ul>
 <p><small>עודכן: אוקטובר 2026</small></p>
 </div>

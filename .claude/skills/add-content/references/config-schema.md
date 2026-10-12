@@ -49,10 +49,11 @@ Each run of the skill has a workspace in the session's scratchpad: `<scratchpad>
 - `language`: the language code for transcription: `he` uses the Hebrew ivrit.ai model, anything else uses multilingual Whisper.
 - `units`: one entry per source.
   - `n`: the unit number on the page. It continues the page's numbering in existing mode.
+  - `label` (optional): the unit's display name when "<unit_label> N" doesn't fit, e.g. a book's "מבוא", "פרק א'", "פרק ב'". When set, it replaces "<unit_label> N" everywhere: in chips (`פרק ב' · עמ' <bdi>12</bdi>`), in the dark unit tag, in the h2 `.ln` badge, in the index's unit column and in the script reports. Ids still use `n`.
   - `kind`: `youtube`, `video` (another URL yt-dlp supports), `pdf`, `web` or `doc`.
   - `id`: the YouTube id, or a short slug for text sources. Files are named by it: `transcripts/<id>.json`, `notes/<id>.md`, `tpl/unit-<n>.tpl.html`.
   - `duration` and `duration_string`: for video units.
-  - `pages`: for text units; chips link to `url#page=N`.
+  - `pages`: for text units; chips link to `url#page=N`. A Google Drive `/view` link ignores `#page`, so the chip still shows the page number. `page_start` and `page_end` (optional) record the unit's page range in the source.
   - `new`: true for units added in this run. Only new units are transcribed, extracted, written and coverage-checked. Old units already live in the page.
 
 ## Workspace layout (created by the scripts as needed)

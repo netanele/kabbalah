@@ -122,6 +122,7 @@ Leave out any block the notes have nothing for, and never invent content to fill
 ```
 
 **The header.**
+- **Unit display name.** Below, "<unit_label> N" always means the unit's display name: its `label` from project.json if it has one (e.g. "פרק ב'" or "מבוא" for a book), otherwise "<unit_label> N". Use it in the `.ln` badge, the dark unit tag and the chips; the scripts do the same.
 - **h2.** Write `<span class="ln"><unit_label> N</span> <topic>`, with the topic from `project.json`. Never add a series prefix such as "<series name> 1 –": the `.ln` chip already says which unit it is.
 - **lead.** There is exactly one `p.lead` directly under the h2. If you have more to say, write a plain `<p>` inside the first card.
 - **meta.** Keep `.meta` to short spans plus one `a.yt`, and give the date in full (`d.m.yyyy`) inside a bdi.
@@ -523,6 +524,19 @@ The column header uses the plural of `unit_label`, e.g. בשיעורים, בפר
 
 ### 8.6 `transcripts`
 `make_transcripts.py` writes this section: one `details.tr` per unit, each with id `tr-N`. In existing mode it appends only the new units. Never edit the section by hand. Any wording fix, such as gershayim on a Name, goes into the script's replacement list.
+
+## 8.7 Text sources (books, PDFs): wording that differs from lectures
+
+The contract's wording above assumes a recorded lecture. For a book or PDF (`kind: pdf|web|doc`), these overrides apply. They were worked out on the first book page (דרכי השגה):
+- **Units and labels.** Each part of the book (introduction, chapters) is a unit with a `label` in project.json: "מבוא", "פרק א'" and so on. Chips read `פרק ב' · עמ' <bdi>12</bdi>`, and the dark tag reads the label.
+- **`.meta`.** Write `עמודים <bdi>6–17</bdi>` instead of a duration, plus a "לקובץ הספר" link to the unit's url. A Google Drive link ignores `#page`, so the chip just opens the file.
+- **Source line.** `מקור בספר:` with page ranges in one bdi.
+- **Voice.** Write "הספר", "המחבר", "מורנו" as the text calls its teacher, and "המלקט" for the editor. Never write "שיעור" or "הרב אמר בשיעור".
+- **Headings after the cards.** Same order, but skip "שאלות מהקהל" (a book has none) and title the doubts block "ספקות בטקסט".
+- **Compiler's preface.** It gets an opening card, "פתח דבר של המלקט", before the outline of the unit it belongs to.
+- **Status tags keep their exact words**, because `check_page.py` matches them literally. Choose by meaning: an exercise the book defers to chapters never written is `נמסר בחלקו` plus `נדחה לשיעור נפרד`, with the explanation in `<dt>מה הרב לא גילה</dt>`. "ואכמ"ל" and similar get `לא נמסר בשיעור`.
+- **Passages the editor inserted** (quoted sources, translations) are marked as such on the card when the notes say so, e.g. "(קטע שהוסיף המלקט, לא ודאי)".
+- **No full text section**, unless the user asks for one. When asked, `make_transcripts.py` can build it from `transcripts/<id>.md`.
 
 ## 9. Self-check before you report
 

@@ -6,9 +6,10 @@ Usage:  python3 -I render_tpl.py --config <ws>/project.json --unit N
 Macros (expanded in this order):
   @SRCS(a|b|…)  -> <div class="srcs"> with one chip per item, joined by one space
                    (hh:mm:ss items give @S chips; for text units, plain numbers give @P chips)
-  @S(hh:mm:ss)  -> <a class="src" href="URL&amp;t=SSSs" target="_blank" rel="noopener"><unit_label> N · <bdi>hh:mm:ss</bdi></a>
+  @S(hh:mm:ss)  -> <a class="src" href="URL&amp;t=SSSs" target="_blank" rel="noopener"><display> · <bdi>hh:mm:ss</bdi></a>
   @T(hh:mm:ss)  -> <a class="ts" href="URL&amp;t=SSSs" …><bdi>hh:mm:ss</bdi></a>
-  @P(12)        -> text units: <a class="src" href="URL#page=12" …><unit_label> N · עמ' 12</a>
+  @P(12)        -> text units: <a class="src" href="URL#page=12" …><display> · עמ' <bdi>12</bdi></a>
+<display> is the unit's "label" from project.json when set (e.g. "פרק ב'"), else "<unit_label> N".
 The timestamp is printed exactly as written; @S and @T accept only hh:mm:ss, so anything else is a leftover.
 
 NN: the existing part's number when a part for <prefix>-N exists; otherwise the next free number after the part
