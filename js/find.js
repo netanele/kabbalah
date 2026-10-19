@@ -153,6 +153,8 @@
     });
   }
   function scrollToEl(el) {
+    var box = el.closest && el.closest('.trbody');   // a hit inside a scrolling transcript box: bring it into the box first
+    if (box) box.scrollTop += el.getBoundingClientRect().top - box.getBoundingClientRect().top - box.clientHeight / 2;
     var r = el.getBoundingClientRect(), top = panelBottom(), h = window.innerHeight;
     var y = Math.max(0, window.scrollY + r.top - (top + (h - top) / 2) + r.height / 2);
     if (Math.abs(y - window.scrollY) > h * 1.5) {     // far away: jump at once; near: glide

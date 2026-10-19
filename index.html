@@ -76,6 +76,10 @@ section>.lead{color:var(--muted);margin:0 0 18px;font-size:1.05rem}
 .cover svg.amulet{width:104px;height:104px}
 .cover svg.sight{width:104px;height:104px}
 .cover svg.lectern{width:104px;height:104px}
+.cover svg.union{width:104px;height:104px}
+.cover svg.tree10{width:70px;height:108px}
+.tree10-g{transform-origin:30px 46px}
+@media (prefers-reduced-motion:no-preference){.tree10-g{transition:transform 1.2s ease}.book:hover .tree10-g{transform:scale(1.08)}}
 .seal-g{transform-origin:50px 50px}
 .amulet-lots{transform-origin:50px 50px}
 .sight-p{transform-origin:50px 24px}
@@ -127,8 +131,8 @@ footer small{color:#a8a08f}
   <svg class="emblem" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 6.4C10 4.9 7.3 4.3 3.6 4.6v13.2c3.7-.3 6.4.3 8.4 1.8 2-1.5 4.7-2.1 8.4-1.8V4.6c-3.7-.3-6.4.3-8.4 1.8z" fill="currentColor" fill-opacity=".14"/><path d="M12 6.4C10 4.9 7.3 4.3 3.6 4.6v13.2c3.7-.3 6.4.3 8.4 1.8m0-13.2c2-1.5 4.7-2.1 8.4-1.8v13.2c-3.7-.3-6.4.3-8.4 1.8m0-13.2v13.2" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/><path d="M5.8 8.2c1.8-.1 3.2.2 4.4.8M5.8 11c1.8-.1 3.2.2 4.4.8M5.8 13.8c1.8-.1 3.2.2 4.4.8M13.8 9c1.2-.6 2.6-.9 4.4-.8M13.8 11.8c1.2-.6 2.6-.9 4.4-.8M13.8 14.6c1.2-.6 2.6-.9 4.4-.8" fill="none" stroke="currentColor" stroke-width=".7" stroke-linecap="round" stroke-opacity=".7"/></svg>
   <div class="kicker">דפי לימוד ועיון</div>
   <h1>ספריית הקבלה</h1>
-  <p>חיבוריו של רבי אברהם אבולעפיה, שיטות ההתבוננות והמדיטציה מספרי הרב אריה קפלן ומספרי רבותינו, ציר הזמן של חכמי ישראל מדור גזרות קנ״א ועד דור השואה והתקומה, עליית נשמה בשיטת הרב יוסף שני, יסודות הקבלה המעשית בשיעורי הרב יהודה אוהד תורג'מן, תרגילי הראיה הרוחנית שבספר "דרכי השגה" על פי שיעורי ר' אברהם יאראוויטש, ושיעורי בנו, הרב שאול יורוביץ, על הספר.</p>
-  <div class="dates">7 דפים · 35 חיבורים · 123 שיטות · 58 ספרי מקור · 151 חכמים · 332 כרטיסי שיטות · 36 כרטיסי תרגילים</div>
+  <p>חיבוריו של רבי אברהם אבולעפיה, שיטות ההתבוננות והמדיטציה מספרי הרב אריה קפלן ומספרי רבותינו, ציר הזמן של חכמי ישראל מדור גזרות קנ״א ועד דור השואה והתקומה, עליית נשמה בשיטת הרב יוסף שני, יסודות הקבלה המעשית בשיעורי הרב יהודה אוהד תורג'מן, תרגילי הראיה הרוחנית שבספר "דרכי השגה" על פי שיעורי ר' אברהם יאראוויטש, שיעורי בנו, הרב שאול יורוביץ, על הספר, יסודות הייחודים: סדר הביצוע לפי האר"י וחכמים נוספים, עם דרשת הרב תדהר אילון אזולאי, ושיר הספירות בצבעים של רבי יוסף צייאח, בשיעור הרב יהודה אוהד תורג'מן.</p>
+  <div class="dates">9 דפים · 35 חיבורים · 123 שיטות · 58 ספרי מקור · 151 חכמים · 389 כרטיסי שיטות · 36 כרטיסי תרגילים</div>
 </header>
 
 <nav class="top" aria-label="ניווט">
@@ -140,6 +144,8 @@ footer small{color:#a8a08f}
   <a href="turgeman-practical-kabbalah.html">יסודות בקבלה מעשית</a>
   <a href="darkey-hasaga.html">דרכי השגה</a>
   <a href="yurovitz-darkey-hahasaga.html">שיעורי דרכי השגה</a>
+  <a href="yichudim.html">יסודות הייחודים</a>
+  <a href="tzayach-shir-hasefirot.html">שיר הספירות בצבעים</a>
   <a href="#between">בין שני הדפים</a>
 </nav>
 
@@ -264,7 +270,7 @@ footer small{color:#a8a08f}
   </a>
   <div class="book-in">
     <p>איך הרב יוסף שבתאי (שני) מירושלים מעלה אנשים לגן עדן: השיטה שלב אחר שלב, בלשונו, עם מקור (סרטון ודקה) לכל פרט. ועוד: מחקר על קמיע "חותם שלמה" בספרי ישראל, מאיפה משיגים קמיע כזה, רשימת מקורות מלאה ותמלולי הסרטונים.</p>
-    <div class="meta"><span class="tag c">מקור לכל פרט</span><span class="tag g">מחקר: חותם שלמה</span><span class="tag p">5 תמלולים מלאים</span><span class="tag">מקורות יהודיים בלבד</span></div>
+    <div class="meta"><span class="tag c">מקור לכל פרט</span><span class="tag g">מחקר: חותם שלמה</span><span class="tag p">5 תמלולים מלאים וקטע</span><span class="tag">מקורות יהודיים בלבד</span></div>
     <h4>בדף</h4>
     <ul class="toc">
       <li><a href="yosef-shani-aliyat-neshama.html#summary">תקציר</a></li>
@@ -336,7 +342,7 @@ footer small{color:#a8a08f}
   </a>
   <div class="book-in">
     <p>התרגילים המעשיים שבספר "דרכי השגה", על פי שיעורי ר' אברהם יאראוויטש בעריכת ר' אמנון גרוס, שעל ידם בא האדם לראיה רוחנית: הצלם והלבוש המתלבשים בגוף, בירור הרגשות בשבע הספירות שלאורך עמוד השדרה ובאותיות בג"ד כפר"ת, ותרגילי נשימה להלבנת המח ולתיקון הצלם. רוב התרגילים כתובים שלב אחר שלב, כלשון הספר, עם מקור (פרק ועמוד) לכל פרט. ועוד: העקרונות החוזרים, הספרים והמקורות שהוזכרו, ורקע על המחבר והמלקט. שיעורי בנו, הרב שאול יורוביץ, על הספר נמצאים בדף נפרד: <a href="yurovitz-darkey-hahasaga.html">שיעורי דרכי השגה</a>.</p>
-    <div class="meta"><span class="tag c">36 כרטיסי תרגילים, רובם שלב אחר שלב</span><span class="tag g">מקור (פרק ועמוד) לכל פרט</span><span class="tag p">כ־1,550 הפניות לפרק ולעמוד</span><span class="tag">מקורות יהודיים בלבד</span></div>
+    <div class="meta"><span class="tag c">36 כרטיסי תרגילים, רובם שלב אחר שלב</span><span class="tag g">מקור (פרק ועמוד) לכל פרט</span><span class="tag p">כ־1,600 הפניות לפרק ולעמוד</span><span class="tag">מקורות יהודיים בלבד</span></div>
     <h4>בדף</h4>
     <ul class="toc">
       <li><a href="darkey-hasaga.html#summary">תקציר</a></li>
@@ -390,6 +396,68 @@ footer small{color:#a8a08f}
   </div>
 </article>
 
+<article class="book wide">
+  <a class="cover" href="yichudim.html">
+    <span>
+      <span class="k">ייחודים וכוונות</span>
+      <h3>יסודות הייחודים</h3>
+      <span class="s">סדר הביצוע לפי האר"י וחכמים נוספים · עם דרשת הרב תדהר אילון אזולאי</span>
+      <span class="d">סרטון אחד, 2015 · ומקורות בספרים</span>
+    </span>
+    <svg class="union" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="1.2" stroke-opacity=".35" stroke-dasharray="2 4"/><path d="M50 36.4A22 22 0 0 1 50 75.6A22 22 0 0 1 50 36.4z" fill="currentColor" fill-opacity=".16"/><circle cx="40" cy="56" r="22" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="60" cy="56" r="22" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M50 70C43 64 44 55 50 46C50 52 55 54 54.5 59C57 56.5 57 53 56.2 50.5C60 56 59 65 50 70z" fill="currentColor" fill-opacity=".9"/><path d="M50 30v-8M43 32l-3-6M57 32l3-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-opacity=".6"/><circle cx="50" cy="15" r="2.4" fill="currentColor"/><g fill="currentColor" fill-opacity=".45"><circle cx="22" cy="78" r="1.3"/><circle cx="78" cy="78" r="1.3"/><circle cx="16" cy="56" r="1.1"/><circle cx="84" cy="56" r="1.1"/></g></svg>
+  </a>
+  <div class="book-in">
+    <p>איך עושים ייחוד לפי ספרי האר"י, כפי שמסרם רבי חיים ויטאל: סדר ביצוע אחד, שלב אחר שלב, עם מקור ראשוני לכל שלב, והתנאים והאזהרות שהספרים מציבים. ועוד: מסורות הצבעים וציור השמות במחשבה, ייחודים בדרכי חכמים נוספים (הרמ"ק, בית אל, הבעש"ט ותלמידיו, חכמי המזרח), ודרשת הרב תדהר אילון אזולאי בהילולת האדמו"ר מקומרנא על הייחודים, הביטול ואהבת ישראל, עם מקור בספרים לכל אחד מדבריו ותמלול מלא. הדף מתעד את הספרים ואת הדרשה, ואינו ממליץ לבצע דבר.</p>
+    <div class="meta"><span class="tag c">57 כרטיסי שיטות, רובם שלב אחר שלב</span><span class="tag g">מקור (ספר, או סרטון ודקה) לכל פרט</span><span class="tag p">תמלול מלא של הדרשה</span><span class="tag">סדר ביצוע ב־14 שלבים</span></div>
+    <h4>בדף</h4>
+    <ul class="toc">
+      <li><a href="yichudim.html#summary">תקציר</a></li>
+      <li><a href="yichudim.html#who">מי הוא הרב</a></li>
+      <li><a href="yichudim.html#before">תנאים ואזהרות</a></li>
+      <li><a href="yichudim.html#method">השיטה: סדר ביצוע ייחוד שלב אחר שלב</a></li>
+      <li><a href="yichudim.html#techniques">כל השיטות</a></li>
+      <li><a href="yichudim.html#part-1">סרטון 1: הייחודים, הביטול ואהבת ישראל</a></li>
+      <li><a href="yichudim.html#vsrc">מקורות לדברי הרב</a></li>
+      <li><a href="yichudim.html#part-2">האר"י: ייחודי האר"י כפי שמסרם רבי חיים ויטאל</a></li>
+      <li><a href="yichudim.html#part-3">צבעים: צבעים, ציור השמות וצירוף אותיות</a></li>
+      <li><a href="yichudim.html#part-4">חכמים: ייחודים בדרכי חכמים נוספים</a></li>
+      <li><a href="yichudim.html#books">ספרים וחכמים</a></li>
+      <li><a href="yichudim.html#research">רקע ומקורות</a></li>
+      <li><a href="yichudim.html#transcripts">תמלולים מלאים</a></li>
+    </ul>
+    <a class="go" href="yichudim.html">לדף <b aria-hidden="true">←</b></a>
+  </div>
+</article>
+
+<article class="book wide">
+  <a class="cover" href="tzayach-shir-hasefirot.html">
+    <span>
+      <span class="k">הקבלה הנבואית · צבעי הספירות</span>
+      <h3>שיר הספירות בצבעים</h3>
+      <span class="s">רבי יוסף צייאח ורבי דוד בן רבי יהודה החסיד · שיעור הרב יהודה אוהד תורג'מן</span>
+      <span class="d">סרטון אחד, 2018 · השמעה מדקה 39</span>
+    </span>
+    <svg class="tree10" viewBox="0 0 60 92" aria-hidden="true" focusable="false"><g stroke="currentColor" stroke-opacity=".45" stroke-width="1.4"><path d="M30 8L14 22M30 8L46 22M14 22L46 22M14 22L14 46M46 22L46 46M14 46L46 46M14 46L30 54M46 46L30 54M30 8L30 86M14 46L14 68M46 46L46 68M14 68L46 68M14 68L30 76M46 68L30 76"/></g><g class="tree10-g"><circle cx="30" cy="8" r="5.5" fill="#fffdf5" stroke="currentColor"/><circle cx="46" cy="22" r="5.5" fill="#5b9bd5"/><circle cx="14" cy="22" r="5.5" fill="#f2c94c"/><circle cx="46" cy="46" r="5.5" fill="#d9dde4"/><circle cx="14" cy="46" r="5.5" fill="#c62828"/><circle cx="30" cy="54" r="5.5" fill="#7e3fa6"/><circle cx="46" cy="68" r="5.5" fill="#f7b8cb"/><circle cx="14" cy="68" r="5.5" fill="#b0305f"/><circle cx="30" cy="76" r="5.5" fill="#f08a24"/><circle cx="30" cy="87" r="5" fill="#1f4ea3"/></g></svg>
+  </a>
+  <div class="book-in">
+    <p>שיעור של הרב יהודה אוהד תורג'מן על הקבלה הנבואית של רבי יוסף צייאח ורבי דוד בן רבי יהודה החסיד: השיטה שלב אחר שלב, עם מקור (דקה בסרטון) לכל פרט, ו"שיר הספירות" שבו כל ספירה נאמרת עם צבע ושורה, והמתרגל רואה את מילות השורה באותו צבע. ועוד: ציור הספירות בצבעיהן עם השורה והמקור ליד כל אחת, כפתור שמשמיע רק את קטע השיר מפי הרב (דקה 38:57), לשון הרמ"ק בפרדס רמונים על גוון כל ספירה, הרקע על רבי דוד וחיבוריו, ותמלול מלא.</p>
+    <div class="meta"><span class="tag c">10 ספירות: צבע, שורה ומקור</span><span class="tag g">השמעת השיר בלחיצה</span><span class="tag p">מקור (דקה) לכל פרט</span><span class="tag">תמלול מלא</span></div>
+    <h4>בדף</h4>
+    <ul class="toc">
+      <li><a href="tzayach-shir-hasefirot.html#summary">תקציר</a></li>
+      <li><a href="tzayach-shir-hasefirot.html#listen">השמעה: שיר הספירות מפי הרב</a></li>
+      <li><a href="tzayach-shir-hasefirot.html#tree">ציור הספירות בצבעיהן</a></li>
+      <li><a href="tzayach-shir-hasefirot.html#song">הספירות, הצבעים והשורות</a></li>
+      <li><a href="tzayach-shir-hasefirot.html#method">השיטה שלב אחר שלב</a></li>
+      <li><a href="tzayach-shir-hasefirot.html#second">טכניקה שנייה</a></li>
+      <li><a href="tzayach-shir-hasefirot.html#theory">הרקע בשיעור</a></li>
+      <li><a href="tzayach-shir-hasefirot.html#sources">מקורות</a></li>
+      <li><a href="tzayach-shir-hasefirot.html#transcript">תמלול מלא</a></li>
+    </ul>
+    <a class="go" href="tzayach-shir-hasefirot.html">לדף <b aria-hidden="true">←</b></a>
+  </div>
+</article>
+
 </div>
 </section>
 
@@ -418,6 +486,8 @@ footer small{color:#a8a08f}
 <li><a href="turgeman-practical-kabbalah.html">יסודות בקבלה מעשית</a></li>
 <li><a href="darkey-hasaga.html">דרכי השגה</a></li>
 <li><a href="yurovitz-darkey-hahasaga.html">שיעורי דרכי השגה</a></li>
+<li><a href="yichudim.html">יסודות הייחודים</a></li>
+<li><a href="tzayach-shir-hasefirot.html">שיר הספירות בצבעים</a></li>
 </ul>
 <p><small>עודכן: אוקטובר 2026</small></p>
 </div>

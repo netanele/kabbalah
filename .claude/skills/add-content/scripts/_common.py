@@ -20,7 +20,8 @@ HEB = "\u05d0-\u05ea"              # letters alef..tav
 # the four-letter Name, with or without marks between the letters (never written in full in the library)
 NAME_ANY = re.compile("\u05d9[%s]*\u05d4[%s]*\u05d5[%s]*\u05d4" % (MARKS, MARKS, MARKS))
 STATUS_TAGS = ("נמסר במלואו", "נמסר בחלקו", "הוזכר בלבד", "סופר כמעשה")
-RED_TAGS = ("לא נמסר בשיעור", "הרב לא מגלה", "נדחה לשיעור נפרד", "לא ברור בתמלול", "לא פורסם")
+RED_TAGS = ("לא נמסר בשיעור", "הרב לא מגלה", "נדחה לשיעור נפרד", "לא ברור בתמלול", "לא פורסם",
+            "לא נמסר בספר", "המחבר לא מגלה", "נוסח משובש")   # the last three: cards built from books, not lectures
 # the known technique types, in the order the index lists them; unknown types follow alphabetically
 TYPE_ORDER = ["קמיע", "גורל", "סגולה", "כוונה", "תפילה", "השבעה", "הכנה ותנאים", "איסור ואזהרה", "עיוני"]
 VIDEO_KINDS = ("youtube", "video")
