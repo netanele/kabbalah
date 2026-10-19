@@ -125,6 +125,21 @@ var METHODS = [
     hod: {"chips": [{"c": ["#fff", "#c62828"], "split": 35, "title": "לבן נוטה לאדום", "t": "\"לובן נוטה אל האודם\""}]},
     yesod: {"chips": [{"c": ["#fff", "#c62828"], "title": "לבן ואדום", "t": "\"גוון תערובת\""}, {"kind": "all", "title": "כלול מכל גוון", "t": "כלול מכל"}]},
     malchut: {"chips": [{"kind": "all", "title": "כלול מכל גוון", "t": "כלולה מכל גוון"}, {"c": ["#5b9bd5"], "title": "תכלת", "t": "תכלת"}]}
+  }},
+  {id:"tidhar", name:"עץ התדהר", ref:"בן זמננו, תשפ\"ב–תשפ\"ג", href:"sefirot-colors.html#tidhar", col:"עץ התדהר", colRef:"עמ' קעב–קעו וכרטיסים", modern:true,
+   /* הצבעים לפי ערכי ה־RGB שבספר עצמו ("יצוג צבעי האור על מסכים"), עמודים קעב–קעג */
+   extra:{daat:{chips:[{"c":["#7f00ff"], "title":"סגול", "t":"\"דעת/סגול ?\"; \"לגבי צבע של ספירת הדעת עדיין לא מצאתי מקור\""}]}},
+   colors:{
+    keter: {"chips": [{"c": ["#ffffff"], "title": "לבן", "t": "\"מצד השפעתו בספירות צבעו לבן\""}, {"kind": "nocol", "t": "בכרטיס: \"גלגלתא כתר לבן/שקוף\""}]},
+    chochma: {"chips": [{"c": ["#007fff"], "title": "תכלת", "t": "תכלת; בכרטיס: \"כחול שמים\""}]},
+    bina: {"chips": [{"c": ["#ffb000"], "title": "זהב", "t": "זהב"}]},
+    chesed: {"chips": [{"c": ["#00ffff"], "title": "תכלת מלובן", "t": "\"תכלת מלובן\""}]},
+    gevura: {"chips": [{"c": ["#ff0000"], "title": "אדום", "t": "אדום"}]},
+    tiferet: {"chips": [{"c": ["#ffff00"], "title": "צהוב", "t": "\"צהוב חלמון ביצה\"; בכרטיס: \"צהוב כורכום\""}]},
+    netzach: {"chips": [{"c": ["#00ff00"], "title": "ירוק", "t": "\"ירוק הנוטה לכחול\""}]},
+    hod: {"chips": [{"c": ["#880000"], "title": "אדום כהה", "t": "\"אדום כהה נוטה לשחור\"; בכרטיס: \"אדום שני\""}]},
+    yesod: {"chips": [{"c": ["#b3ff00"], "title": "ירוק נוטה לצהוב", "t": "\"ירוק הנוטה לצהוב\""}]},
+    malchut: {"chips": [{"c": ["#610061"], "title": "ארגמן", "t": "\"ארגמן סגול כעין יין צלול\""}, {"c": ["#4c1c24"], "title": "בורדו", "t": "\"ארגון אדום כעין בורדו\", כשאורה \"נמשך לבריאה\""}]}
   }}
 ];
 var DATA = {
@@ -134,9 +149,8 @@ var DATA = {
 };
 
 /* ---- הכנה: הגוון שצובע את השמות בכל ספירה ---- */
-METHODS.forEach(function(m){
-  Object.keys(m.colors).forEach(function(f){
-    var e = m.colors[f], ch = e.chips || [];
+function prep(e){
+    var ch = e.chips || [];
     if(!ch.length){ e.kind = 'none'; e.t = ''; return; }
     var u = (e.use != null) ? e.use : -1;
     if(u < 0){ for(var i=0;i<ch.length;i++){ if(ch[i].kind !== 'nocol'){ u = i; break; } } }
@@ -146,7 +160,10 @@ METHODS.forEach(function(m){
     if(!e.t) e.t = p.t;
     var alt = ch.filter(function(x,i){ return i !== u; }).map(function(x){ return x.t; });
     if(alt.length) e.alt = alt;
-  });
+}
+METHODS.forEach(function(m){
+  Object.keys(m.colors).forEach(function(f){ prep(m.colors[f]); });
+  if(m.extra) Object.keys(m.extra).forEach(function(f){ prep(m.extra[f]); });   /* ספירות נוספות, כמו דעת */
 });
 
 var RAINBOW = ['#fff','#5b9bd5','#3faa5a','#f2c94c','#c62828','#7e3fa6'];
@@ -212,7 +229,7 @@ function pillCss(e){
   return 'background:'+b+';'+fg+';'+(avg>.8?'border:1px solid #c9bda5':'border:1px solid transparent');}
 
 function method(id){for(var i=0;i<METHODS.length;i++) if(METHODS[i].id===id) return METHODS[i]; return METHODS[0];}
-function entry(f,mid){ return method(mid||'shir').colors[f]; }
+function entry(f,mid){ var m=method(mid||'shir'); return m.colors[f] || (m.extra && m.extra[f]); }
 
 /* ---- צביעת דף: כל אלמנט עם data-sef="<ספירה>" (ואם רוצים data-sef-m="<שיטה>") ----
  * HTML: מקבל רקע (data-sef-as="bg") או נקודה בסגנון הטבלה (data-sef-as="dot", ברירת המחדל).
