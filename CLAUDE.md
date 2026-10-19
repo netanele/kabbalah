@@ -10,5 +10,14 @@
 - Every page except `index.html` links back to the home page: `<a class="nav-home" href="index.html">ספריית הקבלה</a>` as the first item of its top nav, styled gold and bold (`nav.top a.nav-home{color:var(--gold);font-weight:700}`).
 - All HTML pages and "artifacts" are created as local files in this repo. Never publish them as claude.ai Artifacts.
 
+## Sefirot colors (always)
+- Whenever a page, drawing, yichud or diagram shows sefirot or holy names, use ONLY the sefirot colors from `tzayach-shir-hasefirot.html` (שיר הספירות). The full table with hex codes is in `README.md` under "צבעי הספירות". Never invent other colors.
+- A holy name takes the color of the sefira where it is said in the song: אהי"ה = כתר, י"ה = חכמה, אלקים חיים = בינה, אל = חסד, אלקים = גבורה, הוי"ה = תפארת, ה' צבאות = נצח, אלקים צבאות = הוד, אל חי = יסוד, אדנ"י = מלכות. אין סוף has no sefira color, only light.
+- In combined (interleaved) names, each letter keeps the color of the name it came from.
+- New yichudim go into `otzar-hayichudim.html`.
+
+## Holy names
+- Do not write the name הוי"ה in full anywhere (text or images); write הוי"ה instead.
+
 ## Style and content
-See `README.md` (design tokens, fonts, and the content rules for the meditation page).
+See `README.md` (design tokens, fonts, sefirot colors, and the content rules for the meditation page).
