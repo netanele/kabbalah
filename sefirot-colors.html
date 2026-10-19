@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>שיטות בצבעי הספירות</title>
+<meta name="description" content="מחקר על צבעי הספירות בספרי הקבלה: הזוהר, תיקוני הזוהר, ר' עזריאל, מערכת האלהות, ג'יקטילה, ריקנאטי, ספר הקנה, הרמ"ק, האר"י, ספר חרדים, ראשית חכמה ומגלה עמוקות. טבלת השוואה, צבעי אותיות השם, וכל מקור בלשונו.">
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+
+:root{color-scheme:light;--bg:#f4f0e6;--paper:#fffdf8;--ink:#26221c;--muted:#6f665a;--gold:#9c7a33;--gold2:#c9a75a;--line:#dcd2c0;--dark:#26221c;--warn:#9b5f58;--ok:#5f7a4a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);direction:rtl;color:var(--ink);font-family:"Heebo","Noto Sans Hebrew",Arial,sans-serif;line-height:1.8;font-size:16.5px}
+h1,h2,h3,h4,.serif{font-family:"Frank Ruhl Libre","David Libre","Times New Roman",serif}
+a{color:#6d511d}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+header.hero{background:radial-gradient(1200px 500px at 80% -10%,#5a4a33 0%,#2b2620 55%,#1e1b17 100%);color:#f4ecdc;padding:56px 22px 48px;text-align:center}
+.hero .emblem{width:62px;height:92px;display:block;margin:0 auto 10px}
+.hero .kicker{color:var(--gold2);letter-spacing:.14em;font-size:.85rem;font-weight:500}
+.hero h1{font-size:clamp(2.2rem,6vw,4rem);margin:8px 0 14px;line-height:1.15;font-weight:900}
+.hero p{max-width:860px;margin:0 auto;color:#e6dcc8;font-size:1.12rem}
+.hero .dates{margin-top:16px;color:var(--gold2);font-size:.95rem}
+nav.top{position:sticky;top:0;z-index:20;background:#fffdf8f2;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:6px 10px;display:flex;gap:2px;flex-wrap:wrap;justify-content:center}
+nav.top a{color:#5a4423;text-decoration:none;font-size:.84rem;padding:4px 9px;border-radius:999px;border:1px solid transparent}
+nav.top a:hover{border-color:var(--line);background:#f3ecdf}
+nav.top a.nav-home{color:var(--gold);font-weight:700}
+.container{max-width:1100px;margin:auto;padding:26px 18px 60px}
+section{margin-top:46px}
+section>h2{font-size:2rem;border-bottom:2px solid var(--gold2);padding-bottom:8px;margin:0 0 6px;line-height:1.3}
+section>.lead{color:var(--muted);margin:0 0 18px;font-size:1.05rem}
+h3{font-size:1.35rem;margin:26px 0 8px;color:#4b3b22}
+h4{font-size:1.05rem;margin:14px 0 4px;color:#8a6a2a}
+p{margin:0 0 12px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:0 0 14px;box-shadow:0 3px 12px #3a2c100d}
+.card h3{margin-top:0}
+.steps{counter-reset:step;list-style:none;margin:0;padding:0}
+.steps>li{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 64px 14px 18px;margin:0 0 12px;box-shadow:0 3px 12px #3a2c100d}
+.steps>li::before{counter-increment:step;content:counter(step);position:absolute;right:16px;top:14px;width:34px;height:34px;border-radius:50%;background:var(--dark);color:var(--gold2);font-family:"Frank Ruhl Libre",serif;font-weight:700;font-size:1.1rem;display:grid;place-items:center}
+.steps>li h4{margin:0 0 6px;font-size:1.12rem;color:#3a2e1d}
+.steps>li p{margin:0 0 6px}
+.srcs{margin:6px 0 0;display:flex;flex-wrap:wrap;gap:6px}
+.srcs::before{content:"מקור:";color:var(--muted);font-size:.85rem;align-self:center}
+a.src{display:inline-block;background:#efe7d6;color:#4b3b22;text-decoration:none;font-size:.8rem;padding:2px 10px;border-radius:999px;border:1px solid #e3d8c2}
+a.src:hover{background:#e6dcc5}
+.q{border-right:4px solid var(--gold2);background:#faf6ec;padding:10px 16px;margin:10px 0 12px;border-radius:0 10px 10px 0;font-family:"Frank Ruhl Libre",serif;font-size:1.05rem}
+.q .who{display:block;color:var(--muted);font-family:"Heebo",sans-serif;font-size:.85rem;margin-top:4px}
+.note{border-right:4px solid var(--warn);background:#f8efed;padding:10px 16px;margin:10px 0 14px;border-radius:0 10px 10px 0}
+.good{border-right:4px solid var(--ok);background:#eef3e7;padding:10px 16px;margin:10px 0 14px;border-radius:0 10px 10px 0}
+table{width:100%;border-collapse:collapse;background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:.95rem;margin:8px 0 16px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top;text-align:right}
+th{background:#efe7d6;color:#4b3b22;font-weight:700}
+tr:last-child td{border-bottom:0}
+td .verse{font-family:"Frank Ruhl Libre",serif;font-size:1.08rem;font-weight:500}
+td small{display:block;color:var(--muted);font-size:.82rem;line-height:1.5}
+td.pq{font-family:"Frank Ruhl Libre",serif;font-size:.95rem;color:#4b3b22}
+.sw{display:inline-block;width:22px;height:22px;border-radius:50%;border:1px solid #0003;vertical-align:-5px;margin-left:8px;flex:none}
+ul.plain{margin:0 0 12px;padding-right:20px}
+ul.plain li{margin:0 0 6px}
+.tag{display:inline-block;background:#efe7d6;padding:1px 10px;border-radius:999px;font-size:.78rem;color:#4b3b22;margin-left:4px}
+.tag.r{background:#f3e0dd;color:#6e3b36}
+details.tr{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:10px 18px;margin:0 0 12px}
+details.tr summary{cursor:pointer;font-size:1.1rem;font-weight:700;color:#3a2e1d}
+details.tr summary .n{color:var(--muted);font-weight:400;font-size:.85rem;margin-right:8px}
+.trbody{max-height:520px;overflow:auto;border-top:1px solid var(--line);padding-top:8px;font-size:.95rem}
+.trbody p{margin:0 0 6px}
+.trbody p.song{background:#faf3e1;border-right:3px solid var(--gold2);padding:2px 10px;border-radius:0 8px 8px 0;font-family:"Frank Ruhl Libre",serif;font-size:1.02rem}
+a.ts{color:var(--gold);text-decoration:none;font-size:.78rem;font-family:monospace;background:#f3ecdf;padding:0 6px;border-radius:6px}
+footer{margin-top:50px;color:var(--muted);font-size:.9rem;text-align:center;border-top:1px solid var(--line);padding-top:18px}
+bdi,.ltr{direction:ltr;unicode-bidi:isolate}
+
+
+/* colors page */
+.dot{display:inline-block;width:16px;height:16px;border-radius:50%;border:1px solid #0003;vertical-align:-3px;margin-left:6px;flex:none}
+.dot.big{width:26px;height:26px;margin:0}
+.ch{display:inline-flex;align-items:center;gap:0;margin:0 0 4px 8px;font-size:.88rem;line-height:1.45}
+.ch.nocol{color:var(--muted)}
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--paper);box-shadow:0 3px 12px #3a2c100d}
+table.cmp{margin:0;border:0;border-radius:0;min-width:1180px;font-size:.88rem}
+table.cmp th,table.cmp td{border-left:1px solid #ece4d3;padding:8px 10px}
+table.cmp th small{display:block;font-weight:400;color:var(--muted);font-size:.76rem}
+table.cmp thead th,table.cmp tr:first-child th{position:sticky;top:0}
+table.cmp th a{color:#4b3b22;text-decoration:none;border-bottom:1px dotted var(--gold2)}
+table.cmp .sticky{position:sticky;right:0;background:#f6efe1;z-index:2;min-width:96px}
+table.cmp td.ours{background:#faf3e1}
+table.cmp th.ours{background:#efe2c4}
+table.cmp td.empty{color:#c9bfae;text-align:center}
+.sefn{display:inline-flex;align-items:center;font-family:"Frank Ruhl Libre",serif;font-size:1.05rem}
+.fam{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.fam .card{margin:0}
+.fam h3{margin:0 0 6px;font-size:1.2rem}
+.fam .chips{margin:6px 0 8px}
+.fam small{color:var(--muted)}
+.lrow{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:12px 16px;margin:0 0 10px}
+.lname a{font-weight:700;text-decoration:none;color:#3a2e1d}
+.lname small{display:block;color:var(--muted);font-size:.86rem;line-height:1.5}
+.lets{display:flex;gap:10px;direction:rtl}
+.lt{display:flex;flex-direction:column;align-items:center;gap:4px;font-family:"Frank Ruhl Libre",serif;font-size:.95rem;line-height:1.1;min-width:52px;text-align:center}
+.scard{background:var(--paper);border:1px solid var(--line);border-radius:16px;margin:0 0 16px;overflow:hidden;box-shadow:0 3px 12px #3a2c100d}
+.shead{background:radial-gradient(900px 300px at 85% -40%,#5a4a33 0%,#2b2620 60%,#1e1b17 100%);color:#f4ecdc;padding:14px 20px}
+.shead .era{color:var(--gold2);font-size:.8rem;letter-spacing:.08em}
+.shead h3{color:#f4ecdc;margin:2px 0;font-size:1.4rem}
+.shead .book{color:#cfc3ac;font-size:.9rem}
+.sbody{padding:14px 20px 8px}
+.sbody .q{font-size:1.12rem}
+.prac{background:#eef3e7;border-right:4px solid var(--ok);padding:6px 12px;border-radius:0 8px 8px 0;font-size:.95rem}
+@media(max-width:720px){
+  .hero{padding:44px 16px 36px}
+  .lrow{grid-template-columns:1fr}
+  .lets{justify-content:flex-start}
+  .shead,.sbody{padding-left:14px;padding-right:14px}
+}
+@media print{nav.top{display:none}.tbl-wrap{overflow:visible}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="emblem" viewBox="0 0 60 92" aria-hidden="true" focusable="false"><g stroke="#c9a75a" stroke-opacity=".55" stroke-width="1.4"><path d="M30 8L14 22M30 8L46 22M14 22L46 22M14 22L14 46M46 22L46 46M14 46L46 46M14 46L30 54M46 46L30 54M30 8L30 86M14 46L14 68M46 46L46 68M14 68L46 68M14 68L30 76M46 68L30 76"/></g><circle cx="30" cy="8" r="5.5" fill="#fffdf5" stroke="#c9a75a"/><circle cx="46" cy="22" r="5.5" fill="#5b9bd5"/><circle cx="14" cy="22" r="5.5" fill="#f2c94c"/><circle cx="46" cy="46" r="5.5" fill="#d9dde4"/><circle cx="14" cy="46" r="5.5" fill="#c62828"/><circle cx="30" cy="54" r="5.5" fill="#7e3fa6"/><circle cx="46" cy="68" r="5.5" fill="#f7b8cb"/><circle cx="14" cy="68" r="5.5" fill="#b0305f"/><circle cx="30" cy="76" r="5.5" fill="#f08a24"/><circle cx="30" cy="87" r="5" fill="#1f4ea3"/></svg>
+  <div class="kicker">צבעי הספירות · מחקר בספרי הקבלה</div>
+  <h1>שיטות בצבעי הספירות</h1>
+  <p>מה כתוב בספרי הקבלה על הגוון של כל ספירה: הזוהר ותיקוני הזוהר, המקובלים הראשונים, הרמ"ק, האר"י ותלמידיו, וספרי מוסר וקבלה מאוחרים. כל מקור מובא תחילה בלשונו, ואחר כך הביאור. בסוף, השוואה לצבעים של שיר הספירות.</p>
+  <div class="dates">58 ציטוטים מ־15 ספרים · כל ציטוט הושווה לנוסח שבספריא · נאסף ונכתב 19.10.2026 · ספרי קבלה בלבד</div>
+</header>
+
+<nav class="top" aria-label="ניווט">
+  <a class="nav-home" href="index.html">ספריית הקבלה</a>
+  <a href="#summary">תקציר</a>
+  <a href="#families">ארבע שיטות</a>
+  <a href="#compare">טבלת השוואה</a>
+  <a href="#letters">אותיות השם</a>
+  <a href="#practice">מעשה ואזהרה</a>
+  <a href="#zohar-sec">הזוהר</a>
+  <a href="#tz-sec">התיקונים</a>
+  <a href="#rishonim-sec">הראשונים</a>
+  <a href="#ramak-sec">הרמ"ק</a>
+  <a href="#ari-sec">האר"י</a>
+  <a href="#achronim-sec">אחרונים</a>
+  <a href="#ours">ושיר הספירות</a>
+  <a href="#gaps">מה לא נבדק</a>
+</nav>
+
+<main class="container">
+
+<section id="summary">
+  <h2>תקציר</h2>
+  <div class="card">
+    <p><b>אין שיטה אחת.</b> בספרי הקבלה יש כמה סדרים של גוונים לספירות, והם אינם זהים. בשלושה דברים כמעט כולם מסכימים: <span class="ch"><i class="dot" style="background:#fff;border-color:#cbbd9c"></i>לבן לחסד</span><span class="ch"><i class="dot" style="background:#c62828"></i>אדום לגבורה</span>ולתפארת גוון שמחבר את שניהם, ירוק או לבן ואדום. וכמעט כולם אומרים שלכתר אין גוון, או שהוא תכלית הלובן.</p>
+    <p><b>במקום שהם חלוקים:</b> הבינה ירוקה אצל ר' עזריאל, במערכת האלהות ואצל הרמ"ק, ושחורה בתיקון ע. המלכות כלולה מכל גוון, או תכלת, או שחורה, או משתנה לפי שמה. ונצח, הוד ויסוד מקבלים גוון ממה שמעליהם.</p>
+    <p><b>שתי אזהרות חוזרות:</b> הגוון הוא משל לפעולה ולא תואר של הספירה (הרמ"ק), ובאצילות אין גוון כלל, הגוונים מתגלים רק למטה (האר"י). ספר חרדים מתיר לדמות רק את אותיות השמות.</p>
+    <p><b>שיר הספירות שלנו</b> הולך בעיקרו בדרך ר' עזריאל והרמ"ק: תכלת לחכמה, ירוק בבינה, לבן וכסף לחסד, אדום וזהב לגבורה, ורוד בהיר לנצח, "אודם נוטה אל הלובן", וורוד כהה להוד, "לובן נוטה אל האודם" (אור נערב). <a href="#ours">ההשוואה המלאה</a>.</p>
+  </div>
+  <div class="note">הדף מתעד את לשון הספרים, ואינו הוראה למעשה. הצבעים בטבלאות הם הגוונים שהספרים מזכירים, מצוירים בגווני הפלטה של שיר הספירות; תוויות הספירות עצמן צבועות תמיד בצבעים שלנו.</div>
+</section>
+
+<section id="families">
+  <h2>ארבע שיטות</h2>
+  <p class="lead">רוב המקורות נופלים לאחת מארבע תבניות.</p>
+  <div class="fam">
+    <div class="card"><h3>א. לבן–אדום, ותערובותיהם</h3>
+      <div class="chips"><span class="ch"><i class="dot" style="background:#fff;border-color:#cbbd9c"></i>חסד</span><span class="ch"><i class="dot" style="background:#c62828"></i>גבורה</span><span class="ch"><i class="dot" style="background:linear-gradient(135deg,#fff 50%,#c62828 50%)"></i>תפארת</span><span class="ch"><i class="dot" style="background:linear-gradient(135deg,#c62828 35%,#fff 35%)"></i>נצח</span><span class="ch"><i class="dot" style="background:linear-gradient(135deg,#fff 35%,#c62828 35%)"></i>הוד</span></div>
+      <p>כל ספירה תחתונה היא תערובת של הלבן והאדום שבחסד ובגבורה, ומעליהן תכלת לחכמה וירוק לבינה. <small><a href="#azriel">ר' עזריאל</a>, <a href="#pardes">הרמ"ק</a>, <a href="#orneerav">אור נערב</a>.</small></p></div>
+    <div class="card"><h3>ב. שלושת גווני הקשת והאבות</h3>
+      <div class="chips"><span class="ch"><i class="dot" style="background:#fff;border-color:#cbbd9c"></i>חסד</span><span class="ch"><i class="dot" style="background:#c62828"></i>גבורה</span><span class="ch"><i class="dot" style="background:#3faa5a"></i>תפארת</span></div>
+      <p>לבן, אדום וירוק, כגווני הקשת והעין, והספירות שמתחת לוקחות מהם. בתיקונים בינה ומלכות בשחור; במגלה עמוקות המלכות בתכלת. <small><a href="#ztzitzit">הזוהר</a>, <a href="#tz70">תיקון ע</a>, <a href="#tz21">תיקון כא</a>, <a href="#megale">מגלה עמוקות</a>.</small></p></div>
+    <div class="card"><h3>ג. התכלת של המלכות</h3>
+      <div class="chips"><span class="ch"><i class="dot" style="background:#fff;border-color:#cbbd9c"></i>אור עליון</span><span class="ch"><i class="dot" style="background:#5b9bd5"></i>מלכות</span></div>
+      <p>אור לבן למעלה, ותחתיו אור תכלת שהוא כסא לו, כמו בשלהבת הנר ובציצית. <small><a href="#zflame">הזוהר</a>, <a href="#zshelach">שלח</a>, <a href="#aritzitzit">האר"י</a>, <a href="#charedim">חרדים</a>, <a href="#reshit">ראשית חכמה</a>. ותכלת למלכות, בלי משל האור: <a href="#maarechet">מערכת האלהות</a>, <a href="#recanati">ריקנאטי</a>, <a href="#kanah">ספר הקנה</a>, <a href="#megale">מגלה עמוקות</a>.</small></p></div>
+    <div class="card"><h3>ד. גוון לפי השם</h3>
+      <div class="chips"><span class="ch"><i class="dot" style="background:#26221c"></i>שד"י</span><span class="ch"><i class="dot" style="background:#c62828"></i>אלהי"ם</span><span class="ch"><i class="dot" style="background:#3faa5a"></i>אדנ"י</span></div>
+      <p>אותה ספירה, המלכות, משנה גוון לפי השם שבו היא פועלת. <small><a href="#gikatilla">ר' יוסף ג'יקטילה</a>; וכעין זה <a href="#maarechet">מערכת האלהות</a> (תכלת, תולעת שני וארגמן לפי מצבה) ו<a href="#recanati">ריקנאטי</a> (תכלת ותולעת שני).</small></p></div>
+  </div>
+</section>
+
+<section id="compare">
+  <h2>טבלת השוואה</h2>
+  <p class="lead">ספירה אחר ספירה, לפי כל מקור. בעמודה הראשונה הצבעים שלנו, משיר הספירות. לחיצה על שם המקור מובילה ללשונו בדף. "—" פירושו שהמקור אינו אומר דבר על אותה ספירה. בטלפון אפשר לגלול את הטבלה הצידה.</p>
+  <div class="tbl-wrap"><table class="cmp"><tr><th class="sticky">ספירה</th><th class="ours">שיר הספירות<small>הצבעים שלנו</small></th><th><a href="#azriel">ר&#x27; עזריאל</a><small>ביאור עשר ספירות ט</small></th><th><a href="#tzintro">תיקוני זוהר</a><small>הקדמה, א ע&quot;א</small></th><th><a href="#tz70">תיקון ע</a><small>קכה ע&quot;א</small></th><th><a href="#tzeye">תיקון ע</a><small>גווני העין, קכח ע&quot;ב</small></th><th><a href="#zohar">הזוהר</a><small>קשת, נר, ציצית</small></th><th><a href="#maarechet">מערכת האלהות</a><small>פרקים ד, י&quot;ב</small></th><th><a href="#gikatilla">ר&#x27; יוסף ג&#x27;יקטילה</a><small>שערי אורה</small></th><th><a href="#ramak">הרמ&quot;ק</a><small>פרדס רמונים י; אור נערב ו</small></th></tr><tr><th class="sticky" scope="row"><span class="sefn"><i class="dot" style="background:radial-gradient(#fff,#eee8da);border-style:dashed"></i>כתר</span></th><td class="ours"><span class="ch"><i class="dot" style="background:radial-gradient(#fff,#eee8da);border-style:dashed"></i>לבן בוהק, כמו אוויר</span></td><td><span class="ch"><i class="dot" style="background:transparent;border-style:dashed;border-color:#9c7a33" title="נעלם, בלי גוון"></i>&quot;האור המתעלם&quot;</span></td><td><span class="ch"><i class="dot" style="background:transparent;border-style:dashed;border-color:#9c7a33" title="נעלם, בלי גוון"></i>&quot;זהר טמיר וגניז&quot;</span></td><td><span class="ch"><i class="dot" style="background:transparent;border-style:dashed;border-color:#9c7a33" title="נעלם, בלי גוון"></i>&quot;לא אשתמודע ביה גוון כלל&quot;</span></td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td><span class="ch"><i class="dot" style="background:#fff;border-color:#cbbd9c" title="לבן"></i>&quot;בתכליתה לובן&quot;</span></td><td><span class="ch"><i class="dot" style="background:#fff;border-color:#cbbd9c" title="לבן"></i>&quot;לובן בתכלית&quot;</span><span class="ch"><i class="dot" style="background:#26221c" title="שחור"></i>שחור, כלפי המאציל</span><span class="ch"><i class="dot" style="background:transparent;border-style:dashed;border-color:#9c7a33" title="נעלם, בלי גוון"></i>בלי גוון, בעצמו</span></td></tr><tr><th class="sticky" scope="row"><span class="sefn"><i class="dot" style="background:#5b9bd5;box-shadow:0 0 0 2px #fdd835,0 0 0 4px #e53935"></i>חכמה</span></th><td class="ours"><span class="ch"><i class="dot" style="background:#5b9bd5;box-shadow:0 0 0 2px #fdd835,0 0 0 4px #e53935"></i>תכלת, כולל כל הגוונים</span></td><td><span class="ch"><i class="dot" style="background:#5b9bd5" title="תכלת"></i>&quot;הכולל כל גוון... כעין התכלת&quot;</span></td><td><span class="ch nocol">&quot;זהר בהיר בשחקים&quot;</span></td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td><span class="ch"><i class="dot" style="background:#5b9bd5" title="תכלת"></i>תכלת או ספיר, &quot;ראש לכל הגוונים&quot;</span></td></tr><tr><th class="sticky" scope="row"><span class="sefn"><i class="dot" style="background:linear-gradient(135deg,#f2c94c 50%,#3faa5a 50%)"></i>בינה</span></th><td class="ours"><span class="ch"><i class="dot" style="background:linear-gradient(135deg,#f2c94c 50%,#3faa5a 50%)"></i>צהוב וירוק</span></td><td><span class="ch"><i class="dot" style="background:#3faa5a" title="ירוק"></i>&quot;האור הירוק&quot;</span></td><td><span class="ch nocol">&quot;זריק נצוצין... כברק&quot;</span></td><td><span class="ch"><i class="dot" style="background:#26221c" title="שחור"></i>אוכם, &quot;מסטרא דאימא עלאה&quot;</span></td><td class="empty">—</td><td class="empty">—</td><td><span class="ch"><i class="dot" style="background:#3faa5a" title="ירוק"></i>&quot;קו ירוק&quot;</span></td><td class="empty">—</td><td><span class="ch"><i class="dot" style="background:#3faa5a" title="ירוק"></i>&quot;הירוק כעשבים&quot;</span></td></tr><tr><th class="sticky" scope="row"><span class="sefn"><i class="dot" style="background:linear-gradient(135deg,#fff 50%,#b9bec7 50%)"></i>חסד</span></th><td class="ours"><span class="ch"><i class="dot" style="background:linear-gradient(135deg,#fff 50%,#b9bec7 50%)"></i>לבן וכסף</span></td><td><span class="ch"><i class="dot" style="background:#fff;border-color:#cbbd9c" title="לבן"></i>&quot;האור הלבן&quot;</span></td><td><span class="ch"><i class="dot" style="background:#fff;border-color:#cbbd9c" title="לבן"></i>&quot;חוורו כסיהרא&quot;</span></td><td><span class="ch"><i class="dot" style="background:#fff;border-color:#cbbd9c" title="לבן"></i>חוור</span></td><td><span class="ch"><i class="dot" style="background:#fff;border-color:#cbbd9c" title="לבן"></i>לבנה</span></td><td><span class="ch"><i class="dot" style="background:#fff;border-color:#cbbd9c" title="לבן"></i>&quot;חוור מימינא&quot;</span></td><td><span class="ch"><i class="dot" style="background:#fff;border-color:#cbbd9c" title="לבן"></i>&quot;כל דבר לבן&quot;</span><span class="ch"><i class="dot" style="background:#b9bec7" title="כסף"></i>כסף</span></td><td class="empty">—</td><td><span class="ch"><i class="dot" style="background:#b9bec7" title="כסף"></i>&quot;לבן קרוב אל התכלת... הכסף&quot;</span></td></tr><tr><th class="sticky" scope="row"><span class="sefn"><i class="dot" style="background:linear-gradient(135deg,#c62828 50%,#d4a017 50%)"></i>גבורה</span></th><td class="ours"><span class="ch"><i class="dot" style="background:linear-gradient(135deg,#c62828 50%,#d4a017 50%)"></i>אדום וזהב</span></td><td><span class="ch"><i class="dot" style="background:#c62828" title="אדום"></i>&quot;האור האודם&quot;</span></td><td><span class="ch"><i class="dot" style="background:#c62828" title="אדום"></i>&quot;סומקא כמאדים&quot;</span></td><td><span class="ch"><i class="dot" style="background:#c62828" title="אדום"></i>סומק</span></td><td><span class="ch"><i class="dot" style="background:#c62828" title="אדום"></i>מאדים</span></td><td><span class="ch"><i class="dot" style="background:#5b9bd5" title="תכלת"></i>&quot;תכלת משמאלא&quot; (ציצית)</span></td><td><span class="ch"><i class="dot" style="background:#d4a017" title="זהב"></i>&quot;דין זהב&quot;</span></td><td class="empty">—</td><td><span class="ch"><i class="dot" style="background:#c62828" title="אדום"></i>אודם</span><span class="ch"><i class="dot" style="background:#26221c" title="שחור"></i>שחור</span><span class="ch"><i class="dot" style="background:#5b9bd5" title="תכלת"></i>תכלת</span><span class="ch"><i class="dot" style="background:#d4a017" title="זהב"></i>זהב</span></td></tr><tr><th class="sticky" scope="row"><span class="sefn"><i class="dot" style="background:linear-gradient(135deg,#f2c94c 50%,#7e3fa6 50%)"></i>תפארת</span></th><td class="ours"><span class="ch"><i class="dot" style="background:linear-gradient(135deg,#f2c94c 50%,#7e3fa6 50%)"></i>צהוב וסגול</span></td><td><span class="ch"><i class="dot" style="background:linear-gradient(135deg,#fff 50%,#c62828 50%)" title="לבן ואדום"></i>&quot;כלול מלובן ואודם&quot;</span></td><td><span class="ch"><i class="dot" style="background:#3faa5a" title="ירוק"></i>&quot;כליל ירוקא כחמה&quot;</span></td><td><span class="ch"><i class="dot" style="background:#3faa5a" title="ירוק"></i>ירוק, &quot;עמודא דאמצעיתא&quot;</span></td><td><span class="ch"><i class="dot" style="background:#3faa5a" title="ירוק"></i>חמה</span></td><td><span class="ch"><i class="dot" style="background:#3faa5a" title="ירוק"></i>&quot;עמודא דאמצעיתא... ירוק&quot;</span><span class="ch"><i class="dot" style="background:#fff;border-color:#cbbd9c" title="לבן"></i>יה&quot;ו – &quot;נהורא חוורא&quot;</span></td><td><span class="ch"><i class="dot" style="background:#fff;border-color:#cbbd9c" title="לבן"></i>&quot;אש לבנה&quot;</span><span class="ch"><i class="dot" style="background:#d9dde4" title="לבן שאינו ככסף"></i>ברזל</span></td><td class="empty">—</td><td><span class="ch"><i class="dot" style="background:linear-gradient(135deg,#fff 50%,#c62828 50%)" title="לבן ואדום"></i>לבן ואדום</span><span class="ch"><i class="dot" style="background:#3faa5a" title="ירוק"></i>&quot;ירוק כחלמון ביצה&quot;</span><span class="ch"><i class="dot" style="background:#7e3fa6" title="ארגמן"></i>ארגמן</span></td></tr><tr><th class="sticky" scope="row"><span class="sefn"><i class="dot" style="background:#f7b8cb"></i>נצח</span></th><td class="ours"><span class="ch"><i class="dot" style="background:#f7b8cb"></i>ורוד בהיר</span></td><td><span class="ch"><i class="dot" style="background:linear-gradient(135deg,#c62828 35%,#fff 35%)" title="אדום נוטה ללבן"></i>&quot;האודם הנוטה ללובן&quot;</span></td><td><span class="ch"><i class="dot" style="background:#3faa5a" title="ירוק"></i>&quot;ירוק כככב&quot;</span></td><td><span class="ch"><i class="dot" style="background:#fff;border-color:#cbbd9c" title="לבן"></i>נוטל מן הימין</span></td><td><span class="ch nocol">&quot;כרובי עינא&quot; – נוגה</span></td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td><span class="ch"><i class="dot" style="background:linear-gradient(135deg,#c62828 35%,#fff 35%)" title="אדום נוטה ללבן"></i>&quot;אודם נוטה אל הלובן&quot;</span></td></tr><tr><th class="sticky" scope="row"><span class="sefn"><i class="dot" style="background:#b0305f"></i>הוד</span></th><td class="ours"><span class="ch"><i class="dot" style="background:#b0305f"></i>ורוד כהה</span></td><td><span class="ch"><i class="dot" style="background:linear-gradient(135deg,#fff 35%,#c62828 35%)" title="לבן נוטה לאדום"></i>&quot;הלובן הנוטה לאודם&quot;</span></td><td><span class="ch"><i class="dot" style="background:linear-gradient(135deg,#26221c 50%,#c62828 50%)" title="שחור ואדום"></i>&quot;כליל אוכם וסומק&quot;</span><span class="ch nocol">(בנוסח א: חוור וסומק)</span></td><td><span class="ch"><i class="dot" style="background:#c62828" title="אדום"></i>נוטל מן השמאל</span></td><td><span class="ch nocol">&quot;כרובי עינא&quot; – כוכב</span></td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td><span class="ch"><i class="dot" style="background:linear-gradient(135deg,#fff 35%,#c62828 35%)" title="לבן נוטה לאדום"></i>&quot;לובן נוטה אל האודם&quot;</span></td></tr><tr><th class="sticky" scope="row"><span class="sefn"><i class="dot" style="background:#f08a24"></i>יסוד</span></th><td class="ours"><span class="ch"><i class="dot" style="background:#f08a24"></i>כתום</span></td><td><span class="ch"><i class="dot" style="background:linear-gradient(135deg,#fff 50%,#c62828 50%)" title="לבן ואדום"></i>כלול מכולם</span></td><td><span class="ch nocol">&quot;זהיר לכל עיבר&quot;</span></td><td><span class="ch"><i class="dot" style="background:#3faa5a" title="ירוק"></i>&quot;נטיל גוון מגופא&quot;</span></td><td><span class="ch"><i class="dot" style="background:#26221c" title="שחור"></i>שבתאי</span></td><td><span class="ch"><i class="dot" style="background:conic-gradient(#fff 0 33%,#c62828 0 66%,#3faa5a 0)" title="לבן, אדום, ירוק"></i>הקשת – &quot;חיור וסומק וירוק&quot;</span></td><td class="empty">—</td><td class="empty">—</td><td><span class="ch"><i class="dot" style="background:linear-gradient(135deg,#fff 50%,#c62828 50%)" title="לבן ואדום"></i>&quot;גוון תערובת&quot;</span><span class="ch"><i class="dot" style="background:conic-gradient(#fff,#5b9bd5,#3faa5a,#f2c94c,#c62828,#7e3fa6,#fff)" title="כלול מכל גוון"></i>כלול מכל</span></td></tr><tr><th class="sticky" scope="row"><span class="sefn"><i class="dot" style="background:#1f4ea3"></i>מלכות</span></th><td class="ours"><span class="ch"><i class="dot" style="background:#1f4ea3"></i>כחול</span></td><td><span class="ch"><i class="dot" style="background:conic-gradient(#fff,#5b9bd5,#3faa5a,#f2c94c,#c62828,#7e3fa6,#fff)" title="כלול מכל גוון"></i>&quot;כלול מכל גוון&quot;</span></td><td class="empty">—</td><td><span class="ch"><i class="dot" style="background:#26221c" title="שחור"></i>&quot;אימא תתאה נטילת גוון מאימא עלאה&quot;</span></td><td><span class="ch"><i class="dot" style="background:#5b9bd5" title="תכלת"></i>צדק</span></td><td><span class="ch"><i class="dot" style="background:linear-gradient(135deg,#5b9bd5 50%,#26221c 50%)" title="תכלת־שחור"></i>&quot;נהורא תכלא אוכמא&quot;, לזמנין סומקא</span><span class="ch"><i class="dot" style="background:#5b9bd5" title="תכלת"></i>תכלת – כרסייא</span></td><td><span class="ch"><i class="dot" style="background:#5b9bd5" title="תכלת"></i>&quot;תכלת... כלולה בכל&quot;</span><span class="ch"><i class="dot" style="background:#b0305f" title="תולעת שני"></i>&quot;דין רפה&quot;</span><span class="ch"><i class="dot" style="background:#7e3fa6" title="ארגמן"></i>ארגמן</span><span class="ch"><i class="dot" style="background:#26221c" title="שחור"></i>&quot;אש שחורה&quot;</span></td><td><span class="ch"><i class="dot" style="background:#26221c" title="שחור"></i>שד&quot;י – &quot;אש שחורה&quot;</span><span class="ch"><i class="dot" style="background:#c62828" title="אדום"></i>אלהי&quot;ם – &quot;אש אדומה&quot;</span><span class="ch"><i class="dot" style="background:#3faa5a" title="ירוק"></i>אדנ&quot;י – &quot;אש ירוקה&quot;</span></td><td><span class="ch"><i class="dot" style="background:conic-gradient(#fff,#5b9bd5,#3faa5a,#f2c94c,#c62828,#7e3fa6,#fff)" title="כלול מכל גוון"></i>כלולה מכל גוון</span><span class="ch"><i class="dot" style="background:#5b9bd5" title="תכלת"></i>תכלת</span></td></tr></table></div>
+</section>
+
+<section id="letters">
+  <h2>צבעי אותיות השם</h2>
+  <p class="lead">יש מקורות שנותנים גוון לא לספירה אלא לכל אחת מארבע אותיות השם. כדי שלא לכתוב את השם, האותיות מופיעות כאן בשמותיהן.</p>
+  <div class="lrow"><div class="lname"><a href="#tz70">תיקוני זוהר, תיקון ע (קכה ע&quot;א)</a><small>&quot;י&#x27; בגוון חוור, ה&#x27; בגוון סומק, ו&#x27; בגוון ירוק, ה&#x27; בגוון אוכם&quot;</small></div><div class="lets"><span class="lt"><i class="dot big" style="background:#fff;border-color:#cbbd9c" title="לבן"></i><b>יו"ד</b></span><span class="lt"><i class="dot big" style="background:#c62828" title="אדום"></i><b>ה"א</b></span><span class="lt"><i class="dot big" style="background:#3faa5a" title="ירוק"></i><b>וא"ו</b></span><span class="lt"><i class="dot big" style="background:#26221c" title="שחור"></i><b>ה"א אחרונה</b></span></div></div><div class="lrow"><div class="lname"><a href="#megale">מגלה עמוקות, ואתחנן אופן ר&quot;ו</a><small>י = אל, חסד; ה = אלהים, דין; ו = רחמים; ה אחרונה = אדנ&quot;י, &quot;דין הרפה&quot;</small></div><div class="lets"><span class="lt"><i class="dot big" style="background:#fff;border-color:#cbbd9c" title="לבן"></i><b>יו"ד</b></span><span class="lt"><i class="dot big" style="background:#c62828" title="אדום"></i><b>ה"א</b></span><span class="lt"><i class="dot big" style="background:#3faa5a" title="ירוק"></i><b>וא"ו</b></span><span class="lt"><i class="dot big" style="background:#5b9bd5" title="תכלת"></i><b>ה"א אחרונה</b></span></div></div><div class="lrow"><div class="lname"><a href="#zflame">זוהר, בראשית נ ע&quot;ב–נא ע&quot;א</a><small>יה&quot;ו – &quot;נהורא חוורא&quot;; ה אחרונה – &quot;נהורא תכלא אוכמא&quot;</small></div><div class="lets"><span class="lt"><i class="dot big" style="background:#fff;border-color:#cbbd9c" title="לבן"></i><b>יו"ד</b></span><span class="lt"><i class="dot big" style="background:#fff;border-color:#cbbd9c" title="לבן"></i><b>ה"א</b></span><span class="lt"><i class="dot big" style="background:#fff;border-color:#cbbd9c" title="לבן"></i><b>וא"ו</b></span><span class="lt"><i class="dot big" style="background:linear-gradient(135deg,#5b9bd5 50%,#26221c 50%)" title="תכלת־שחור"></i><b>ה"א אחרונה</b></span></div></div><div class="lrow"><div class="lname"><a href="yichudim.html#t3-2">הרמ&quot;ק, פרדס רמונים י, ג</a><small>הה&quot;א האחרונה – &quot;תערובות הכל&quot; (מתועד בדף יסודות הייחודים)</small></div><div class="lets"><span class="lt"><i class="dot big" style="background:#fff;border-color:#cbbd9c" title="לבן"></i><b>יו"ד</b></span><span class="lt"><i class="dot big" style="background:#c62828" title="אדום"></i><b>ה"א</b></span><span class="lt"><i class="dot big" style="background:#3faa5a" title="ירוק"></i><b>וא"ו</b></span><span class="lt"><i class="dot big" style="background:conic-gradient(#fff,#5b9bd5,#3faa5a,#f2c94c,#c62828,#7e3fa6,#fff)" title="כלול מכל גוון"></i><b>ה"א אחרונה</b></span></div></div>
+  <p style="color:var(--muted);font-size:.92rem">שתי שיטות נוספות שאינן גוון לכל אות: אצל האר"י הצבע אינו קבוע לאות: צבע האותיות המצוירות מראה באיזה עולם האדם דבוק, ושינוי באות מסוימת מראה פגם (<a href="#aritest">שער רוח הקודש</a>); ובאור נערב השם עצמו אין בו גוון, ו"עיקר הגוונים הם בשם אדנ"י" (<a href="#orneerav">אור נערב</a>).</p>
+</section>
+
+<section id="practice">
+  <h2>מעשה ואזהרה</h2>
+  <p class="lead">מה הספרים אומרים לעשות בצבעים, ומה הם מזהירים.</p>
+  <div class="card">
+    <h3>מה עושים</h3>
+    <ul class="plain">
+      <li><b>מסתכלים בנר.</b> "מאן דבעי למנדע חכמתא דיחודא קדישא, יסתכל בשלהובא" – הסתכלות בנר ממש. <a href="#zflame">הזוהר</a>; ופירוש האר"י, <a href="#ariflame">חמשת גווני הנר</a>.</li>
+      <li><b>מדמים את הספירות כאורות.</b> "יש לנו לדמות" – דרך מחשבה, לא סדר תפילה. <a href="#azriel">ר' עזריאל</a>.</li>
+      <li><b>מציירים את השם בגוון הספירה.</b> כשצריך להמשיך שפע ממידה מסוימת, וגם בתפילה, בהויות המנוקדות. בין המקורות כאן, רק <a href="#pardes">הרמ"ק</a>.</li>
+      <li><b>מציירים את אותיות השם ובודקים את צבען.</b> שחור, אדום, לבן או לבן מאיר, כסימן לעולם שבו האדם דבוק. <a href="#aritest">האר"י</a>.</li>
+      <li><b>מדמים רק אותיות, ונדבקים באור התכלת.</b> <a href="#charedim">ספר חרדים</a>.</li>
+    </ul>
+    <h3>אזהרות</h3>
+    <ul class="plain">
+      <li>"ואל יעלה על לבו ומחשבתו שיהיו דברים כפשוטן" – הגוון משל לפעולה. <a href="#pardes">הרמ"ק</a>.</li>
+      <li>"כי אין שם גוון ולא מראה" באצילות; "שרשם למעלה ותוצאותם הימה". <a href="#ariwarn">האר"י</a>.</li>
+      <li>"המדמה יותר מאותיות מגשים", ובאין סוף "לא דמיון אותיות ולא שום דמיון". <a href="#charedim">ספר חרדים</a>.</li>
+      <li>השם עצמו אין בו גוון, והגוונים במלכות. <a href="#orneerav">אור נערב</a>.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="zohar-sec"><h2>א. הזוהר</h2><p class="lead">בלשון הזוהר עצמו, לא מתוך הרמ"ק. ההפניות לפי ספריא, והדף במקום שהוא ידוע בוודאות.</p>
+<article class="scard" id="zrainbow">
+  <div class="shead"><span class="era">זוהר</span><h3>גווני הקשת וייחוד קריאת שמע</h3><div class="book">ספר הזוהר, בראשית יח ע&quot;ב</div></div>
+  <div class="sbody">
+    <div class="q">"מיכא"ל בסטרא דא, רפא"ל בסטרא דא, גבריא"ל בסטרא דא. ואנון גוונין דאתחזיין בההוא דמות חיור וסומק וירוק."<span class="who"><a href="https://www.sefaria.org/Zohar,_Bereshit.7.70?lang=he" target="_blank" rel="noopener">ספר הזהר, בראשית ז׳:ע׳</a></span></div><div class="q">"יי אלהינו יי. גוונין סתימין דלא אתחזן ואתקשרן אל מקום אחד יחודא חדא בעלאה. גוונין בקשת לתתא לאתיחדא בהו. חוור סומק וירוק כגוונין סתימין."<span class="who"><a href="https://www.sefaria.org/Zohar,_Bereshit.7.72?lang=he" target="_blank" rel="noopener">ספר הזהר, בראשית ז׳:ע״ב</a></span></div>
+    <p>שלושה גוונים, לבן, אדום וירוק, נראים בקשת למטה, וכנגדם "גוונין סתימין" למעלה, שמתייחדים בשלוש התיבות "ה' אלהינו ה'". הזוהר אינו כותב כאן איזה גוון לאיזו ספירה, ואף לא באיזה צד עומד כל אחד משלושת המלאכים שהוא מזכיר, מיכאל, רפאל וגבריאל.</p>
+    <p class="prac"><b>מעשה:</b> ייחוד בקריאת שמע, בלי ציור צבעים.</p>
+  </div>
+</article>
+<article class="scard" id="zflame">
+  <div class="shead"><span class="era">זוהר</span><h3>הנר: אור לבן ואור תכלת</h3><div class="book">ספר הזוהר, בראשית נ ע&quot;ב–נא ע&quot;א</div></div>
+  <div class="sbody">
+    <div class="q">"מאן דבעי למנדע חכמתא דיחודא קדישא. יסתכל בשלהובא דסלקא מגו גחלתא. או מגו בוצינא דדליק."<span class="who"><a href="https://www.sefaria.org/Zohar,_Bereshit.86.248?lang=he" target="_blank" rel="noopener">ספר הזהר, בראשית פ״ו:רמ״ח</a></span></div><div class="q">"בשלהובא דסלקא אית תרין נהורין. חד נהורא חוורא דנהיר. וחד נהורא דאתאחיד בה אוכמא או תכלא."<span class="who"><a href="https://www.sefaria.org/Zohar,_Bereshit.86.249?lang=he" target="_blank" rel="noopener">ספר הזהר, בראשית פ״ו:רמ״ט</a></span></div><div class="q">"ודא תכלא אוכמא לזמנין אתהדר סומקא. וההוא נהורא חוורא דעליה לא אשתני לעלמין"<span class="who"><a href="https://www.sefaria.org/Zohar,_Bereshit.86.252?lang=he" target="_blank" rel="noopener">ספר הזהר, בראשית פ״ו:רנ״ב</a></span></div><div class="q">"ה"א בתראה דשמא קדישא איהו נהורא תכלא אוכמא דאתאחיד ביה"ו דהוא נהורא חוורא דנהיר."<span class="who"><a href="https://www.sefaria.org/Zohar,_Bereshit.86.259?lang=he" target="_blank" rel="noopener">ספר הזהר, בראשית פ״ו:רנ״ט</a></span></div>
+    <p>בשלהבת שני אורות: אור לבן שאינו משתנה לעולם, ותחתיו אור תכלת או שחור שלפעמים נעשה אדום. הזוהר עצמו מפרש: הה"א האחרונה של השם, המלכות, היא האור התכלת, והאותיות יה"ו הן האור הלבן.</p>
+    <p class="prac"><b>מעשה:</b> כן, במפורש: "יסתכל בשלהובא". הסתכלות בנר ממש, לא ציור במחשבה.</p>
+  </div>
+</article>
+<article class="scard" id="zeye">
+  <div class="shead"><span class="era">זוהר</span><h3>הגוונים שנראים בעין סגורה</h3><div class="book">ספר הזוהר, בראשית, היכלות (ספריא: בראשית ס&quot;ו)</div></div>
+  <div class="sbody">
+    <div class="q">"כההוא חיזו דמתחזיא (צז א, סב) בסתימו כד מתגלגלא עינא ואתחזי ההוא זהרא נציץ."<span class="who"><a href="https://www.sefaria.org/Zohar,_Bereshit.66.99?lang=he" target="_blank" rel="noopener">ספר הזהר, בראשית ס״ו:צ״ט</a></span></div><div class="q">"אלמלא כל אנון גוונין דעינא דאתחזיין, כד אסתים עינא ואתגלגלא בגלגלא לא אתחזון אנון גוונין דזהרן."<span class="who"><a href="https://www.sefaria.org/Zohar,_Bereshit.66.100?lang=he" target="_blank" rel="noopener">ספר הזהר, בראשית ס״ו:ק׳</a></span></div>
+    <p>בתיאור עליית רצון התפילה דרך ההיכלות: הגוונים שנראים כשהעין סגורה ומתגלגלת הם משל לגוונים העליונים, ו"אלמלא אנון גוונין" לא היה הנסתר נדבק בהם. אין כאן סדר צבעים לספירות.</p>
+    <p class="prac"><b>מעשה:</b> מראה של גוונים בעין סגורה, כמשל; לא הוראת מעשה.</p>
+  </div>
+</article>
+<article class="scard" id="ztzitzit">
+  <div class="shead"><span class="era">זוהר</span><h3>הציצית: לבן מימין, תכלת משמאל, ירוק באמצע</h3><div class="book">ספר הזוהר, רעיא מהימנא, פנחס</div></div>
+  <div class="sbody">
+    <div class="q">"מצות ציצית, כליל תכלת ולבן, דינא ורחמי. בנורא, אשא חוורא לא אכיל. תכלא, אכיל ושצי"<span class="who"><a href="https://www.sefaria.org/Zohar,_Pinchas.123.850?lang=he" target="_blank" rel="noopener">ספר הזהר, פנחס קכ״ג:תת״נ</a></span></div><div class="q">"חוור מימינא, תכלת משמאלא, עמודא דאמצעיתא, יחוד בין תרווייהו, ירוק."<span class="who"><a href="https://www.sefaria.org/Zohar,_Pinchas.123.850?lang=he" target="_blank" rel="noopener">ספר הזהר, פנחס קכ״ג:תת״נ</a></span></div>
+    <p>הלבן הוא הרחמים, מן הימין; התכלת הוא הדין, "אכיל ושצי", מן השמאל; והירוק הוא העמוד האמצעי שמייחד את שניהם. מכאן גם "משיכיר בין תכלת ללבן" בזמן קריאת שמע.</p>
+    
+  </div>
+</article>
+<article class="scard" id="zshelach">
+  <div class="shead"><span class="era">זוהר</span><h3>התכלת היא כסא הדין, המלכות</h3><div class="book">ספר הזוהר, שלח; פקודי</div></div>
+  <div class="sbody">
+    <div class="q">"בגין דתכלת, איהו כרסייא לבית דוד, ותקונא דיליה."<span class="who"><a href="https://www.sefaria.org/Zohar,_Sh%27lach.46.328?lang=he" target="_blank" rel="noopener">ספר הזהר, שלח לך מ״ו:שכ״ח</a></span></div><div class="q">"דכל גוונין טבין לחלמא, בר תכלא, דאיהו כרסייא דסליק בדינא דנפשות."<span class="who"><a href="https://www.sefaria.org/Zohar,_Sh%27lach.46.328?lang=he" target="_blank" rel="noopener">ספר הזהר, שלח לך מ״ו:שכ״ח</a></span></div><div class="q">"דתכלא איהו רזא דנהורא דכורסייא תכלא. דאיהו בקשורא דנהירו (בראשית נ"א ע"א) חוורא, כלא כחדא."<span class="who"><a href="https://www.sefaria.org/Zohar,_Pekudei.21.198?lang=he" target="_blank" rel="noopener">ספר הזהר, פקודי כ״א:קצ״ח</a></span></div>
+    <p>התכלת שבציצית ובבגדי הכהן הגדול היא "כרסייא", המלכות, ובזה חוזר הזוהר אל אור התכלת שבנר הקשור באור הלבן.</p>
+    
+  </div>
+</article>
+</section>
+<section id="tz-sec"><h2>ב. תיקוני הזוהר</h2><p class="lead">בתיקונים יש רשימות מלאות יותר, ובהן גם צבע לאותיות השם.</p>
+<article class="scard" id="tzintro">
+  <div class="shead"><span class="era">תיקוני הזוהר</span><h3>עשרה זוהרים, לכל ספירה זוהר</h3><div class="book">תיקוני הזוהר, הקדמה, א ע&quot;א</div></div>
+  <div class="sbody">
+    <div class="q">"זהר טמיר וגניז דא כת"ר, זהר בהיר בשחקים דא חכמ"ה, זהר זריק נצוצין ומבהיק כברק לעיינין דא בינ"ה, זהר חוורו כסיהרא דא גדול"ה, זהר זהיר סומקא כמאדים דא גבור"ה, זהר מבהיק כליל ירוקא כחמה דא תפאר"ת, זהר ירוק כככב דא נצ"ח, זהר כליל אוכם וסומק דא הו"ד, זהר זהיר לכל עיבר כמאן דמחא בפטיש וזריק שביבין לכל סטר דא יסו"ד."<span class="who"><a href="https://www.sefaria.org/Tikkunei_Zohar.1a.6?lang=he" target="_blank" rel="noopener">תקוני הזהר א׳ א:ו׳</a></span></div>
+    <p>זו "נוסחא אחרינא" שבהקדמה, והיא מפרשת כל זוהר בשם הספירה. כתר טמיר וגנוז, חכמה זוהר בהיר בלי גוון מפורש, בינה ניצוצות וברק, חסד לבן כירח, גבורה אדום כמאדים, תפארת ירוק כשמש, נצח ירוק ככוכב, הוד שחור ואדום, יסוד ניצוצות לכל צד. בנוסח הראשון (שם, א ע"א, פסקה ה) ההוד "כליל חוור וסומק", לבן ואדום.</p>
+    
+  </div>
+</article>
+<article class="scard" id="tz70">
+  <div class="shead"><span class="era">תיקוני הזוהר</span><h3>ארבעה גוונים, ואותיות השם</h3><div class="book">תיקוני הזוהר, תיקון ע, קכה ע&quot;א</div></div>
+  <div class="sbody">
+    <div class="q">"גוון חוור מסטרא דחסד, סומק מסטרא דגבורה, ירוק מסטרא דעמודא דאמצעיתא, אוכם מסטרא דאימא עלאה"<span class="who"><a href="https://www.sefaria.org/Tikkunei_Zohar.125a.3?lang=he" target="_blank" rel="noopener">תקוני הזהר קכ״ה א:ג׳</a></span></div><div class="q">"אימא תתאה נטילת גוון מאימא עלאה, שוקא ימינא נטיל גוון מדרועא ימינא"<span class="who"><a href="https://www.sefaria.org/Tikkunei_Zohar.125a.3?lang=he" target="_blank" rel="noopener">תקוני הזהר קכ״ה א:ג׳</a></span></div><div class="q">"כתר עלאה איהו סתים לא אשתמודע ביה גוון כלל לעילא, ובעמודא דאמצעיתא אחזי כל גוונין."<span class="who"><a href="https://www.sefaria.org/Tikkunei_Zohar.125a.3?lang=he" target="_blank" rel="noopener">תקוני הזהר קכ״ה א:ג׳</a></span></div><div class="q">"ארבע אתוון מתלבשין בארבע גוונין אלין, י' בגוון חוור, ה' בגוון סומק, ו' בגוון ירוק, ה' בגוון אוכם, האי שמא איהו דרקים גוונין בכל אתר"<span class="who"><a href="https://www.sefaria.org/Tikkunei_Zohar.125a.4?lang=he" target="_blank" rel="noopener">תקוני הזהר קכ״ה א:ד׳</a></span></div>
+    <p>השכינה ניכרת בארבעה גוונים: לבן מן החסד, אדום מן הגבורה, ירוק מן התפארת, ושחור מן הבינה. הספירות שלמטה נוטלות גוון: המלכות מן הבינה, הנצח מן החסד, ההוד מן הגבורה, היסוד מן הגוף. לכתר אין גוון כלל. ובאותיות השם: י לבן, ה אדום, ו ירוק, ה אחרונה שחורה.</p>
+    <p class="prac"><b>מעשה:</b> אין הוראה לצייר; השם רוקם גוונים בכל מקום, ונרשם בקמטי המצח.</p>
+  </div>
+</article>
+<article class="scard" id="tzeye">
+  <div class="shead"><span class="era">תיקוני הזוהר</span><h3>גווני העין וכוכבי הלכת</h3><div class="book">תיקוני הזוהר, תיקון ע, קכח ע&quot;ב</div></div>
+  <div class="sbody">
+    <div class="q">"גוונין דעינא, חוור לבנ"ה סומק מאדי"ם, ירוק חמ"ה, אוכם שבתא"י, תכלת צד"ק, ואינון כגוונא דחסד גבורה תפארת יסוד ומלכות, תרי כרובי עינא נצח והוד"<span class="who"><a href="https://www.sefaria.org/Tikkunei_Zohar.128b.6?lang=he" target="_blank" rel="noopener">תקוני הזהר קכ״ח ב:ו׳</a></span></div>
+    <p>חמישה גווני העין כנגד חמש ספירות: חסד לבן, גבורה אדום, תפארת ירוק, יסוד שחור, מלכות תכלת. נצח והוד הם שני כרובי העין, בלי גוון משלהם.</p>
+    
+  </div>
+</article>
+<article class="scard" id="tz21">
+  <div class="shead"><span class="era">תיקוני הזוהר</span><h3>גווני הנר לבושים לאבות</h3><div class="book">תיקוני הזוהר, תיקון כא, נ ע&quot;א ונב ע&quot;ב</div></div>
+  <div class="sbody">
+    <div class="q">"נר איהי ה׳. חמש גוונין נהירין בה ואנון חוור סומק ירוק ואוכם ותכלת."<span class="who"><a href="https://www.sefaria.org/Tikkunei_Zohar.50a.10?lang=he" target="_blank" rel="noopener">תקוני הזהר נ׳ א:י׳</a></span></div><div class="q">"תלת גוונין דשרגא ותלת גוונין אילין אינון לבושין לתלת אבהן: דאינון חוור סומק ירוק. גוון אוכמא איהי קדרותא דלהון"<span class="who"><a href="https://www.sefaria.org/Tikkunei_Zohar.52b.15?lang=he" target="_blank" rel="noopener">תקוני הזהר נ״ב ב:ט״ו</a></span></div><div class="q">"ובהון מתלבשין הו״ה תכלת לבושא דאת י׳ דאיהו תכלית דכלא."<span class="who"><a href="https://www.sefaria.org/Tikkunei_Zohar.52b.15?lang=he" target="_blank" rel="noopener">תקוני הזהר נ״ב ב:ט״ו</a></span></div>
+    <p>הנר הוא הה"א, המלכות, ובו חמישה גוונים. לבן, אדום וירוק הם לבושי שלושת האבות, חסד, גבורה ותפארת, והשחור הוא "קדרותא", החשכה שלהם. בשלושת הגוונים מתלבשות שלוש האותיות האחרונות של השם, והתכלת היא לבוש האות י', "תכלית דכלא".</p>
+    
+  </div>
+</article>
+</section>
+<section id="rishonim-sec"><h2>ג. המקובלים הראשונים</h2><p class="lead">מגירונה ועד איטליה, לפני דורו של הרמ"ק.</p>
+<article class="scard" id="azriel">
+  <div class="shead"><span class="era">גירונה, המאה ה־13</span><h3>הרשימה המלאה הראשונה</h3><div class="book">ר&#x27; עזריאל מגירונה, ביאור עשר ספירות (שאלה ט)</div></div>
+  <div class="sbody">
+    <div class="q">"אך בהתלבש העצם בדמיון יש לנו לדמות הכח הראשון אל האור המתעלם. והכח השני אל האור (המתעלם) הכולל כל גוון וזה האור הוא כעין התכלת שהיא תכלית כל הצבעים ואין בו עין גוון ידוע. הכח השלישי אל האור הירוק, הכח הרביעי אל האור הלבן, הכח החמישי אל האור האודם, הכח הששי כלול מלובן ואודם, הכח השביעי כח האודם הנוטה ללובן, הכח השמיני כח הלובן הנוטה לאודם, הכח התשיעי כלול מלובן ואודם ומן האודם הנוטה ללובן ומן הלובן הנוטה לאודם, הכח העשירי כלול מכל גוון:"<span class="who"><a href="https://www.sefaria.org/Beur_Eser_Sefirot.9.2?lang=he" target="_blank" rel="noopener">ביאור עשר ספירות ט׳:ב׳</a></span></div>
+    <p>עשר ספירות, עשרה אורות, בסדר: כתר אור נעלם; חכמה כולל כל גוון, "כעין התכלת"; בינה ירוק; חסד לבן; גבורה אדום; תפארת לבן ואדום; נצח אדום נוטה ללבן; הוד לבן נוטה לאדום; יסוד כולל את כולם; מלכות כלולה מכל גוון. הכרעת הרמ"ק, כעבור כשלוש מאות שנה, קרובה מאוד לתבנית הזו, אבל מוסיפה לכמה ספירות כמה גוונים לפי בחינותיהן.</p>
+    <p class="prac"><b>מעשה:</b> "יש לנו לדמות": הדמיון בצבעים הוא הדרך לחשוב על הספירות, ואינו סדר תפילה.</p>
+  </div>
+</article>
+<article class="scard" id="maarechet">
+  <div class="shead"><span class="era">מחבר לא ידוע, מן הראשונים</span><h3>כסף, זהב, תכלת ותולעת שני</h3><div class="book">ספר מערכת האלהות</div></div>
+  <div class="sbody">
+    <div class="q">"הרבעית חסד. אהבה. מדת אברהם. גדולה. כהן. ימין. רחמים גדולים. חלב וכל דבר לבן רומז לה."<span class="who"><a href="https://www.sefaria.org/Ma%27arekhet_HaElokut.4.6?lang=he" target="_blank" rel="noopener">מערכת האלקות ד׳:ו׳</a></span></div><div class="q">"צבע תכלת הוא רומז שהיא כלולה בכל כלומר שחוט של חסד משוך עליה והיא עם הכל. וצבע תולעת שני הוא רמז שהיא מדת הדין רפה. וצבע ארגמן שהוא אדום יותר רומז על פגיעתו הגדולה מזוהמת הנחש"<span class="who"><a href="https://www.sefaria.org/Ma%27arekhet_HaElokut.4.22?lang=he" target="_blank" rel="noopener">מערכת האלקות ד׳:כ״ב</a></span></div><div class="q">"חסד מוצא לכסף שהוא לבן. ופחד לזהב שהוא אדום. והתפארת לברזל שהוא לבן אבל לא ככסף"<span class="who"><a href="https://www.sefaria.org/Ma%27arekhet_HaElokut.12.16?lang=he" target="_blank" rel="noopener">מערכת האלקות י״ב:ט״ז</a></span></div>
+    <p>בכינויי הספירות שבפרק ד: לבינה "קו ירוק", לחסד "כל דבר לבן" וכסף, לגבורה "דין זהב", לתפארת "אש לבנה", ולמלכות "אש שחורה". ולמלכות שלושה גוונים לפי מצבה: תכלת כשהיא כלולה מהכל, תולעת שני כשהיא דין רפה, וארגמן לפגיעה הקשה.</p>
+    
+  </div>
+</article>
+<article class="scard" id="gikatilla">
+  <div class="shead"><span class="era">קסטיליה, 1248–אחרי 1305</span><h3>שלוש אשות של המלכות לפי שמותיה</h3><div class="book">ר&#x27; יוסף ג&#x27;יקטילה, שערי אורה</div></div>
+  <div class="sbody">
+    <div class="q">"כשנקראת שדי, מתלבשת מראה אש שחורה אוכלת"<span class="who"><a href="https://www.sefaria.org/Sha%27arei_Orah,_First_Gate,_Tenth_Sefirah.176?lang=he" target="_blank" rel="noopener">שערי אורה, השער הראשון - הספירה העשירית קע״ו</a></span></div><div class="q">"וכשנקראת אלהי"ם מתלבשת גוון אש אדומה, מראה אש אוכלת ושורפת ומכלה"<span class="who"><a href="https://www.sefaria.org/Sha%27arei_Orah,_First_Gate,_Tenth_Sefirah.177?lang=he" target="_blank" rel="noopener">שערי אורה, השער הראשון - הספירה העשירית קע״ז</a></span></div><div class="q">"וכשנקראת אדני מתלבשת גוון אש ירוקה"<span class="who"><a href="https://www.sefaria.org/Sha%27arei_Orah,_First_Gate,_Tenth_Sefirah.178?lang=he" target="_blank" rel="noopener">שערי אורה, השער הראשון - הספירה העשירית קע״ח</a></span></div><div class="q">"ראשית כל המראות לובן, תכלית כל המראות שחרות. הספירה הזאת בתכליתה לובן"<span class="who"><a href="https://www.sefaria.org/Sha%27arei_Orah,_Tenth_Gate,_First_Sefirah.56?lang=he" target="_blank" rel="noopener">שערי אורה, השער העשירי - הספירה הראשונה נ״ו</a></span></div>
+    <p>המלכות אחת, אבל גוונה משתנה לפי השם שבו היא פועלת: בשם שד"י אש שחורה, בשם אלהי"ם אש אדומה, ובשם אדנ"י אש ירוקה. והכתר, "ראש הלבן", הוא תכלית הלובן.</p>
+    
+  </div>
+</article>
+<article class="scard" id="recanati">
+  <div class="shead"><span class="era">איטליה, בערך 1300</span><h3>המשכן: כסף, זהב, ארגמן ותכלת</h3><div class="book">ר&#x27; מנחם ריקנאטי, פירוש על התורה</div></div>
+  <div class="sbody">
+    <div class="q">"מלת תכלת היא מלשון כל... והרמז בו ליסוד עולם או יהיה הרמז בו לכנסת ישראל שהיא תכלית הכל וסוף הכל והארגמן רמז למכריע ראשון"<span class="who"><a href="https://www.sefaria.org/Recanati_on_the_Torah,_Terumah.2?lang=he" target="_blank" rel="noopener">רקנאטי על התורה, תרומה ב׳</a></span></div><div class="q">"הכסף ימינו של הקב"ה והזהב שמאלו והארגמן מורכב משניהם."<span class="who"><a href="https://www.sefaria.org/Recanati_on_the_Torah,_Terumah.2?lang=he" target="_blank" rel="noopener">רקנאטי על התורה, תרומה ב׳</a></span></div><div class="q">"בהיות מדת הדין כלולה כמו הארון היה כסויה תכלת ובהיותה דנה בפני עצמה כמו השלחן היה כסוייה"<span class="who"><a href="https://www.sefaria.org/Recanati_on_the_Torah,_Bamidbar.9?lang=he" target="_blank" rel="noopener">רקנאטי על התורה, במדבר ט׳</a></span></div>
+    <p>כסף לחסד, זהב לגבורה, וארגמן, שארוג משניהם, לתפארת, "מכריע ראשון". התכלת ליסוד או לכנסת ישראל, המלכות, "תכלית הכל". ובכיסויי כלי המשכן: המלכות בתכלת כשהיא כלולה, ובתולעת שני כשהיא דנה לבדה, כמו במערכת האלהות.</p>
+    
+  </div>
+</article>
+<article class="scard" id="kanah">
+  <div class="shead"><span class="era">מחבר לא ידוע, מן הראשונים</span><h3>התכלת: תכלית הכל, וכוללת כל הצבעים</h3><div class="book">ספר הקנה</div></div>
+  <div class="sbody">
+    <div class="q">"התכלת רומז בכנ"י מלשון תכלית הכל"<span class="who"><a href="https://www.sefaria.org/Sefer_HaKanah.28.13?lang=he" target="_blank" rel="noopener">ספר הקנה כ״ח:י״ג</a></span></div><div class="q">"כשם שהחכמה היא כלל העולם גולם המקבל כל צורה כענין ה' בחכמה יסד ארץ כן התכלת שבעין כוללת כל הצבעים"<span class="who"><a href="https://www.sefaria.org/Sefer_HaKanah.109.9?lang=he" target="_blank" rel="noopener">ספר הקנה ק״ט:ט׳</a></span></div>
+    <p>התכלת שבציצית רומזת לכנסת ישראל, המלכות. ובמקום אחר התכלת כנגד החכמה, משום שהיא "כוללת כל הצבעים".</p>
+    
+  </div>
+</article>
+</section>
+<section id="ramak-sec"><h2>ד. הרמ"ק</h2><p class="lead">ההכרעה שבפרדס רמונים מתועדת בהרחבה בדף יסודות הייחודים. כאן הסיכום, וספרו הקצר אור נערב.</p>
+<article class="scard" id="pardes">
+  <div class="shead"><span class="era">צפת, 1522–1570</span><h3>פרדס רמונים, שער הגוונים</h3><div class="book">ר&#x27; משה קורדובירו, פרדס רמונים, שערים י ול&quot;ב</div></div>
+  <div class="sbody">
+    <div class="q">"ואל יעלה על לבו ומחשבתו שיהיו דברים כפשוטן ח"ו, לפי שהגוון הוא דבר הנגשם"<span class="who"><a href="https://www.sefaria.org/Pardes_Rimmonim.10.1?lang=he" target="_blank" rel="noopener">פרדס רמונים י׳:א׳</a></span></div><div class="q">"ולסבה זו כאשר יצטרך הממשיך להמשיך שפע רחמים מהחסד יצייר נגדו שם הספירה בגוון הענין הנצרך אליו כפי גוון המדה."<span class="who"><a href="https://www.sefaria.org/Pardes_Rimmonim.10.1?lang=he" target="_blank" rel="noopener">פרדס רמונים י׳:א׳</a></span></div><div class="q">"ומה טוב ומה נעים אם ירצה לצייר הויות האלה בגוונם כי אז ודאי תפלתו מועילה יותר ויותר"<span class="who"><a href="https://www.sefaria.org/Pardes_Rimmonim.32.2?lang=he" target="_blank" rel="noopener">פרדס רמונים ל״ב:ב׳</a></span></div>
+    <p>הרמ"ק מביא את כל הדעות ומכריע ספירה אחר ספירה. הכרעתו קרובה מאוד לר' עזריאל. בשער הגוונים הוא מלמד לצייר את שם הספירה בגוון שלה כשצריך להמשיך שפע ממידה מסוימת, ומביא גם לבוש בגוון המידה וקמיעות; ובשער הכוונה (שער ל"ב) הוא מוסיף שבתפילה, אחרי ציור ההויות המנוקדות, "מה טוב ומה נעים" לצייר אותן בגוונן. בין המקורות שבדף הזה, רק הרמ"ק מלמד זאת. הטבלה המלאה, הניקוד לכל ספירה והאזהרות – <a href="yichudim.html#t3-1">בדף יסודות הייחודים</a>.</p>
+    <p class="prac"><b>מעשה:</b> כן: לצייר את שם הספירה בגוונה כדי להמשיך שפע ממנה, ובתפילה את ההויות המנוקדות בגוונן. ראו <a href="yichudim.html#t3-1">הכרטיס המלא</a>.</p>
+  </div>
+</article>
+<article class="scard" id="orneerav">
+  <div class="shead"><span class="era">צפת, 1522–1570</span><h3>אור נערב: אותה שיטה בקיצור, ועיקר הגוונים במלכות</h3><div class="book">ר&#x27; משה קורדובירו, אור נערב, חלק ו פרק ד</div></div>
+  <div class="sbody">
+    <div class="q">"המדות יחסו להם גוונים על שם פעולתם, כי הגוונים יורו על פעולות כענין הלובן על הרחמים והאודם אל הדין"<span class="who"><a href="https://www.sefaria.org/Ohr_Ne%27erav,_PART_VI.4.2?lang=he" target="_blank" rel="noopener">אור נערב, חלק ו ד׳:ב׳</a></span></div><div class="q">"ולכך גוונה התכלת שהיא ראש לפתיחת הגוון מהשחרות והשחור נפתח בתכלת. ויש שפירש שגוונה הספיר"<span class="who"><a href="https://www.sefaria.org/Ohr_Ne%27erav,_PART_VI.4.4?lang=he" target="_blank" rel="noopener">אור נערב, חלק ו ד׳:ד׳</a></span></div><div class="q">"וגוון הבינה הוא הירוק כעשבים"<span class="who"><a href="https://www.sefaria.org/Ohr_Ne%27erav,_PART_VI.4.4?lang=he" target="_blank" rel="noopener">אור נערב, חלק ו ד׳:ד׳</a></span></div><div class="q">"גוון חסד גוון הלובן, ולא לובן מלובן ככתר אלא לבן קרוב אל התכלת והוא גוון הכסף."<span class="who"><a href="https://www.sefaria.org/Ohr_Ne%27erav,_PART_VI.4.5?lang=he" target="_blank" rel="noopener">אור נערב, חלק ו ד׳:ה׳</a></span></div><div class="q">"הנצ״ח אודם נוטה אל הלובן שרובה רחמים מפני נטייתו לצד החסד. הו״ד לובן נוטה אל האודם שרובו דין מפני נטייתו לצד הגבורה."<span class="who"><a href="https://www.sefaria.org/Ohr_Ne%27erav,_PART_VI.4.7?lang=he" target="_blank" rel="noopener">אור נערב, חלק ו ד׳:ז׳</a></span></div><div class="q">"עוד צריך לדעת כי עיקר גווני אלו אל המדות במלכות כשם שעיקר פעולותיה בה, וזהו ששם הוי״ה אין בו גוון כלל ועיקר הגוונים הם בשם אדנ״י"<span class="who"><a href="https://www.sefaria.org/Ohr_Ne%27erav,_PART_VI.4.9?lang=he" target="_blank" rel="noopener">אור נערב, חלק ו ד׳:ט׳</a></span></div>
+    <p>הגוונים מורים על הפעולות: לבן לרחמים ואדום לדין. ובסוף הוא מוסיף כלל חשוב: הגוונים עיקרם במלכות. שם הוי"ה עצמו אין בו גוון, והוא כאור שמאיר מבעד לעששית, והגוונים נראים בעששית, בשם אדנ"י.</p>
+    
+  </div>
+</article>
+</section>
+<section id="ari-sec"><h2>ה. האר"י ותלמידיו</h2><p class="lead">אצל האר"י אין טבלה של גוון לכל ספירה. יש אזהרה, ויש שימוש בצבעים כסימן.</p>
+<article class="scard" id="ariwarn">
+  <div class="shead"><span class="era">צפת, 1543–1620</span><h3>&quot;אין שם גוון ולא מראה&quot;</h3><div class="book">ר&#x27; חיים ויטאל, שער מאמרי רשב&quot;י, פירוש ספרא דצניעותא</div></div>
+  <div class="sbody">
+    <div class="q">"אל יפתוך רמי הקומה קרואי שאול האומרים כי שם מראות וגוונים במקום הנאצלים העליונים"<span class="who"><a href="https://www.sefaria.org/Sha%27ar_Ma%27amarei_Rashbi,_Commentary_on_Sifra_DeTzeniuta.1.17?lang=he" target="_blank" rel="noopener">שער מאמרי רשב&quot;י, פירוש ספרא דצניעותא א׳:י״ז</a></span></div><div class="q">"כי אין שם גוון ולא מראה רואה ואינו נראה (ע"ג) המתגאה על גאה. הן אמת כי שרשם למעלה. ותוצאותם הימה"<span class="who"><a href="https://www.sefaria.org/Sha%27ar_Ma%27amarei_Rashbi,_Commentary_on_Sifra_DeTzeniuta.1.17?lang=he" target="_blank" rel="noopener">שער מאמרי רשב&quot;י, פירוש ספרא דצניעותא א׳:י״ז</a></span></div><div class="q">"סומק ותכלת ואוכם והם דינא קשיא גבורה דינא רפייא מלכות דינא מסאבא מהקליפות"<span class="who"><a href="https://www.sefaria.org/Sha%27ar_Ma%27amarei_Rashbi,_Commentary_on_Sifra_DeTzeniuta.1.17?lang=he" target="_blank" rel="noopener">שער מאמרי רשב&quot;י, פירוש ספרא דצניעותא א׳:י״ז</a></span></div>
+    <p>באצילות אין גוון. שורש הגוונים למעלה, אבל הם מתגלים רק למטה, מעולם הבריאה. ובאותו מקום הוא מונה שלושה גווני דין: אדום לגבורה, הדין הקשה; תכלת למלכות, הדין הרפה; ושחור לקליפות.</p>
+    
+  </div>
+</article>
+<article class="scard" id="aritest">
+  <div class="shead"><span class="era">צפת, 1543–1620</span><h3>צבע האותיות כסימן לעולם</h3><div class="book">ר&#x27; חיים ויטאל, שער רוח הקודש</div></div>
+  <div class="sbody">
+    <div class="q">"וכן אם האות הוא מצוייר בין עיניו בדיו שחור ידע שעדיין הוא בעשיה ואם אדום הוא ביצירה ואם לבן בבריאה ואם לבן ומאיר ומתנוצץ הארתו הנה הוא באצי'"<span class="who"><a href="https://www.sefaria.org/Sha%27ar_Ruach_HaKodesh.3.12?lang=he" target="_blank" rel="noopener">שער רוח הקודש ג׳:י״ב</a></span></div><div class="q">"מי שלא יצויר נגדו אלא כתיבה שחורה מורה שחטא ופגם למעלה ואם מצטייר בגוון אש אדום אז הוא מתוקן"<span class="who"><a href="https://www.sefaria.org/Sha%27ar_Ruach_HaKodesh.3.19?lang=he" target="_blank" rel="noopener">שער רוח הקודש ג׳:י״ט</a></span></div>
+    <p>כאן הצבע אינו של הספירה אלא של האדם: לפי צבע אותיות השם המצוירות בין עיניו הוא יודע באיזה עולם הוא דבוק. הפירוט המלא <a href="yichudim.html#t3-4">בדף יסודות הייחודים</a>.</p>
+    <p class="prac"><b>מעשה:</b> כן: לצייר את אותיות השם ולראות את צבען. "מי שהוא יודע ומורגל בזה".</p>
+  </div>
+</article>
+<article class="scard" id="ariflame">
+  <div class="shead"><span class="era">צפת, 1543–1620</span><h3>חמשת גווני הנר כנגד חמשה פרצופים</h3><div class="book">ר&#x27; חיים ויטאל, שער מאמרי רשב&quot;י, פרשת בראשית</div></div>
+  <div class="sbody">
+    <div class="q">"דע כי יש יחוד עליון ניכר בגחלת ובשלהבת והם ה' בחינות כנגד חמשה פרצופים שבעולם האצילו' ממטה למעלה ואלו הם תכלת הדבוק בפתיל' ופעמים היא גוון אודם והירוק והלבן ואור אחד מקיף ניכר לעין ואור אחר עליון יותר ומקי' על כולן ואינו ניכר"<span class="who"><a href="https://www.sefaria.org/Sha%27ar_Ma%27amarei_Rashbi,_Parashat_Bereshit.21?lang=he" target="_blank" rel="noopener">שער מאמרי רשב&quot;י, פרשת בראשית כ״א</a></span></div>
+    <p>פירוש האר"י למאמר הזוהר על הנר: מלמטה למעלה, התכלת הדבוק בפתילה ולפעמים אדום, ואחריו הירוק, הלבן, אור מקיף שנראה לעין, ואור עליון ממנו שאינו נראה. חמש בחינות כנגד חמשה פרצופים.</p>
+    
+  </div>
+</article>
+<article class="scard" id="aritzitzit">
+  <div class="shead"><span class="era">צפת, 1543–1620</span><h3>התכלת לעולם במלכות</h3><div class="book">ר&#x27; חיים ויטאל, פרי עץ חיים, שער הציצית</div></div>
+  <div class="sbody">
+    <div class="q">"כי בחי' התכלת, היא לעולם במלכות"<span class="who"><a href="https://www.sefaria.org/Pri_Etz_Chaim,_Gate_of_Fringes.4.8?lang=he" target="_blank" rel="noopener">פרי עץ חיים, שער הציצית ד׳:ח׳</a></span></div><div class="q">"כי בתיקונים אמרו, שהתכלת הוא בחי' החכמה גוון ספיר. ובזוהר אמרו, כי התכלת היא המלכות. גם אמרו במ"א, שהיא בינה. וג' מקומות אלו הם אמיתים"<span class="who"><a href="https://www.sefaria.org/Pri_Etz_Chaim,_Gate_of_Fringes.4.11?lang=he" target="_blank" rel="noopener">פרי עץ חיים, שער הציצית ד׳:י״א</a></span></div>
+    <p>האר"י מיישב שלוש דעות בזוהר ובתיקונים: התכלת היא חכמה, בינה או מלכות, ו"ג' מקומות אלו הם אמיתים". ובציצית שלנו, אחרי החורבן, כל החוטים לבנים.</p>
+    
+  </div>
+</article>
+</section>
+<section id="achronim-sec"><h2>ו. אחרונים</h2><p class="lead">ספרי מוסר וקבלה מצפת ומפולין.</p>
+<article class="scard" id="charedim">
+  <div class="shead"><span class="era">צפת, 1533–1600</span><h3>מותר לדמות אותיות, לא יותר</h3><div class="book">ר&#x27; אלעזר אזכרי, ספר חרדים, ידיעת ה&#x27;</div></div>
+  <div class="sbody">
+    <div class="q">"כשתכוין בשום ספירה מן הספירות לא תדמה בשכלך בה שום דמיון בכח המדמה אשר לך שיכניסך הדמיון בהגשמות הספירה"<span class="who"><a href="https://www.sefaria.org/Sefer_Charedim,_Knowledge_of_God.5.2?lang=he" target="_blank" rel="noopener">ספר חרדים, ידיעת ה&#x27; ה׳:ב׳</a></span></div><div class="q">"ותדמה את אותיות השמות שזאת מותר לך אמנם המדמה יותר מאותיות מגשים"<span class="who"><a href="https://www.sefaria.org/Sefer_Charedim,_Knowledge_of_God.5.2?lang=he" target="_blank" rel="noopener">ספר חרדים, ידיעת ה&#x27; ה׳:ב׳</a></span></div><div class="q">"משל לאור הנר שלמעלה אור לבן ותחתיו אור תכלת והתכלת כסא ללבן והעם אשר בחר צוה אותם להדבק במחשבתם אל האור התכלת הזה"<span class="who"><a href="https://www.sefaria.org/Sefer_Charedim,_Knowledge_of_God.2.2?lang=he" target="_blank" rel="noopener">ספר חרדים, ידיעת ה&#x27; ב׳:ב׳</a></span></div>
+    <p>בכוונה בספירה מותר לצייר רק את אותיות השמות. כל דמיון אחר של הספירה הוא הגשמה, ובאין סוף אסור אפילו דמיון אותיות. ועם זאת, על פי הזוהר, תשע הספירות הן "נהורא חיוורא" והמלכות "נהורא תכלא", וישראל נצטוו להידבק במחשבתם באור התכלת.</p>
+    <p class="prac"><b>מעשה:</b> ציור אותיות השמות בלבד, ודבקות במחשבה באור התכלת.</p>
+  </div>
+</article>
+<article class="scard" id="reshit">
+  <div class="shead"><span class="era">צפת, המאה ה־16</span><h3>השלהבת: אור לבן לתפארת, תכלת לשכינה</h3><div class="book">ר&#x27; אליהו די וידאש, ראשית חכמה, שער האהבה</div></div>
+  <div class="sbody">
+    <div class="q">"שהשלהבת העולה, היא אור לבן, היא רמז לתפארת, והגחלת שהיא גוון התכלת היא כנגד השכינה שהיא אש."<span class="who"><a href="https://www.sefaria.org/Reshit_Chokhmah,_Gate_of_Love.5.26?lang=he" target="_blank" rel="noopener">ראשית חכמה, שער האהבה ה׳:כ״ו</a></span></div>
+    <p>פירוש מאמר הזוהר על הנר: האור הלבן הוא התפארת והתכלת היא השכינה, המלכות.</p>
+    
+  </div>
+</article>
+<article class="scard" id="megale">
+  <div class="shead"><span class="era">קרקא, 1585–1633</span><h3>ארבעה גוונים בארבע אותיות השם</h3><div class="book">ר&#x27; נתן נטע שפירא, מגלה עמוקות על ואתחנן, אופן ר&quot;ו</div></div>
+  <div class="sbody">
+    <div class="q">"י' של הוי"ה הוא סוד אל מדת החסד שהוא גוון לבן, ה' של הוי"ה הוא שם של אלהים שהוא דין גוון אדום, ו' של הוי"ה הוא שם של ה' רחמים גווני ירוק, ה' אחרונה של הוי"ה הוא סוד אדני מדת הדין הרפ"ה גוון תכלת."<span class="who"><a href="https://www.sefaria.org/Megalleh_Amukkot_on_Parashat_VaEtchanan.206?lang=he" target="_blank" rel="noopener">מגלה עמוקות על פרשת ואתחנן ר״ו</a></span></div><div class="q">"תמן תשכח ה' גוונא דעינא "שחור "אדום "לבן "תכלת "ירוק."<span class="who"><a href="https://www.sefaria.org/Megalleh_Amukkot_on_Parashat_VaEtchanan.206?lang=he" target="_blank" rel="noopener">מגלה עמוקות על פרשת ואתחנן ר״ו</a></span></div>
+    <p>כמו בתיקונים, אבל הה"א האחרונה כאן תכלת ולא שחור: י לבן, חסד; ה אדום, דין; ו ירוק, רחמים; ה תכלת, אדנ"י, הדין הרפה. ולצדם חמשה גווני העין.</p>
+    
+  </div>
+</article>
+</section>
+
+<section id="ours">
+  <h2>ושיר הספירות?</h2>
+  <p class="lead">הרב יהודה אוהד תורג'מן אמר שלקח את הגוונים מהרמ"ק (<a href="tzayach-shir-hasefirot.html#song">בדף שיר הספירות</a>). ההשוואה מראה שזה נכון ברובו, עם שני חידושים.</p>
+  <div class="card">
+    <ul class="plain">
+      <li><b>כמו ר' עזריאל והרמ"ק:</b> חכמה תכלת, "הכולל כל גוון" (ר' עזריאל); בינה ירוק; חסד לבן וכסף ("לבן קרוב אל התכלת והוא גוון הכסף"); גבורה אדום וזהב. אצל הרמ"ק הזהב משותף לבינה ולגבורה, ומכאן אולי גם הצהוב שבבינה. הכתר לבן כמו אצל הרמ"ק וג'יקטילה; אצל ר' עזריאל הוא "האור המתעלם".</li>
+      <li><b>נצח והוד:</b> הוורוד הבהיר והוורוד הכהה הם "אודם נוטה אל הלובן" ו"לובן נוטה אל האודם" של ר' עזריאל והרמ"ק: תערובת של לבן ואדום, בהירה יותר בנצח וכהה יותר בהוד.</li>
+      <li><b>תפארת, צהוב וסגול:</b> אצל הרמ"ק התפארת "ירוק כחלמון ביצה", כלומר צהבהב, וגם ארגמן, שהוא סגול־אדום. שני הגוונים של השיר נמצאים שם.</li>
+      <li><b>יסוד, כתום:</b> לא נמצא "כתום" באף ספר. הקרוב ביותר הוא "גוון תערובת" של לבן ואדום, כמו בדף שיר הספירות.</li>
+      <li><b>מלכות, כחול:</b> קרוב לתכלת של המלכות בזוהר, בציצית, במערכת האלהות וגם אצל הרמ"ק, שנותן לה תכלת לצד "כלולה מכל גוון".</li>
+    </ul>
+  </div>
+</section>
+
+<section id="gaps">
+  <h2>מה לא נבדק</h2>
+  <p class="lead">מקורות שחיפשנו ולא מצאנו את לשונם בנוסח שאפשר לבדוק.</p>
+  <ul class="plain">
+    <li><b>ר' דוד בן יהודה החסיד</b> (אור זרוע, מראות הצובאות): לשונו על הגוונים לא נמצאה בדפוס נגיש. "מראות הצובאות" ו"אור זרוע" שבספריא הם ספרים אחרים באותו שם. מה שידוע עליו – <a href="yichudim.html#t3-7">בדף יסודות הייחודים</a> ו<a href="tzayach-shir-hasefirot.html#theory">בדף שיר הספירות</a>.</li>
+    <li><b>הקומרנא, היכל הברכה:</b> בהיברובוקס יש רק סריקות, בלי טקסט שאפשר לחפש בו. המקומות שאותרו – שמות קצט ע"א ("אש שחורה על גבי אש לבנה"), ש"ד ע"א, ודברים קסא ע"ב – לא נקראו בלשונם.</li>
+    <li><b>לא נמצאו ברשת:</b> ר' אשר בן דוד, ספרי העיון, גינת אגוז, טעמי המצוות לריקנאטי, אבן השהם לר' יוסף צייאח, הרש"ש (נהר שלום, רחובות הנהר), החיד"א, וקול יעקב.</li>
+    <li><b>ג'יקטילה:</b> תכלת למלכות לא נמצאה בשערי אורה שבספריא (אין בו המילה "תכלת").</li>
+    <li><b>דף בזוהר:</b> ההפניות לזוהר בראשית ס"ו (היכלות), פנחס, שלח ופקודי הן לפי ספריא; מספר הדף לא אומת.</li>
+  </ul>
+</section>
+
+<footer>
+  <p><a href="index.html">ספריית הקבלה</a> · <a href="tzayach-shir-hasefirot.html">שיר הספירות בצבעים</a> · <a href="yichudim.html">יסודות הייחודים</a> · <a href="otzar-hayichudim.html">אוצר הייחודים</a> · עודכן: אוקטובר 2026</p>
+</footer>
+</main>
+</body>
+</html>
