@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>אוצר הייחודים</title>
-<meta name="description" content="ייחודים בלשון הספרים, כל שם צבוע בצבע הספירה שלו לפי שיר הספירות. ייחוד ראשון: שערי חיים, יחוד ד', מתתא לעילא.">
+<meta name="description" content="ייחודים בלשון הספרים, כל שם צבוע בצבע הספירה שלו לפי שיר הספירות. ייחודים: שערי חיים, יחוד ד' (מתתא לעילא); שער רוח הקודש, יחוד י"ו (הנותן בים דרך). בכל ייחוד אפשר לבחור שיטת צבעים.">
 <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:light;--bg:#f4f0e6;--paper:#fffdf8;--ink:#26221c;--muted:#6f665a;--gold:#9c7a33;--gold2:#c9a75a;--line:#dcd2c0;--dark:#26221c;--warn:#9b5f58;
   /* צבעי הספירות, מתוך שיר הספירות */
-  --keter:#fffdf5;--keter-edge:#b39a5e;--tif-a:#f2c94c;--tif-b:#7e3fa6;--malchut:#1f4ea3}
+  --keter:#fffdf5;--keter-edge:#b39a5e;--tif-a:#f2c94c;--tif-b:#7e3fa6;--malchut:#1f4ea3;--chesed-a:#ffffff;--chesed-b:#b9bec7}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:70px}
 body{margin:0;background:var(--bg);direction:rtl;color:var(--ink);font-family:"Heebo","Noto Sans Hebrew",Arial,sans-serif;line-height:1.8;font-size:16.5px}
@@ -41,11 +41,13 @@ bdi{direction:ltr;unicode-bidi:isolate}
 .k{color:var(--keter);-webkit-text-stroke:1.1px var(--keter-edge);text-shadow:0 0 14px #fff3cc,0 0 3px #efe3c2}
 .t{background:linear-gradient(180deg,var(--tif-a) 0 52%,var(--tif-b) 52% 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:.6px #4a2d0f55}
 .m{color:var(--malchut)}
+.c{background:linear-gradient(180deg,var(--chesed-a) 0 52%,var(--chesed-b) 52% 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:1px #8a8f99}
 /* inline names inside the book's words: a pill in the sefira color */
 .nm{display:inline-block;padding:0 .38em;border-radius:.45em;line-height:1.35;font-weight:700;-webkit-text-stroke:0;background-clip:border-box;-webkit-background-clip:border-box}
 .nm.k{background:radial-gradient(#fff,#f1ebdc);color:#5c4a2a;border:1px dashed #cbbd9c;text-shadow:none}
 .nm.t{background:linear-gradient(135deg,var(--tif-a) 50%,var(--tif-b) 50%);color:#fff;text-shadow:0 0 2px #3b1a52,0 0 2px #3b1a52,0 0 4px #3b1a52}
 .nm.m{background:var(--malchut);color:#fff}
+.nm.c{background:linear-gradient(135deg,var(--chesed-a) 50%,var(--chesed-b) 50%);color:#2f343c;border:1px solid #b9bec7;text-shadow:none}
 .es{font-weight:700;color:#7a6331;background:radial-gradient(closest-side,#fffbea,#f6edd3);padding:0 .4em;border-radius:1em;box-shadow:0 0 12px #f0dfa8}
 .nf{font-weight:700;border-bottom:2px dotted var(--gold2)}
 
@@ -82,6 +84,45 @@ ol.ylist{list-style:none;margin:0;padding:0}
 .yins{font-family:"Frank Ruhl Libre",serif;font-size:1.22rem;margin:0;line-height:2}
 .yfoot{padding:14px 22px;color:var(--muted);font-size:.92rem;border-top:1px solid var(--line);background:#faf6ec}
 footer{margin-top:50px;color:var(--muted);font-size:.9rem;text-align:center;border-top:1px solid var(--line);padding-top:18px}
+/* ---- picker: color method ---- */
+.mpick{display:flex;flex-direction:column;gap:6px;min-width:min(100%,340px)}
+.mpick label{display:flex;gap:8px;align-items:center;font-size:.88rem;color:#5a4423;font-weight:500}
+.mpick select{font:500 .9rem "Heebo",sans-serif;padding:5px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#3a2e1d;max-width:100%}
+.mleg{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.8rem;color:var(--muted);line-height:1.45}
+.mleg span.it{display:inline-flex;gap:6px;align-items:center}
+.mleg i.sw2{width:14px;height:14px;border-radius:50%;display:inline-block;flex:none}
+.mleg b{color:#3a2e1d;font-weight:500}
+.mleg a{font-size:.78rem}
+.mnote{font-size:.78rem;color:var(--warn)}
+/* ---- yichud 2 ---- */
+.yname.eq{font-size:1.45rem;white-space:normal;line-height:1.9;letter-spacing:0}
+.yname.eq .nm{font-size:1.25rem}
+.yname i{font-style:normal;color:var(--muted);font-weight:400;padding:0 .15em}
+.g{color:#7a6331}
+.yexp{color:var(--muted);font-size:.9rem;margin:4px 0 0;line-height:1.7}
+.vs{background:#f6edd3;padding:0 .3em;border-radius:6px}
+.yintro{padding:14px 22px 4px;border-bottom:1px solid #ece4d3}
+.hsec{padding:18px 22px;border-top:1px solid var(--line)}
+.hsec h4{font-size:1.4rem;margin:0 0 6px}
+.hsec h5{font-family:"Frank Ruhl Libre",serif;font-size:1.15rem;margin:18px 0 8px;color:#5a4423}
+.hgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(285px,1fr));gap:12px}
+.pb{border:1px solid var(--line);border-radius:12px;background:#fff;padding:10px 12px}
+.pb.elul{box-shadow:inset 0 0 0 2px var(--gold2);background:#fbf4e2}
+.pb h4{margin:0 0 8px;font-size:1.02rem;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.pb h4 .mo{color:var(--muted);font-family:"Heebo",sans-serif;font-size:.8rem;font-weight:400}
+.pb h4 .et{font-family:"Heebo",sans-serif;font-size:.72rem;background:var(--dark);color:var(--gold2);border-radius:999px;padding:0 8px}
+.hrs{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.hr{background:#faf6ec;border-radius:8px;padding:4px 6px;text-align:center}
+.hr .n,.lt .n{display:block;font-size:.68rem;color:var(--muted);line-height:1.3}
+.hr .f{display:block;font-family:"Frank Ruhl Libre",serif;font-weight:900;font-size:1.35rem;line-height:1.6;white-space:nowrap;letter-spacing:.03em}
+.hr .f .nm{font-size:1rem}
+.lts{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:6px;border-top:1px dashed var(--line);padding-top:6px}
+.lt{text-align:center;font-family:"Frank Ruhl Libre",serif;font-weight:900;font-size:1.3rem;line-height:1.3}
+.lt.wide{grid-column:1/-1;font-family:"Heebo",sans-serif;font-weight:400;font-size:.8rem;color:var(--muted)}
+details.full{border-top:1px solid var(--line);padding:12px 22px}
+details.full summary{cursor:pointer;font-weight:500;color:#5a4423}
+details.full .ft{font-family:"Frank Ruhl Libre",serif;font-size:1.05rem;line-height:1.95;margin-top:10px}
+details.full .nt{font-family:"Heebo",sans-serif;font-size:.85rem;color:var(--muted)}
 @media(max-width:720px){
   .hero{padding:44px 16px 36px}
   .key{grid-template-columns:1fr}
@@ -89,7 +130,8 @@ footer{margin-top:50px;color:var(--muted);font-size:.9rem;text-align:center;bord
   .yr{grid-template-columns:1fr;gap:8px;padding:14px 16px}
   .yname{order:1;font-size:2.2rem}
   .ytext{order:2}
-  .ybar,.yhead,.yfoot{padding-left:16px;padding-right:16px}
+  .ybar,.yhead,.yfoot,.yintro,.hsec,details.full{padding-left:16px;padding-right:16px}
+  .yname.eq{font-size:1.3rem}
 }
 @media print{nav.top{display:none}.ybar .seg{display:none}}
 </style>
@@ -100,15 +142,17 @@ footer{margin-top:50px;color:var(--muted);font-size:.9rem;text-align:center;bord
   <svg class="emblem" viewBox="0 0 60 92" aria-hidden="true" focusable="false"><g stroke="#c9a75a" stroke-opacity=".55" stroke-width="1.4"><path d="M30 8L14 22M30 8L46 22M14 22L46 22M14 22L14 46M46 22L46 46M14 46L46 46M14 46L30 54M46 46L30 54M30 8L30 86M14 46L14 68M46 46L46 68M14 68L46 68M14 68L30 76M46 68L30 76"/></g><circle cx="30" cy="8" r="5.5" fill="#fffdf5" stroke="#c9a75a"/><circle cx="46" cy="22" r="5.5" fill="#5b9bd5"/><circle cx="14" cy="22" r="5.5" fill="#f2c94c"/><circle cx="46" cy="46" r="5.5" fill="#d9dde4"/><circle cx="14" cy="46" r="5.5" fill="#c62828"/><circle cx="30" cy="54" r="5.5" fill="#7e3fa6"/><circle cx="46" cy="68" r="5.5" fill="#f7b8cb"/><circle cx="14" cy="68" r="5.5" fill="#b0305f"/><circle cx="30" cy="76" r="5.5" fill="#f08a24"/><circle cx="30" cy="87" r="5" fill="#1f4ea3"/></svg>
   <div class="kicker">ייחודים · בצבעי הספירות</div>
   <h1>אוצר הייחודים</h1>
-  <p>ייחודים בלשון הספרים, מילה במילה. כל שם קדוש צבוע בצבע הספירה שלו, לפי הצבעים של שיר הספירות, וגם בשמות המשולבים כל אות צבועה בצבע השם שממנו באה.</p>
-  <div class="dates">ייחוד אחד · נאסף ונכתב 19.10.2026 · מקורות יהודיים בלבד</div>
+  <p>ייחודים בלשון הספרים, מילה במילה. כל שם קדוש צבוע בצבע הספירה שלו, לפי הצבעים של שיר הספירות, וגם בשמות המשולבים כל אות צבועה בצבע השם שממנו באה. בכל ייחוד אפשר לבחור שיטת צבעים אחרת, מספרי המקובלים.</p>
+  <div class="dates">שני ייחודים · 9 שיטות צבעים · עודכן 19.10.2026 · מקורות יהודיים בלבד</div>
 </header>
 
 <nav class="top" aria-label="ניווט">
   <a class="nav-home" href="index.html">ספריית הקבלה</a>
   <a href="#key">מפתח הצבעים</a>
   <a href="#y1">ייחוד א · שערי חיים</a>
+  <a href="#y2">ייחוד ב · הנותן בים דרך</a>
   <a href="yichudim.html">יסודות הייחודים</a>
+  <a href="sefirot-colors.html">שיטות בצבעי הספירות</a>
   <a href="tzayach-shir-hasefirot.html">שיר הספירות בצבעים</a>
 </nav>
 
@@ -116,18 +160,21 @@ footer{margin-top:50px;color:var(--muted);font-size:.9rem;text-align:center;bord
 
 <section id="key">
   <h2>מפתח הצבעים</h2>
-  <p class="lead">הצבעים לקוחים מ<a href="tzayach-shir-hasefirot.html#song">שיר הספירות</a>. שם בכל ספירה נאמר שם קדוש: בכתר אהי"ה, בתפארת הוי"ה, ובמלכות אדנ"י. לכן כל שם צבוע כאן בצבע הספירה שבה נאמר בשיר.</p>
+  <p class="lead">הצבעים כאן הם הצבעים שלנו, מ<a href="tzayach-shir-hasefirot.html#song">שיר הספירות</a>. שם בכל ספירה נאמר שם קדוש: בכתר אהי"ה, בחסד אל, בתפארת הוי"ה, ובמלכות אדנ"י. לכן כל שם צבוע כאן בצבע הספירה שבה נאמר בשיר.</p>
+  <div class="note">יש עוד שיטות לצבעי הספירות בספרי המקובלים: ר' עזריאל, תיקוני הזוהר, הזוהר, מערכת האלהות, ר' יוסף ג'יקטילה והרמ"ק. כולן מרוכזות, עם לשון כל מקור, בדף <a href="sefirot-colors.html#compare">שיטות בצבעי הספירות</a>. בכל ייחוד בדף הזה יש רשימה "שיטת הצבעים": בוחרים שיטה, והשמות נצבעים לפיה. השם נשאר תמיד בספירה שלו, ורק הגוון מתחלף. ספירה שהמקור אינו נותן לה גוון מוצגת באפור.</div>
   <div class="card key">
-    <svg viewBox="0 0 60 92" role="img" aria-label="עץ הספירות: כתר, תפארת ומלכות בצבעיהן">
-      <defs><linearGradient id="kt" x1="0" y1="0" x2="1" y2="1"><stop offset=".5" stop-color="#f2c94c"/><stop offset=".5" stop-color="#7e3fa6"/></linearGradient></defs>
+    <svg viewBox="0 0 60 92" role="img" aria-label="עץ הספירות: כתר, חסד, תפארת ומלכות בצבעיהן">
+      <defs><linearGradient id="kt" x1="0" y1="0" x2="1" y2="1"><stop offset=".5" stop-color="#f2c94c"/><stop offset=".5" stop-color="#7e3fa6"/></linearGradient><linearGradient id="kc" x1="0" y1="0" x2="1" y2="1"><stop offset=".5" stop-color="#ffffff"/><stop offset=".5" stop-color="#b9bec7"/></linearGradient></defs>
       <g stroke="#cdbf9f" stroke-width="1.4"><path d="M30 8L14 22M30 8L46 22M14 22L46 22M14 22L14 46M46 22L46 46M14 46L46 46M14 46L30 54M46 46L30 54M30 8L30 86M14 46L14 68M46 46L46 68M14 68L46 68M14 68L30 76M46 68L30 76"/></g>
-      <g fill="#ece5d6"><circle cx="46" cy="22" r="4.5"/><circle cx="14" cy="22" r="4.5"/><circle cx="46" cy="46" r="4.5"/><circle cx="14" cy="46" r="4.5"/><circle cx="46" cy="68" r="4.5"/><circle cx="14" cy="68" r="4.5"/><circle cx="30" cy="76" r="4.5"/></g>
+      <g fill="#ece5d6"><circle cx="46" cy="22" r="4.5"/><circle cx="14" cy="22" r="4.5"/><circle cx="14" cy="46" r="4.5"/><circle cx="46" cy="68" r="4.5"/><circle cx="14" cy="68" r="4.5"/><circle cx="30" cy="76" r="4.5"/></g>
       <circle cx="30" cy="8" r="6.5" fill="#fffdf5" stroke="#b39a5e" stroke-dasharray="2 2"/>
+      <circle cx="46" cy="46" r="6" fill="url(#kc)" stroke="#9aa0aa" stroke-width=".8"/>
       <circle cx="30" cy="54" r="6.5" fill="url(#kt)"/>
       <circle cx="30" cy="86" r="6" fill="#1f4ea3"/>
     </svg>
     <div>
       <div class="krow"><span class="sw" style="background:radial-gradient(#fff,#eee8da);border-style:dashed"></span><div><b class="serif">אהי"ה · כתר</b> &nbsp;לבן בוהק, בלתי נראה, כמו אוויר<small>בשיר: "אהי"ה אשר אהי"ה הוא יכתירני"</small></div></div>
+      <div class="krow"><span class="sw" style="background:linear-gradient(135deg,#fff 50%,#b9bec7 50%)"></span><div><b class="serif">אל · חסד</b> &nbsp;לבן וכסף<small>בשיר: "אל, בימין חסדו יגדלני"</small></div></div>
       <div class="krow"><span class="sw" style="background:linear-gradient(135deg,#f2c94c 50%,#7e3fa6 50%)"></span><div><b class="serif">הוי"ה · תפארת</b> &nbsp;צהוב וסגול<small>בשיר: "ה' ברחמיו יפארני", ו"נאמר שם אדנות, ואתה תכוון בשם הוי"ה בצבע הצהוב והסגול"</small></div></div>
       <div class="krow"><span class="sw" style="background:#1f4ea3"></span><div><b class="serif">אדנ"י · מלכות</b> &nbsp;כחול<small>בשיר: "אדנ"י שפתי תפתח ופי יגיד תהלתך"</small></div></div>
       <div class="krow"><span class="sw" style="background:radial-gradient(closest-side,#fffbea,#f6edd3);box-shadow:0 0 10px #f0dfa8;border-color:#e8d9a8"></span><div><b class="serif">אין סוף</b> &nbsp;למעלה מכל הספירות, ולכן בלי צבע של ספירה: רק אור</div></div>
@@ -140,7 +187,7 @@ footer{margin-top:50px;color:var(--muted);font-size:.9rem;text-align:center;bord
   <h2>ייחוד א: עליית העולמות מתתא לעילא</h2>
   <p class="lead">חיבור הנפש מעולם העשיה, ועלייה שלב אחר שלב, שם אחר שם, דרך עשיה, יצירה, בריאה ואצילות, עד אין סוף.</p>
 
-  <article class="yichud">
+  <article class="yichud" id="y1a" data-sefirot="keter tiferet malchut">
     <div class="yhead">
       <div class="num">ייחוד 1</div>
       <h3>יחוד ד'</h3>
@@ -152,6 +199,7 @@ footer{margin-top:50px;color:var(--muted);font-size:.9rem;text-align:center;bord
         <button type="button" id="ordBook" aria-pressed="true">כסדר הספר</button>
         <button type="button" id="ordUp" aria-pressed="false">סדר הכוונה, מלמטה למעלה</button>
       </div>
+      <div class="mpick" data-for="y1a"></div>
     </div>
     <ol class="ylist" id="ylist1">
       <li class="yr" data-print="1" data-step="12">
@@ -243,13 +291,121 @@ footer{margin-top:50px;color:var(--muted);font-size:.9rem;text-align:center;bord
   </article>
 </section>
 
+<section id="y2">
+  <h2>ייחוד ב: הנותן בים דרך</h2>
+  <p class="lead">כוונת חודש אלול, שבו נפתחים י"ג מקורות של י"ג תיקוני דיקנא. ס"ג וקס"א הם דר"ך, והם מאירים בשם ב"ן שהוא "ים". מה שהאר"י נתן לר' חיים ויטאל בראש חודש אלול שנת של"א, עם שני ימי תענית.</p>
+
+  <article class="yichud" id="y2a" data-sefirot="keter chesed tiferet">
+    <div class="yhead">
+      <div class="num">ייחוד 2</div>
+      <h3>יחוד י"ו</h3>
+      <div class="src">שער רוח הקודש, יחוד י"ו · <a href="https://www.sefaria.org/Sha'ar_Ruach_HaKodesh.123?lang=he" target="_blank" rel="noopener">לפי הנוסח בספריא</a> (דפוס ירושלים תרכ"ג)</div>
+    </div>
+    <div class="ybar">
+      <span class="open">"וז"ס הנותן בים דרך"</span>
+      <div class="mpick" data-for="y2a"></div>
+    </div>
+    <div class="yintro">
+      <div class="q">"בר"ח אלול שנת השל"א ליצירה א"ל מורי ז"ל שאתענ' אותם שני ימים רצופי' אשר אחר יום ר"ח עצמו של אלול ושעי"ז אשיג איזו השגה וכונת אלו התעניות הוא כי בחדש אלול נפתחי' י"ג מקורות של הי"ג תיקוני דיקנא דעתיקא והם מתגלי' ומאירי' למט' באו"א במקו' המקיף של המוחין שלהם כמו שביארנו בריש אדרת האזינו כי מחוץ למוחין דאו"א בוקע אור שלה' לחוץ ומאיר שם בסוד אור מקיף ושם מתגלי' אלו הי"ג תיקוני דיקנא דעתיקא ותחלה צריך לכוין דרך כללות"<span class="who">שער רוח הקודש, יחוד י"ו</span></div>
+      <p class="yexp">בראש חודש אלול של"א (1571) אמר האר"י לר' חיים ויטאל להתענות שני ימים רצופים אחרי ראש החודש, ועל ידי זה ישיג השגה. קודם מכוונים "דרך כללות" כל החודש (שלבים 1–3), ואחר כך בשני הימים (שלבים 4–6).</p>
+    </div>
+    <ol class="ylist" id="ylist2">
+      <li class="yr">
+        <div class="yname" aria-label="אלול"><span class="t">א</span><span class="t">ל</span><span class="k">ו</span><span class="k">ל</span></div>
+        <div class="ytext">
+          <div class="ymeta"><span class="wtag">כל חודש אלול</span><span class="stp">שלב 1 · כללות</span></div>
+          <p class="yins">כי כל זה החדש של אלול הוא סוד שם <span class="nm t">הוי"ה</span> דס"ג ו<span class="nm k">אהי"ה</span> דיודי"ן שהוא בגי' קס"א ואלו נרמזי' בתיבת אלול כי ב' אותיות א"ל הם ג' יודי"ן ואל"ף שבשם ס"ג כנודע שמהם יוצא שם <span class="nm c">א"ל</span> כנז' בזוהר פ' פנחס וב' אותיות ו"ל הם שם <span class="nm c">א"ל</span> היוצא מג' יודי"ן ואלף ג"כ דקס"א כי ג' יודי"ן שבו הם ל' ובמקום אות א' הושם במקומ' אות ו' כי האל"ף נעלמת בוא"ו זה ולכן נקרא אלו"ל כי בכל החדש הזה ראוי לכוין בשני שמות אלו:</p>
+          <p class="yexp">ס"ג הוא הוי"ה במילוי יו"ד ה"י וא"ו ה"י: יש בו שלוש יודי"ן (30, כמו ל') ואל"ף אחת, והן א"ל. קס"א הוא אהי"ה במילוי אל"ף ה"י יו"ד ה"י: שלוש היודי"ן שבו הן ל', והאל"ף נעלמת בוא"ו, והן ו"ל. יחד: אלו"ל. בתיבה למעלה, א"ל בצבע ס"ג (הוי"ה) ו־ו"ל בצבע קס"א (אהי"ה), כל אות לפי השם שממנו באה.</p>
+        </div>
+      </li>
+      <li class="yr">
+        <div class="yname eq" aria-label="ס"ג וקס"א הם דרך"><span class="nm t">ס"ג</span> <i>+</i> <span class="nm k">קס"א</span> <i>=</i> <span class="g">דר"ך</span></div>
+        <div class="ytext">
+          <div class="ymeta"><span class="wtag">כל חודש אלול</span><span class="stp">שלב 2 · כללות</span></div>
+          <p class="yins">והנה ב' שמות <span class="nm t">ס"ג</span> ו<span class="nm k">קס"א</span> הנז' הם בגי' דר"ך וז"ס <b class="vs">הנותן בים דרך</b>:</p>
+          <p class="yexp">63 ועוד 161 הם 224, וכך דר"ך: ד' 4, ר' 200, ך' 20. הפסוק: "כֹּה אָמַר ה' הַנּוֹתֵן בַּיָּם דָּרֶךְ וּבְמַיִם עַזִּים נְתִיבָה" (<a href="https://www.sefaria.org/Isaiah.43.16?lang=he" target="_blank" rel="noopener">ישעיה מג, טז</a>).</p>
+        </div>
+      </li>
+      <li class="yr">
+        <div class="yname" aria-label="בים"><span class="t">ב</span><span class="t">י</span><span class="t">ם</span></div>
+        <div class="ytext">
+          <div class="ymeta"><span class="wtag">כל חודש אלול</span><span class="stp">שלב 3 · כללות</span></div>
+          <p class="yins">כי מלת בי"ם הוא שם של <span class="nm t">ב"ן</span> דההי"ן וב' שמות הנז' עולים בגי' דר"ך שמאירים בהם שם <span class="nm t">ב"ן</span> הזה שהוא בגי' בי"ם ודרך זה נפתח בכל חדש אלול:</p>
+          <p class="yexp">ב"ן הוא הוי"ה במילוי ההי"ן, 52, וכך בי"ם: ב' 2, י' 10, ם' 40. שני השמות, שהם דר"ך, מאירים בב"ן שהוא "ים", וזה "הנותן בים דרך".</p>
+        </div>
+      </li>
+      <li class="yr">
+        <div class="yname eq" aria-label="הוי"ה אהי"ה הם מ"ח"><span class="nm t">הוי"ה</span> <span class="nm k">אהי"ה</span> <i>=</i> <span class="g">מ"ח</span></div>
+        <div class="ytext">
+          <div class="ymeta"><span class="wtag">שני הימים</span><span class="stp">שלב 4</span></div>
+          <p class="yins">והנה אחר שתכוין בזה הכללות בכל חדש אלול צריך שתכוין אח"כ בשני ימים הראשונים הנז"ל בענין זה והוא כי הנה יש בשני ימים אלו מ"ח שעות והם ג"כ בסוד <span class="nm t">הוי"ה</span> <span class="nm k">אהי"ה</span> הנז"ל שהם בגי' מ"ח עם הכולל:</p>
+          <p class="yexp">26 ועוד 21 הם 47, ועם הכולל 48: כמספר השעות בשני ימי התענית, ב' וג' באלול.</p>
+        </div>
+      </li>
+      <li class="yr">
+        <div class="yname" aria-label="יב"ק"><span class="g">יב"ק</span></div>
+        <div class="ytext">
+          <div class="ymeta"><span class="wtag">סוף היום הראשון</span><span class="stp">שלב 5</span></div>
+          <p class="yins">והנה בסוף יום א' תכוין שכבר נשלם חצי הדרך הנז' שהוא בגי' יב"ק וז"ס יענך <span class="nm t">הוי"ה</span> ביום צרה שהוא ר"ת בגי' יב"ק וכן ר"ת יעננו ביום קראנו הם יב"ק:</p>
+          <p class="yexp">חצי מ־224 הוא 112, יב"ק. ראשי התיבות "יענך ה' ביום צרה" (י' י' ב' צ') הם 112, וכן "יעננו ביום קראנו" (י' ב' ק'), <a href="https://www.sefaria.org/Psalms.20.2?lang=he" target="_blank" rel="noopener">תהלים כ</a>.</p>
+        </div>
+      </li>
+      <li class="yr">
+        <div class="yname eq" aria-label="פעמיים יב"ק הם דרך"><span class="g">יב"ק</span> <i>×2</i> <i>=</i> <span class="g">דר"ך</span></div>
+        <div class="ytext">
+          <div class="ymeta"><span class="wtag">סוף היום השני</span><span class="stp">שלב 6</span></div>
+          <p class="yins">ובסוף יום השני תכוין בשני פעמי' יב"ק שהוא דרך כנז"ל שהם <span class="nm t">ס"ג</span> ו<span class="nm k">קס"א</span>:</p>
+          <p class="yexp">פעמיים 112 הם 224: כל הדר"ך נשלם.</p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="hsec" id="y2-hours">
+      <h4>כוונה שנייה: מ"ח השעות</h4>
+      <div class="q">"עוד יש כונה שנית פרטיית בשני הימים אלו והוא שתצרף תיחלה הי"ב צרופי' של ההוי"ה והי"ב צרופים של אהי"ה כנודע ובין שניהם הם כ"ד אבל הם עולי' אל מ"ח כנגד מ"ח שעות שבשני הימים אלו כמו שנבאר"<span class="who">שם</span></div>
+      <p class="yexp">ר' שמואל ויטאל מבאר: כל צירוף לוקח ארבע שעות. בשעה הראשונה אהי"ה לבדו, בשנייה אהי"ה כולל הוי"ה (אות מזה ואות מזה), בשלישית הוי"ה לבדו, ברביעית הוי"ה כולל אהי"ה. כל אות של אהי"ה בסגו"ל וכל אות של הוי"ה בחיר"ק. י"ב הצירופים הם כנגד י"ב חודשי השנה מניסן עד אדר, ולכן הצירוף השישי, של אלול, עיקר בחודש הזה, ומכוונים אותו עם כל צירוף. הצירופים כאן בסדר הציור שבספר.</p>
+      <p class="yexp">מתחת לכל צירוף, הכוונה השלישית שבספר: כ"ח אותיות, אות אחת בכל שעה. ביום הראשון: עשר אותיות מילוי אהי"ה דיודי"ן, עשר אותיות מילוי הוי"ה דע"ב, וארבע אותיות אהי"ה. ביום השני: עשר אותיות מילוי ההוי"ה (בציור שבספר: יוד הי ואו הי), עשר אותיות מילוי אהי"ה, וארבע אותיות הוי"ה.</p>
+      <h5>יום ראשון · שעות 1–24</h5>
+      <div class="hgrid"><div class="pb"><h4><span>צירוף א'</span><span class="mo">חודש ניסן</span></h4>
+<div class="hrs"><div class="hr"><span class="n">שעה 1 · אהי"ה לבדו</span><span class="f"><span class="k">אֶ</span><span class="k">הֶ</span><span class="k">יֶ</span><span class="k">הֶ</span></span></div><div class="hr"><span class="n">שעה 2 · אהי"ה כולל הוי"ה</span><span class="f"><span class="k">אֶ</span><span class="t">יִ</span><span class="k">הֶ</span><span class="t">הִ</span><span class="k">יֶ</span><span class="t">וִ</span><span class="k">הֶ</span><span class="t">הִ</span></span></div><div class="hr"><span class="n">שעה 3 · הוי"ה לבדו</span><span class="f"><span class="nm t">הוי"ה</span></span></div><div class="hr"><span class="n">שעה 4 · הוי"ה כולל אהי"ה</span><span class="f"><span class="t">יִ</span><span class="k">אֶ</span><span class="t">הִ</span><span class="k">הֶ</span><span class="t">וִ</span><span class="k">יֶ</span><span class="t">הִ</span><span class="k">הֶ</span></span></div></div><div class="lts" aria-label="כ&quot;ח האותיות בשעות האלה"><div class="lt"><span class="n">1</span><span class="k">אֶ</span></div><div class="lt"><span class="n">2</span><span class="k">לֶ</span></div><div class="lt"><span class="n">3</span><span class="k">פֶ</span></div><div class="lt"><span class="n">4</span><span class="k">הֶ</span></div></div></div><div class="pb"><h4><span>צירוף ב'</span><span class="mo">חודש אייר</span></h4>
+<div class="hrs"><div class="hr"><span class="n">שעה 5 · אהי"ה לבדו</span><span class="f"><span class="k">אֶ</span><span class="k">הֶ</span><span class="k">הֶ</span><span class="k">יֶ</span></span></div><div class="hr"><span class="n">שעה 6 · אהי"ה כולל הוי"ה</span><span class="f"><span class="k">אֶ</span><span class="t">יִ</span><span class="k">הֶ</span><span class="t">הִ</span><span class="k">הֶ</span><span class="t">הִ</span><span class="k">יֶ</span><span class="t">וִ</span></span></div><div class="hr"><span class="n">שעה 7 · הוי"ה לבדו</span><span class="f"><span class="t">יִ</span><span class="t">הִ</span><span class="t">הִ</span><span class="t">וִ</span></span></div><div class="hr"><span class="n">שעה 8 · הוי"ה כולל אהי"ה</span><span class="f"><span class="t">יִ</span><span class="k">אֶ</span><span class="t">הִ</span><span class="k">הֶ</span><span class="t">הִ</span><span class="k">הֶ</span><span class="t">וִ</span><span class="k">יֶ</span></span></div></div><div class="lts" aria-label="כ&quot;ח האותיות בשעות האלה"><div class="lt"><span class="n">5</span><span class="k">יֶ</span></div><div class="lt"><span class="n">6</span><span class="k">יֶ</span></div><div class="lt"><span class="n">7</span><span class="k">וֶ</span></div><div class="lt"><span class="n">8</span><span class="k">דֶ</span></div></div></div><div class="pb"><h4><span>צירוף ג'</span><span class="mo">חודש סיון</span></h4>
+<div class="hrs"><div class="hr"><span class="n">שעה 9 · אהי"ה לבדו</span><span class="f"><span class="k">אֶ</span><span class="k">יֶ</span><span class="k">הֶ</span><span class="k">הֶ</span></span></div><div class="hr"><span class="n">שעה 10 · אהי"ה כולל הוי"ה</span><span class="f"><span class="k">אֶ</span><span class="t">יִ</span><span class="k">יֶ</span><span class="t">וִ</span><span class="k">הֶ</span><span class="t">הִ</span><span class="k">הֶ</span><span class="t">הִ</span></span></div><div class="hr"><span class="n">שעה 11 · הוי"ה לבדו</span><span class="f"><span class="t">יִ</span><span class="t">וִ</span><span class="t">הִ</span><span class="t">הִ</span></span></div><div class="hr"><span class="n">שעה 12 · הוי"ה כולל אהי"ה</span><span class="f"><span class="t">יִ</span><span class="k">אֶ</span><span class="t">וִ</span><span class="k">יֶ</span><span class="t">הִ</span><span class="k">הֶ</span><span class="t">הִ</span><span class="k">הֶ</span></span></div></div><div class="lts" aria-label="כ&quot;ח האותיות בשעות האלה"><div class="lt"><span class="n">9</span><span class="k">הֶ</span></div><div class="lt"><span class="n">10</span><span class="k">יֶ</span></div><div class="lt"><span class="n">11</span><span class="t">יִ</span></div><div class="lt"><span class="n">12</span><span class="t">וִ</span></div></div></div><div class="pb"><h4><span>צירוף ד'</span><span class="mo">חודש תמוז</span></h4>
+<div class="hrs"><div class="hr"><span class="n">שעה 13 · אהי"ה לבדו</span><span class="f"><span class="k">הֶ</span><span class="k">יֶ</span><span class="k">הֶ</span><span class="k">אֶ</span></span></div><div class="hr"><span class="n">שעה 14 · אהי"ה כולל הוי"ה</span><span class="f"><span class="k">הֶ</span><span class="t">הִ</span><span class="k">יֶ</span><span class="t">וִ</span><span class="k">הֶ</span><span class="t">הִ</span><span class="k">אֶ</span><span class="t">יִ</span></span></div><div class="hr"><span class="n">שעה 15 · הוי"ה לבדו</span><span class="f"><span class="t">הִ</span><span class="t">וִ</span><span class="t">הִ</span><span class="t">יִ</span></span></div><div class="hr"><span class="n">שעה 16 · הוי"ה כולל אהי"ה</span><span class="f"><span class="t">הִ</span><span class="k">הֶ</span><span class="t">וִ</span><span class="k">יֶ</span><span class="t">הִ</span><span class="k">הֶ</span><span class="t">יִ</span><span class="k">אֶ</span></span></div></div><div class="lts" aria-label="כ&quot;ח האותיות בשעות האלה"><div class="lt"><span class="n">13</span><span class="t">דִ</span></div><div class="lt"><span class="n">14</span><span class="t">הִ</span></div><div class="lt"><span class="n">15</span><span class="t">יִ</span></div><div class="lt"><span class="n">16</span><span class="t">וִ</span></div></div></div><div class="pb"><h4><span>צירוף ה'</span><span class="mo">חודש אב</span></h4>
+<div class="hrs"><div class="hr"><span class="n">שעה 17 · אהי"ה לבדו</span><span class="f"><span class="k">הֶ</span><span class="k">יֶ</span><span class="k">אֶ</span><span class="k">הֶ</span></span></div><div class="hr"><span class="n">שעה 18 · אהי"ה כולל הוי"ה</span><span class="f"><span class="k">הֶ</span><span class="t">הִ</span><span class="k">יֶ</span><span class="t">וִ</span><span class="k">אֶ</span><span class="t">יִ</span><span class="k">הֶ</span><span class="t">הִ</span></span></div><div class="hr"><span class="n">שעה 19 · הוי"ה לבדו</span><span class="f"><span class="t">הִ</span><span class="t">וִ</span><span class="t">יִ</span><span class="t">הִ</span></span></div><div class="hr"><span class="n">שעה 20 · הוי"ה כולל אהי"ה</span><span class="f"><span class="t">הִ</span><span class="k">הֶ</span><span class="t">וִ</span><span class="k">יֶ</span><span class="t">יִ</span><span class="k">אֶ</span><span class="t">הִ</span><span class="k">הֶ</span></span></div></div><div class="lts" aria-label="כ&quot;ח האותיות בשעות האלה"><div class="lt"><span class="n">17</span><span class="t">יִ</span></div><div class="lt"><span class="n">18</span><span class="t">וִ</span></div><div class="lt"><span class="n">19</span><span class="t">הִ</span></div><div class="lt"><span class="n">20</span><span class="t">יִ</span></div></div></div><div class="pb elul"><h4><span>צירוף ו'</span><span class="mo">חודש אלול</span><span class="et">עיקר בחודש אלול</span></h4>
+<div class="hrs"><div class="hr"><span class="n">שעה 21 · אהי"ה לבדו</span><span class="f"><span class="k">הֶ</span><span class="k">הֶ</span><span class="k">יֶ</span><span class="k">אֶ</span></span></div><div class="hr"><span class="n">שעה 22 · אהי"ה כולל הוי"ה</span><span class="f"><span class="k">הֶ</span><span class="t">הִ</span><span class="k">הֶ</span><span class="t">הִ</span><span class="k">יֶ</span><span class="t">וִ</span><span class="k">אֶ</span><span class="t">יִ</span></span></div><div class="hr"><span class="n">שעה 23 · הוי"ה לבדו</span><span class="f"><span class="t">הִ</span><span class="t">הִ</span><span class="t">וִ</span><span class="t">יִ</span></span></div><div class="hr"><span class="n">שעה 24 · הוי"ה כולל אהי"ה</span><span class="f"><span class="t">הִ</span><span class="k">הֶ</span><span class="t">הִ</span><span class="k">הֶ</span><span class="t">וִ</span><span class="k">יֶ</span><span class="t">יִ</span><span class="k">אֶ</span></span></div></div><div class="lts" aria-label="כ&quot;ח האותיות בשעות האלה"><div class="lt"><span class="n">21</span><span class="k">אֶ</span></div><div class="lt"><span class="n">22</span><span class="k">הֶ</span></div><div class="lt"><span class="n">23</span><span class="k">יֶ</span></div><div class="lt"><span class="n">24</span><span class="k">הֶ</span></div></div></div></div>
+      <h5>יום שני · שעות 1–24</h5>
+      <div class="hgrid"><div class="pb"><h4><span>צירוף ז'</span><span class="mo">חודש תשרי</span></h4>
+<div class="hrs"><div class="hr"><span class="n">שעה 1 · אהי"ה לבדו</span><span class="f"><span class="k">יֶ</span><span class="k">הֶ</span><span class="k">אֶ</span><span class="k">הֶ</span></span></div><div class="hr"><span class="n">שעה 2 · אהי"ה כולל הוי"ה</span><span class="f"><span class="k">יֶ</span><span class="t">וִ</span><span class="k">הֶ</span><span class="t">הִ</span><span class="k">אֶ</span><span class="t">יִ</span><span class="k">הֶ</span><span class="t">הִ</span></span></div><div class="hr"><span class="n">שעה 3 · הוי"ה לבדו</span><span class="f"><span class="t">וִ</span><span class="t">הִ</span><span class="t">יִ</span><span class="t">הִ</span></span></div><div class="hr"><span class="n">שעה 4 · הוי"ה כולל אהי"ה</span><span class="f"><span class="t">וִ</span><span class="k">יֶ</span><span class="t">הִ</span><span class="k">הֶ</span><span class="t">יִ</span><span class="k">אֶ</span><span class="t">הִ</span><span class="k">הֶ</span></span></div></div><div class="lts" aria-label="כ&quot;ח האותיות בשעות האלה"><div class="lt"><span class="n">1</span><span class="t">יִ</span></div><div class="lt"><span class="n">2</span><span class="t">וִ</span></div><div class="lt"><span class="n">3</span><span class="t">דִ</span></div><div class="lt"><span class="n">4</span><span class="t">הִ</span></div></div></div><div class="pb"><h4><span>צירוף ח'</span><span class="mo">חודש חשון</span></h4>
+<div class="hrs"><div class="hr"><span class="n">שעה 5 · אהי"ה לבדו</span><span class="f"><span class="k">יֶ</span><span class="k">הֶ</span><span class="k">הֶ</span><span class="k">אֶ</span></span></div><div class="hr"><span class="n">שעה 6 · אהי"ה כולל הוי"ה</span><span class="f"><span class="k">יֶ</span><span class="t">וִ</span><span class="k">הֶ</span><span class="t">הִ</span><span class="k">הֶ</span><span class="t">הִ</span><span class="k">אֶ</span><span class="t">יִ</span></span></div><div class="hr"><span class="n">שעה 7 · הוי"ה לבדו</span><span class="f"><span class="t">וִ</span><span class="t">הִ</span><span class="t">הִ</span><span class="t">יִ</span></span></div><div class="hr"><span class="n">שעה 8 · הוי"ה כולל אהי"ה</span><span class="f"><span class="t">וִ</span><span class="k">יֶ</span><span class="t">הִ</span><span class="k">הֶ</span><span class="t">הִ</span><span class="k">הֶ</span><span class="t">יִ</span><span class="k">אֶ</span></span></div></div><div class="lts" aria-label="כ&quot;ח האותיות בשעות האלה"><div class="lt"><span class="n">5</span><span class="t">יִ</span></div><div class="lt"><span class="n">6</span><span class="t">וִ</span></div><div class="lt"><span class="n">7</span><span class="t">אִ</span></div><div class="lt"><span class="n">8</span><span class="t">וִ</span></div></div></div><div class="pb"><h4><span>צירוף ט'</span><span class="mo">חודש כסלו</span></h4>
+<div class="hrs"><div class="hr"><span class="n">שעה 9 · אהי"ה לבדו</span><span class="f"><span class="k">יֶ</span><span class="k">אֶ</span><span class="k">הֶ</span><span class="k">הֶ</span></span></div><div class="hr"><span class="n">שעה 10 · אהי"ה כולל הוי"ה</span><span class="f"><span class="k">יֶ</span><span class="t">וִ</span><span class="k">אֶ</span><span class="t">יִ</span><span class="k">הֶ</span><span class="t">הִ</span><span class="k">הֶ</span><span class="t">הִ</span></span></div><div class="hr"><span class="n">שעה 11 · הוי"ה לבדו</span><span class="f"><span class="t">וִ</span><span class="t">יִ</span><span class="t">הִ</span><span class="t">הִ</span></span></div><div class="hr"><span class="n">שעה 12 · הוי"ה כולל אהי"ה</span><span class="f"><span class="t">וִ</span><span class="k">יֶ</span><span class="t">יִ</span><span class="k">אֶ</span><span class="t">הִ</span><span class="k">הֶ</span><span class="t">הִ</span><span class="k">הֶ</span></span></div></div><div class="lts" aria-label="כ&quot;ח האותיות בשעות האלה"><div class="lt"><span class="n">9</span><span class="t">הִ</span></div><div class="lt"><span class="n">10</span><span class="t">יִ</span></div><div class="lt"><span class="n">11</span><span class="k">אֶ</span></div><div class="lt"><span class="n">12</span><span class="k">לֶ</span></div></div></div><div class="pb"><h4><span>צירוף י'</span><span class="mo">חודש טבת</span></h4>
+<div class="hrs"><div class="hr"><span class="n">שעה 13 · אהי"ה לבדו</span><span class="f"><span class="k">הֶ</span><span class="k">אֶ</span><span class="k">הֶ</span><span class="k">יֶ</span></span></div><div class="hr"><span class="n">שעה 14 · אהי"ה כולל הוי"ה</span><span class="f"><span class="k">הֶ</span><span class="t">הִ</span><span class="k">אֶ</span><span class="t">יִ</span><span class="k">הֶ</span><span class="t">הִ</span><span class="k">יֶ</span><span class="t">וִ</span></span></div><div class="hr"><span class="n">שעה 15 · הוי"ה לבדו</span><span class="f"><span class="t">הִ</span><span class="t">יִ</span><span class="t">הִ</span><span class="t">וִ</span></span></div><div class="hr"><span class="n">שעה 16 · הוי"ה כולל אהי"ה</span><span class="f"><span class="t">הִ</span><span class="k">הֶ</span><span class="t">יִ</span><span class="k">אֶ</span><span class="t">הִ</span><span class="k">הֶ</span><span class="t">וִ</span><span class="k">יֶ</span></span></div></div><div class="lts" aria-label="כ&quot;ח האותיות בשעות האלה"><div class="lt"><span class="n">13</span><span class="k">פֶ</span></div><div class="lt"><span class="n">14</span><span class="k">הֶ</span></div><div class="lt"><span class="n">15</span><span class="k">יֶ</span></div><div class="lt"><span class="n">16</span><span class="k">יֶ</span></div></div></div><div class="pb"><h4><span>צירוף י"א</span><span class="mo">חודש שבט</span></h4>
+<div class="hrs"><div class="hr"><span class="n">שעה 17 · אהי"ה לבדו</span><span class="f"><span class="k">הֶ</span><span class="k">אֶ</span><span class="k">יֶ</span><span class="k">הֶ</span></span></div><div class="hr"><span class="n">שעה 18 · אהי"ה כולל הוי"ה</span><span class="f"><span class="k">הֶ</span><span class="t">הִ</span><span class="k">אֶ</span><span class="t">יִ</span><span class="k">יֶ</span><span class="t">וִ</span><span class="k">הֶ</span><span class="t">הִ</span></span></div><div class="hr"><span class="n">שעה 19 · הוי"ה לבדו</span><span class="f"><span class="t">הִ</span><span class="t">יִ</span><span class="t">וִ</span><span class="t">הִ</span></span></div><div class="hr"><span class="n">שעה 20 · הוי"ה כולל אהי"ה</span><span class="f"><span class="t">הִ</span><span class="k">הֶ</span><span class="t">יִ</span><span class="k">אֶ</span><span class="t">וִ</span><span class="k">יֶ</span><span class="t">הִ</span><span class="k">הֶ</span></span></div></div><div class="lts" aria-label="כ&quot;ח האותיות בשעות האלה"><div class="lt"><span class="n">17</span><span class="k">וֶ</span></div><div class="lt"><span class="n">18</span><span class="k">דֶ</span></div><div class="lt"><span class="n">19</span><span class="k">הֶ</span></div><div class="lt"><span class="n">20</span><span class="k">יֶ</span></div></div></div><div class="pb"><h4><span>צירוף י"ב</span><span class="mo">חודש אדר</span></h4>
+<div class="hrs"><div class="hr"><span class="n">שעה 21 · אהי"ה לבדו</span><span class="f"><span class="k">הֶ</span><span class="k">הֶ</span><span class="k">אֶ</span><span class="k">יֶ</span></span></div><div class="hr"><span class="n">שעה 22 · אהי"ה כולל הוי"ה</span><span class="f"><span class="k">הֶ</span><span class="t">הִ</span><span class="k">הֶ</span><span class="t">הִ</span><span class="k">אֶ</span><span class="t">יִ</span><span class="k">יֶ</span><span class="t">וִ</span></span></div><div class="hr"><span class="n">שעה 23 · הוי"ה לבדו</span><span class="f"><span class="t">הִ</span><span class="t">הִ</span><span class="t">יִ</span><span class="t">וִ</span></span></div><div class="hr"><span class="n">שעה 24 · הוי"ה כולל אהי"ה</span><span class="f"><span class="t">הִ</span><span class="k">הֶ</span><span class="t">הִ</span><span class="k">הֶ</span><span class="t">יִ</span><span class="k">אֶ</span><span class="t">וִ</span><span class="k">יֶ</span></span></div></div><div class="lts" aria-label="כ&quot;ח האותיות בשעות האלה"><div class="lt wide">ארבע אותיות <span class="nm t">הוי"ה</span> הפשוטות, אות בכל שעה, בחיר"ק</div></div></div></div>
+      <p class="yexp">ומי שאין בו כוח לכוון כל שם בשעתו, מכוון את הצירוף בתחילת כל ארבע שעות. ובלילה, כשאומר "בידך אפקיד רוחי", מכוון שלושה צירופים יחד, או בפרטות כשקם בחצות. הלשון המלא כאן למטה.</p>
+    </div>
+
+    <details class="full">
+      <summary>כל לשון היחוד, כפי שנדפס</summary>
+      <div class="ft">
+        <p>בר"ח אלול שנת השל"א ליצירה א"ל מורי ז"ל שאתענ' אותם שני ימים רצופי' אשר אחר יום ר"ח עצמו של אלול ושעי"ז אשיג איזו השגה וכונת אלו התעניות הוא כי בחדש אלול נפתחי' י"ג מקורות של הי"ג תיקוני דיקנא דעתיקא והם מתגלי' ומאירי' למט' באו"א במקו' המקיף של המוחין שלהם כמו שביארנו בריש אדרת האזינו כי מחוץ למוחין דאו"א בוקע אור שלה' לחוץ ומאיר שם בסוד אור מקיף ושם מתגלי' אלו הי"ג תיקוני דיקנא דעתיקא ותחלה צריך לכוין דרך כללות כי כל זה החדש של אלול הוא סוד שם הוי"ה דס"ג ואהי"ה דיודי"ן שהוא בגי' קס"א ואלו נרמזי' בתיבת אלול כי ב' אותיות א"ל הם ג' יודי"ן ואל"ף שבשם ס"ג כנודע שמהם יוצא שם א"ל כנז' בזוהר פ' פנחס וב' אותיות ו"ל הם שם א"ל היוצא מג' יודי"ן ואלף ג"כ דקס"א כי ג' יודי"ן שבו הם ל' ובמקום אות א' הושם במקומ' אות ו' כי האל"ף נעלמת בוא"ו זה ולכן נקרא אלו"ל כי בכל החדש הזה ראוי לכוין בשני שמות אלו והנה ב' שמות ס"ג וקס"א הנז' הם בגי' דר"ך וז"ס הנותן בים דרך כי מלת בי"ם הוא שם של ב"ן דההי"ן וב' שמות הנז' עולים בגי' דר"ך שמאירים בהם שם ב"ן הזה שהוא בגי' בי"ם ודרך זה נפתח בכל חדש אלול והנה אחר שתכוין בזה הכללות בכל חדש אלול צריך שתכוין אח"כ בשני ימים הראשונים הנז"ל בענין זה והוא כי הנה יש בשני ימים אלו מ"ח שעות והם ג"כ בסוד הוי"ה אהי"ה הנז"ל שהם בגי' מ"ח עם הכולל והנה בסוף יום א' תכוין שכבר נשלם חצי הדרך הנז' שהוא בגי' יב"ק וז"ס יענך הוי"ה ביום צרה שהוא ר"ת בגי' יב"ק וכן ר"ת יעננו ביום קראנו הם יב"ק ובסוף יום השני תכוין בשני פעמי' יב"ק שהוא דרך כנז"ל שהם ס"ג וקס"א. עוד יש כונה שנית פרטיית בשני הימים אלו והוא שתצרף תיחלה הי"ב צרופי' של ההוי"ה והי"ב צרופים של אהי"ה כנודע ובין שניהם הם כ"ד אבל הם עולי' אל מ"ח כנגד מ"ח שעות שבשני הימים אלו כמו שנבאר וזה ציורם לפניך</p>
+        <p class="nt">כאן בספר שלושה ציורים של הצירופים (ציור א, ב, ג). הם מוצגים למעלה בטבלת השעות.</p>
+        <p><b>אמר</b> שמואל רצוני לומ' שתצייר כל בית ראשון מהציור הראשון ואח"כ ציור הא' מהבי' השני ואח"כ ציור הג' מהבית השלישי ואח"כ תחזור חלילה לציור הב' מהבית הא' ציו' ב' מהבי' הב' ולציור ב' מהבי' הג' ובן ע"ז הדרך עד תשלום כ"ד בתים. וביאור ציור זה ענינו כך כי תחלה תקח צרוף א' מ"ב שמות אלו שהם אהי"ה הוי"ה והנה צרוף זה הוא כולל ד' שעות ראשונות של שני ימים אלו כיצד שעה א' תכוין בשם אהי"ה לבדו בשעה שנית תכוין לשם אהי"ה כולל לשם הוי"ה כזה איההיוה"ה בשעה שלישית תכוין לשם הוי"ה לבדו. בשע' ד' תכוין לשם הוי"ה כולל לשם אהי"ה כזה יאהה ויה"ה. אח"כ תקח הצרוף השני מכל שם מאלו השנים הנז' ותכוין בהם בד' שעות שניות ע"ד הנז"ל כיצד בשעה א' מן ד' שעות השניות תכוין בשם אהה"י בשעה ב' תכוין לשם אהה"י רנז"ל ויהיה כולל לצרוף יהה"ו עמו כזה איההההי"ו. בשע' שלישית תכוין לצרוף ב' של הוי"ה והוא צרוף יהה"ו לבדו. בשע' ד' תכוין לזה הצרוף הב' של ההוי"ה כולל עמו לצרוף הב' של אהי"ה כזה יאההההו"י ועד"ז כל י"ב צרופי' כל צרוף מהם של השני שמות הנז' הם בסוד ד' שעות ע"ד הנז"ל עד שנמצא כי הארבע' שעות האחרונות שבשני הימים הנז' תכוין בהם בצרוף הי"ב של ההוי"ה ובצרוף הי"ב של אהי"ה אלא החלוק הוא כי בכל צרוף וצרוף מן הי"ב תתחיל בשתי שעות הראשונות בשם אהי"ה ובשתי שעות אחרונות תתחיל בכם הוי"ה כמצוייר למעל' ודע כי כל השמות הנז' צריך שתיקדם וכל צרוף שם אהי"ה יהיה כל אות ואות ממנו בנקוד סגול וכל שם צרוף ההוי"ה יהיה בנקודת חירי"ק כמצוייר למעל'. גם דע כי כאשר אתה מתחיל בכונת צרוף אהי"ה וכולל בתוכו לשם הוי"ה אין הכונ' שזה נשמ' לזה אלא שזה בסוד פנימי וזה בסוד אור מקיף אליו והנה אם תוכל לכוין ע"ד הנז"ל כל שם בשע' שלו הנה מה טוב ומה נעים והוא דבר גדול מאד ואם אין בך כח לזה תכוין אל צרוף הא' כסדר הנ"זל בתחלת ד' שעות ראשונות ואח"כ בצרוף הב' כסדר הנז"ל בתחל' ארבע שעות שניות וכן תמיד וכל זה ביום אבל בליל' שאתה מוכרח לישן ואינך יכול לכוין בפרטות בכל שעה ולא אפי' בכל ד' שעות כנז' ולכן כשתאמר בידך אפקיד רוחי וגו' אז תכוין לג' צרופי' ביחד הכוללי' י"ב שעות בליל' ויותר טוב יהיה אם תכוין כשתשכב בשש שעות ראשונות עד חצי הליל' ובקומך בחצות הליל' אז תכוין בפרטות כל שם בשע' שלו ע"ד הנז"ל:</p>
+        <p><b>ודע</b> כי אלו הי"ב צרופי' של אהי"ה ושל הוי"ה הם נחלקי' בי"ב חדשי השנה מניסן ועד אדר כסדר' ולכן בכל עת ועת שאת' מכוין בצרופי אהי"ה או הוי"ה כנז"ל צריך שתכוין בצרוף הששי של אהי"ה והוי"ה ותכוין כי ב' צרופי' אלו שהם הששי של אהי"ה ושל הוי"ה הם עיקריי' בכל חדש אלו שהו' החדש הששי וזה הצרוף הולך עם כל הצרופי' בחדש הזה ועוד יש כונ' אחרת והיא זאת כי הנה ב' שמות אהי"ה והוי"ה הנז' בפשוטם יש בהם שמנ' אותיות ובמלואם יש עשרי' אותיות הרי הם כ"ח אותיות ובכל יום מאלו הב' ימים צריך לכוין בכלם כיצד בעשר' שעות ראשונות מיום א' תכוין בעשר' אותיות של אהי"ה דיוד"ן כל שעה אחת באות אחת על סדר זה שעה א' <b>א</b> שעה ב' <b>ל'</b> שעה שלישית <b>פ'</b> וכו' וכל אות מהם מנוקדת בסגו"ל ובעשר' שעות אחרות תכוין בעשר' אותיות של הוי"ה דע"ב דיודי"ן כל אות בשעה אחת וכל אות ואות מנוקדת בחירי"ק ובארבע' שעות אחרונות של יום א' תכוין בד' אותיות פשוטת של אהי"ה כל אות בסגו"ל הרי לך כ"ד שעות של יום א' ואח"כ בעשר' שעות ראשונות של יום ב' תתחיל בעשר' אותיות מלוי דהוי"ה דיודי"ן כל שעה באות א' ע"ד הנ"ל כל או' נקוד' בחירי"ק ובעשר' שעות שניות של יום ב' תכוין בעשר' אותיו' אהי"ה דיודי"ן נקודו' בסגו"ל ואח"כ בארבע' שעו' אחרונות של יום ב' תכוין בארבע' אותיות פשוטות של ההוי"ה נקודו בחרי"ק וכל זה ציירנו אותו למעל' ע"ש:</p>
+      </div>
+    </details>
+    <div class="yfoot">ביחוד הזה שמות של כתר (אהי"ה), של תפארת (הוי"ה, ס"ג, ב"ן) ושם א"ל של חסד. בתיבת "אלול" שבשלב 1 כל אות בצבע השם שממנו באה. אחרי היחוד הזה הספר ממשיך ביחוד גדול של י"ג נימין וי"ג תיקוני דיקנא, שגם הוא נאמר לשני הימים האלה; הוא לא הובא כאן. כמו בשאר הדפים, שם הוי"ה אינו נכתב כאן במלואו, ובמקום שבספר נדפס השם נכתב "הוי"ה".</div>
+  </article>
+</section>
+
 <footer>
-  <p><a href="index.html">ספריית הקבלה</a> · <a href="yichudim.html">יסודות הייחודים</a> · עודכן: אוקטובר 2026</p>
+  <p><a href="index.html">ספריית הקבלה</a> · <a href="yichudim.html">יסודות הייחודים</a> · <a href="sefirot-colors.html">שיטות בצבעי הספירות</a> · עודכן: אוקטובר 2026</p>
 </footer>
 </main>
 
+<script src="js/sefirot-methods.js"></script>
 <script>
 (function(){
+  /* סדר השורות בייחוד א */
   var list = document.getElementById('ylist1');
   var bBook = document.getElementById('ordBook'), bUp = document.getElementById('ordUp');
   function order(up){
@@ -260,11 +416,61 @@ footer{margin-top:50px;color:var(--muted);font-size:.9rem;text-align:center;bord
   }
   bBook.onclick = function(){ order(false); };
   bUp.onclick = function(){ order(true); };
-  list.addEventListener('click', function(e){
-    var r = e.target.closest('.yr'); if(!r) return;
-    var was = r.classList.contains('on');
-    Array.prototype.forEach.call(list.children, function(x){ x.classList.remove('on'); });
-    if(!was) r.classList.add('on');
+  /* סימון שורה, בכל הייחודים */
+  Array.prototype.forEach.call(document.querySelectorAll('ol.ylist'), function(ol){
+    ol.addEventListener('click', function(e){
+      if(e.target.closest('a')) return;
+      var r = e.target.closest('.yr'); if(!r) return;
+      var was = r.classList.contains('on');
+      Array.prototype.forEach.call(ol.children, function(x){ x.classList.remove('on'); });
+      if(!was) r.classList.add('on');
+    });
+  });
+
+  /* שיטת הצבעים: הנתונים מ־js/sefirot-methods.js, המקום האחד של כל השיטות */
+  var S = window.SEFIROT; if(!S) return;
+  var CLS = {keter:'k', chesed:'c', tiferet:'t', malchut:'m'};
+  var NAMES = {}; Object.keys(S.data.names).forEach(function(n){ var f=S.data.names[n]; (NAMES[f]=NAMES[f]||[]).push(n); });
+  var HE = {}; S.data.sefirot.forEach(function(x){ HE[x.id]=x.he; });
+  /* כלל CSS לכל שיטה חוץ מ"שלנו" (שהיא ברירת המחדל שבדף) */
+  var css = '';
+  S.data.methods.forEach(function(m){
+    if(m.ours) return;
+    Object.keys(CLS).forEach(function(f){
+      var e = m.colors[f], sel = '.yichud[data-method="'+m.id+'"] ';
+      css += sel+'.'+CLS[f]+':not(.nm){'+S.letterCss(e)+'}\n';
+      css += sel+'.nm.'+CLS[f]+'{'+S.pillCss(e)+'}\n';
+    });
+  });
+  var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
+
+  Array.prototype.forEach.call(document.querySelectorAll('.mpick'), function(box){
+    var art = document.getElementById(box.dataset.for);
+    var used = (art.dataset.sefirot||'').split(/\s+/).filter(Boolean);
+    var id = 'm-'+box.dataset.for;
+    var lab = document.createElement('label'); lab.setAttribute('for', id); lab.textContent = 'שיטת הצבעים';
+    var sel = document.createElement('select'); sel.id = id;
+    S.data.methods.forEach(function(m){
+      var o = document.createElement('option'); o.value = m.id;
+      o.textContent = m.name + (m.ours ? ' (שלנו)' : '') + ' · ' + m.ref.replace(' · הצבעים שלנו','');
+      sel.appendChild(o);
+    });
+    lab.appendChild(sel); box.appendChild(lab);
+    var leg = document.createElement('div'); leg.className = 'mleg'; leg.setAttribute('aria-live','polite'); box.appendChild(leg);
+    function draw(){
+      var m = S.method(sel.value);
+      if(m.ours) art.removeAttribute('data-method'); else art.setAttribute('data-method', m.id);
+      var h = '', missing = [];
+      used.forEach(function(f){
+        var e = m.colors[f];
+        if(e.kind==='none'||e.kind==='nocol') missing.push(HE[f]);
+        h += '<span class="it"><i class="sw2" style="'+S.swatch(e)+'"></i><span><b>'+HE[f]+' · '+(NAMES[f]||[]).join(', ')+'</b> '+S.label(e).replace(/</g,'&lt;')+'</span></span>';
+      });
+      h += '<a href="'+m.href+'">'+(m.ours?'שיר הספירות':'לשון המקור')+' ←</a>';
+      if(missing.length) h += '<span class="mnote">במקור הזה אין גוון ל'+missing.join(' ול')+', ולכן השם מוצג באפור.</span>';
+      leg.innerHTML = h;
+    }
+    sel.addEventListener('change', draw); draw();
   });
 })();
 </script>
