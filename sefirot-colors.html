@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>שיטות בצבעי הספירות</title>
-<meta name="description" content="מחקר על צבעי הספירות בספרי הקבלה: הזוהר, תיקוני הזוהר, ר' עזריאל, מערכת האלהות, ג'יקטילה, ריקנאטי, ספר הקנה, הרמ"ק, האר"י, ספר חרדים, ראשית חכמה ומגלה עמוקות. טבלת השוואה, צבעי אותיות השם, וכל מקור בלשונו.">
+<meta name="description" content="מחקר על צבעי הספירות בספרי הקבלה: הזוהר, תיקוני הזוהר, ר' עזריאל, מערכת האלהות, ג'יקטילה, ריקנאטי, ספר הקנה, הרמ"ק, האר"י, ספר חרדים, ראשית חכמה ומגלה עמוקות; ובני זמננו: עץ התדהר והרב זמיר כהן. טבלת השוואה, צבעי אותיות השם, וכל מקור בלשונו.">
 <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 
@@ -132,6 +132,26 @@ table.gv td.zq{font-family:"Frank Ruhl Libre",serif;color:#4b3b22}
   .lets{justify-content:flex-start}
   .shead,.sbody{padding-left:14px;padding-right:14px}
 }
+/* טבלת ההשוואה בלי גלילה הצידה: במחשב היא רחבה מהעמודה ונכנסת כולה, בטלפון כל ספירה היא כרטיס */
+#compare{width:min(1500px,calc(100vw - 32px));position:relative;right:50%;transform:translateX(50%)}
+#cmpWrap{overflow:visible}
+#cmpWrap table.cmp{min-width:0;width:100%;table-layout:fixed;font-size:.76rem}
+#cmpWrap table.cmp th,#cmpWrap table.cmp td{padding:6px 5px;vertical-align:top;overflow-wrap:anywhere}
+#cmpWrap table.cmp .sticky{position:static;min-width:0;width:86px;white-space:nowrap}
+#cmpWrap table.cmp tr:first-child th{position:static}
+#cmpWrap .ch{font-size:.74rem;margin:0 0 4px 4px;align-items:flex-start}
+#cmpWrap .ch .dot{flex:none;margin-top:2px}
+table.cmp.zm{min-width:0}
+@media(max-width:720px){
+  #cmpWrap table.cmp,#cmpWrap table.cmp tbody,#cmpWrap table.cmp tr,#cmpWrap table.cmp th,#cmpWrap table.cmp td{display:block;width:auto}
+  #cmpWrap table.cmp tr:first-child{display:none}
+  #cmpWrap table.cmp tr{border-bottom:2px solid var(--line)}
+  #cmpWrap table.cmp .sticky{width:auto;font-size:1rem;padding:10px 12px}
+  #cmpWrap table.cmp td.empty{display:none}
+  #cmpWrap table.cmp td{display:grid;grid-template-columns:92px 1fr;gap:8px;border-left:0;border-top:1px solid #ece4d3;padding:6px 12px;text-align:right}
+  #cmpWrap table.cmp td::before{content:attr(data-m);font-weight:700;color:#5a4423}
+  #cmpWrap .ch{font-size:.86rem}
+}
 @media print{nav.top{display:none}.tbl-wrap{overflow:visible}}
 </style>
 </head>
@@ -141,8 +161,8 @@ table.gv td.zq{font-family:"Frank Ruhl Libre",serif;color:#4b3b22}
   <svg class="emblem" viewBox="0 0 60 92" aria-hidden="true" focusable="false"><g stroke="#c9a75a" stroke-opacity=".55" stroke-width="1.4"><path d="M30 8L14 22M30 8L46 22M14 22L46 22M14 22L14 46M46 22L46 46M14 46L46 46M14 46L30 54M46 46L30 54M30 8L30 86M14 46L14 68M46 46L46 68M14 68L46 68M14 68L30 76M46 68L30 76"/></g><circle data-sef="keter" cx="30" cy="8" r="5.5" fill="#fffdf5" stroke="#c9a75a"/><circle data-sef="chochma" cx="46" cy="22" r="5.5" fill="#5b9bd5"/><circle data-sef="bina" cx="14" cy="22" r="5.5" fill="#f2c94c"/><circle data-sef="chesed" cx="46" cy="46" r="5.5" fill="#d9dde4"/><circle data-sef="gevura" cx="14" cy="46" r="5.5" fill="#c62828"/><circle data-sef="tiferet" cx="30" cy="54" r="5.5" fill="#7e3fa6"/><circle data-sef="netzach" cx="46" cy="68" r="5.5" fill="#f7b8cb"/><circle data-sef="hod" cx="14" cy="68" r="5.5" fill="#b0305f"/><circle data-sef="yesod" cx="30" cy="76" r="5.5" fill="#f08a24"/><circle data-sef="malchut" cx="30" cy="87" r="5" fill="#1f4ea3"/></svg>
   <div class="kicker">צבעי הספירות · מחקר בספרי הקבלה</div>
   <h1>שיטות בצבעי הספירות</h1>
-  <p>מה כתוב בספרי הקבלה על הגוון של כל ספירה: הזוהר ותיקוני הזוהר, המקובלים הראשונים, הרמ"ק, האר"י ותלמידיו, וספרי מוסר וקבלה מאוחרים; ולצדם מקור בן זמננו, עץ התדהר. כל מקור מובא תחילה בלשונו, ואחר כך הביאור. בסוף, השוואה לצבעים של שיר הספירות.</p>
-  <div class="dates">58 ציטוטים מ־15 ספרים · כל ציטוט הושווה לנוסח שבספריא · ועוד מקור בן זמננו, עץ התדהר, מצילום · נאסף ונכתב 19.10.2026 · ספרי קבלה בלבד</div>
+  <p>מה כתוב בספרי הקבלה על הגוון של כל ספירה: הזוהר ותיקוני הזוהר, המקובלים הראשונים, הרמ"ק, האר"י ותלמידיו, וספרי מוסר וקבלה מאוחרים; ולצדם שני מקורות בני זמננו, עץ התדהר והרב זמיר כהן. כל מקור מובא תחילה בלשונו, ואחר כך הביאור. בסוף, השוואה לצבעים של שיר הספירות.</p>
+  <div class="dates">58 ציטוטים מ־15 ספרים · כל ציטוט הושווה לנוסח שבספריא · ועוד שני מקורות בני זמננו: עץ התדהר, מצילום, והרב זמיר כהן, משקף בהרצאה · נאסף ונכתב 19.10.2026 · ספרי קבלה בלבד</div>
 </header>
 
 <nav class="top" aria-label="ניווט">
@@ -160,6 +180,7 @@ table.gv td.zq{font-family:"Frank Ruhl Libre",serif;color:#4b3b22}
   <a href="#ari-sec">האר"י</a>
   <a href="#achronim-sec">אחרונים</a>
   <a href="#tidhar-sec">עץ התדהר</a>
+  <a href="#zamir-sec">הרב זמיר כהן</a>
   <a href="#ours">ושיר הספירות</a>
   <a href="#gaps">מה לא נבדק</a>
 </nav>
@@ -198,7 +219,7 @@ table.gv td.zq{font-family:"Frank Ruhl Libre",serif;color:#4b3b22}
 
 <section id="compare">
   <h2>טבלת השוואה</h2>
-  <p class="lead">ספירה אחר ספירה, לפי כל מקור. בעמודה הראשונה הצבעים שלנו, משיר הספירות. לחיצה על שם המקור מובילה ללשונו בדף. "—" פירושו שהמקור אינו אומר דבר על אותה ספירה. בטלפון אפשר לגלול את הטבלה הצידה.</p>
+  <p class="lead">ספירה אחר ספירה, לפי כל מקור. בעמודה הראשונה הצבעים שלנו, משיר הספירות. לחיצה על שם המקור מובילה ללשונו בדף. "—" פירושו שהמקור אינו אומר דבר על אותה ספירה. בטלפון כל ספירה מוצגת ככרטיס, ובו המקורות שאומרים עליה משהו, זה מתחת לזה.</p>
   <div class="tbl-wrap" id="cmpWrap"><noscript><p>הטבלה נבנית מהקובץ js/sefirot-methods.js, ולכן צריך JavaScript כדי לראות אותה.</p></noscript></div>
   <!-- הטבלה נבנית מ־js/sefirot-methods.js, המקום האחד של כל הצבעים. לשינוי צבע או מקור: לערוך שם, לא כאן. -->
   <script src="js/sefirot-methods.js"></script>
@@ -510,6 +531,33 @@ table.gv td.zq{font-family:"Frank Ruhl Libre",serif;color:#4b3b22}
     <h4>ביחס לשאר הדף</h4>
     <p>זה מקור בן זמננו, לא ספר קבלה קדום. ההבדל מהרמ"ק הוא בבחירה ובפירוש: ברוב הספירות הוא לוקח דעה אחת מאלה שהרמ"ק מביא, ועושה אותה לצבע ספקטרלי טהור. בבינה הוא בוחר בזהב, שהרמ"ק מביא בשם "יש שכינו אותו אל הבינה", ולא בירוק. בחסד הוא בוחר ב"תכלת מלובן", דעת ה"אחרים" שבפרדס, ונותן לה תכלת־טורקיז. בתפארת הוא מפרש את "הירוק כמוריקא וכחלמון ביצה" כצהוב. את ההוד, אדום כהה, הוא לוקח מנוסח בתיקוני הזוהר, "זהר כליל אוכם וסומק דא הוד". לדעת הוא נותן סגול, וכותב בעצמו שלא מצא לזה מקור.</p>
     <p>בטבלת ההשוואה שלמעלה ובבחירת השיטה באוצר הייחודים הצבעים לפי ערכי ה־RGB שבספר. במלכות הצבע העיקרי הוא הארגמן הסגול (<bdi>97,0,97</bdi>); הבורדו (<bdi>76,28,36</bdi>) הוא הגוון כשאורה "נמשך לבריאה". הדעת אינה בטבלת ההשוואה, שיש בה עשר ספירות.</p>
+  </div>
+</article>
+</section>
+
+<section id="zamir-sec"><h2>ח. בן זמננו: הרב זמיר כהן</h2>
+<p class="lead">שיטה שהרב זמיר כהן הציג בהרצאה, בשקף של עץ הספירות על דמות האדם. החידוש שלה: לחסד ולגבורה שלושה גוונים כל אחת.</p>
+<article class="scard" id="zamir">
+  <div class="shead"><span class="era">בן זמננו</span><h3>שלושה גוונים ביד</h3><div class="book">הרב זמיר כהן, שקף מתוך הרצאה (התמלול כאן מהשקף; ההרצאה עצמה עוד לא קושרה)</div></div>
+  <div class="sbody">
+    <h4>השיטה</h4>
+    <p>הספירות מצוירות על דמות של אדם, כל ספירה במקומה בגוף. חסד וגבורה הן כנגד שתי הידיים, ולכן לכל אחת מהן שלושה גוונים: ביד יש שלושה חלקים, ולכל חלק גוון משלו. בשאר הספירות גוון אחד, או שני גוונים מעורבים.</p>
+    <h4>תמלול השקף</h4>
+    <div class="tbl-wrap"><table class="cmp zm"><tr><th class="sticky">ספירה</th><th>הכתוב בשקף</th></tr>
+      <tr><th class="sticky" scope="row"><span class="sefn"><i class="dot" data-sef="keter" data-sef-m="zamir"></i>כתר</span></th><td>"אור שקוף"</td></tr>
+      <tr><th class="sticky" scope="row"><span class="sefn"><i class="dot" data-sef="chochma" data-sef-m="zamir"></i>חכמה</span></th><td>"סגול - כחול"</td></tr>
+      <tr><th class="sticky" scope="row"><span class="sefn"><i class="dot" data-sef="bina" data-sef-m="zamir"></i>בינה</span></th><td>"ירוק"</td></tr>
+      <tr><th class="sticky" scope="row"><span class="sefn"><i class="dot" data-sef="chesed" data-sef-m="zamir"></i>חסד</span></th><td>שלוש משבצות: "לבן", "כסף", "כחול בהיר" (מן הקצה פנימה)</td></tr>
+      <tr><th class="sticky" scope="row"><span class="sefn"><i class="dot" data-sef="gevura" data-sef-m="zamir"></i>גבורה</span></th><td>שלוש משבצות: "אדום", "זהב", "אדום בהיר" (מן הקצה פנימה)</td></tr>
+      <tr><th class="sticky" scope="row"><span class="sefn"><i class="dot" data-sef="tiferet" data-sef-m="zamir"></i>תפארת</span></th><td>"צהוב"</td></tr>
+      <tr><th class="sticky" scope="row"><span class="sefn"><i class="dot" data-sef="netzach" data-sef-m="zamir"></i>נצח</span></th><td>"תכלת + ורוד נוטה ללבן"</td></tr>
+      <tr><th class="sticky" scope="row"><span class="sefn"><i class="dot" data-sef="hod" data-sef-m="zamir"></i>הוד</span></th><td>"ורוד + תכלת נוטה לאדום"</td></tr>
+      <tr><th class="sticky" scope="row"><span class="sefn"><i class="dot" data-sef="yesod" data-sef-m="zamir"></i>יסוד</span></th><td>"כתום"</td></tr>
+      <tr><th class="sticky" scope="row"><span class="sefn"><i class="dot" data-sef="malchut" data-sef-m="zamir"></i>מלכות</span></th><td>"אדום נוטה לשחור"</td></tr>
+    </table></div>
+    <h4>ביחס לשאר הדף</h4>
+    <p>זה מקור בן זמננו, לא ספר קבלה קדום. השיטה קרובה מאוד לשיר הספירות שלנו: יסוד כתום, נצח ורוד בהיר, הוד ורוד כהה, חסד לבן וכסף וגבורה אדום וזהב. ההבדלים: בחסד נוסף כחול בהיר ובגבורה אדום בהיר; לנצח ולהוד נוסף תכלת; החכמה סגולה־כחולה ולא תכלת; הבינה ירוקה בלבד, כמו אצל ר' עזריאל, מערכת האלהות והרמ"ק; התפארת צהובה בלבד, כמו בעץ התדהר; והמלכות אדומה נוטה לשחור, ולא כחולה.</p>
+    <p>שלושת הגוונים של החסד קרובים לרמ"ק, שמביא בחסד לבן, כסף ו"לבן קרוב אל התכלת". גם בגבורה הרמ"ק מביא אדום וזהב. בטבלת ההשוואה ובבחירת השיטה באוצר הייחודים הצבעים נדגמו מהשקף עצמו, ובחסד ובגבורה השם נצבע בשלושת הגוונים יחד.</p>
   </div>
 </article>
 </section>
