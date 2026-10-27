@@ -1,0 +1,7474 @@
+{
+ "playlists": {
+  "PLLUBXC9MO-xU1Ll2ysmS5uIldI_Sz5gC7": "קבלה מעשית הרב תורג'מן",
+  "PLLUBXC9MO-xUNKvV-WKq8XD2r97s7S-Oe": "שמושי שרים- הרב תורג'מן שליט'א",
+  "PLLUBXC9MO-xUou48MSy_pGej4ZM4d2RD6": "שיחת עופות",
+  "PLLUBXC9MO-xV0tru5LiS42oukuM3cmB-Y": "שער הגלגולים",
+  "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli": "ספר המלכות - חכמת הצירוף",
+  "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV": "גורל החול",
+  "PLLUBXC9MO-xVDM9RNdayWyNY_K090E-1P": "הקדמת רחובות הנהר",
+  "PLLUBXC9MO-xVGTOMGTfa5NeJ26MzkHelK": "חזיונות וחלומות של רבי יהודה פתיא",
+  "PLLUBXC9MO-xVWMP48nmpw9kUx_N40-vFt": "מורה הפרישות",
+  "PLLUBXC9MO-xVpuOeWAjVGXZv-PJED9Wgg": "רב פעלים ענייני הכשפים ורוחות",
+  "PLLUBXC9MO-xVvLqIQT9UjE9SbE3nulfuT": "רבי יוסף מערבי",
+  "PLLUBXC9MO-xWS0WF3IS21CvsRkUxbRx_H": "חכמי ירושלים והמערב",
+  "PLLUBXC9MO-xW_8leA3L6QBHpjlBzdLV7J": "פתחי עולם חכמת התכונה",
+  "PLLUBXC9MO-xW_KAym7_Mk_LA2OWiGmhT2": "ספר ברית מנוחה",
+  "PLLUBXC9MO-xWmzYsU2AF5-8CPOxahABLu": "דרישות מלאכים",
+  "PLLUBXC9MO-xXGSrqBmGaHRwaZBFl8zhAY": "הרב ציאח שארית יוסף ואבן השהם",
+  "PLLUBXC9MO-xXbGYyLvnn-aZ--a3QwoFtu": "רוחות בני אדם",
+  "PLRNNwsAVvjl4": "אבני בורלא"
+ },
+ "videos": [
+  {
+   "id": "PadYKv1IK_Y",
+   "title": "דרושי המלבוש והטהירו - הרב אוהד תורג'מן שליט\"א",
+   "dur": 5868,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20181018"
+  },
+  {
+   "id": "hnl0kJv8ZwM",
+   "title": "‏‏הקבלה הנבואית של רבי יוסף ציאח  חלק ב ורבי דוד בן רבי יהודה החסיד",
+   "dur": 2855,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xXGSrqBmGaHRwaZBFl8zhAY",
+     2
+    ]
+   ],
+   "date": "20181218"
+  },
+  {
+   "id": "Iuo65VSvhPM",
+   "title": "איך לבנות מקווה בבית בקלות. הרב יהודה אוהד תורג'מן.",
+   "dur": 1176,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20210121"
+  },
+  {
+   "id": "QaM8K6RKkrE",
+   "title": "אכילת חולין בטהרה   מבוא",
+   "dur": 2216,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20210203"
+  },
+  {
+   "id": "5PzGn1GK_Xk",
+   "title": "שער הצירוף פרק ג",
+   "dur": 3564,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20210210"
+  },
+  {
+   "id": "HuC4nyJvVVA",
+   "title": "קבלת הניקוד פרק ד",
+   "dur": 4844,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20210217"
+  },
+  {
+   "id": "GetcLN1fUM0",
+   "title": "בציון הרב חיד'א זיע'א",
+   "dur": 583,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20210222"
+  },
+  {
+   "id": "pbuCZpk0-wA",
+   "title": "פרק ה ו שער הצירוף",
+   "dur": 5532,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20210224"
+  },
+  {
+   "id": "ogbN11gIUs8",
+   "title": "שער הצירוף פרק אחרון",
+   "dur": 5973,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20210303"
+  },
+  {
+   "id": "9glfZ9v5tOA",
+   "title": "אבני זכרון הקדמה",
+   "dur": 4216,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20210310"
+  },
+  {
+   "id": "i9FK-9eZALw",
+   "title": "סוד כסא הכבוד בקבלת הראשונים",
+   "dur": 4510,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20210317"
+  },
+  {
+   "id": "xhfOfwllKXs",
+   "title": "כוכבים ומזלות בקבלה הרב תורגמן",
+   "dur": 1570,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20210527"
+  },
+  {
+   "id": "eOPG8uI9bYQ",
+   "title": "הקדמת הרב פתיא לספר עץ חיים",
+   "dur": 3947,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20211027"
+  },
+  {
+   "id": "XkWfsSuW6vg",
+   "title": "הקדמה לעץ חיים ומעלת בעל הלשם שבו ואחלמה",
+   "dur": 5068,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20211101"
+  },
+  {
+   "id": "-ygdclYaolQ",
+   "title": "פרשת תולדות",
+   "dur": 3139,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20211102"
+  },
+  {
+   "id": "gJAaJvMhSPg",
+   "title": "האלכימאי האחרון רבי מכלוף אמסלם",
+   "dur": 4529,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20211103"
+  },
+  {
+   "id": "mOhaD3qZdoo",
+   "title": "הקדמת הרב פתיא לעץ חיים חלק ב",
+   "dur": 4721,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20211103"
+  },
+  {
+   "id": "2YyVo3Mg66U",
+   "title": "שיעור עמוק בעניין הלבשת הפרצופים",
+   "dur": 3321,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20211104"
+  },
+  {
+   "id": "NwrRFyJ2D3M",
+   "title": "ענף ב' עץ חיים האגוז והתמרה חלק א",
+   "dur": 5488,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20211107"
+  },
+  {
+   "id": "liJdgftSTMw",
+   "title": "אוצרות חיים 1",
+   "dur": 5425,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20211110"
+  },
+  {
+   "id": "_joCQej06Lk",
+   "title": "עץ חיים ענף ב' האגוז והתמרה2",
+   "dur": 4606,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20211114"
+  },
+  {
+   "id": "5gs4vKrahrQ",
+   "title": "אוצרות חיים2",
+   "dur": 4334,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20211117"
+  },
+  {
+   "id": "cU2hNnA6Rhs",
+   "title": "האגוז והתמרה 3 הרב יהודה אוהד תורג'מן שליט\"א.",
+   "dur": 6323,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20211121"
+  },
+  {
+   "id": "4URLrCpZsdo",
+   "title": "כוחו של יהודי",
+   "dur": 153,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20211121"
+  },
+  {
+   "id": "U6rlPfck9aQ",
+   "title": "לימוד על מעיין חבקוק, פרק י'ג אבן השהם",
+   "dur": 551,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20211121"
+  },
+  {
+   "id": "ZFVQR4MZgmI",
+   "title": "בעקבות רבי אברהם בן הרמב\"ם וחסידות מצרים",
+   "dur": 284,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20211122"
+  },
+  {
+   "id": "AG4UsrxVPJ4",
+   "title": "השקטת הנפש- הקשבה לרחש והמיית הטבע כהשקטה פנימית.",
+   "dur": 89,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20211122"
+  },
+  {
+   "id": "2cL0drPzsDY",
+   "title": "השקטת הנפש- להתענג במצוותיו.",
+   "dur": 146,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20211122"
+  },
+  {
+   "id": "6hP22nn2ZSs",
+   "title": "השקטת הנפש- מורה הפרישות.",
+   "dur": 89,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20211122"
+  },
+  {
+   "id": "Z2XtZp9-eE0",
+   "title": "אוצרות חיים שער טנתא פרק א",
+   "dur": 4053,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20211124"
+  },
+  {
+   "id": "WO9hhHnRynk",
+   "title": "סוד בתורת ההתקשרות והרגיעה הפנימית",
+   "dur": 89,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20211124"
+  },
+  {
+   "id": "JnSEB4_ROkk",
+   "title": "תיקון ליל שישי בחבקוק הנביא כסלו תשפב",
+   "dur": 316,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20211125"
+  },
+  {
+   "id": "32JUsrKuvto",
+   "title": "שער טנתא ב וקצת בענייני רוחות וסוד ההבל",
+   "dur": 1918,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20211201"
+  },
+  {
+   "id": "oKgF7SqyQrQ",
+   "title": "קבר רבי יהודה הנשיא עם הבנים הצדיקים מתפללים על עם ישראל",
+   "dur": 557,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20211203"
+  },
+  {
+   "id": "fRDv51VirZM",
+   "title": "חולאים רוחניים",
+   "dur": 96,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20211205"
+  },
+  {
+   "id": "PE0YgPeB338",
+   "title": "על רבנו השמן ששון",
+   "dur": 49,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20211205"
+  },
+  {
+   "id": "_uoBF8tEJ3o",
+   "title": "פרשת מקץ",
+   "dur": 2168,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20211206"
+  },
+  {
+   "id": "Mk91krFKhj0",
+   "title": "לא עכשיו והיצר מתאדה",
+   "dur": 104,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20211207"
+  },
+  {
+   "id": "WkeOBx4sMvM",
+   "title": "תקנת האלשיך הקדוש",
+   "dur": 96,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20211207"
+  },
+  {
+   "id": "gqVPhKT_XWw",
+   "title": "עקודים פרק א",
+   "dur": 3581,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20211208"
+  },
+  {
+   "id": "6YCGWH0YAAA",
+   "title": "שער הגלגולים 1",
+   "dur": 3030,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV0tru5LiS42oukuM3cmB-Y",
+     1
+    ]
+   ],
+   "date": "20211215"
+  },
+  {
+   "id": "d9-mRPI6-Co",
+   "title": "שיעור עיוני ביישוב על המחלוקת של רבי יעקב אבוחצירא והרש\"ש",
+   "dur": 5576,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20211221"
+  },
+  {
+   "id": "G-hS2j_82Wc",
+   "title": "שער הגלגולים 2 ועניין גלגולי שלג בשובבים",
+   "dur": 3078,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV0tru5LiS42oukuM3cmB-Y",
+     2
+    ]
+   ],
+   "date": "20211222"
+  },
+  {
+   "id": "az6Aua5xZCw",
+   "title": "שער הגלגולים 3",
+   "dur": 3816,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV0tru5LiS42oukuM3cmB-Y",
+     3
+    ]
+   ],
+   "date": "20211229"
+  },
+  {
+   "id": "sW7Eu4wYb2I",
+   "title": "שארית יוסף שער ה",
+   "dur": 4610,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xXGSrqBmGaHRwaZBFl8zhAY",
+     7
+    ]
+   ],
+   "date": "20220118"
+  },
+  {
+   "id": "Ze2cteShWfg",
+   "title": "שארית יוסף שער ו חלק א (מתוך ב' חלקים).",
+   "dur": 2663,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xXGSrqBmGaHRwaZBFl8zhAY",
+     8
+    ]
+   ],
+   "date": "20220118"
+  },
+  {
+   "id": "TtVaYHyXMns",
+   "title": "שארית יוסף שער ו חלק ב",
+   "dur": 1919,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xXGSrqBmGaHRwaZBFl8zhAY",
+     9
+    ]
+   ],
+   "date": "20220118"
+  },
+  {
+   "id": "SUPCI5HFaLI",
+   "title": "שארית יוסף שער ז",
+   "dur": 2231,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xXGSrqBmGaHRwaZBFl8zhAY",
+     10
+    ]
+   ],
+   "date": "20220118"
+  },
+  {
+   "id": "golrjlt8FK8",
+   "title": "שארית יוסף שער ח",
+   "dur": 1915,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xXGSrqBmGaHRwaZBFl8zhAY",
+     11
+    ]
+   ],
+   "date": "20220118"
+  },
+  {
+   "id": "SjYIgYwVQ_0",
+   "title": "שער הגלגולים 4",
+   "dur": 2202,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV0tru5LiS42oukuM3cmB-Y",
+     4
+    ]
+   ],
+   "date": "20220118"
+  },
+  {
+   "id": "3pTab3LKz4g",
+   "title": "כוונת השלג 1",
+   "dur": 2894,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220121"
+  },
+  {
+   "id": "BSrVMiY-4uk",
+   "title": "שער ט חלק א",
+   "dur": 2592,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xXGSrqBmGaHRwaZBFl8zhAY",
+     12
+    ]
+   ],
+   "date": "20220121"
+  },
+  {
+   "id": "-r6O1pu8x-4",
+   "title": "שער ט חלק ב והרחבה מכתב יד צרור החיים",
+   "dur": 2897,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xXGSrqBmGaHRwaZBFl8zhAY",
+     13
+    ]
+   ],
+   "date": "20220121"
+  },
+  {
+   "id": "jiAqmlBcZUM",
+   "title": "שער הגלגולים 5 וחזיונות הרב אגסי",
+   "dur": 4426,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV0tru5LiS42oukuM3cmB-Y",
+     5
+    ]
+   ],
+   "date": "20220126"
+  },
+  {
+   "id": "4ZSDHaEF1HE",
+   "title": "סוד העייניין ושאלת חלום לבעלי התוספות",
+   "dur": 3504,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220202"
+  },
+  {
+   "id": "uLjhZexlYyc",
+   "title": "מסורת הטלת גורלות מקובלי מרוקו",
+   "dur": 4510,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220209"
+  },
+  {
+   "id": "Mk25c3xbyrs",
+   "title": "רחובות הנהר שיעור מספר 1",
+   "dur": 5899,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVDM9RNdayWyNY_K090E-1P",
+     1
+    ]
+   ],
+   "date": "20220213"
+  },
+  {
+   "id": "uuWXdhAyTEI",
+   "title": "ספר המלכות 1 חכמי הצירוף",
+   "dur": 4120,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     1
+    ]
+   ],
+   "date": "20220216"
+  },
+  {
+   "id": "vaD-QQKjQzg",
+   "title": "הקדמת רחובות הנהר 2",
+   "dur": 4971,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVDM9RNdayWyNY_K090E-1P",
+     2
+    ]
+   ],
+   "date": "20220221"
+  },
+  {
+   "id": "5VZYNa2QURY",
+   "title": "הקדמת רחובות הנהר 3",
+   "dur": 907,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVDM9RNdayWyNY_K090E-1P",
+     3
+    ]
+   ],
+   "date": "20220221"
+  },
+  {
+   "id": "z5-8S6qGLG8",
+   "title": "ספר המלכות 2",
+   "dur": 7330,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     2
+    ]
+   ],
+   "date": "20220223"
+  },
+  {
+   "id": "zP28kJgJ9EA",
+   "title": "הקדמת רחובות הנהר 4",
+   "dur": 3752,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVDM9RNdayWyNY_K090E-1P",
+     4
+    ]
+   ],
+   "date": "20220227"
+  },
+  {
+   "id": "SSiE4QDeydA",
+   "title": "ספר המלכות 3",
+   "dur": 7968,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     3
+    ]
+   ],
+   "date": "20220302"
+  },
+  {
+   "id": "ZKzsHIpPvGk",
+   "title": "הקדמת רחובות הנהר 5",
+   "dur": 5903,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVDM9RNdayWyNY_K090E-1P",
+     5
+    ]
+   ],
+   "date": "20220306"
+  },
+  {
+   "id": "1EGXdsGR0sM",
+   "title": "ספר המלכות 4",
+   "dur": 6318,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     4
+    ]
+   ],
+   "date": "20220309"
+  },
+  {
+   "id": "wKQXmXmdzYM",
+   "title": "שיעור על פורים על פי הסוד עם הרב גבאי בנתניה",
+   "dur": 5831,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220309"
+  },
+  {
+   "id": "qMaRsgfVDkI",
+   "title": "הקדמת רחובות הנהר 6 וענייני קבלה מעשית - שיעור חובה!",
+   "dur": 6661,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVDM9RNdayWyNY_K090E-1P",
+     6
+    ]
+   ],
+   "date": "20220313"
+  },
+  {
+   "id": "7pS7Is6tpng",
+   "title": "ספר המלכות 5 שיעור בניו יורק",
+   "dur": 6409,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     5
+    ]
+   ],
+   "date": "20220329"
+  },
+  {
+   "id": "fA07AMm3IAo",
+   "title": "קיצור כוונות העמידה לרש\"ש בברוקלין (כולל הרב טובול ליקוויד).",
+   "dur": 3568,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220329"
+  },
+  {
+   "id": "YsAz6ugo5qA",
+   "title": "ספר המלכות 6",
+   "dur": 4770,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     6
+    ]
+   ],
+   "date": "20220406"
+  },
+  {
+   "id": "2PAwgfVUQIU",
+   "title": "כוונות הגדה של פסח בדרך קצרה",
+   "dur": 2750,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220410"
+  },
+  {
+   "id": "ZqHXGQDQCBk",
+   "title": "סוד העומר",
+   "dur": 3028,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220424"
+  },
+  {
+   "id": "2hmRL-FgEB0",
+   "title": "איך משחררים דאגות בחיים ספר המלכות פרק א' משנה ז 7",
+   "dur": 4488,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     7
+    ]
+   ],
+   "date": "20220427"
+  },
+  {
+   "id": "t3gSqDlpj_w",
+   "title": "גדולת מהרחו ושימושי שרי השמן",
+   "dur": 4407,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220501"
+  },
+  {
+   "id": "I2F2adk9HM0",
+   "title": "ספר המלכות פרק א משנה ח 8",
+   "dur": 3968,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     8
+    ]
+   ],
+   "date": "20220504"
+  },
+  {
+   "id": "8YCRQ8rcaWc",
+   "title": "פרשת אמור סוד העומר דברי אש",
+   "dur": 4415,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220505"
+  },
+  {
+   "id": "L8nbDMayao8",
+   "title": "קמיע שלושת המנורות",
+   "dur": 3722,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220508"
+  },
+  {
+   "id": "cgsIDAzbxLQ",
+   "title": "ספר המלכות פרק א' הלכה ט 9",
+   "dur": 4420,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     9
+    ]
+   ],
+   "date": "20220511"
+  },
+  {
+   "id": "Dz0yTA12yzg",
+   "title": "מבנה גלגלי העשיה ועניין המלאכים והשדים",
+   "dur": 3839,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220512"
+  },
+  {
+   "id": "YIQECNc8jGs",
+   "title": "הקבלה הנבואית וחבורת בעלי השם (חכמת המעיינות והאבנים)",
+   "dur": 4738,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220517"
+  },
+  {
+   "id": "iI-aD7FsOQg",
+   "title": "מאמר פסיעותיו של אברהם אבינו 1",
+   "dur": 5714,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220518"
+  },
+  {
+   "id": "sekmnbmPahY",
+   "title": "ניגונים לכבוד רשב\"י עם התלמידים אחרי השיעור- לג בעומר תשפב",
+   "dur": 621,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220518"
+  },
+  {
+   "id": "CVbctA6bTp0",
+   "title": "הסבר קצר על שיעור יסודות בקבלה המעשית 1 - לשאלת רבים.",
+   "dur": 102,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xU1Ll2ysmS5uIldI_Sz5gC7",
+     2
+    ]
+   ],
+   "date": "20220527"
+  },
+  {
+   "id": "SamvXhL10JI",
+   "title": "יסודות בקבלה מעשית 1",
+   "dur": 5435,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xU1Ll2ysmS5uIldI_Sz5gC7",
+     1
+    ]
+   ],
+   "date": "20220527"
+  },
+  {
+   "id": "YjPJceng3lI",
+   "title": "מאמר פסיעותיו של אברהם אבינו 2",
+   "dur": 3545,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220529"
+  },
+  {
+   "id": "HGWLGJW7FFw",
+   "title": "יסודות בקבלה מעשית 2",
+   "dur": 7788,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xU1Ll2ysmS5uIldI_Sz5gC7",
+     3
+    ]
+   ],
+   "date": "20220602"
+  },
+  {
+   "id": "b6GoA-dbGNs",
+   "title": "דוד קדוש בונה בית הכנסת על שם הצדיק רבי דוד דרעא לוי במגדל העמק",
+   "dur": 1278,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220606"
+  },
+  {
+   "id": "rR-M0hWIcIA",
+   "title": "הילולה לרבי דוד דרעא הלוי בעל ספר המלכות במגדל העמק",
+   "dur": 1835,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220606"
+  },
+  {
+   "id": "qusDUEajA5Y",
+   "title": "הרב הגאון מיכאל בוסקילה שליט\"א (מרבני וחכמי מגדל העמק) על רבי דוד דרעא לוי בהילולא במגדל העמק",
+   "dur": 757,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220606"
+  },
+  {
+   "id": "oIlyc0zYQOU",
+   "title": "הרה\"ג דוד אוחיון בהילולא במגדל העמק",
+   "dur": 614,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220606"
+  },
+  {
+   "id": "qwPN5eaSUuc",
+   "title": "יסודות בקבלה המעשית 3 מטפחת למציאת חן וטלית עם ע''ב שמות.",
+   "dur": 3661,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xU1Ll2ysmS5uIldI_Sz5gC7",
+     4
+    ]
+   ],
+   "date": "20220608"
+  },
+  {
+   "id": "pFeJ0bgW1Lc",
+   "title": "ספר המלכות פרק א הלכות ט' -י' 10",
+   "dur": 3356,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     11
+    ]
+   ],
+   "date": "20220609"
+  },
+  {
+   "id": "kDS6dYFfe3Y",
+   "title": "ספר המלכות קבלת הדרעא במרוקו פרק א' הלכה יא יב",
+   "dur": 3853,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     10
+    ]
+   ],
+   "date": "20220609"
+  },
+  {
+   "id": "ZXEwicphh0o",
+   "title": "פיוט לכבוד רבי חיים דילרוזה זיע'א בעל הספר הקדוש תורת חכם",
+   "dur": 465,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220615"
+  },
+  {
+   "id": "v2Omt7a4wHs",
+   "title": "פיוט לכבוד רבי שלמה מולכו בעל השמנים זיע'א",
+   "dur": 371,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220615"
+  },
+  {
+   "id": "32zRvZ5GtSY",
+   "title": "יסודות בקבלה מעשית 4 גורל האותיות של ספר המלכות ושורשי השמות",
+   "dur": 6971,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xU1Ll2ysmS5uIldI_Sz5gC7",
+     5
+    ]
+   ],
+   "date": "20220616"
+  },
+  {
+   "id": "IHXMGeDmdzk",
+   "title": "הילולא לרבי מסעוד עבדלחק בקרית מלאכי",
+   "dur": 3381,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220619"
+  },
+  {
+   "id": "YEIXgrtt4L0",
+   "title": "רבי מסעוד עבדלחאק זיע'א בקרית מלאכי.",
+   "dur": 138,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220619"
+  },
+  {
+   "id": "G1RIlphUeuE",
+   "title": "קבלה מעשית 5 עשיית הבכור",
+   "dur": 4961,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xU1Ll2ysmS5uIldI_Sz5gC7",
+     6
+    ]
+   ],
+   "date": "20220621"
+  },
+  {
+   "id": "2IXTURow_Go",
+   "title": "ספר המלכות פרק א' הלכה יג התלבשות האותיות בספירות ובמלאכים",
+   "dur": 6072,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220622"
+  },
+  {
+   "id": "hKpqTjHZHB8",
+   "title": "קבלה מעשית 6 גורל החול הלכה למעשה",
+   "dur": 6476,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xU1Ll2ysmS5uIldI_Sz5gC7",
+     7
+    ]
+   ],
+   "date": "20220627"
+  },
+  {
+   "id": "Dp0XLm_Qpmw",
+   "title": "שימושי שרים חלק ב",
+   "dur": 4957,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xUNKvV-WKq8XD2r97s7S-Oe",
+     1
+    ]
+   ],
+   "date": "20220630"
+  },
+  {
+   "id": "2KwxqY4m38s",
+   "title": "שימושי שרים חלק א",
+   "dur": 4284,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xUNKvV-WKq8XD2r97s7S-Oe",
+     2
+    ]
+   ],
+   "date": "20220701"
+  },
+  {
+   "id": "RXto9jdNq3U",
+   "title": "הילולא פירוש הפיוט וסיפורים על חכמי בית אל",
+   "dur": 1601,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220705"
+  },
+  {
+   "id": "H_YcZf4grYE",
+   "title": "הילולת רבי חיים דילרוזה בעל התורת חכם זיע\"א וביאור ספר התכונה למהרח\"ו בגלגל ההיקף היומי",
+   "dur": 3733,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220705"
+  },
+  {
+   "id": "gC4cqHUH0wc",
+   "title": "הילולת רבי חיים דילרוזה זיע\"א חלק א'",
+   "dur": 1646,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220705"
+  },
+  {
+   "id": "DUQB9X8dfxY",
+   "title": "ספר המרכבות לרבי דוד בריה",
+   "dur": 4485,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xUNKvV-WKq8XD2r97s7S-Oe",
+     3
+    ]
+   ],
+   "date": "20220710"
+  },
+  {
+   "id": "qyaf6Gq9-S8",
+   "title": "יז בתמוז יום הפעולות, קבלה מעשית 7",
+   "dur": 3619,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xU1Ll2ysmS5uIldI_Sz5gC7",
+     8
+    ]
+   ],
+   "date": "20220711"
+  },
+  {
+   "id": "qTjO8KZ7OxM",
+   "title": "תיקון ולימוד ליל שישי בחבקוק הנביא",
+   "dur": 91,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220714"
+  },
+  {
+   "id": "CrzR05ErBTM",
+   "title": "עץ חיים שער נון פרקים א' וב'.",
+   "dur": 4421,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220715"
+  },
+  {
+   "id": "Ecy_XprbNf8",
+   "title": "שיעור בענייני עליות והשגה בפלורידה באנגלית חלק 2",
+   "dur": 1048,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220721"
+  },
+  {
+   "id": "mm5-H7A6uN4",
+   "title": "שיעור בענייני עליות והשגות בפלורידה חלק 1",
+   "dur": 1584,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220721"
+  },
+  {
+   "id": "r4pvvQBY1Zw",
+   "title": "הילולת הרמ\"ק ורבי משה אלבז זיע\"א בלוס אנגלס (שיעור באנגלית).",
+   "dur": 3994,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220722"
+  },
+  {
+   "id": "WUAuxsiGjoU",
+   "title": "עלית נשמה לחברון לאבינו אברהם זיע'א.",
+   "dur": 425,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xU1Ll2ysmS5uIldI_Sz5gC7",
+     10
+    ]
+   ],
+   "date": "20220722"
+  },
+  {
+   "id": "UYlPMZfi7Hs",
+   "title": "שיעור פתיחה לקבלה, האילן הקדוש באנגלית, בלוס אנגלס",
+   "dur": 5097,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220722"
+  },
+  {
+   "id": "ojsrTRFdI6E",
+   "title": "הקדמה לקריאת שמע",
+   "dur": 4326,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220725"
+  },
+  {
+   "id": "_dtbVG8EYHA",
+   "title": "קבלה מעשית 8 ספר הגורלות למהרחו",
+   "dur": 5596,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xU1Ll2ysmS5uIldI_Sz5gC7",
+     9
+    ]
+   ],
+   "date": "20220725"
+  },
+  {
+   "id": "JBwyKnnF-Uk",
+   "title": "על קברו של רבנו האר'י, בסוד זמן הילוך הכוכבים והמזלות. ספר התכונה פרק יג.",
+   "dur": 743,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220802"
+  },
+  {
+   "id": "ZeWG0Qosi2I",
+   "title": "שיעור לתשעה באב סוד הבכור והצמחים- קבלה מעשית 9",
+   "dur": 5612,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xU1Ll2ysmS5uIldI_Sz5gC7",
+     11
+    ]
+   ],
+   "date": "20220807"
+  },
+  {
+   "id": "-JDwS-Qmf8o",
+   "title": "הילולת רבי עמרם בן דיוואן טו באב תשפב (בדילנד, החלק הראשון באנגלית, השאר בעברית).",
+   "dur": 3327,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220812"
+  },
+  {
+   "id": "8H2zYLn_M2I",
+   "title": "הקדוש רבי חיים טולדאנו זיע'א מסאלי ראבט.",
+   "dur": 213,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220817"
+  },
+  {
+   "id": "2jsBz6UI1xU",
+   "title": "חלקת הצדיקים משפחת ביבאס זיע'א",
+   "dur": 118,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220817"
+  },
+  {
+   "id": "eB74miHmFhU",
+   "title": "רבי חיים פינטו הקטן זיע'א",
+   "dur": 435,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220818"
+  },
+  {
+   "id": "Vf5xpNCrSFY",
+   "title": "דייני בבל, הרב סלמן חוגי עבודי ורבי יעקב מוצפי זיע'א",
+   "dur": 356,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220824"
+  },
+  {
+   "id": "xZxJ405GhTU",
+   "title": "על ציונו של רבי יהודה פתיא זיע'א",
+   "dur": 151,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220824"
+  },
+  {
+   "id": "RmlGSmgfdr4",
+   "title": "ספר דרישת מלאכים לרמ\"ק והילולא לרבנו הנזיר, רבי דוד הכהן זיע\"א.",
+   "dur": 8148,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220825"
+  },
+  {
+   "id": "Jd1dXlyR2Ts",
+   "title": "גלגולי שלג לפני השופר.",
+   "dur": 2982,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220912"
+  },
+  {
+   "id": "pEzoVayUtjg",
+   "title": "שיעור הכנה לאלול elul",
+   "dur": 2419,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20220919"
+  },
+  {
+   "id": "uxnOGIJO3M8",
+   "title": "מקובלי איטליה ושורשי הסודות לרמז- קבלה מעשית 10",
+   "dur": 4973,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xU1Ll2ysmS5uIldI_Sz5gC7",
+     12
+    ]
+   ],
+   "date": "20221011"
+  },
+  {
+   "id": "_7-oVVaJNCA",
+   "title": "חיזוק גדול בעניין הנשמות ובעניין האושפיזין",
+   "dur": 412,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20221013"
+  },
+  {
+   "id": "oM8R-_nIQsI",
+   "title": "פרשת נח (קמיע וה' ברך את אברהם בכל).",
+   "dur": 765,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20221024"
+  },
+  {
+   "id": "VGmmjAqLsGg",
+   "title": "פרשת נח דבר תורה אזכרה",
+   "dur": 860,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20221027"
+  },
+  {
+   "id": "pFRAqojn0Fs",
+   "title": "קברו של הצדיק רבי יוסף מלכה ממגדל העמק",
+   "dur": 67,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20221110"
+  },
+  {
+   "id": "3WWAxk6wJfM",
+   "title": "שיעור על רבי אהרון פיררא",
+   "dur": 3465,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20221116"
+  },
+  {
+   "id": "mHVXXkifyWI",
+   "title": "סוד הדגלים בקבלה הנבואית (שארית יוסף פ' י'ג) ומעט בעניין התכונה וקבלה מעשית.",
+   "dur": 4433,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xXGSrqBmGaHRwaZBFl8zhAY",
+     16
+    ]
+   ],
+   "date": "20221121"
+  },
+  {
+   "id": "3qmuPhDH-Ws",
+   "title": "שימושי השכלים בלב נתיבות חלק א'.",
+   "dur": 5072,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20221201"
+  },
+  {
+   "id": "dNTpADuG6gs",
+   "title": "מקווה בבית שלב א' מתוך שלושה שלבים.",
+   "dur": 43,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20221204"
+  },
+  {
+   "id": "bKRyenyLDak",
+   "title": "מקוה בבית חלק 2",
+   "dur": 233,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20221205"
+  },
+  {
+   "id": "gMH-B4iv2uY",
+   "title": "מקווה בבית חלק ג'",
+   "dur": 103,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20221205"
+  },
+  {
+   "id": "P6koW-V7yuI",
+   "title": "פרשת וישב. חלום יוסף- דור דור וחכמיו",
+   "dur": 784,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20221212"
+  },
+  {
+   "id": "f5yPMf2i3-8",
+   "title": "שארית יוסף שער י'ד סוד המרכבה ומעט מעניין המולדות, סוד מולד בהר''ד.",
+   "dur": 3463,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xXGSrqBmGaHRwaZBFl8zhAY",
+     15
+    ]
+   ],
+   "date": "20221215"
+  },
+  {
+   "id": "2dI4Zc6b8F4",
+   "title": "האם הסביבון הוא כלי הימורים אירופאי או מנהג קדוש",
+   "dur": 228,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20221216"
+  },
+  {
+   "id": "vABsmUcjS9A",
+   "title": "ענייני הניסים והמופתים בקבלה מעשית (זאת חנוכה פתח תקוה).",
+   "dur": 3714,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xU1Ll2ysmS5uIldI_Sz5gC7",
+     14
+    ]
+   ],
+   "date": "20221226"
+  },
+  {
+   "id": "V3w_7hBjYME",
+   "title": "ספר שורשי הסודות לרבי משה זכות (ערב השקה עיקרו בקבלה מעשית).",
+   "dur": 5632,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xU1Ll2ysmS5uIldI_Sz5gC7",
+     13
+    ]
+   ],
+   "date": "20221229"
+  },
+  {
+   "id": "_RSehJbDt9I",
+   "title": "רגע שיא 59:40 - 1:04:40 מ-רבי יעקב אבוחצירא וקבלה מעשית ההילולא",
+   "dur": 306,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20230113"
+  },
+  {
+   "id": "VcPGNlI0228",
+   "title": "חלומות הרב פתיא חלק א",
+   "dur": 6188,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVGTOMGTfa5NeJ26MzkHelK",
+     2
+    ]
+   ],
+   "date": "20230126"
+  },
+  {
+   "id": "o8mYto6hap8",
+   "title": "חלומות הרב פתיא 2",
+   "dur": 3239,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVGTOMGTfa5NeJ26MzkHelK",
+     3
+    ]
+   ],
+   "date": "20230130"
+  },
+  {
+   "id": "wDzqU2_S_Js",
+   "title": "שעון הגורל",
+   "dur": 2679,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20230210"
+  },
+  {
+   "id": "l4Kc3rbW5lo",
+   "title": "נזירות בזמן הזה 1",
+   "dur": 5276,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20230220"
+  },
+  {
+   "id": "e6EqmluEIQo",
+   "title": "שארית יוסף פרק כד",
+   "dur": 2224,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xXGSrqBmGaHRwaZBFl8zhAY",
+     14
+    ]
+   ],
+   "date": "20230223"
+  },
+  {
+   "id": "2KgfFqENqYQ",
+   "title": "מורה הפרישות שיעור 1",
+   "dur": 4138,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVWMP48nmpw9kUx_N40-vFt",
+     1
+    ]
+   ],
+   "date": "20230324"
+  },
+  {
+   "id": "y_VP6EdOtHY",
+   "title": "להיזהר בטיפות שעווה של נר ההבדלה",
+   "dur": 63,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20230325"
+  },
+  {
+   "id": "tE2iRHeZdBM",
+   "title": "סגולות הכרפס (למשפט, הגנה לחיילים, רפואה,גורל החולה, פרנסה ומיתוק הדינים).",
+   "dur": 333,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20230402"
+  },
+  {
+   "id": "FrRgsqGVAhs",
+   "title": "סגולת המצה",
+   "dur": 92,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20230402"
+  },
+  {
+   "id": "NVaaqrBTTFI",
+   "title": "הילולת מהרחו ספר התכונה",
+   "dur": 9069,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20230421"
+  },
+  {
+   "id": "Co1i1oqJhkg",
+   "title": "מורה הפרישות 3",
+   "dur": 2896,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVWMP48nmpw9kUx_N40-vFt",
+     3
+    ]
+   ],
+   "date": "20230424"
+  },
+  {
+   "id": "6UZO5cK-2Wc",
+   "title": "גורל החול 1 גורל יורדי הים",
+   "dur": 7554,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     1
+    ]
+   ],
+   "date": "20230616"
+  },
+  {
+   "id": "WeREK9axvdg",
+   "title": "גורל החול 2 שש עשרה צורות הגורל",
+   "dur": 2349,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     2
+    ]
+   ],
+   "date": "20230616"
+  },
+  {
+   "id": "Tp34AGlPdDk",
+   "title": "ספר האור לרבי יהודה אבן חנין והמקובל רבי שמואל פלאגה.",
+   "dur": 2746,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20230627"
+  },
+  {
+   "id": "poe7c6rOV7U",
+   "title": "מספרים בערבית לומדים בחצי דקה",
+   "dur": 36,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20230629"
+  },
+  {
+   "id": "vCKTrzgPyQU",
+   "title": "סוד בין המייצרים ושלושת השבועות, וכוח תיקון חצות ביום",
+   "dur": 1120,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20230711"
+  },
+  {
+   "id": "oviQzY8QfO8",
+   "title": "המכוון הגדול הרב סלמאן אליהו זיעא",
+   "dur": 1930,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20230723"
+  },
+  {
+   "id": "efzgqclY-os",
+   "title": "שיעור בעניין הרוחות 3",
+   "dur": 5125,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20231007"
+  },
+  {
+   "id": "6jsB-XJt1kU",
+   "title": "קורבנות שחרית",
+   "dur": 1893,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20231026"
+  },
+  {
+   "id": "pIxKudkGlpU",
+   "title": "הילולת אביר יעקב חלק ב תשפ'ד",
+   "dur": 1994,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20240103"
+  },
+  {
+   "id": "HH59fAJd9VY",
+   "title": "סיפורים מדהימים על רבי מכלוף אבוחצירא זיע''א בהילולת אביר יעקב תשפ'ד",
+   "dur": 1777,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20240103"
+  },
+  {
+   "id": "BiF-7NAXxmY",
+   "title": "ספר חדש גורל כחול הים",
+   "dur": 4571,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20240104"
+  },
+  {
+   "id": "dVHPm3ZbbH4",
+   "title": "מול הר הבית והרעותם בחצוצרות לפני ה' ונושעתם מאויביכם",
+   "dur": 57,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20240304"
+  },
+  {
+   "id": "t4xl7oDvXyM",
+   "title": "פעולות השעות לפי צרור החיים",
+   "dur": 1910,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20240305"
+  },
+  {
+   "id": "o_JSOsg6he8",
+   "title": "חצוצרות בקבר דוד הלילה יתחיל האירוע...",
+   "dur": 804,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20240418"
+  },
+  {
+   "id": "xSAYEsmVyBw",
+   "title": "כתבי יד מדרום מרוקו עם הגאון הרב אברהם אסולין שליט\"א",
+   "dur": 384,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20240428"
+  },
+  {
+   "id": "AM8iC-84fJU",
+   "title": "ספר חדש יראת אלהים לרבנו הירא",
+   "dur": 33,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20240630"
+  },
+  {
+   "id": "Py8lzEkb2gg",
+   "title": "בבא ראובן ויהודה ויזמאן זיע'א",
+   "dur": 418,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20240704"
+  },
+  {
+   "id": "dHq2rUeHznk",
+   "title": "רבי כליפא בן מלכה זיע'א רבה של אגדיר אביו של רבי אברהם הנזיר",
+   "dur": 64,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20240705"
+  },
+  {
+   "id": "DV1AwvDKI2g",
+   "title": "רבי דוד בן ברוך הכהן אזוג זיע'א",
+   "dur": 1423,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20240709"
+  },
+  {
+   "id": "Qjgau62FfxE",
+   "title": "הרב דוד חבושה שליט\"א",
+   "dur": 119,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20240929"
+  },
+  {
+   "id": "_oGs_tLr9TU",
+   "title": "רגע שיא 4:34 - 9:34 מ-הרב יהודה אוהד תורג'מן בשידור חי!",
+   "dur": 301,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20250102"
+  },
+  {
+   "id": "EY6xNbh0gsY",
+   "title": "שיעור בעניין שביעי של פסח וסוד קריעת הים לעילוי נשמת החייל אליה הילל הי''ד. קצת משבחים מהרח''ו זי'ע",
+   "dur": 1201,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20250417"
+  },
+  {
+   "id": "cVXJG6JSfBk",
+   "title": "הקדוש רבי יוסף פינטו ורבי יוסף נחמיאס זיע''א בוארזזת.",
+   "dur": 241,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20250515"
+  },
+  {
+   "id": "pGn5J3eFbec",
+   "title": "טינריר",
+   "dur": 1226,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20250516"
+  },
+  {
+   "id": "0YUplGYoPF0",
+   "title": "קמיעות סגולות ומלאכים... זהירות!",
+   "dur": 306,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20250605"
+  },
+  {
+   "id": "FbWvNkRZyW4",
+   "title": "ענייני גן עדן הארץ וגן עדן עליון. שיעור בליקווד",
+   "dur": 4567,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20250722"
+  },
+  {
+   "id": "77uTNo_A0Xc",
+   "title": "הרב ישועה בן שושן מסמן באצבעות את תיקוני הדיקנא שבזוהר בלי שאף אחד יראה. פטירתו ז''ך אלול.",
+   "dur": 29,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20250905"
+  },
+  {
+   "id": "LSIhok2JxuQ",
+   "title": "כנס לכבוד הרה''ג יוסף חיים לביא שליט''א לסיום והשלמת פירושו על כל העץ חיים בקבלת האר''י חלק י''ג.",
+   "dur": 863,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20250917"
+  },
+  {
+   "id": "FFF58LgC7Yg",
+   "title": "האדמור מסקוליע והרב הנזיר מירושלים",
+   "dur": 2616,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20251124"
+  },
+  {
+   "id": "BdZVnB_MFuE",
+   "title": "הילולת רבי דוד בן ברוך אצל רבי דוד ורבי רפאל אבוחצירא אשדוד. ",
+   "dur": 1787,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20251223"
+  },
+  {
+   "id": "wFcit931Z7E",
+   "title": "שבחי ספר הזהר. סיום הזהר ברמת גן הרב אליהו מנצור שליט\"א ",
+   "dur": 2754,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20251225"
+  },
+  {
+   "id": "7Q2Nhsxugi8",
+   "title": "הילולת הרב יצחק כדורי זיע''א ישיבת נחלת יצחק תשפו",
+   "dur": 1394,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20260117"
+  },
+  {
+   "id": "m2rXO82SA4U",
+   "title": "הרב יעקב עדס על הרב יצחק כדורי זיע' א",
+   "dur": 222,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20260117"
+  },
+  {
+   "id": "xNjZBVgZUxA",
+   "title": "אזכרה לצ'רלי (שלום) ביטון באר שבע. אביו של הרה''ג דוד איתמר ביטון שליט\"א ",
+   "dur": 1106,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20260126"
+  },
+  {
+   "id": "MSkZClGcJsQ",
+   "title": "אל תפספסו זה הסרטון הכי חשוב בעולם!",
+   "dur": 131,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20260512"
+  },
+  {
+   "id": "yqGt3TyjVl4",
+   "title": "הכנה לשבועות תשפו",
+   "dur": 3721,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20260518"
+  },
+  {
+   "id": "XGhR5rGd7Pk",
+   "title": "הנהגת שלום בית מרבי חיים ויטאל.",
+   "dur": 271,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20260528"
+  },
+  {
+   "id": "Ib5IUY6Dy5I",
+   "title": "פטירת רבי חיים בן עטר בתאריך יד תמוז.",
+   "dur": 182,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20260630"
+  },
+  {
+   "id": "w_uerDX0xS4",
+   "title": "הרב הגאון רבי שלמה יעקב ביטון שליט\"א ",
+   "dur": 897,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20260802"
+  },
+  {
+   "id": "Q3fuI2AGf0Y",
+   "title": "רבי דניאל השומר אשכנזי. הילולא בשיכון כנען בצפת. ראש חודש אלול תשפו.",
+   "dur": 1276,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20260813"
+  },
+  {
+   "id": "-VoHOn9Zzv0",
+   "title": "חכם יהודה פתיא ונשמת משה רבנו בתיקון חצות.",
+   "dur": 116,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20260830"
+  },
+  {
+   "id": "0od-oTmpUwg",
+   "title": "הרה''ג דניאל ביטון שליט'א בהילולת הפלא יועץ",
+   "dur": 1235,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20260930"
+  },
+  {
+   "id": "bt0PBqnS7jM",
+   "title": "חידוש קצר על פרשת נח. הצדיק הנסתר.",
+   "dur": 270,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": "20261016"
+  },
+  {
+   "id": "rvSpX9FcujQ",
+   "title": "14 באוגוסט 2024",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "KDPu-x9lPTs",
+   "title": "17 באוגוסט 2022",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "UJAgq_1uBcU",
+   "title": "17 באפריל 2022",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "0Qdgza0CwWc",
+   "title": "19 באפריל 2023",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "PlLUOMqx_nk",
+   "title": "19 באפריל 2025",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "uW_X7Ok3hPY",
+   "title": "22 במאי 2022",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "h9hIdd0P9AA",
+   "title": "22 במאי 2022",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "RIMSLT8v5vs",
+   "title": "23 באפריל 2025",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "7UnqTdfronM",
+   "title": "24 בפברואר 2026",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "Mxyv2bao3XI",
+   "title": "3 בפברואר 2025",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "2Jk8L5Q1v1E",
+   "title": "6 במאי 2026",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "ZnwLbJ06_O0",
+   "title": "7 באוגוסט 2024",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "8qZZQRdgOQU",
+   "title": "7 באוגוסט 2026",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "tcuu_PivF2k",
+   "title": "The Secret of the Binding of Isaac avinu",
+   "dur": 1900,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "eM6_NnMgMrA",
+   "title": "The holy names 72 of skay",
+   "dur": 2995,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "MMJ7imZHjhg",
+   "title": "The secrets of Abraham ",
+   "dur": 5213,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "xd_2qhM7VpA",
+   "title": "palm reading secrets",
+   "dur": 8874,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "ST9Cc90Z5PU",
+   "title": "sidur harashash Sim salom",
+   "dur": 4422,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "qtC8a4PWZkU",
+   "title": "sidur rashash amida, brahot emzaiot. neshikin.",
+   "dur": 2386,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "9dwL7Vuw-gE",
+   "title": "אבני בורלא 1",
+   "dur": 7759,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLRNNwsAVvjl4",
+     3
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "7VMWx-p9b_c",
+   "title": "אבני בורלא 2. ענייני הקשירות",
+   "dur": 7352,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLRNNwsAVvjl4",
+     2
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "8VT7qwdmcjQ",
+   "title": "אגרת המסע לרבי חיים בן עטר אור החיים הקדוש זיע''א",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "7QpyEVUo21E",
+   "title": "אהבת הבן",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "4pE132kC_ns",
+   "title": "אוצרות חיים 2 עקודים",
+   "dur": 7689,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "FoVklW_swoc",
+   "title": "אוצרות חיים 3 נקודים",
+   "dur": 5081,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "mc8grR-zNlw",
+   "title": "אוצרות חיים מההתחלה",
+   "dur": 9601,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "YViTnSJdI18",
+   "title": "אחיין של הרב פתיא מפלס דרך ל669",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "dgfuoCPjSUM",
+   "title": "איגרת המסע של רבי חיים בן עטר וענייני קבלה מעשית",
+   "dur": 5691,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "Ib6MyZd95Ec",
+   "title": "איך רבי יהודה פתיא התחיל להשיג השגה רוחנית.",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "RrhBlnmz-WU",
+   "title": "אמא של רבי חנניה דרעי הצדקת עתרי''ד",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "BxPrw1sRPzE",
+   "title": "אמת ליהודה רבי יהודה פתיא",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "7Vu2yv1b1Lc",
+   "title": "אצל הרב פיררא ערב ראש השנה תשפ'ד",
+   "dur": 880,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "tAwvjzNBAvo",
+   "title": "בין הזמנים",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "TyEINEE92Rg",
+   "title": "בית הקברות בקזבלנקה מערה ז'דידה. עם דניאל ביטון לעשש דלקבור. ",
+   "dur": 744,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "6UbXKUXyuzk",
+   "title": "בית כנסת העתיק במראכש 'בית אל'.",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "3GaCBs_Z6L8",
+   "title": "בעל המעיין רבי יעקב נחמיאס ורבי חגי פרץ",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "qJlW_dnOz_w",
+   "title": "בעל תשובה שהציל חבר מחטא בשניהם האחרונה",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "WXyfhfZl4HA",
+   "title": "בקברו של רבי אלעזר בן טובו עם הרב אסולין והרב אביסרור הי''ו.",
+   "dur": 621,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "J9MPHAPQtnA",
+   "title": "ברית מנוחה 1",
+   "dur": 4312,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xW_KAym7_Mk_LA2OWiGmhT2",
+     7
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "LsFfna6M3w4",
+   "title": "ברית מנוחה 10",
+   "dur": 6929,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xW_KAym7_Mk_LA2OWiGmhT2",
+     10
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "jAcQBQgq1SM",
+   "title": "ברית מנוחה 11 ניקוד החמישי.",
+   "dur": 4045,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "3zpbiQB99mo",
+   "title": "ברית מנוחה 12. הניקוד השישי ",
+   "dur": 6255,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "ZPK3mbvwWsk",
+   "title": "ברית מנוחה 2",
+   "dur": 4338,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xW_KAym7_Mk_LA2OWiGmhT2",
+     6
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "yIeZfYvGPdQ",
+   "title": "ברית מנוחה 3",
+   "dur": 5306,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xW_KAym7_Mk_LA2OWiGmhT2",
+     5
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "gw0QCdzivjc",
+   "title": "ברית מנוחה 4",
+   "dur": 5100,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xW_KAym7_Mk_LA2OWiGmhT2",
+     4
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "wYOz6rfIUYg",
+   "title": "ברית מנוחה 5",
+   "dur": 5978,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xW_KAym7_Mk_LA2OWiGmhT2",
+     3
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "PpmoK9rDznA",
+   "title": "ברית מנוחה 6",
+   "dur": 5415,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xW_KAym7_Mk_LA2OWiGmhT2",
+     2
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "8W3eAP8bf2c",
+   "title": "ברית מנוחה 7 ניקוד הראשון",
+   "dur": 6262,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xW_KAym7_Mk_LA2OWiGmhT2",
+     1
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "jfvOzxDX2jk",
+   "title": "ברית מנוחה 8 דרך הניקוד הכללי",
+   "dur": 5545,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xW_KAym7_Mk_LA2OWiGmhT2",
+     8
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "ZZqDD_Lj8Ps",
+   "title": "ברית מנוחה 9 עניין הדוכיפת",
+   "dur": 5000,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xW_KAym7_Mk_LA2OWiGmhT2",
+     9
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "idlmoahsOys",
+   "title": "ברית מנוחה דרך שלישית 1",
+   "dur": 3431,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "L2RYnWXIfrQ",
+   "title": "ברית.מנוחה 13",
+   "dur": 4305,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "Ru74V0iSgjE",
+   "title": "גבולי אלכסון בקבלת הקדמונים",
+   "dur": 3772,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "STIQg6rOYZ0",
+   "title": "גורל בתי החול לרבי חיים ויטאל- שיעור בעיון עמוק هيلاج كدخدا",
+   "dur": 5871,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xW_8leA3L6QBHpjlBzdLV7J",
+     3
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "u5uZl8k_kFU",
+   "title": "גורל החול 10",
+   "dur": 2690,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     11
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "enwB6muk17U",
+   "title": "גורל החול 18",
+   "dur": 5644,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     18
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "azAkvEAzSPg",
+   "title": "גורל החול 21 שערים כ''ו כ''ז.",
+   "dur": 6242,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     23
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "eJB-2iYlcGg",
+   "title": "גורל החול 22 שער כח",
+   "dur": 2665,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     25
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "MkKTDalRNSM",
+   "title": "גורל החול 23 שער כט",
+   "dur": 3465,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     26
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "DfRwFW8OzeI",
+   "title": "גורל החול 24 שער ל'",
+   "dur": 5998,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     27
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "IIxZeS5fgcw",
+   "title": "גורל החול 25 שער ל\"א",
+   "dur": 5917,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     28
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "SGpk6N7DFvs",
+   "title": "גורל החול 26 שער ל\"ב",
+   "dur": 4311,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     29
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "QcBQrdOy_aU",
+   "title": "גורל החול 27 שער לב שאלה נח",
+   "dur": 3442,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     30
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "0wSX57H8Hwk",
+   "title": "גורל החול 28 שער לג",
+   "dur": 4265,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     31
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "6pBkKJ2-8Cw",
+   "title": "גורל החול 29 שער לד בכותל",
+   "dur": 4730,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     32
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "XbNXkZQR_Zs",
+   "title": "גורל החול 3",
+   "dur": 5533,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     3
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "JNR7E9WBCjk",
+   "title": "גורל החול 30 שער ל''ו וסוד שיחת עופות",
+   "dur": 5140,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     33
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "fAacWPBsOus",
+   "title": "גורל החול 31 שער לח דיין זוגי",
+   "dur": 7314,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     34
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "BoVW1Gf_YUs",
+   "title": "גורל החול 32 שער מ - מ''ג",
+   "dur": 5143,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     22
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "BMcoXVDnUUM",
+   "title": "גורל החול 33 שער מ\"ד - מ\"ה",
+   "dur": 6172,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     35
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "vLddATp3Dxc",
+   "title": "גורל החול 34 שער מ\"ה וקונטרס קבלה מעשית",
+   "dur": 5607,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     36
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "lgF9ldvwdUM",
+   "title": "גורל החול 4",
+   "dur": 6439,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     4
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "EH80mnK1G2s",
+   "title": "גורל החול 5",
+   "dur": 3680,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     5
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "qqo5NqLWBJA",
+   "title": "גורל החול 6 גורל יורדי הים",
+   "dur": 5195,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     6
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "V6Jq7wN3lnw",
+   "title": "גורל החול 7 שער ד כללי הגורל",
+   "dur": 1780,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     7
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "O2S20abGC9A",
+   "title": "גורל החול 8 וקצת מענייני הפעולות והרוחות.",
+   "dur": 5035,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     9
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "kYuHxSAfFWw",
+   "title": "גורל החול שיעור 17",
+   "dur": 4866,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     21
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "AIS4FCzEEnc",
+   "title": "גורל החול שיעור 19 פרקים כ\"ב כ\"ג - בית האחים.",
+   "dur": 6245,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     17
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "0e1g7MSgd3s",
+   "title": "גורל החול שיעור 20 שערים כד כה",
+   "dur": 6420,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     16
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "S4GFUK0Sg7s",
+   "title": "גורל החול שיעור 9 כחול הים.",
+   "dur": 5170,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     10
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "qY2XpC1sSqI",
+   "title": "גורל החול שיעור בעיון. אבני בורלא 3",
+   "dur": 8502,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLRNNwsAVvjl4",
+     1
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "ET8r4avp81I",
+   "title": "גורל החולה רבי מרדכי מלכה רב פעלים",
+   "dur": 6940,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVpuOeWAjVGXZv-PJED9Wgg",
+     14
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "PY2euGOvthw",
+   "title": "גורל העוף והנר למרן הבית יוסף בסימן תקפג 2",
+   "dur": 3526,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xUou48MSy_pGej4ZM4d2RD6",
+     1
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "9Jl0FAksBb8",
+   "title": "גורל כחול הים 11",
+   "dur": 3350,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     12
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "0eDB3fc7oZU",
+   "title": "גורל כחול הים 12",
+   "dur": 2880,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     13
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "Tzm7-PR5r4o",
+   "title": "גורל כחול הים 13",
+   "dur": 4440,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     14
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "ymeXx0wlq40",
+   "title": "גורל כחול הים 14",
+   "dur": 5220,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     15
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "PfPcz68HMEw",
+   "title": "גורל כחול הים שער יח שיעור 16",
+   "dur": 4501,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     19
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "OtaZvzIML5E",
+   "title": "גורלות חלומות וחזיונות הרב יהודה פתיה בצפייתו לגאולה. שיעור לתשעה באב.",
+   "dur": 3403,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVGTOMGTfa5NeJ26MzkHelK",
+     1
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "BE3YYBijE8k",
+   "title": "גלגולי שלג הדרכה מעשית",
+   "dur": 510,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "M0Zkrl2WXnU",
+   "title": "גלגולי שלג למתענה 72 שעות.",
+   "dur": 696,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "XwNaPWdujDU",
+   "title": "גלגולי שלג למתענה יום אחד",
+   "dur": 286,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "TPtJ2AsNFOg",
+   "title": "גלגולים של עשרת ימי תשובה",
+   "dur": 731,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "jqwxUfOusUs",
+   "title": "דגם בית המקדש בוארזזת מרוקו",
+   "dur": 440,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "20Li2E3hcaE",
+   "title": "די בביטול כישוף אין צורך בהפרדה.",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "LkfdxSxloQo",
+   "title": "דעת מרן בעניין שדים בארץ ישראל 3",
+   "dur": 5269,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVpuOeWAjVGXZv-PJED9Wgg",
+     6
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "8uSqSAq3e4E",
+   "title": "דעת רבי חיים ויטאל שהארץ כדורית",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "XOQAvRJFgTs",
+   "title": "דרוש הנבואה לרמ''ק בסוף דרישות מלאכים",
+   "dur": 5145,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xWmzYsU2AF5-8CPOxahABLu",
+     25
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "eXc5rkOYJQI",
+   "title": "דרישות מלאכים 1 חקירה א ב",
+   "dur": 4545,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xWmzYsU2AF5-8CPOxahABLu",
+     1
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "44POMjUshvs",
+   "title": "דרישות מלאכים 10 ג' חקירות ו ז",
+   "dur": 6341,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xWmzYsU2AF5-8CPOxahABLu",
+     10
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "OYLKUG1vOr0",
+   "title": "דרישות מלאכים 11 דרישה ד חקירה א-ב",
+   "dur": 6900,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xWmzYsU2AF5-8CPOxahABLu",
+     11
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "RP6u5cVKQPU",
+   "title": "דרישות מלאכים 12 שיעור חזק ביותר דרישה ד חקירה ג ד.",
+   "dur": 9110,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xWmzYsU2AF5-8CPOxahABLu",
+     12
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "Op7vr2sdZEw",
+   "title": "דרישות מלאכים 13 דרישה ד חקירה ה' ו'",
+   "dur": 8103,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xWmzYsU2AF5-8CPOxahABLu",
+     13
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "4yDsPTKWEIA",
+   "title": "דרישות מלאכים 14 דרישה חמישית חקירה א ב",
+   "dur": 4625,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xWmzYsU2AF5-8CPOxahABLu",
+     14
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "nRFdxWDdL5A",
+   "title": "דרישות מלאכים 15 דרישה ג' חקירה ה' 3",
+   "dur": 974,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xWmzYsU2AF5-8CPOxahABLu",
+     15
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "XjY4pIjw0VM",
+   "title": "דרישות מלאכים 15, דרישה ה' חקירה ג'",
+   "dur": 253,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xWmzYsU2AF5-8CPOxahABLu",
+     17
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "2F0Rw1DtHr0",
+   "title": "דרישות מלאכים 16 דרישה חקירות ה ו ז",
+   "dur": 5610,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xWmzYsU2AF5-8CPOxahABLu",
+     18
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "-42hD8b_pJA",
+   "title": "דרישות מלאכים 17 דרישה ו' חקירות א ב",
+   "dur": 6445,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xWmzYsU2AF5-8CPOxahABLu",
+     19
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "xL3XL9Hv3Vs",
+   "title": "דרישות מלאכים 18 דרישה ו' חקירה ג' ד'",
+   "dur": 5930,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xWmzYsU2AF5-8CPOxahABLu",
+     20
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "7bKovQ8GRUE",
+   "title": "דרישות מלאכים 19 דרישה ו' חקירה ה' ו' ז'",
+   "dur": 9245,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xWmzYsU2AF5-8CPOxahABLu",
+     21
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "4dkG5wzSSTI",
+   "title": "דרישות מלאכים 2 דרישה ג'",
+   "dur": 7402,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xWmzYsU2AF5-8CPOxahABLu",
+     2
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "UMvIomLdfCo",
+   "title": "דרישות מלאכים 20 מופתים רבי דוד ומשה. דרישה ז חקירה א",
+   "dur": 3255,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xWmzYsU2AF5-8CPOxahABLu",
+     22
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "avTe38bPtbc",
+   "title": "דרישות מלאכים 22 דרישה ז חקירה ד ה",
+   "dur": 8321,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "EkzJcL_Ef9Y",
+   "title": "דרישות מלאכים 3 חקירה ו'",
+   "dur": 3711,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xWmzYsU2AF5-8CPOxahABLu",
+     3
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "f8HOEkX_o10",
+   "title": "דרישות מלאכים 4 דרישה ב חקירות א ב",
+   "dur": 6564,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xWmzYsU2AF5-8CPOxahABLu",
+     4
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "_Fu5xRBBmw4",
+   "title": "דרישות מלאכים 5 דרישה ג ד חקירה ב שיעור 5",
+   "dur": 3966,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xWmzYsU2AF5-8CPOxahABLu",
+     5
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "G3hUNZXBoy8",
+   "title": "דרישות מלאכים 6 דרישה ב חקירה ה ו.",
+   "dur": 6974,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xWmzYsU2AF5-8CPOxahABLu",
+     6
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "aBrsXWZ31IE",
+   "title": "דרישות מלאכים 7 דרישה ב' חקירה ז' ותחילת דרישה ג'",
+   "dur": 6701,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xWmzYsU2AF5-8CPOxahABLu",
+     7
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "ST9Do7Sy4Nw",
+   "title": "דרישות מלאכים 8 דרישה ג חקירה א ב",
+   "dur": 6707,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xWmzYsU2AF5-8CPOxahABLu",
+     8
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "PtfLJ26x6rU",
+   "title": "דרישות מלאכים 9 חקירה ד' דרישה ד'",
+   "dur": 7954,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xWmzYsU2AF5-8CPOxahABLu",
+     9
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "nW0RvffQ40g",
+   "title": "דרישות מלאכים דרישה ה' חקירה ג' חלק ב'",
+   "dur": 426,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xWmzYsU2AF5-8CPOxahABLu",
+     16
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "8PXRAVw-qtI",
+   "title": "דרישת מלאכים 21 דרישה ז חקירה ב ג",
+   "dur": 5105,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xWmzYsU2AF5-8CPOxahABLu",
+     23
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "ozH9-b-iy2E",
+   "title": "דרשת בר מצווה",
+   "dur": 1233,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "WycTSbbs5nY",
+   "title": "האוהב ישראל מאפטא והעשיר",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "ggfLw-qFhjI",
+   "title": "הדפסת התניא במרוקאית",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "ijjIunLZIwY",
+   "title": "הילולא וסיפורים על רבי חיים דילרוזה ומקובלים ירושלים",
+   "dur": 5104,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "M-jlt4IrZOA",
+   "title": "הילולת הפלא יועץ ואושפיזא דיוסף תשפז",
+   "dur": 1214,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "ZoQBXOA7CPc",
+   "title": "הילולת הרב יצחק כדורי זקן המקובלים זיע\"א",
+   "dur": 4753,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "H5SxJigKqOM",
+   "title": "הילולת הרמ''ק ספר דרישת מלאכים חקירה שישית. תשפ'ג.",
+   "dur": 4071,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "2RQpb9f3uf4",
+   "title": "הילולת רבי חיים דילהרוזה בעל תורת חכם. ו תמוז תשפה.",
+   "dur": 3267,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "rrAZwTY9_pE",
+   "title": "הילולת רבי חיים ויטאל . תשפו",
+   "dur": 6675,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "CkeTJ560c5E",
+   "title": "הילולת רבי חיים ויטאל ספר החזיונות",
+   "dur": 4766,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "x8P8dMQSgXI",
+   "title": "הילולת רבי ידידיה רפאל אבולעפיה 1",
+   "dur": 1809,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "TCksPje4Q0k",
+   "title": "הילולת רבי יעקב אבוחצירא והרמב'ם תשפ''ה",
+   "dur": 2771,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "0Sy7yDEk4fM",
+   "title": "היר'א",
+   "dur": 1055,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "VT-uI5ptRSg",
+   "title": "הכוח של התפילין!!",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "ALVrpzDb-SA",
+   "title": "הכנה חזקה לשמחת תורה. אסור לפספס!",
+   "dur": 9651,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "2uHPGfEzm1c",
+   "title": "הכנה לחג שבועות (מיאמי)",
+   "dur": 1220,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "oCn7PkYnhPs",
+   "title": "הכנה ליום כיפור בעשרת ימי תשובה",
+   "dur": 2480,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "ZAD3BJkG-LE",
+   "title": "הכנה ליום כיפור תשפז",
+   "dur": 6200,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "nZdiBM2tj84",
+   "title": "המלאך שהציל את רבי כליפא מלכא",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "GCjbhtx9Cf4",
+   "title": "המנהג והקבלה. שיעור חשוב מאוד... רב פעלים",
+   "dur": 10841,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "ib1S184BOzA",
+   "title": "המעיין השביעי 1 ענייני השדים והרוחות",
+   "dur": 9709,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "eKSyFsqG_CY",
+   "title": "המעיין השביעי 2 נהרות ד ה ו",
+   "dur": 8252,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "Ejnb8cMlE3g",
+   "title": "המעיין השביעי 3 נהר ז' ח'",
+   "dur": 6705,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "Ta1ouonacgo",
+   "title": "המעיין השביעי 4 נהר ט י",
+   "dur": 6335,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "A-T0hBBINKQ",
+   "title": "המעיין השביעי 6 נהרות יד טו",
+   "dur": 7981,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "CGkJIXx2oRs",
+   "title": "המעיין השביעי 7 נהר טז עד יט",
+   "dur": 7914,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "BsrB9TMN9kw",
+   "title": "המקובל הרב מרדכי עטיה ראש ישיבת המקובלים מעיין בפליאה רבה בספרו של רבי יוסף ציאח זיעא צרור החיים",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "2ZkMiKwyJBM",
+   "title": "הנהגה נכונה בשלום בית",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "rHwesDjgLDE",
+   "title": "הצדיק רבי דוד ביטון זי''ע שואל את המלאך כמה לגבות על הקמיע",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "2Oyhk77JVR4",
+   "title": "הקבלה המעשית שבתלמוד 1",
+   "dur": 7972,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVpuOeWAjVGXZv-PJED9Wgg",
+     4
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "kBHaOHImxqA",
+   "title": "הקבלה הנבואית של רבי יוסף ציאח  חלק ב ורבי דוד בן רבי יהודה החסיד",
+   "dur": 2855,
+   "src": [
+    "old"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "Q1XWx-Tw-D4",
+   "title": "הקבלה הנבואית של רבי יוסף ציאח מאת הרב אוהד תורג'מן",
+   "dur": 6289,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xXGSrqBmGaHRwaZBFl8zhAY",
+     1
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "8JReLLt_7QM",
+   "title": "הקבלה שבתלמוד. רב פעלים 11",
+   "dur": 2775,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVpuOeWAjVGXZv-PJED9Wgg",
+     2
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "64wZE0VBPJU",
+   "title": "הקדמת ספר מראה הילדים ומעלת טבריה וקצת עניינים",
+   "dur": 8210,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "CA0GgOvrR1Q",
+   "title": "הקדמת רחובות הנהר 7 דף ג' עמודה ב'",
+   "dur": 4194,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "E5ghhUolHcE",
+   "title": "הקדמת רחובות הנהר דף ג' עמודה ג' שיעור 8",
+   "dur": 2534,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "pftO122SRIE",
+   "title": "הר הזיתים חלקה עליונה",
+   "dur": 1450,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "ldfz2kSDlGc",
+   "title": "הרב הדיאה המשך",
+   "dur": 400,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "kf3K1uJu7iM",
+   "title": "הרב יהודה אוהד תורג'מן",
+   "dur": 116,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "hH7PJoFZkk0",
+   "title": "הרב יהודה אוהד תורג'מן בשידור חי!",
+   "dur": 216,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "J4d_S_mGH5Y",
+   "title": "הרב יהודה אוהד תורג'מן בשידור חי!",
+   "dur": 115,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "QjFQI4kaJS8",
+   "title": "הרב יהודה אוהד תורג'מן בשידור חי!",
+   "dur": 51,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "gs0I8niChGU",
+   "title": "הרב יהודה אוהד תורג'מן, תפילה במניין בזמן סכנה.",
+   "dur": 932,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "8IAEvDfXN_k",
+   "title": "הרב יצחק משה פיררה זיע''א.",
+   "dur": 156,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "evauvVGPwik",
+   "title": "הרבנים אלפיה והדיה",
+   "dur": 406,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "Zkl-jYiN-mE",
+   "title": "הרצאה במכללת אורט תל אביב",
+   "dur": 3538,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "PXrAXYGPosA",
+   "title": "השתלשלות עץ החיים חלק ב' - הרב אוהד תורג'מן",
+   "dur": 4878,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "_gppRyfk70E",
+   "title": "התאמת שמות לזיווג החלפת שם ועניין מיתת ילדים והפלות. שיעור חזק!",
+   "dur": 5600,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "1cuZB_UyqZY",
+   "title": "התכונה 2",
+   "dur": 571,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "4QukliMLl4c",
+   "title": "ו תמוז תשפג הילולת רבי חיים דילרוזה בעל תורת חכם",
+   "dur": 2787,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "dCHQKCVmOgo",
+   "title": "ז\"ך הרחמים הילולת רבי אהרון פיררא והרב ישועה בן שושן זיע''א.",
+   "dur": 5285,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "Foc_d5KXrQs",
+   "title": "זאת חנוכה תשפה הדלקה עם כוונות.",
+   "dur": 580,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "FJY0aTzlC5Y",
+   "title": "חג המימונה חידושים שמחה ודברי תורה",
+   "dur": 1231,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "i2MfDd8axEw",
+   "title": "חותם שלמה (חתים אל סולימאני) הכרתת איראן בקרוב. הכנה לפסח שבת הגדול.",
+   "dur": 5450,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "PeyoEDpqBJg",
+   "title": "חזיון משה. מעשה הרוח שהוציא רבי משה מפראג.",
+   "dur": 6152,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "vKM-DS9NyUM",
+   "title": "חזרה פרקטית על ממשלת שעות המלאכים והמזלות",
+   "dur": 1268,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     24
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "wX9mwYocmyA",
+   "title": "חידוש מדהים",
+   "dur": 40,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "lxa4UiOms3g",
+   "title": "חיזוק באמונה פרשת וישלח יעקב",
+   "dur": 1296,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "4p_Qdvd5Kls",
+   "title": "חיזוק גדול מהרב חיים בן שושן בכותל.",
+   "dur": 152,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "t8m_ennbMIw",
+   "title": "חיזוק יומי לזמן המלחמה",
+   "dur": 1793,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "HhaTiAyOEew",
+   "title": "חכמי המערב 1 רבי שלום אמזאלג זיע\"א",
+   "dur": 3888,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xWS0WF3IS21CvsRkUxbRx_H",
+     1
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "J4WDLWMgeoc",
+   "title": "חכמת הצירוף והניגון חלק א, הרב אוהד תורג'מן.",
+   "dur": 878,
+   "src": [
+    "old"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "5sAzjGSeXeg",
+   "title": "חכמת הצירוף פרק א' מתוך שמונה פרקים",
+   "dur": 2537,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "pSbu4GXVoZE",
+   "title": "חכמת התכונה 1",
+   "dur": 1875,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "3qS0wJsY7CQ",
+   "title": "חלומות ופתרונם 1",
+   "dur": 4180,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "77Kf4ZZMekU",
+   "title": "חלומות ופתרונם 2 חזיונות הרב שמעון אגסי זיע''א. שיעור בברוקלין",
+   "dur": 2951,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "e6cox4WKs0U",
+   "title": "חלומות ופתרונם 3 וענייני רוחות והשגה. שיעור חזק",
+   "dur": 10940,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "FpGF_qYAlPM",
+   "title": "חרדות ופחדים. רב פעלים 10. חזיונות הרב פתיא. ",
+   "dur": 6114,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVpuOeWAjVGXZv-PJED9Wgg",
+     3
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "8dmTzeSI7d4",
+   "title": "חשיבות אמירת הקרבנות בבוקר  https://youtu.be/6jsB-XJt1kU?si=3gGas1JbW1K9oJwy",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "vWP6WoWSpmo",
+   "title": "טטט תיקון הברית תשפד",
+   "dur": 5936,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "Gyovq7zMXoE",
+   "title": "כ''ח מחנות חמה ולבנה",
+   "dur": 2705,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "j0_c8r1gnTQ",
+   "title": "כוונות בעומר לפי הספר תורת חכם",
+   "dur": 6355,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "6ASRXwPSwdM",
+   "title": "כוונות יום הכיפורים",
+   "dur": 1638,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "U5ME8KKlij4",
+   "title": "כוונות ראש השנה, רי\"ו בעמידה.",
+   "dur": 6784,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "BOa9B2jEBNs",
+   "title": "כוונת השלמת המוחין בעומר",
+   "dur": 2786,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "I4zXQVB1X4k",
+   "title": "כיבוד הורים דאורייתא! תן לסבא להיות סנדק",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "wveUOi2XvNU",
+   "title": "כסף צרוף 1 ",
+   "dur": 5655,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "3FkeoB-v-Nc",
+   "title": "כפר אל-קלעה הכוהנים הקדושים רבי יוסף ורבי יצחק. בעל שופרה דיוסף.",
+   "dur": 845,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "guEzILUtcpE",
+   "title": "כשפים נתפסים גם בבני תורה וגם צדיקים יסודי עולם!",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "nV-8dNYB7Ts",
+   "title": "כתיבה על צלחות. רב פעלים 14",
+   "dur": 7308,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "DL2Ro6yc2zY",
+   "title": "לג בעומר באנגלית",
+   "dur": 1665,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "vm0Cc7ZWVt4",
+   "title": "לך לך סוד המרכבה אבר שכינה",
+   "dur": 1015,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "82UGD5U2MUA",
+   "title": "למען תזכרו אבן העזר סימן ה' סעיף א",
+   "dur": 640,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "TEElqy3z_fc",
+   "title": "מבוא לתורת האר\"י חלק א' - הרב אוהד תורג'מן שליט\"א שליט\"א",
+   "dur": 4104,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "tx4ndBy0rwQ",
+   "title": "מה המלאך השבועי?",
+   "dur": 5399,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "R29623nTTk0",
+   "title": "מורה הפרישות 2",
+   "dur": 3480,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVWMP48nmpw9kUx_N40-vFt",
+     2
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "3DKsrfQpjAg",
+   "title": "מימון בן נח. נח הציל גם את השדים מהמבול",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "wHRFDRs8caA",
+   "title": "מימונה שמחה תירבחו ותסעדו",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "3oNBVE0SG9k",
+   "title": "מיקום השמש והירח במעלות",
+   "dur": 3353,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xW_8leA3L6QBHpjlBzdLV7J",
+     4
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "wBFRbSUpOts",
+   "title": "מלאכי התקופה. אבני בורלא 4",
+   "dur": 5510,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "SGyU7YFHuCM",
+   "title": "מנהגי השופר באיטליה",
+   "dur": 835,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "snCCsA4IoxM",
+   "title": "מספרים בערבית בשתי דקות",
+   "dur": 290,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     8
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "Cn49uveIpLM",
+   "title": "מעיין השביעי 10 נהר כב כג. סוד האגוז למנוע כשפים לחתנים וילדים",
+   "dur": 5620,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "MXFOpHVW58w",
+   "title": "מעיין השביעי 11 נהר כד כה",
+   "dur": 4991,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "Y_7yxEGc8gA",
+   "title": "מעיין השביעי 12 נהר כו המיטה של שלמה המלך סוד ההכנה וספר מפתח הזהב",
+   "dur": 6115,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "9q10WINuieI",
+   "title": "מעיין השביעי 5 נהרות יא עד יד",
+   "dur": 8439,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "az1hA6VacNc",
+   "title": "מעיין השביעי 8 נהר יט",
+   "dur": 5646,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "TKwxux-Xr2M",
+   "title": "מעיין השביעי 9 נהר כ כא",
+   "dur": 5675,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "QBheDbWzw7Y",
+   "title": "מעין השביעי 13 הכנה לניסן. נהר כז כח.",
+   "dur": 6042,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "8ouq50zOfsc",
+   "title": "מערת חכמי המערב בצפת בבית העלמין העתיק. חודשה על ידי אחייני היקר רבי יוחנן סבג אחראי מטעם המועצה.",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "z72CtjKegyE",
+   "title": "מעשה ברבי יוסף מערבי",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "CoEav-WSTwA",
+   "title": "מצאנו את כתב ידו של רבי מרדכי בן מלכה זיע''א בקבלה",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "39ASkRZ1dMQ",
+   "title": "משנת חסידים 1 מסכת הוית הנשמות",
+   "dur": 702,
+   "src": [
+    "old"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "EPHszoCKyTY",
+   "title": "משנת חסידים 2",
+   "dur": 511,
+   "src": [
+    "old"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "0Bt4MTl_sos",
+   "title": "משנת חסידים 3 סוד נשמות דאצילות כנפי יונה. וזיהרא עילאה",
+   "dur": 1001,
+   "src": [
+    "old"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "bZLs72swmDg",
+   "title": "נזירות 1",
+   "dur": 5240,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "up88ZhDl4Lk",
+   "title": "נר יוסף מערבי 1 נר ראשון חנוכה תשפו",
+   "dur": 3035,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVvLqIQT9UjE9SbE3nulfuT",
+     1
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "OsL1grNrZqs",
+   "title": "נר יוסף מערבי 2",
+   "dur": 1971,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVvLqIQT9UjE9SbE3nulfuT",
+     2
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "XcV3dDx31zc",
+   "title": "נר יוסף מערבי 3 נר שלישי",
+   "dur": 2467,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVvLqIQT9UjE9SbE3nulfuT",
+     3
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "Ait7p-uVshg",
+   "title": "נר יוסף מערבי 4 נר רביעי",
+   "dur": 2280,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVvLqIQT9UjE9SbE3nulfuT",
+     4
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "1k4gGaNSaIk",
+   "title": "נר יוסף מערבי 5 נר חמישי",
+   "dur": 3365,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVvLqIQT9UjE9SbE3nulfuT",
+     5
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "PpdsGbe5MUo",
+   "title": "נר יוסף מערבי 6 נר שישי.",
+   "dur": 5570,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVvLqIQT9UjE9SbE3nulfuT",
+     6
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "4aJAVa6cn8I",
+   "title": "נר יוסף מערבי 7 נר שביעי",
+   "dur": 1602,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVvLqIQT9UjE9SbE3nulfuT",
+     7
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "ibe_fiwzvSE",
+   "title": "נר יוסף מערבי 8 ההילולא",
+   "dur": 4140,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVvLqIQT9UjE9SbE3nulfuT",
+     8
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "BGPotJgyoCo",
+   "title": "סגולה נגד עין הרע מספר הפעולות למהרח''ו",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "wQ0bHFFmqDE",
+   "title": "סגולת האפיקומן",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "-6C81ubmr34",
+   "title": "סגולת המרור ללידה קלה אם תשא עליה כזית מרור",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "--Ays3npGTA",
+   "title": "סגולת הערבה של הושענא רבה לעת צרה שלא תבוא. מבנו של רבנו החיד''א",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "yNvLxE16aIU",
+   "title": "סגולת פרסה של סוס. רב פעלים 15",
+   "dur": 4690,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "ayUBYo7N07o",
+   "title": "סדר עליית הפרצופים ביום טוב לפי הרשש",
+   "dur": 5433,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "gw0oqpSTVPk",
+   "title": "סוד דרכי החיים",
+   "dur": 792,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "Y2z1vcUG89I",
+   "title": "סוד הלחשים דרישות מלאכים 23 דרישה ז חקירה ו ז",
+   "dur": 6699,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xWmzYsU2AF5-8CPOxahABLu",
+     24
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "jnAbC_SWzrM",
+   "title": "סוד המוזיקה בקבלה חלק ב",
+   "dur": 753,
+   "src": [
+    "old"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "elrP8Sg7YyA",
+   "title": "סוד הפרשה מקץ",
+   "dur": 2607,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "Z-bVXoencrc",
+   "title": "סוד הצללים ליל הושענה רבה",
+   "dur": 9554,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "MidvQRPN-t4",
+   "title": "סוד הרוחות והנפשות 2",
+   "dur": 6528,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xXbGYyLvnn-aZ--a3QwoFtu",
+     2
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "Ib2oeDL_vxk",
+   "title": "סוד הריקוד בשמחת תורה בכל כוחו",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "tKSitCSqKWI",
+   "title": "סוד יום כיפור ודרושי המלבוש. שיעור חזק!!! תשפה",
+   "dur": 4900,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "bBGi-HfO6Tc",
+   "title": "סוד קרבן פסח וכשפי מצרים. רב פעלים 13",
+   "dur": 7731,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVpuOeWAjVGXZv-PJED9Wgg",
+     13
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "4NKrfRbZQVg",
+   "title": "סטטיסטיקה...",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "yuVNLjo-Gag",
+   "title": "סידור הרשש באנגלית sidoor harashash",
+   "dur": 4940,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "SAdED23KTcs",
+   "title": "סימן עז סעיף א מורד",
+   "dur": 702,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "b2KFM71UCbY",
+   "title": "סיפור על רבי יעקב בנו של הבן איש חי זיע''א",
+   "dur": 744,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "SmrxBorvkdI",
+   "title": "סיפורים על רבי חיים ויטאל בהילולת תשפד",
+   "dur": 3140,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "a2DabLRS_xU",
+   "title": "סעודה באגדיר לכבוד רבי כליפא בן מלכא",
+   "dur": 2005,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "EFIP1awdrcY",
+   "title": "ספר בקבלה מעשית הרב בניהו שמואלי ראש ישיבת המקובלים נהר שלום",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "MXBfDgfWnFU",
+   "title": "ספר הזכרונות והתולדות של ירושלים מאת הרב קואינקא זיע''א",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "1cM0P9hyfH0",
+   "title": "ספר המלכות 11 פ''א יב",
+   "dur": 7079,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     12
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "4J8u3BKo0n4",
+   "title": "ספר המלכות 12 פ'א יג",
+   "dur": 6139,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     13
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "Fpq9E_vF-90",
+   "title": "ספר המלכות 13 פ'א טו",
+   "dur": 7497,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     14
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "8cC4xNeKDfw",
+   "title": "ספר המלכות 14 פ'א משנה טו עד כ",
+   "dur": 5652,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     15
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "iENuOVDIK1E",
+   "title": "ספר המלכות 15 פ'א משנה כמה כא",
+   "dur": 3098,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     16
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "jDl7O3GveiY",
+   "title": "ספר המלכות 16 פ'א משנה כב כג כד",
+   "dur": 4616,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     17
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "PcXdnZtwpdQ",
+   "title": "ספר המלכות 17 פ'א כה - כט בעניין הכשפים",
+   "dur": 8489,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     18
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "o_oWt42gpa4",
+   "title": "ספר המלכות 18 סיום פרק א תחילת ב. סיפורים על איית כלילא וכפר טינריר",
+   "dur": 4591,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     19
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "yFFUhjQ0jnw",
+   "title": "ספר המלכות 19 פרק ב ב ג",
+   "dur": 4760,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     21
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "15fdxnPlafs",
+   "title": "ספר המלכות 20 פרק ב משנה ד ה",
+   "dur": 3641,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     20
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "PYsOvqCFBZI",
+   "title": "ספר המלכות 21 פרק ב הלכה ו ז גלגל הטבע והכפל",
+   "dur": 5070,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     22
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "3J0NTkzPK4A",
+   "title": "ספר המלכות 22 פרק ב הלכה ח עד טו",
+   "dur": 3070,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     23
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "n22ek9tQQY8",
+   "title": "ספר המלכות 23 פרק ג הלכה את ב'",
+   "dur": 6711,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     24
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "Sl-I41VjZ9s",
+   "title": "ספר המלכות 25 הכנה לפסח. פ'ג ה עד סוף הפרק.",
+   "dur": 5751,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     26
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "5YenrJAH2B8",
+   "title": "ספר המלכות 26 פרק ד הלכה א.",
+   "dur": 5405,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     27
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "_VO3Bxp_ArM",
+   "title": "ספר המלכות 27 פרק ד הלכות ב ג",
+   "dur": 3240,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     31
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "Hp7pZ1psBL4",
+   "title": "ספר המלכות 28 פרק ד ד הבעל שם מלונדון",
+   "dur": 4349,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     28
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "_Zg9z-gSePY",
+   "title": "ספר המלכות 29 פרק ד' משניות ה עד הסוף",
+   "dur": 4486,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     29
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "awNvYaHgnhc",
+   "title": "ספר המלכות 30 פרק ה משניות א ב",
+   "dur": 4031,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     30
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "nlI8kHLsRyE",
+   "title": "ספר המלכות 31 פרק ה הלכה ג' ד'",
+   "dur": 4830,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     32
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "ql1JF38IxV0",
+   "title": "ספר המלכות 32 פרק ה הלכות ה ו",
+   "dur": 5610,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "YMuLqzg8x8o",
+   "title": "ספר המלכות 33 פרק ה ופרק ו א ב",
+   "dur": 7697,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     33
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "TWbqTL-C3ms",
+   "title": "ספר המלכות 34 פרק ו עד הסוף פרק ז הלכה א'. שיעור חזק",
+   "dur": 5574,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     34
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "MgTO_zJySmc",
+   "title": "ספר המלכות 35 פרק ז כולל סגולות",
+   "dur": 3640,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     35
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "gkLk9EDJwW4",
+   "title": "ספר המלכות 36 פרק ח הלכה א ב. סוד המוזיקה בקבלה",
+   "dur": 6825,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     36
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "T_m3pFiqG5s",
+   "title": "ספר המלכות 37 פרק ח הלכה ג' ד'",
+   "dur": 4995,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     37
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "j5zcLKylItY",
+   "title": "ספר המלכות 38 הדומיאל וממשלתו בכוכבי המבוכה. וקצת עניין הלחשים. סוף פרק ח. פרק ט' הלכה א ב",
+   "dur": 7088,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     38
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "5zpOCT6Ce0E",
+   "title": "ספר המלכות 40 שיעור אחרון.",
+   "dur": 6358,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "5l85ZCEczOI",
+   "title": "ספר הפרכוס",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "chAPHu1ShcE",
+   "title": "ספר הפרכוס. הילולת רבי כליפא בן מלכה",
+   "dur": 5690,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "q6u6vGk-K6Y",
+   "title": "ספר התכונה הקדמה ופרק ראשון",
+   "dur": 3158,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xW_8leA3L6QBHpjlBzdLV7J",
+     5
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "Wx8nO3WLcUU",
+   "title": "ספר מלכות 24 פ'ג הלכה ג' ד'",
+   "dur": 4386,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV85zmiBsjUW1o-ZTU3NGli",
+     25
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "PkVwz7fz-FI",
+   "title": "ספר פתחי עולם 1 בחכמת התכונה",
+   "dur": 5670,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xW_8leA3L6QBHpjlBzdLV7J",
+     2
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "lY4tcpFivGE",
+   "title": "ספר פתחי עולם להשיג במכון חכמי המערב 025820539",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "z0nI_JnQvlc",
+   "title": "ספר צרור החיים. שיעור במונסי ניו יורק",
+   "dur": 5410,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "fzpSfP7-w1c",
+   "title": "ספר שושן המלבוש אחרי 450 שנה יוצא לאור",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "5jVxYizaNWQ",
+   "title": "עלי באר שיר עליית השכינה. בעל המים רבי יעקב נחמיאס",
+   "dur": 596,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "9DJsF2SSmUc",
+   "title": "עליות שבת בתורת חכם (סימן ע''א).",
+   "dur": 3424,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "OZkvawG81EY",
+   "title": "עניין הכוחות בספר נחש הנחושת",
+   "dur": 2635,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "zAS5OUdcm_E",
+   "title": "עניין הכשפים גורל החול 15 שער יז כחול הים",
+   "dur": 4988,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xV9_O3PXRFDxAIdxm7UzUAV",
+     20
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "t-_U5MFEgxs",
+   "title": "ענייני סוכות בהלכה וקבלה. הרב עובדיה יוסף שליט\"א (בן רבי יעקב).",
+   "dur": 1257,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "je5mjsDOXY4",
+   "title": "ענייני רוחות 4 ומעט על המצב והמלחמה",
+   "dur": 8161,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xXbGYyLvnn-aZ--a3QwoFtu",
+     3
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "pEOujrhdJsI",
+   "title": "ענייני רוחות רעות ודיבוקים 1",
+   "dur": 6286,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xXbGYyLvnn-aZ--a3QwoFtu",
+     1
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "shwaGU8qyHg",
+   "title": "עשרים שנה, ואין מי שימלא את מקומו של הרב כדורי",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "Xj3dJXmya-s",
+   "title": "פדיון נפש ערב ראש השנה בכותל תשפ''ג לכלל ישראל. שנה טובה ומבורכת לכל תלמידי ולכל בית ישראל.",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "eJsruvYyGXw",
+   "title": "פורים איזה גורל השתמש המן וסוד הפור",
+   "dur": 3201,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "7EHrPxDyhCA",
+   "title": "פורים המשולש קצרצר",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "S3oGeYYYoFs",
+   "title": "פרסום רי דמן עכו",
+   "dur": 45,
+   "src": [
+    "old"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "mnW_zPyMelo",
+   "title": "פרשת בא",
+   "dur": 2771,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "Zr81P9JIUIg",
+   "title": "פרשת בראשית הרב הגאון עובדיה יוסף בן רבי יעקב שליט''א",
+   "dur": 941,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "srvAxFpyu4o",
+   "title": "פרשת ויקהל פיתוחי חותם",
+   "dur": 4025,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "EGOxXFmuDac",
+   "title": "פרשת משפטים",
+   "dur": 3512,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "K7cN3HcfKY0",
+   "title": "פרשת פנחס בניו יורק ברוקלין",
+   "dur": 1510,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "4objNLLANuQ",
+   "title": "פרשת פקודי רבי יצחק בן וואליד",
+   "dur": 3512,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "8O3yzUA8zxc",
+   "title": "פרשת תזריע פתוחי חותם",
+   "dur": 2691,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "TzGGup1iLPg",
+   "title": "פתחי עולם 10 פרק ב'.",
+   "dur": 4780,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xW_8leA3L6QBHpjlBzdLV7J",
+     12
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "lIkenW9bR0Q",
+   "title": "פתחי עולם 11 פרק ד ה ו. סוד הממון הכסף והעושר.",
+   "dur": 6105,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xW_8leA3L6QBHpjlBzdLV7J",
+     14
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "iL3GQMyzsnc",
+   "title": "פתחי עולם 12 פרק ו ז.",
+   "dur": 2799,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xW_8leA3L6QBHpjlBzdLV7J",
+     13
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "0WARk1kc67A",
+   "title": "פתחי עולם 2 כוחות בתי המקור והמקרה",
+   "dur": 5275,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xW_8leA3L6QBHpjlBzdLV7J",
+     1
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "e1yWjgwu-Q4",
+   "title": "פתחי עולם 3 שפלות גלות ונשיאות הכוכבים",
+   "dur": 5346,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xW_8leA3L6QBHpjlBzdLV7J",
+     8
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "XKAfRwtq3_U",
+   "title": "פתחי עולם 4 כח הגבולים כוח הפנים ושמחת הכוכב (עמוד 53 עד 60).",
+   "dur": 5775,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xW_8leA3L6QBHpjlBzdLV7J",
+     7
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "TJGetXOGnjc",
+   "title": "פתחי עולם 5 עניין המבטים ועשר מעלות שבכוכב",
+   "dur": 4440,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xW_8leA3L6QBHpjlBzdLV7J",
+     6
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "SKDJIQAF8k8",
+   "title": "פתחי עולם 6 מחברות הכוכבים, האלפרדר והליג' אקודקודין. שיעור עמוק ומרתק.",
+   "dur": 5918,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "_hkW6J-H48g",
+   "title": "פתחי עולם 7 זמני מצעד המזלות, שמות האנשים, ענייני רוחות המושבות בעולם",
+   "dur": 7285,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xW_8leA3L6QBHpjlBzdLV7J",
+     10
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "vM3F7XblAEs",
+   "title": "פתחי עולם 8 גורל הלבנה מנזל אל קאמר",
+   "dur": 6240,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xW_8leA3L6QBHpjlBzdLV7J",
+     9
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "3kguIrqYuH4",
+   "title": "פתחי עולם 9 פרק א",
+   "dur": 5325,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xW_8leA3L6QBHpjlBzdLV7J",
+     11
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "UtsFHrgzdrA",
+   "title": "ציפצופי עופות 3",
+   "dur": 2924,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xUou48MSy_pGej4ZM4d2RD6",
+     2
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "OuiW_H4uxm0",
+   "title": "צפצופי עופות ושיחת דקלים 1 פורים.",
+   "dur": 3675,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xUou48MSy_pGej4ZM4d2RD6",
+     3
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "mD9TjRk8a-s",
+   "title": "קבורת רחל אשת רבי עקיבא",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "yQsws8so3D8",
+   "title": "קבלה מעשית 11 כשפים וחסימות",
+   "dur": 7126,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xU1Ll2ysmS5uIldI_Sz5gC7",
+     15
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "zjUmhbRA1h8",
+   "title": "קבלה מעשית וקבלת האר'י והרשש והקשר ביניהם ",
+   "dur": 7680,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "39d23bgIHpI",
+   "title": "קבר החמדת ימים בטורקיה",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "aIeXz2whX8g",
+   "title": "קינות שאחרי ערבית בית ועד העדה המערבית תשפד",
+   "dur": 3530,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "yyBrI-pWdvY",
+   "title": "קינות שאחרי ערבית ט באב תשפג",
+   "dur": 3378,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "GXPZxzb0R24",
+   "title": "קינות שקודם ערבית בית ועד העדה המערבית תשפד",
+   "dur": 2960,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "3rXyrxLFdK0",
+   "title": "קינות תשעה באב עם הפייטן נזר ישראל רבי דוד עטיה היהודי.. התשפ'ג",
+   "dur": 2720,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "2Q00if8AMJU",
+   "title": "קמיע מקורי שכתב רבי יהודה פתיא זיע''א",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "L5vkADXtlBE",
+   "title": "רב פעלים 1",
+   "dur": 4351,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVpuOeWAjVGXZv-PJED9Wgg",
+     12
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "k_tPnZfQFP0",
+   "title": "רב פעלים 12. ענייני רפואות השדים והרוחות ",
+   "dur": 7981,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVpuOeWAjVGXZv-PJED9Wgg",
+     1
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "dc5AHoK3TRE",
+   "title": "רב פעלים 2 לחשים על המים",
+   "dur": 8140,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVpuOeWAjVGXZv-PJED9Wgg",
+     11
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "aagRPlZvwjM",
+   "title": "רב פעלים 3 סוד כתיבה על צלחות רפואה ",
+   "dur": 7383,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVpuOeWAjVGXZv-PJED9Wgg",
+     10
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "8yfQpm83XWk",
+   "title": "רב פעלים 4",
+   "dur": 4428,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVpuOeWAjVGXZv-PJED9Wgg",
+     9
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "GXLN6VBFgew",
+   "title": "רב פעלים 8",
+   "dur": 4170,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVpuOeWAjVGXZv-PJED9Wgg",
+     5
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "lFyTVFF0ork",
+   "title": "רבי אברהם ואזנה זיע'א",
+   "dur": 261,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "Dn8U3O8QEkc",
+   "title": "רבי אליעזר דאבילא ברבט",
+   "dur": 575,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "G8G22gmDymQ",
+   "title": "רבי אליעזר די אבילא",
+   "dur": 1758,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "nMgO_Bj4wjc",
+   "title": "רבי דוד הכהן מווזאן",
+   "dur": 41,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "k6ibmw4UHmY",
+   "title": "רבי דוד ומשה הצדיק הגדול תמימותם של אבותינו הקדושים. קליפת קע'ו עולה פצו בשמים פיהם ונהפך לצוףאמרתך.",
+   "dur": 721,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "np3xfMj49Rc",
+   "title": "רבי דניאל השומר אשכנזי זיע''א",
+   "dur": 1640,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "sb3c4SeY9p0",
+   "title": "רבי דניאל השומר אשכנזי זיע'א",
+   "dur": 336,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "FuGK20i6hjc",
+   "title": "רבי ידידיה רפאל אבולעפיה 2",
+   "dur": 1505,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "5qYNUFxEy3U",
+   "title": "רבי ידידיה רפאל אבולעפיה זיע''א טו סיון",
+   "dur": 436,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "6PdqnU4gt4w",
+   "title": "רבי יהודה הטורקי שנגלה לו אליהו ז\"ל",
+   "dur": 26,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "R0BF7wL6OYU",
+   "title": "רבי יהושע ברדוגו מקריית אתא",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "WtAuAnMlk14",
+   "title": "רבי יוסף קארו והמגיד",
+   "dur": 2746,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "BUvLneWWfXY",
+   "title": "רבי יחיא בן ברוך הכהן אזוג זיע'א בווארז'ז'ת",
+   "dur": 101,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "jWhTA8IRyXQ",
+   "title": "רבי יעקב אבוחצירא וקבלה מעשית ההילולא",
+   "dur": 3966,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "NNqWxt3Fgkg",
+   "title": "רבי ישועה בן שושן זיע'א מסמן באצבעו את תיקוני הדיקנא בלי שישימו לב. נפטר בז''ך אלול.",
+   "dur": 29,
+   "src": [
+    "old"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "7UW9ALPAljg",
+   "title": "רבי ניסים עיני זיע''א",
+   "dur": 3955,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "__3ygq9OvhU",
+   "title": "רבי עמרם בן דיוואן",
+   "dur": 283,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "srVgs4bvzLE",
+   "title": "רבי רפאל אנקווה",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "hu0WCW7Hyy4",
+   "title": "רבי שאול נחמיאס זיע'א במרקש נכד של רבי יששכר בעל המעיין",
+   "dur": 1550,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "Wuncv9N11U8",
+   "title": "רבי שלמה בלחנס. באוריקה",
+   "dur": 645,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "SQwO6gKSgmE",
+   "title": "רבי שלמה עמאר ממראכש",
+   "dur": 1628,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "WXLRk6a8Znc",
+   "title": "רגע שיא בשידור החי",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "w7yCUC0qe6A",
+   "title": "רגע שיא בשידור החי",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "pW63vOcd2x0",
+   "title": "רגע שיא בשידור החי",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "x-Edy6eRHXM",
+   "title": "רגע שיא בשידור החי",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "8AdWQqXIdgo",
+   "title": "רגע שיא בשידור החי",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "dQIl84QWSZg",
+   "title": "רגע שיא בשידור החי",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "cskC-7dy5Xc",
+   "title": "רגע שיא בשידור החי",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "vJ1dkkqawkw",
+   "title": "רגע שיא בשידור החי",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "UZ11OL9Yi68",
+   "title": "רגע שיא בשידור החי",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "6-4QRRx9ARI",
+   "title": "רגע שיא בשידור החי",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "mkHkrgeZ8nc",
+   "title": "רגע שיא בשידור החי",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "jNF8ipSFj6w",
+   "title": "רגע שיא בשידור החי",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "qB0kC-qoH7A",
+   "title": "רגע שיא בשידור החי",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "1DGayUj-o7U",
+   "title": "רחובות הנהר ג' ע'ג שיעור 9",
+   "dur": 5960,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "ur9yUcJKklo",
+   "title": "רשיון מרב שעיילה מקרסטיר במרוקו",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "ThD1fDd3PnI",
+   "title": "שארית יוסף אבן ציאח 2",
+   "dur": 6943,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xXGSrqBmGaHRwaZBFl8zhAY",
+     3
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "O4DSWw33emw",
+   "title": "שארית יוסף אבן ציאח 3",
+   "dur": 7086,
+   "src": [
+    "old",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xXGSrqBmGaHRwaZBFl8zhAY",
+     4
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "CN1ohKxfOAY",
+   "title": "שארית יוסף אבן ציאח 4",
+   "dur": 6811,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xXGSrqBmGaHRwaZBFl8zhAY",
+     5
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "Ehqx3Xi4vGE",
+   "title": "שארית יוסף אבן ציאח 5",
+   "dur": 6785,
+   "src": [
+    "pl",
+    "upload"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xXGSrqBmGaHRwaZBFl8zhAY",
+     6
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "EUQSDkIGSws",
+   "title": "שארית יוסף פרק כ'.",
+   "dur": 2281,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "ss9v0Dj84gE",
+   "title": "שארית יוסף ציאח פרק טו",
+   "dur": 5704,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xXGSrqBmGaHRwaZBFl8zhAY",
+     17
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "OmKXIyqJ6jA",
+   "title": "שארית יוסף שער יז",
+   "dur": 7424,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xXGSrqBmGaHRwaZBFl8zhAY",
+     18
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "LizxqmiSk5U",
+   "title": "שארית יוסף שער יח פרעון והלואה בחדרי המרכבה",
+   "dur": 6063,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xXGSrqBmGaHRwaZBFl8zhAY",
+     19
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "f-i5gSISGxs",
+   "title": "שארית יוסף שער יט סוד העופרת וביטול כשפים",
+   "dur": 3645,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xXGSrqBmGaHRwaZBFl8zhAY",
+     20
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "GhdiGdzrYfk",
+   "title": "שארית יוסף שער כא כב וסוד העופרת",
+   "dur": 4835,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "fw9_oEyESAw",
+   "title": "שבחי הרש''ש זי''ע לכבוד ההילולא",
+   "dur": 4505,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "JHmv5Fk6rsY",
+   "title": "שבשתא דינקותא",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "1dgY-kkfdMw",
+   "title": "שדים בארץ ישראל 1. רב פעלים 5",
+   "dur": 8002,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVpuOeWAjVGXZv-PJED9Wgg",
+     8
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "vDfEMRkGAc8",
+   "title": "שדים בארץ ישראל 2. רב פעלים 6",
+   "dur": 7812,
+   "src": [
+    "live",
+    "pl"
+   ],
+   "pl": [
+    [
+     "PLLUBXC9MO-xVpuOeWAjVGXZv-PJED9Wgg",
+     7
+    ]
+   ],
+   "date": ""
+  },
+  {
+   "id": "mSRWuJ5NGGI",
+   "title": "שובבים",
+   "dur": 356,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "IXDimGE9xsU",
+   "title": "שומרי החומות. צדיק נסתר בוכה על השכינה כל לילה בכותל. כל לילה! לפחות שלושים שנה ברצף! אשריכם ישראל!",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "qP_Yl3pRuc0",
+   "title": "שיח מעיראק (לפי הקידומת) עושה כישוף עם שמות הקודש... בשם אהיה אשר אהיה אדני אל שדי צבאות... וזה המעט",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "GvntJzb5GkE",
+   "title": "שיעור בכולל ליקווד בעניין כלי ורוחא ברשש. עץ חיים שער כ פ'ט",
+   "dur": 5865,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "UogyyWIPX0o",
+   "title": "שיעור בספר מלאך המשיב חלק א'.",
+   "dur": 979,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "EbzqxAgMFmk",
+   "title": "שיעור הכנה לראש השנה תשפז",
+   "dur": 2590,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "x70FkdwzhfQ",
+   "title": "שיעור חזק בדברי הרשש לכבוד ההילולה נהר שלום דף כג",
+   "dur": 7184,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "pYPngIIlwvM",
+   "title": "שיעור חזק על עניין הגלגולים ועונש כף הקלע",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "ZjvUthpAFmE",
+   "title": "שיעור ט באב על גירוש ספרד ומקובלי הגירוש",
+   "dur": 2705,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "FSNgXjSgif0",
+   "title": "שיעור לחיים [ההתחלה בגורל החול] שיעור חזק ביותר!",
+   "dur": 5531,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "__U3HZiaAlA",
+   "title": "שליח ציבור בנעילת כיפור",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "CRHp_F-BprI",
+   "title": "שנה טובה גמר חתימה טובה",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "CEYAFtFvW4g",
+   "title": "שער טנתא ב וקצת בענייני רוחות וסוד ההבל",
+   "dur": 1918,
+   "src": [
+    "old"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "GW4zpW-8V9Q",
+   "title": "שרטוטי כף היד 1",
+   "dur": 4769,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "8103nkLjjzM",
+   "title": "שרטוטי כף היד 2 שושנת יעקב",
+   "dur": 5689,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "mx5ihL0QgDg",
+   "title": "תגובה לר' אביתר מלאכי הי''ו",
+   "dur": 1840,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "8VB8VmcE6gE",
+   "title": "תהי שבע רצון ומלא ברכת השם",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "UNaa1qiM6mY",
+   "title": "תורת חכם נטילת ידיים וחכמת הצירוף",
+   "dur": 4553,
+   "src": [
+    "upload"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "y7sMnRH4wfc",
+   "title": "תיקון הברית שובבים תשפה",
+   "dur": 2478,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "IaGQIGIpnco",
+   "title": "תיקון המזוזה למקובלי צרפת רש''י ותלמידיו",
+   "dur": 4335,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "JOyP1ptIFF4",
+   "title": "תיקון המטבעות",
+   "dur": 900,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "DhfjUWvlh88",
+   "title": "תיקון המטבעות",
+   "dur": 992,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "U3OREC2pp7E",
+   "title": "תיקון הצדקה",
+   "dur": 786,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "-KTzOYf58F8",
+   "title": "תיקון להשמדת ראשי הנחש",
+   "dur": 2486,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "nSXLfevvER0",
+   "title": "תיקון רחל בימי בין המצרים",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "7QiqDTbxB8M",
+   "title": "תיקוני עוונות וסוד גלגולי שלג נהר שלום דף מו מז על פי הרשש",
+   "dur": 5745,
+   "src": [
+    "live"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "ohldBQIvVPA",
+   "title": "תלמוד תורה כנגד כולם",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  },
+  {
+   "id": "P2uIMAmt014",
+   "title": "תרועה גדולה בחצוצרות כסף לראשונה על אדמת אמריקה.",
+   "dur": 0,
+   "src": [
+    "short"
+   ],
+   "pl": [],
+   "date": ""
+  }
+ ]
+}

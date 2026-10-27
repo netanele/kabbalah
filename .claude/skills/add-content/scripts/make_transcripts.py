@@ -8,6 +8,10 @@ with [עמ' N] markers instead; each line becomes a paragraph and a leading [ע�
 Holy-name rules on the transcript text: the Name with or without niqqud -> הוי"ה; "אהיה אשר אהיה" ->
 אהי"ה אשר אהי"ה; שדי as a Name -> שד"י by phrase rules only, so "יעלות, שדי וחול" and שדים stay as spoken.
 
+Video units follow the repo rule (CLAUDE.md "Transcripts"): the lines are written to <ws>/out/transcripts/<page>-<n>.json
+(copied to the repo's transcripts/ at integration) and the page holds only a stub <details class="tr" data-transcript="…">
+that js/transcripts.js fills. Text units stay inline. The page must load js/transcripts.js before js/find.js.
+
 new mode:      writes the whole <section id="transcripts"> part (h2, lead, one block per new unit).
 existing mode: inserts the new blocks into the existing transcripts part before its </section>, in unit order
                (before the first old block with a higher number, if any). A unit whose tr-N block already
@@ -27,7 +31,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import _common as C  # noqa: E402
 
 WS = re.compile(r"\s+")
-TR_BLOCK = re.compile(r'<details class="tr" id="tr-(\d+)">.*?</details>', re.S)
+TR_BLOCK = re.compile(r'<details class="tr" id="tr-(\d+)"[^>]*>.*?</details>', re.S)
 
 
 def heb_num(n: int) -> str:
@@ -44,32 +48,39 @@ def short_url(unit: dict) -> str:
 
 def render_video(cfg, unit: dict, data: dict, count_names: dict):
     n = int(unit["n"])
-    lines = []
+    lines = []                      # JSON lines: {t, ts, text}
     count = 0
     for seg in data.get("segments", []):
         text = WS.sub(" ", str(seg.get("text", ""))).strip()
         if not text:
             continue
-        text = html.escape(C.holy(text, count_names), quote=False)
+        text = C.holy(text, count_names)
         start = int(float(seg.get("start", 0)))
-        lines.append('<p><a class="ts" href="%s" target="_blank" rel="noopener"><bdi>%s</bdi></a> %s</p>'
-                     % (C.time_href(unit, start), C.hms(start), text))
+        lines.append({"t": start, "ts": C.hms(start), "text": text})
         count += 1
     model = str(data.get("model", ""))
     credit = "<bdi>Whisper</bdi> של ivrit.ai" if "ivrit" in model else "<bdi>Whisper</bdi>"
     title = unit.get("title") or data.get("title") or unit["id"]
     dur = unit.get("duration_string") or data.get("duration_string") or ""
-    out = ['<details class="tr" id="tr-%d">' % n,
+    # Repo rule (CLAUDE.md "Transcripts"): the lines live in transcripts/<page>-<n>.json, loaded by js/transcripts.js;
+    # the page keeps only the stub with data-transcript and an empty .trbody.
+    stem = cfg.page[:-5] if cfg.page.endswith(".html") else cfg.page
+    rel = "transcripts/%s-%d.json" % (stem, n)
+    jpath = cfg.ws / "out" / rel
+    jpath.parent.mkdir(parents=True, exist_ok=True)
+    meta = "%s · %s קטעים · תמלול אוטומטי" % (dur, heb_num(count))
+    doc = {"page": stem, "id": "tr-%d" % n, "title": "%s · %s" % (C.unit_display(cfg, unit), title), "meta": meta,
+           "video": {"id": unit["id"], "url": C.unit_url(unit)}, "count": count, "lines": lines}
+    C.write_text(jpath, json.dumps(doc, ensure_ascii=False, separators=(",", ":")) + "\n")
+    out = ['<details class="tr" id="tr-%d" data-transcript="%s">' % (n, rel),
            '  <summary><span class="serif">%s · %s</span> '
            '<span class="n"><bdi>%s</bdi> · %s קטעים · תמלול אוטומטי</span></summary>'
            % (C.unit_display(cfg, unit), html.escape(title, quote=False), dur, heb_num(count)),
            '  <p class="lead">מקור: <a href="%s" target="_blank" rel="noopener"><bdi>%s</bdi></a> · '
            'תמלול אוטומטי: %s · לחיצה על חותמת הזמן פותחת את הסרטון באותה דקה.</p>'
            % (C.attr(C.unit_url(unit)), html.escape(short_url(unit), quote=False), credit),
-           '  <div class="trbody">']
-    out.extend(lines)
-    out.append("  </div>")
-    out.append("</details>")
+           '  <div class="trbody"><p class="tr-loading">טוען תמלול…</p></div>',
+           "</details>"]
     return "\n".join(out), count
 
 

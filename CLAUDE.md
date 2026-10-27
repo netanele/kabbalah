@@ -27,3 +27,13 @@
 
 ## Style and content
 See `README.md` (design tokens, fonts, sefirot colors, and the content rules for the meditation page).
+
+## Transcripts (תמלולים)
+- Transcripts are never inline in the HTML. Every video transcript lives in `transcripts/<page>-<n>.json` (one file per lesson/video; `<page>` = the html file name without `.html`, `<n>` = the number in the `<details class="tr" id="tr-<n>">`). Schema: `{page, id, title, meta, video:{id,url}, count, lines:[{t, ts, text, html?, href?, cls?}]}` (`t` seconds, `ts` display stamp, `text` plain text unless `html:true`, `href` only when the line's link is not `video.url&t=<t>s`, `cls` a paragraph class such as `song`).
+- The page keeps only the `<details class="tr" id="tr-<n>" data-transcript="transcripts/<page>-<n>.json">` with its `<summary>`, the lead paragraph and an empty `<div class="trbody"><p class="tr-loading">טוען תמלול…</p></div>`; `js/transcripts.js` (loaded before `js/find.js`) fetches and renders the lines. New pages with transcripts follow the same pattern; never paste transcript lines into the HTML.
+- Loading needs HTTP (the site at netanele.github.io/kabbalah, or `python3 -m http.server` locally); from `file://` the loader shows an explanation instead.
+
+## Books (ספרים) – Google Drive
+- The user's book library is the Google Drive folder **"Torah/Books"**: https://drive.google.com/drive/folders/1xseNntc6xbkkVhNdppPMGO_rAaE9Q_0N (id `1xseNntc6xbkkVhNdppPMGO_rAaE9Q_0N`, with sub-folders). Every book that a page offers the learner to read is shown **inside the page as a PDF preview** of the file from this folder (`<iframe src="https://drive.google.com/file/d/<FILE_ID>/preview">`), never as a copy in the repo.
+- If a needed book is not in the folder: find a downloadable PDF online (hebrewbooks, Sefaria, NLI, archive.org, publisher), give the user the link, and the user downloads it into the folder; then add its Drive file id to the page. Do not embed the external PDF directly.
+- Book ids and titles live in one place, `js/books.js` (Drive file id, title, author, folder); pages reference books by key.

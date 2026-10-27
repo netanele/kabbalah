@@ -281,12 +281,13 @@ EHYEH = re.compile("אהיה אשר אהיה")
 # phrase rules only, so the ordinary words שדים / שדיין / "יעלות, שדי וחול" (a book title) stay as spoken
 SHADDAI_AFTER_WORD = re.compile("(בשם|שם|מלכות|של|חותם|אל|כותבים|כל) שדי(?![\u05d0-\u05ea])")
 SHADDAI_BEFORE_WORD = re.compile("(?<![\u05d0-\u05ea])שדי (שאמר|הוויה)")
+ADONAI_MELECH = re.compile(r'(?<![\w"׳״])אדו?ני(?= מלך\b| ימלוך\b)')  # the Name spoken before מלך / ימלוך -> אדנ"י
 
 
 def holy(text: str, count: dict = None) -> str:
     """Library rule for spoken Names: the Name -> הוי"ה, אהיה אשר אהיה -> אהי"ה אשר אהי"ה, שדי as a Name -> שד"י."""
     count = {} if count is None else count
-    for key in ('הוי"ה', 'אהי"ה', 'שד"י'):
+    for key in ('הוי"ה', 'אהי"ה', 'שד"י', 'אדנ"י'):
         count.setdefault(key, 0)
     text, n = NAME_SUB.subn('הוי"ה', text)
     count['הוי"ה'] += n
@@ -296,6 +297,8 @@ def holy(text: str, count: dict = None) -> str:
     count['שד"י'] += n
     text, n = SHADDAI_BEFORE_WORD.subn('שד"י \\1', text)
     count['שד"י'] += n
+    text, n = ADONAI_MELECH.subn('אדנ"י', text)
+    count['אדנ"י'] += n
     return text
 
 

@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>סדר הלימוד: מן היסודות אל המעשה</title>
+<meta name="description" content="תוכנית לימוד אחת, ממוספרת, לכל מה שבספריית הקבלה: תשע מדרגות מהלכה ומידות דרך הספירות, דרכי השגה והייחודים אל חכמת הצירוף, עליית הנשמה, הקבלה המעשית והגורלות. כל 619 שיעורי הרב יהודה אוהד תורג'מן ביוטיוב, כל סקשן בספרייה וכל ספר, אחד אחרי השני, עם שער מהמקורות בין מדרגה למדרגה, מעקב התקדמות, וקריאת הספרים מתוך הדף.">
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#f4f0e6;--paper:#fffdf8;--ink:#26221c;--muted:#6f665a;--gold:#9c7a33;--gold2:#c9a75a;--line:#dcd2c0;--dark:#26221c;--warn:#9b5f58;--ok:#5f7a4a;--lvl1:#e6efe0;--lvl2:#efe7d6;--lvl3:#f3e0dd}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:120px}
+body{margin:0;background:var(--bg);direction:rtl;color:var(--ink);font-family:"Heebo","Noto Sans Hebrew",Arial,sans-serif;line-height:1.8;font-size:16.5px}
+h1,h2,h3,h4,.serif{font-family:"Frank Ruhl Libre","David Libre","Times New Roman",serif}
+a{color:#6d511d}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+header.hero{background:radial-gradient(1200px 500px at 80% -10%,#5a4a33 0%,#2b2620 55%,#1e1b17 100%);color:#f4ecdc;padding:56px 22px 48px;text-align:center}
+.hero .emblem{width:62px;height:92px;display:block;margin:0 auto 10px}
+.hero .kicker{color:var(--gold2);letter-spacing:.14em;font-size:.85rem;font-weight:500}
+.hero h1{font-size:clamp(2.2rem,6vw,4rem);margin:8px 0 14px;line-height:1.15;font-weight:900}
+.hero p{max-width:860px;margin:0 auto;color:#e6dcc8;font-size:1.12rem}
+.hero .dates{margin-top:16px;color:var(--gold2);font-size:.95rem}
+nav.top{position:sticky;top:0;z-index:30;background:#fffdf8f2;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:6px 10px;display:flex;gap:2px;flex-wrap:wrap;justify-content:center}
+nav.top a{color:#5a4423;text-decoration:none;font-size:.84rem;padding:4px 9px;border-radius:999px;border:1px solid transparent}
+nav.top a:hover{border-color:var(--line);background:#f3ecdf}
+nav.top a.nav-home{color:var(--gold);font-weight:700}
+.container{max-width:1100px;margin:auto;padding:26px 18px 60px}
+section{margin-top:46px}
+section>h2{font-size:2rem;border-bottom:2px solid var(--gold2);padding-bottom:8px;margin:0 0 6px;line-height:1.3}
+section>.lead{color:var(--muted);margin:0 0 18px;font-size:1.05rem}
+h3{font-size:1.35rem;margin:26px 0 8px;color:#4b3b22}
+h4{font-size:1.05rem;margin:14px 0 4px;color:#8a6a2a}
+p{margin:0 0 12px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:0 0 14px;box-shadow:0 3px 12px #3a2c100d}
+.card h3{margin-top:0}
+.q{border-right:4px solid var(--gold2);background:#faf6ec;padding:10px 16px;margin:10px 0 12px;border-radius:0 10px 10px 0;font-family:"Frank Ruhl Libre",serif;font-size:1.05rem}
+.q .who{display:block;color:var(--muted);font-family:"Heebo",sans-serif;font-size:.85rem;margin-top:4px}
+.note{border-right:4px solid var(--warn);background:#f8efed;padding:10px 16px;margin:10px 0 14px;border-radius:0 10px 10px 0}
+.good{border-right:4px solid var(--ok);background:#eef3e7;padding:10px 16px;margin:10px 0 14px;border-radius:0 10px 10px 0}
+table{width:100%;border-collapse:collapse;background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:.95rem;margin:8px 0 16px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top;text-align:right}
+th{background:#efe7d6;color:#4b3b22;font-weight:700}
+tr:last-child td{border-bottom:0}
+.tag{display:inline-block;background:#efe7d6;padding:1px 10px;border-radius:999px;font-size:.78rem;color:#4b3b22;margin-left:4px;white-space:nowrap}
+.tag.r{background:#f3e0dd;color:#6e3b36}.tag.g{background:#e6efe0;color:#3f5a30}.tag.b{background:#e3e9f3;color:#2f4468}
+ul.plain{margin:0 0 12px;padding-right:20px}
+ul.plain li{margin:0 0 6px}
+footer{margin-top:50px;color:var(--muted);font-size:.9rem;text-align:center;border-top:1px solid var(--line);padding-top:18px}
+bdi,.ltr{direction:ltr;unicode-bidi:isolate}
+a.src{display:inline-block;background:#efe7d6;color:#4b3b22;text-decoration:none;font-size:.8rem;padding:2px 10px;border-radius:999px;border:1px solid #e3d8c2}
+a.src:hover{background:#e6dcc5}
+button.btn{appearance:none;border:1px solid var(--line);background:#f3ecdf;border-radius:999px;font:500 .85rem "Heebo",sans-serif;padding:4px 12px;cursor:pointer;color:#4b3b22}
+button.btn:hover{background:#e9dfca}
+button.btn.on{background:var(--gold2);border-color:var(--gold2);color:#1e1b17}
+button.btn.dark{background:var(--dark);color:var(--gold2);border-color:var(--dark)}
+
+/* where am I */
+.whereami{position:sticky;top:40px;z-index:25;background:#2b2620f2;color:#f4ecdc;border-radius:14px;padding:10px 16px;margin:18px 0 6px;display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;box-shadow:0 6px 20px #1e1b1740;backdrop-filter:blur(6px)}
+.whereami b{color:#fff6e3;font-family:"Frank Ruhl Libre",serif;font-size:1.15rem}
+.whereami .bar{flex:1;min-width:140px;height:10px;background:#ffffff22;border-radius:999px;overflow:hidden}
+.whereami .bar i{display:block;height:100%;background:linear-gradient(90deg,#c9a75a,#e8d29a);width:0}
+.whereami .n{color:#cfc3ac;font-size:.88rem}
+.whereami button.btn{background:var(--gold2);border-color:var(--gold2);color:#1e1b17;font-weight:700}
+.whereami button.btn.ghost{background:transparent;color:#f4ecdc;border-color:#ffffff44;font-weight:400}
+.filters{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 18px;align-items:center}
+.filters .lbl{color:var(--muted);font-size:.9rem;margin-left:6px}
+
+/* ladder */
+.ladder{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:12px 8px;box-shadow:0 3px 12px #3a2c100d}
+svg.ladder-svg{display:block;width:100%;height:auto;max-width:1000px;margin:auto}
+svg.ladder-svg .rung{cursor:pointer}
+svg.ladder-svg .rung rect.bx{stroke:#5c4a2a;stroke-width:1.2}
+svg.ladder-svg .rung:hover rect.bx{stroke-width:2.5;stroke:var(--gold)}
+svg.ladder-svg text{font-family:"Heebo",sans-serif}
+svg.ladder-svg .t1{font:700 16px "Frank Ruhl Libre",serif;fill:#26221c}
+svg.ladder-svg .t2{font:400 11.5px "Heebo",sans-serif;fill:#6f665a}
+svg.ladder-svg .t3{font:500 11px "Heebo",sans-serif;fill:#4b3b22}
+svg.ladder-svg .band{font:700 13px "Heebo",sans-serif;fill:#4b3b22}
+svg.ladder-svg .rail{stroke:#cdbf9f;stroke-width:6;stroke-linecap:round}
+svg.ladder-svg .prog{fill:#c9a75a}
+
+/* stages */
+.stage{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:0 0 10px;margin:0 0 26px;box-shadow:0 3px 12px #3a2c100d;overflow:hidden}
+.stage>header{padding:16px 20px 10px;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px 16px;align-items:baseline}
+.stage>header h3{margin:0;font-size:1.6rem}
+.stage>header .lvl{font-size:.8rem;padding:2px 10px;border-radius:999px;font-weight:500}
+.lvl.l1{background:var(--lvl1);color:#3f5a30}.lvl.l2{background:var(--lvl2);color:#5a4423}.lvl.l3{background:var(--lvl3);color:#6e3b36}
+.stage>header .stat{color:var(--muted);font-size:.88rem;flex-basis:100%}
+.stage .sbar{height:8px;background:#efe7d6;border-radius:999px;overflow:hidden;margin:6px 0 0}
+.stage .sbar i{display:block;height:100%;background:var(--gold2);width:0}
+.stage .body{padding:12px 20px 0}
+.stage .goal{font-family:"Frank Ruhl Libre",serif;font-size:1.08rem;margin:0 0 6px}
+.stage .whyp{color:var(--muted);font-size:.95rem;margin:0 0 12px}
+ol.units{list-style:none;margin:0;padding:0}
+ol.units>li{display:grid;grid-template-columns:28px 58px 26px 1fr;gap:8px 10px;align-items:start;padding:8px 6px;border-top:1px solid #efe7d6}
+ol.units>li.head{display:block;background:#faf6ec;border-top:1px solid var(--line);margin-top:10px;padding:8px 12px;border-radius:10px 10px 0 0}
+ol.units>li.head .ht{font-family:"Frank Ruhl Libre",serif;font-weight:700;font-size:1.08rem;color:#3a2e1d}
+ol.units>li.head .hw{color:var(--muted);font-size:.9rem;margin:2px 0 0}
+ol.units>li.head .hc{float:left;display:flex;gap:6px;align-items:center}
+ol.units>li.enrich{opacity:.9}
+ol.units>li.enrich .no{color:#8a6a2a}
+ol.units>li.done .ttl{text-decoration:line-through;color:var(--muted)}
+ol.units>li.done{background:#f7f3ea}
+ol.units>li.here{outline:2px solid var(--gold2);outline-offset:-2px;background:#fff8e6;border-radius:8px}
+ol.units input[type=checkbox]{width:20px;height:20px;margin:4px 0 0;accent-color:var(--gold)}
+ol.units .no{font-family:monospace;color:#5a4423;font-size:.9rem;padding-top:3px;white-space:nowrap}
+ol.units .ic{font-size:1.1rem;padding-top:1px}
+ol.units .ttl{font-weight:500}
+ol.units .ttl a{text-decoration:none}
+ol.units .ttl a:hover{text-decoration:underline}
+ol.units .meta{color:var(--muted);font-size:.85rem;display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center}
+ol.units .why{color:#4b3b22;font-size:.9rem;margin-top:2px}
+ol.units .pg{color:var(--muted);font-size:.85rem}
+.hide{display:none!important}
+/* gate */
+.gate{margin:16px 20px 6px;border:2px solid var(--gold2);background:#fff8e6;border-radius:14px;padding:12px 16px}
+.gate h4{margin:0 0 6px;font-size:1.15rem;color:#4b3b22}
+.gate label{display:flex;gap:10px;align-items:flex-start;margin:6px 0;font-family:"Frank Ruhl Libre",serif;font-size:1.02rem}
+.gate label input{margin-top:6px;accent-color:var(--gold)}
+.gate label .who{display:block;color:var(--muted);font-family:"Heebo",sans-serif;font-size:.82rem}
+.gate .ok{margin-top:8px}
+.gate.passed{border-color:var(--ok);background:#eef3e7}
+.dang{margin:8px 20px 0;color:#6e3b36;font-size:.92rem}
+.dang b{color:#9b5f58}
+/* book preview */
+.bk{margin:4px 0 0}
+.bk .files{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.pv{margin:8px 0 4px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+.pv iframe{width:100%;height:620px;border:0;display:block}
+.pv .pvh{display:flex;justify-content:space-between;align-items:center;padding:4px 10px;background:#efe7d6;font-size:.85rem}
+.nodrive{color:var(--warn);font-size:.85rem}
+/* books table */
+.books .bkrow{display:grid;grid-template-columns:1fr auto;gap:6px 12px;padding:10px 0;border-top:1px solid #efe7d6}
+.books .bkrow .t{font-weight:700;font-family:"Frank Ruhl Libre",serif;font-size:1.08rem}
+.books .bkrow .a{color:var(--muted);font-size:.9rem}
+.books .bkrow .n{font-size:.9rem}
+/* catalog */
+details.ser{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:8px 14px;margin:0 0 8px}
+details.ser summary{cursor:pointer;font-weight:700;color:#3a2e1d}
+details.ser summary .n{color:var(--muted);font-weight:400;font-size:.85rem;margin-right:8px}
+details.ser table{margin:8px 0 4px;font-size:.9rem}
+.toc{columns:2;column-gap:28px;margin:0 0 14px;padding-right:20px;font-size:.95rem}
+@media(max-width:720px){.toc{columns:1}.hero{padding:44px 16px 36px}ol.units>li{grid-template-columns:24px 50px 22px 1fr;gap:6px}.pv iframe{height:480px}.whereami{top:36px}.books .bkrow{grid-template-columns:1fr}}
+@media print{nav.top,.whereami,.filters{display:none}.stage{break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="emblem" viewBox="0 0 60 92" aria-hidden="true" focusable="false"><g stroke="#c9a75a" stroke-opacity=".75" stroke-width="1.6" fill="none"><path d="M12 86h36M12 74h36M12 62h36M12 50h36M12 38h36M12 26h36M12 14h36M14 6v82M46 6v82"/><circle cx="30" cy="6" r="3" fill="#c9a75a"/></g></svg>
+  <div class="kicker">תוכנית לימוד · תשע מדרגות · 619 שיעורים · 62 ספרים</div>
+  <h1>סדר הלימוד: מן היסודות אל המעשה</h1>
+  <p>תוכנית אחת, ממוספרת, מלמעלה למטה, לכל מה שבספרייה: הלכה ומידות, הספירות והשמות, דרכי השגה והייחודים, חכמת הצירוף של רבי אברהם אבולעפיה ורבי יוסף צייאח, עליית הנשמה, הקבלה המעשית והגורלות. כל שיעור של הרב יהודה אוהד תורג'מן ביוטיוב, כל סקשן בספרייה וכל ספר הם יחידה אחת עם מספר קבוע. בין מדרגה למדרגה עומד שער: התנאים שהמקורות קובעים.</p>
+  <div class="dates" id="hero-stats">9 מדרגות · 748 יחידות · 619 שיעורים (547 שעות) · 52 סקשנים בספרייה · 68 יחידות ספר מ־62 ספרים · 11 תרגולים · 9 שערים</div>
+</header>
+
+<nav class="top" aria-label="ניווט">
+  <a class="nav-home" href="index.html">ספריית הקבלה</a>
+  <a href="#summary">תמצית</a>
+  <a href="#principles">העקרונות</a>
+  <a href="#ladder">הסולם</a>
+  <a href="#stages">המדרגות</a>
+  <a href="#stage-0">0</a><a href="#stage-1">1</a><a href="#stage-2">2</a><a href="#stage-3">3</a><a href="#stage-4">4</a><a href="#stage-5">5</a><a href="#stage-6">6</a><a href="#stage-7">7</a><a href="#stage-8">8</a>
+  <a href="#map">מפת הספרייה</a>
+  <a href="#books">הספרים</a>
+  <a href="#catalog">קטלוג השיעורים</a>
+  <a href="#more">מה עוד לא בספרייה</a>
+  <a href="#research">רקע ומקורות</a>
+</nav>
+
+<div class="container">
+
+<div class="whereami" id="whereami" aria-live="polite">
+  <b id="wa-stage">מדרגה 0</b>
+  <span class="n" id="wa-next">היחידה הבאה: 0.1</span>
+  <span class="bar"><i id="wa-fill"></i></span>
+  <span class="n" id="wa-pct">0 מ־748 יחידות (0%)</span>
+  <span class="n" id="wa-vid">0 מ־619 שיעורים</span>
+  <button class="btn" id="wa-go" type="button">המשך מכאן ↓</button>
+  <button class="btn ghost" id="wa-export" type="button" title="שמירת ההתקדמות לקובץ">ייצוא</button>
+  <button class="btn ghost" id="wa-import" type="button" title="טעינת התקדמות מקובץ">ייבוא</button>
+  <input type="file" id="wa-file" accept="application/json" class="hide">
+</div>
+
+<!-- ===================== תמצית ===================== -->
+<section id="summary">
+<h2>תמצית</h2>
+<p class="lead">איך משתמשים בדף הזה, ומה נבדק כדי לבנות אותו.</p>
+<div class="card">
+<p><b>הדף הוא תוכנית לימוד אחת, לא מפה.</b> מתחילים ביחידה 0.1, מסמנים אותה כשהיא נגמרה, ועוברים ל־0.2. כל יחידה היא פעולה אחת: <span class="tag">📖 דף</span> לקרוא סקשן אחד בספרייה · <span class="tag">▶ שיעור</span> לצפות בשיעור של הרב · <span class="tag">📚 ספר</span> ללמוד פרקים מסוימים בספר (נפתח לקריאה בתוך הדף מהדרייב) · <span class="tag">✋ תרגול</span> לבצע שיטה שכבר נלמדה · <span class="tag">🚪 שער</span> לבדוק את תנאי המעבר מהמקורות. בתוך כל מדרגה הסדר הוא לפי נושא: קודם הרקע בדף, אחריו השיעור של הרב, אחריו הכרטיסים או התמלול, אחריהם הספר, ובסוף התרגול. כל סדרה של הרב נשארת שלמה בתוך מדרגה אחת, לפי מספרי השיעורים. ההילולות, החגים והסיפורים הם <b>העשרה</b>: ממוספרים, אבל לא חוסמים.</p>
+<p><b>הפס "איפה אני"</b> למעלה זוכר את ההתקדמות בדפדפן הזה (לא נשלח לשום מקום). "ייצוא" שומר אותה לקובץ קטן, "ייבוא" מחזיר אותה במחשב אחר. "המשך מכאן" קופץ ליחידת החובה הראשונה שעוד לא סומנה.</p>
+<p><b>מה נבדק.</b> 13 הדפים של הספרייה (התמצית, "לפני שמתחילים", העקרונות והספרים של כל אחד); 619 הסרטונים בערוץ הרב תורג'מן, כולל 308 השידורים החיים שאינם מופיעים ברשימת הסרטונים הרגילה, 83 הקצרים, והערוץ הישן; 36 ספרי "מכון חכמי ירושלים והמערב"; וכ־45 מקורות קלאסיים ועכשוויים על סדר הלימוד: הרמב"ם, השולחן ערוך והרמ"א, הרמ"ק באור נערב, הקדמות מהרח"ו ושער רוח הקודש, הרמח"ל, הבן איש חי, הרב קוק, הרב מרדכי אליהו, הרב כדורי, החיד"א, בית אל, הרב יעקב הלל, בעל הסולם, שבע נתיבות התורה וחיי העולם הבא של אבולעפיה, סולם העליה, הרב קפלן. <b>הרב תורג'מן עצמו לא פרסם סדר לימוד.</b> הסדר כאן נבנה מהסימונים שלו ("יסודות", "שיעור חובה", "מבוא ופתח לקבלה", "המדריך המעשי", "הכרך החמישי") ומדבריו בשיעורים שבספרייה, כל אחד עם קישור לשנייה.</p>
+</div>
+</section>
+
+<!-- ===================== העקרונות ===================== -->
+<section id="principles">
+<h2>ששת העקרונות שהסדר בנוי עליהם</h2>
+<p class="lead">אין עליהם מחלוקת בין המקורות. כל ציטוט פותח את השיעור באותה שנייה או את העמוד.</p>
+<div class="card">
+<h3>א. ידע לפני גיל: הלכה ונגלה קודמים לסוד</h3>
+<div class="q">"ואין לאדם לטייל בפרדס רק לאחר שמלא כריסו בשר ויין, והוא לידע איסור והיתר ודיני המצות"<span class="who">רמ"א יו"ד רמו ד · <a href="https://he.wikisource.org/wiki/שולחן_ערוך_יורה_דעה_רמו_ד" target="_blank" rel="noopener">ויקיטקסט</a> · הרמ"ק באור נערב ג, א: "למלא כריסו בדיני הגמרא… לפחות לשנת העשרים"; גיל ארבעים הוא "יש שכתבו" (ש"ך שם ס"ק ו)</span></div>
+<div class="q">"אדם שהוא לא תלמיד חכם והוא לא עוסק בנגלה והוא לא נשוי – לא להתקרב"<span class="who">הרב תורג'מן, יסודות בקבלה מעשית 1 · <a href="https://www.youtube.com/watch?v=SamvXhL10JI&t=381s" target="_blank" rel="noopener">00:06:21</a> · וגם: "קודם כל, העיקר זה תלמיד חכם" (<a href="https://www.youtube.com/watch?v=zjUmhbRA1h8&t=859s" target="_blank" rel="noopener">ארי-רש"ש 00:14:19</a>)</span></div>
+<div class="q">"שצריך אדם למלא כרסו בש"ס ופוסקים לפני שהוא לומד פנימיות… זה גם נאמר על כל יום ויום"<span class="who">הרב שאול יורוביץ, שיעורי דרכי השגה 13 · <a href="https://www.youtube.com/watch?v=dqyytO8F64c&t=3076s" target="_blank" rel="noopener">00:51:16</a></span></div>
+<h3>ב. ביטול ותיקון לפני ייחוד והמשכה; "אי אפשר לקפוץ"</h3>
+<div class="q">"צריך האד' לתקן את נפשו תחלה… ויטהר מזוהמת חלאת עונותיו ואח"כ יוכל לייחד"<span class="who">שער רוח הקודש הקדמה ט"ז · <a href="yichudim.html#before">יסודות הייחודים</a></span></div>
+<div class="q">"לא שייך שאדם יכוון את כונות האריז"ל… בלא שתיקן את הצלם אלהי"ם"<span class="who">דרכי השגה פרק ב עמ' 9 · <a href="darkey-hasaga.html#part-2">דרכי השגה</a> · הרב יורוביץ: "הבסיס לכל העבודות זה קודם כול ריכוז פשוט" (<a href="https://www.youtube.com/watch?v=3obtXoPCCXk&t=1958s" target="_blank" rel="noopener">שיעור 4, 00:32:38</a>); "אי אפשר לקפוץ, לדלג" (<a href="https://www.youtube.com/watch?v=dqyytO8F64c&t=230s" target="_blank" rel="noopener">שיעור 13, 00:03:50</a>)</span></div>
+<h3>ג. שלוש מדרגות של דרכים, לפי הרב תורג'מן</h3>
+<div class="q">ניגון, תנועה ודבקות "מתאימה לכולם"; מדיטציות אבולעפיה "אני לא ממליץ אותה לכל אחד, כי זה באמת צריך קדושה וחסידות ופרישות"; קבלה מעשית רק ל"איש פרוש וקדוש… ואוי ואבוי"<span class="who">מורה הפרישות 1 · <a href="https://www.youtube.com/watch?v=2KgfFqENqYQ&t=973s" target="_blank" rel="noopener">00:16:13</a> · מורה הפרישות 3 · <a href="https://www.youtube.com/watch?v=Co1i1oqJhkg&t=767s" target="_blank" rel="noopener">00:12:47</a></span></div>
+<div class="q">"הכותב והמשתמש ועושה פעולות הוא יותר מסתכן מאשר מי שרק מייחד"<span class="who">קבלה מעשית וקבלת האר"י והרש"ש · <a href="https://www.youtube.com/watch?v=zjUmhbRA1h8&t=7610s" target="_blank" rel="noopener">02:06:50</a></span></div>
+<h3>ד. עיון לפני מעשה, גם בתוך הקבלה המעשית</h3>
+<div class="q">"אנשים רצים ללמוד את החד־זנאתי ואת כל הגורלות… אבל אם אדם לא יודע את הבסיסים האלה [הגלגלים והמשמשים]… זה מחצב בהשכלה"<span class="who">יסודות בקבלה מעשית 1 · <a href="https://www.youtube.com/watch?v=SamvXhL10JI&t=2482s" target="_blank" rel="noopener">00:41:22</a> · "אני אפילו את המפתחות לא נותן, אני רק מכניס אתכם ככה לרכב" (<a href="https://www.youtube.com/watch?v=G1RIlphUeuE&t=1424s" target="_blank" rel="noopener">שיעור 5, 00:23:44</a>)</span></div>
+<h3>ה. רב או חברותא</h3>
+<div class="q">"סמיכת חכמים קודם כל בהלכה, להיות תלמיד חכם, ואחר כך ללכת לחכם שילמד אותו, אם ירצה ללמד אותו"<span class="who">יסודות בקבלה מעשית 1 · <a href="https://www.youtube.com/watch?v=SamvXhL10JI&t=392s" target="_blank" rel="noopener">00:06:32</a> · הבן איש חי (רב פעלים ח"ג): "אין אמיתותם מושגת לאדם אלא ע"י רב מוסמך"; אבולעפיה (שבע נתיבות, הנתיב השביעי): שם מ"ב וע"ב "פה אל פה"; הרב שני: "אין עשה זאת בעצמך"</span></div>
+<h3>ו. הסדר של הרב עצמו</h3>
+<p>הרב תורג'מן לא פרסם סדר לימוד (נבדקו עשר חנויות, הספרייה הלאומית, שני פורומים, ראיון ו־157 כותרות פודקאסט). הסימונים שלו: סדרת "<b>יסודות</b> בקבלה מעשית" (1–11) בנויה יסודות ומקורות (1, 2, 10) → פעולות (3, 5, 7, 9) → גורלות (4, 6, 8) → כשפים (11); "הקדמת רחובות הנהר 6 – <b>שיעור חובה!</b>"; דרישות מלאכים לרמ"ק "<b>ספר מבוא ופתח</b> לקבלה"; "גורל כחול הים" עם "<b>המדריך המעשי</b> להטלת הגורל"; "יראת אלהים – <b>הכרך החמישי</b> בסדרה"; ובמורה הפרישות הדירוג שבסעיף ג. מכאן המדרגות.</p>
+</div>
+</section>
+
+<!-- ===================== הסולם ===================== -->
+<section id="ladder">
+<h2>הסולם: תשע מדרגות בשלוש רמות</h2>
+<p class="lead">לחיצה על מדרגה קופצת אליה. הפס הזהוב בכל מדרגה הוא ההתקדמות שלך בה. המעבר בין מדרגות הוא לפי שער, לא לפי זמן.</p>
+<div class="ladder" id="ladder-box"></div>
+</section>
+
+<!-- ===================== המדרגות ===================== -->
+<section id="stages">
+<h2>המדרגות</h2>
+<p class="lead">כל יחידה בשורה אחת: מספר, סוג, מה עושים, למה עכשיו, וקישור. סימון התיבה שומר את ההתקדמות.</p>
+<div class="filters">
+  <span class="lbl">הצג:</span>
+  <button class="btn on" type="button" data-f="all">הכול</button>
+  <button class="btn" type="button" data-f="core">רק חובה</button>
+  <button class="btn" type="button" data-f="video">רק שיעורי הרב</button>
+  <button class="btn" type="button" data-f="todo">רק מה שעוד לא סיימתי</button>
+  <span class="lbl" id="f-count"></span>
+</div>
+<div id="stages-box"></div>
+</section>
+
+<!-- ===================== מפת הספרייה ===================== -->
+<section id="map">
+<h2>מפת הספרייה: איפה כל דף במסלול</h2>
+<p class="lead">13 הדפים, ובאיזו יחידה נקרא כל סקשן.</p>
+<div id="map-box"></div>
+</section>
+
+<!-- ===================== הספרים ===================== -->
+<section id="books">
+<h2>הספרים</h2>
+<p class="lead">כל ספר שהמסלול שולח אליו, של הרב תורג'מן או חיצוני. ספר שנמצא בתיקיית הספרים בדרייב נפתח לקריאה בתוך הדף; ספר שעדיין אין שם מקושר למקום שאפשר להשיג אותו, וכשהוא נוסף לתיקייה הוא ייפתח כאן.</p>
+<div class="note" id="books-note">תצוגת הספרים נטענת מגוגל דרייב ודורשת כניסה לחשבון שיש לו גישה לתיקייה. בלי גישה יוצג "אין הרשאה"; הקישור "בדרייב" פותח את הקובץ בחלון חדש.</div>
+<div class="card books" id="books-box"></div>
+</section>
+
+<!-- ===================== קטלוג ===================== -->
+<section id="catalog">
+<h2>קטלוג שיעורי הרב יהודה אוהד תורג'מן</h2>
+<p class="lead">כל 619 הסרטונים לפי הסדרות שבערוץ, ואחריהן השיעורים הבודדים לפי תאריך. ליד כל שיעור מספר היחידה שלו במסלול. סימון <span class="tag g">בספרייה</span> = יש לו דף עם כרטיסים ותמלול.</p>
+<div id="catalog-box"></div>
+</section>
+
+<!-- ===================== מה עוד לא בספרייה ===================== -->
+<section id="more">
+<h2>מה עוד לא בספרייה</h2>
+<p class="lead">הסדרות שיש להן שיעורים במסלול אבל עדיין אין להן דף עם כרטיסים ותמלולים. אלה המועמדות הבאות לדפים חדשים, לפי הסדר שבו המסלול מגיע אליהן.</p>
+<div id="more-box"></div>
+</section>
+
+<!-- ===================== רקע ומקורות ===================== -->
+<section id="research">
+<h2>רקע ומקורות</h2>
+<p class="lead">מה נבדק, מאיפה, ומה לא נמצא.</p>
+<div class="card">
+<h3>המקורות הקלאסיים על סדר הלימוד</h3>
+<ul class="plain">
+<li><b>תנאים:</b> רמב"ם יסודי התורה ד, יג; שו"ע ורמ"א יו"ד רמו ד וש"ך ס"ק ו; הרמ"ק, אור נערב ח"ג פ"א (ששת התנאים, גיל עשרים); חרם תקט"ו (1755): זוהר, פרדס ושומר אמונים משלושים, כתבי האר"י מארבעים; הגר"א; ר' חיים ויטאל, הקדמת עץ חיים (בשר ויין, טבילה, כעס, חצות) ושערי קדושה ח"ג; שער הגלגולים הקדמה א (דורש עץ חיים ושער ההקדמות) ול"ח; שער רוח הקודש הקדמה ט"ו–ט"ז; הבן איש חי, רב פעלים ח"ג ("רב מוסמך"); הרב קוק, אורות התורה פ"ט; הרב מרדכי אליהו והבבא סאלי; הרב כדורי; החיד"א.</li>
+<li><b>סדר הספרים:</b> שמונה שערים (שער ההקדמות ראשון); בעל הסולם, הקדמה לתלמוד עשר הספירות (פנים, אור פנימי, הסתכלות פנימית); ישיבות בית אל ונהר שלום (תפילה בכוונות אחרי לימוד); הרב יעקב הלל, פתחי שערים ובנין אריאל; הרב אבינר: מסילת ישרים "ספר הקבלה למתחילים".</li>
+<li><b>אבולעפיה:</b> שבע נתיבות התורה (שבע המדרגות; הכשרתו: אריסטו, המורה "פעמים רבות מאד", התלמוד, ההיכלות, הבהיר, ספר יצירה); חיי העולם הבא (ההכנות והטכניקה); אידל (שלושת השלבים); אלבוטיני, סולם העליה פרק י; שערי צדק; קפלן, Meditation and Kabbalah.</li>
+<li><b>צייאח:</b> גארב, "קבלתו של ר' יוסף אבן ציאח כמקור להבנת קבלת צפת", קבלה ד (תשנ"ט); מהדורות הרב תורג'מן (אבן השהם, שארית יוסף, צרור החיים).</li>
+<li><b>קבלה מעשית:</b> פניני הלכה, אמונה ומצוותיה פרק כ; הרב יעקב הלל, תמים תהיה ווישב הים ח"א סי' יג; אביגדור אמיתי, "בעניין קבלה מעשית לחשים וקמיעות" (מפת הספרות: ספר הרזים, שימוש תהילים והרשב"א סי' תיג, ברית מנוחה ואישורי הרמ"ק והאר"י, שושן יסוד העולם, מפתח שלמה, ספר הפעולות, קדושת יצחק); ר' יעקב ספיר, מסע תימן פי"ג.</li>
+<li><b>מורה הפרישות, דרכי השגה, עליית נשמה:</b> מהדורת פנטון תשמ"ז; דרכי השגה בוויקיטקסט ובבלוג "לדעת ברוח" של אמנון גרוס; סדרות הרב יוסף שני (תורה 1).</li>
+</ul>
+<h3>הרב תורג'מן: הספרים והשיעורים</h3>
+<ul class="plain">
+<li><b>36 כותרים</b> של מכון חכמי ירושלים והמערב אומתו בקטלוגים (ספר טוב, המדף היהודי, ספרי חיים, Seforim Center, הספרייה הלאומית, אוצר החכמה): סדרת "הקבלה המעשית" (שימושי שרים של מעלה, שרשי הסודות, שושן יסוד העולם ושושן המלבוש, גורל כחול הים, יראת אלהים, מפתח הזהב, אבני בורלא, רב פעלים, פתחי עולם, ספר התכונה השלם), "הקבלה הנבואית" (פרדס הספר, ספר הגאולה, אוצר החיים, אבן השהם, שארית יוסף, צרור החיים), "קבלת המערב" (אבני זכרון, דרישות מלאכים, מלאך המשיב, נר יוסף מערבי, ספר הזכרונות והתולדות), תורת הרש"ש (לב חכם א–ה, אילנא דחיי, בגדי הבד), והלכה (אבן אחת, למען תזכרו, איגרות המסע).</li>
+<li><b>לא נמצאו:</b> ספר בשם "יסודות בקבלה מעשית" (זו סדרת שיעורים); מהדורה של הרב למורה הפרישות; "אוצר הגורלות"; מהדורות ברית מנוחה, ספר המלכות ושיר הספירות; סילבוס כתוב, קורס או סדרת זום.</li>
+<li><b>הערוץ:</b> 218 העלאות (2018–2026), 308 שידורים חיים (לשונית Live, שאינם ברשימת הסרטונים), 83 קצרים, 18 פלייליסטים, והערוץ הישן "אוהד תורג'מן" (חכמת הצירוף והניגון, משנת חסידים, שארית יוסף 3; עוד 72 שיעורי "למען תזכרו" בהלכה שאינם כאן). השיעורים מופיעים גם בפודקאסט (Spreaker, 157 פרקים) וב־kolel.org. אין שיעור בשם אבולעפיה, אור השכל, ספר יצירה, ספר הרזים או שימוש תהילים; הקו הנבואי אצל הרב עובר דרך צייאח, ר' יצחק דמן עכו וספר המלכות.</li>
+<li><b>מגבלות:</b> יוטיוב חסם משיכת תיאורי הסרטונים, ולכן השיבוץ נעשה לפי הכותרות, הפלייליסטים ומה שכבר נלמד בספרייה; לשידורים החיים אין תאריך מדויק. שיעור שנראה לך במקום הלא נכון – זה המקום לתקן.</li>
+</ul>
+<h3>איך הדף בנוי</h3>
+<p>הנתונים (המדרגות, היחידות, הספרים והקטלוג) נמצאים בקובץ אחד, <bdi>js/seder-halimud-data.js</bdi>, והדף מצייר ממנו; רשימת הספרים ומזהי הקבצים בדרייב ב־<bdi>js/books.js</bdi>. ההתקדמות נשמרת ב־localStorage של הדפדפן בלבד. הספרים נטענים כתצוגת PDF מגוגל דרייב מתוך תיקיית הספרים של הספרייה.</p>
+</div>
+</section>
+
+</div>
+
+<footer>
+<p>ספריית הקבלה · <a href="index.html">דף הבית</a> · נבנה 27.10.2026</p>
+</footer>
+
+<script src="js/books.js"></script>
+<script src="js/seder-halimud-data.js"></script>
+<script>
+(function(){
+'use strict';
+var D = window.SEDER, B = window.BOOKS || {};
+var KEY = 'seder-halimud-progress-v1';
+var P = load();
+function load(){ try { return JSON.parse(localStorage.getItem(KEY)) || {done:{},gates:{},gatechk:{}}; } catch(e){ return {done:{},gates:{},gatechk:{}}; } }
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(P)); } catch(e){} }
+function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+var ICON = {page:'📖', video:'▶', book:'📚', practice:'✋', note:'ℹ', head:''};
+var LVL = {'לכל אחד':'l1','למתקדמים':'l2','בהדרכת מורה בלבד':'l3'};
+var YT = 'https://www.youtube.com/watch?v=';
+var PAGE_LIST = [['abulafia.html','כתבי רבי אברהם אבולעפיה'],['meditation.html','שיטות המדיטציה היהודית'],['sages-timeline.html','ציר הזמן של חכמי ישראל'],['yosef-shani-aliyat-neshama.html','עליית נשמה בשיטת הרב יוסף שני'],['turgeman-practical-kabbalah.html','יסודות בקבלה מעשית'],['turgeman-ari-rashash.html','קבלה מעשית וקבלת האר"י והרש"ש'],['turgeman-moreh-haprishut.html','מורה הפרישות'],['darkey-hasaga.html','דרכי השגה'],['yurovitz-darkey-hahasaga.html','שיעורי דרכי השגה'],['yichudim.html','יסודות הייחודים'],['tzayach-shir-hasefirot.html','שיר הספירות בצבעים'],['otzar-hayichudim.html','אוצר הייחודים'],['sefirot-colors.html','שיטות בצבעי הספירות']];
+
+var ALL = []; D.stages.forEach(function(s){ s.units.forEach(function(u){ if(u.type!=='head') ALL.push(u); }); });
+var NV = ALL.filter(function(u){return u.type==='video';}).length;
+
+function libLinks(u){
+  if(!u.lib || !u.lib.length) return '';
+  return u.lib.map(function(f){ var t=(PAGE_LIST.filter(function(p){return p[0]===f;})[0]||[f,f])[1]; return '<a class="src" href="'+f+'#transcripts" title="הדף בספרייה עם הכרטיסים והתמלול">בספרייה: '+esc(t)+'</a>'; }).join(' ');
+}
+function bookFiles(key){
+  var b = B[key]; if(!b) return '';
+  var files = b.drive || [];
+  var h = '<div class="bk"><div class="files">';
+  if(files.length){
+    files.forEach(function(f,i){
+      var nm = f.title.replace(/\.(pdf|djvu|htm|html)$/i,'');
+      if(f.ext==='pdf'){
+        h += '<button class="btn dark pv-btn" type="button" data-id="'+esc(f.id)+'" data-t="'+esc(nm)+'">לקריאה בדף'+(files.length>1?' · '+esc(nm):'')+'</button> ';
+      } else {
+        h += '<a class="src" href="https://drive.google.com/file/d/'+esc(f.id)+'/view" target="_blank" rel="noopener">בדרייב ('+esc(f.ext==='html'||f.ext==='htm'?'טקסט':f.ext)+'): '+esc(nm)+'</a> ';
+      }
+      if(f.path==='(Desktop)') h += '<span class="nodrive" title="הקובץ נמצא בדרייב מחוץ לתיקיית הספרים">מחוץ לתיקיית הספרים</span> ';
+    });
+  } else {
+    h += '<span class="nodrive">עדיין לא בתיקיית הספרים בדרייב</span>';
+    if(b.find) h += ' <a class="src" href="'+esc(b.find)+'" target="_blank" rel="noopener">להשיג כאן</a>';
+  }
+  h += '</div><div class="pv hide"></div></div>';
+  return h;
+}
+function unitRow(u, s){
+  var id = 'u-'+u.no, done = !!P.done[u.no];
+  var cls = (u.core?'':'enrich')+(done?' done':'');
+  if(u.type==='head'){
+    return '<li class="head" data-no="'+u.no+'"><span class="hc"><span class="tag">'+u.count+' שיעורים</span><button class="btn mark-all" type="button" data-no="'+u.no+'">סמן את כולם</button></span><div class="ht">'+(u.core?'':'<span class="tag r">העשרה</span> ')+esc(u.title)+'</div>'+(u.why?'<div class="hw">'+esc(u.why)+'</div>':'')+'</li>';
+  }
+  var h = '<li id="'+id+'" class="'+cls+'" data-no="'+u.no+'" data-type="'+u.type+'" data-core="'+(u.core?1:0)+'">';
+  h += '<input type="checkbox" '+(done?'checked':'')+' aria-label="סיימתי '+u.no+'" data-no="'+u.no+'">';
+  h += '<span class="no">'+u.no+'</span><span class="ic" title="'+u.type+'">'+ICON[u.type]+'</span><div>';
+  if(u.type==='page'){
+    h += '<div class="ttl"><a href="'+esc(u.href)+'">'+esc(u.title)+'</a></div><div class="pg">'+esc(u.page)+'</div>';
+    if(u.why) h += '<div class="why">'+esc(u.why)+'</div>';
+  } else if(u.type==='video'){
+    h += '<div class="ttl"><a href="'+YT+u.id+'" target="_blank" rel="noopener">'+esc(u.title)+'</a></div>';
+    h += '<div class="meta"><bdi>'+esc(u.dur)+'</bdi>'+(u.date?' · '+esc(u.date):'')+(u.live?' <span class="tag b">שידור חי</span>':'')+(u.short?' <span class="tag">קצר</span>':'')+(u.old?' <span class="tag">הערוץ הישן</span>':'')+' '+libLinks(u);
+    if(u.alt && u.alt.length) h += u.alt.map(function(a){return ' <a class="src" href="'+YT+a+'" target="_blank" rel="noopener">עותק נוסף</a>';}).join('');
+    h += '</div>';
+  } else if(u.type==='book'){
+    h += '<div class="ttl">'+esc(u.title)+(u.parts?' <span class="tag">'+esc(u.parts)+'</span>':'')+'</div><div class="pg">'+esc(u.author)+'</div>';
+    if(u.why) h += '<div class="why">'+esc(u.why)+'</div>';
+    h += bookFiles(u.key);
+  } else if(u.type==='practice'){
+    h += '<div class="ttl">'+esc(u.title)+(u.dur?' <span class="tag g">'+esc(u.dur)+'</span>':'')+'</div>';
+    if(u.why) h += '<div class="why">'+esc(u.why)+'</div>';
+  } else if(u.type==='note'){
+    h += '<div class="why">'+esc(u.text)+'</div>';
+  }
+  h += '</div></li>';
+  return h;
+}
+function gateHtml(s){
+  var g = s.gate, passed = !!P.gates[s.n];
+  var h = '<div class="gate'+(passed?' passed':'')+'" id="gate-'+s.n+'"><h4>🚪 '+esc(g.title)+'</h4>';
+  g.checks.forEach(function(c,i){
+    var k = s.n+'.'+i, on = !!(P.gatechk[k]);
+    h += '<label><input type="checkbox" data-gk="'+k+'" '+(on?'checked':'')+'><span>'+esc(c.text)+'<span class="who">'+esc(c.src)+(c.href?' · <a href="'+esc(c.href)+'"'+(/^http/.test(c.href)?' target="_blank" rel="noopener"':'')+'>מקור</a>':'')+'</span></span></label>';
+  });
+  h += '<div class="ok"><button class="btn'+(passed?' on':' dark')+' gate-btn" type="button" data-n="'+s.n+'">'+(passed?'✓ עברתי את השער':'עברתי את השער'+(s.n<8?' → מדרגה '+(s.n+1):''))+'</button></div></div>';
+  return h;
+}
+function stageHtml(s){
+  var vids = s.units.filter(function(u){return u.type==='video';});
+  var core = s.units.filter(function(u){return u.type!=='head' && u.core;}).length;
+  var hrs = Math.round(vids.reduce(function(a,u){return a+u.secs;},0)/3600);
+  var h = '<article class="stage" id="stage-'+s.n+'"><header><h3>מדרגה '+s.n+' · '+esc(s.title)+'</h3><span class="lvl '+LVL[s.level]+'">'+esc(s.level)+'</span>';
+  h += '<span class="stat" id="stat-'+s.n+'"></span><div class="sbar" style="flex-basis:100%"><i id="sfill-'+s.n+'"></i></div></header>';
+  h += '<div class="body"><p class="goal">'+esc(s.goal)+'</p><p class="whyp"><b>למה כאן:</b> '+esc(s.why)+'</p>';
+  h += '<ol class="units">'+s.units.map(function(u){return unitRow(u,s);}).join('')+'</ol></div>';
+  if(s.dangers && s.dangers.length) h += '<div class="dang"><b>סכנות שהמקורות מזהירים מהן:</b> '+s.dangers.map(esc).join(' · ')+'</div>';
+  h += gateHtml(s) + '</article>';
+  return h;
+}
+function render(){
+  document.getElementById('stages-box').innerHTML = D.stages.map(stageHtml).join('');
+  renderLadder(); renderMap(); renderBooks(); renderCatalog(); renderMore(); refresh();
+}
+// ---- ladder
+function renderLadder(){
+  var W=1000, rowH=62, top=40, H=top+rowH*9+30;
+  var h = '<svg class="ladder-svg" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="סולם תשע המדרגות">';
+  h += '<line class="rail" x1="60" y1="'+(top-10)+'" x2="60" y2="'+(H-20)+'"/><line class="rail" x1="'+(W-60)+'" y1="'+(top-10)+'" x2="'+(W-60)+'" y2="'+(H-20)+'"/>';
+  var bands = {l1:'#e6efe0', l2:'#efe7d6', l3:'#f3e0dd'};
+  D.stages.slice().reverse().forEach(function(s,i){
+    var y = top + i*rowH, cls = LVL[s.level], vids = s.units.filter(function(u){return u.type==='video';}).length;
+    var core = s.units.filter(function(u){return u.type!=='head'&&u.core;}).length;
+    h += '<g class="rung" data-n="'+s.n+'" tabindex="0"><rect class="bx" x="70" y="'+(y+4)+'" width="'+(W-140)+'" height="'+(rowH-10)+'" rx="12" fill="'+bands[cls]+'"/>';
+    h += '<rect class="prog" id="lprog-'+s.n+'" x="70" y="'+(y+rowH-12)+'" width="0" height="4" rx="2"/>';
+    h += '<text class="t1" x="'+(W-95)+'" y="'+(y+26)+'" text-anchor="start" direction="rtl" style="direction:rtl;text-anchor:start">מדרגה '+s.n+' · '+esc(s.title)+'</text>';
+    h += '<text class="t2" x="'+(W-95)+'" y="'+(y+44)+'" text-anchor="start" direction="rtl" style="direction:rtl;text-anchor:start">'+esc(s.level)+' · '+core+' יחידות חובה · '+vids+' שיעורים</text>';
+    h += '<text class="t3" x="95" y="'+(y+34)+'" direction="ltr" style="direction:ltr;text-anchor:start" id="lpct-'+s.n+'">0%</text></g>';
+  });
+  h += '</svg>';
+  document.getElementById('ladder-box').innerHTML = h;
+  document.querySelectorAll('svg.ladder-svg .rung').forEach(function(g){
+    var go = function(){ location.hash = '#stage-'+g.getAttribute('data-n'); };
+    g.addEventListener('click', go); g.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' ') { e.preventDefault(); go(); } });
+  });
+}
+// ---- map
+function renderMap(){
+  var rows = PAGE_LIST.map(function(p){
+    var units = ALL.filter(function(u){return u.type==='page' && u.href.split('#')[0]===p[0];});
+    var cells = units.map(function(u){return '<a href="#u-'+u.no+'" class="src">'+u.no+'</a> '+esc(u.title.replace(/^[^→]*→\s*/,''));}).join('<br>');
+    var vids = ALL.filter(function(u){return u.type==='video' && u.lib && u.lib.indexOf(p[0])>=0;}).map(function(u){return u.no;});
+    return '<tr><td><a href="'+p[0]+'">'+esc(p[1])+'</a></td><td>'+(cells||'<span class="nodrive">רקע בלבד</span>')+'</td><td>'+(vids.length?vids.map(function(n){return '<a href="#u-'+n+'" class="src">'+n+'</a>';}).join(' '):'')+'</td></tr>';
+  });
+  document.getElementById('map-box').innerHTML = '<table><thead><tr><th>הדף</th><th>הסקשנים במסלול</th><th>השיעורים שלו במסלול</th></tr></thead><tbody>'+rows.join('')+'</tbody></table>';
+}
+// ---- books
+function renderBooks(){
+  var keys = Object.keys(B);
+  var byStage = {};
+  keys.forEach(function(k){ var b=B[k]; (b.stages||[]).forEach(function(n){ (byStage[n]=byStage[n]||[]).push(k); }); if(!(b.stages||[]).length) (byStage['x']=byStage['x']||[]).push(k); });
+  var h = '';
+  D.stages.forEach(function(s){
+    var ks = byStage[s.n]||[]; if(!ks.length) return;
+    h += '<h3>מדרגה '+s.n+' · '+esc(s.title)+'</h3>';
+    ks.forEach(function(k){
+      var b = B[k];
+      var units = ALL.filter(function(u){return u.type==='book'&&u.key===k;}).map(function(u){return '<a href="#u-'+u.no+'" class="src">'+u.no+'</a>';}).join(' ');
+      h += '<div class="bkrow" id="book-'+k+'"><div><div class="t">'+esc(b.title)+'</div><div class="a">'+esc(b.author)+(b.note?' · '+esc(b.note):'')+'</div>'+bookFiles(k)+'</div><div class="n">'+units+'</div></div>';
+    });
+  });
+  document.getElementById('books-box').innerHTML = h;
+  var nd = keys.filter(function(k){return !(B[k].drive||[]).length;});
+  var nn = document.getElementById('books-note');
+  nn.innerHTML += ' <b>'+(keys.length-nd.length)+' מ־'+keys.length+' הספרים נמצאים בתיקייה.</b>'+(nd.length?' חסרים: '+nd.map(function(k){return '<a href="#book-'+k+'">'+esc(B[k].title)+'</a>';}).join(', ')+'.':'');
+}
+// ---- catalog
+function renderCatalog(){
+  var h = '';
+  D.series.forEach(function(s){
+    h += '<details class="ser"><summary>'+esc(s.title)+' <span class="n">'+s.videos.length+' שיעורים</span></summary><table><thead><tr><th>#</th><th>השיעור</th><th>משך</th><th>יחידה</th></tr></thead><tbody>';
+    s.videos.forEach(function(v,i){
+      var u = unitBy(v.unit);
+      h += '<tr><td>'+(i+1)+'</td><td><a href="'+YT+v.id+'" target="_blank" rel="noopener">'+esc(v.title)+'</a>'+(u&&u.lib&&u.lib.length?' <span class="tag g">בספרייה</span>':'')+'</td><td><bdi>'+esc(v.dur)+'</bdi></td><td><a href="#u-'+v.unit+'" class="src">'+v.unit+'</a></td></tr>';
+    });
+    h += '</tbody></table></details>';
+  });
+  h += '<details class="ser"><summary>שיעורים בודדים שאינם בפלייליסט <span class="n">'+D.rest.length+' סרטונים, לפי תאריך</span></summary><table><thead><tr><th>תאריך</th><th>השיעור</th><th>משך</th><th>יחידה</th></tr></thead><tbody>';
+  D.rest.forEach(function(v){
+    var u = unitBy(v.unit);
+    h += '<tr><td>'+(v.date||(v.src.indexOf('live')>=0?'שידור חי':(v.src.indexOf('short')>=0?'קצר':'')))+'</td><td><a href="'+YT+v.id+'" target="_blank" rel="noopener">'+esc(v.title)+'</a>'+(u&&u.lib&&u.lib.length?' <span class="tag g">בספרייה</span>':'')+'</td><td><bdi>'+esc(v.dur)+'</bdi></td><td><a href="#u-'+v.unit+'" class="src">'+v.unit+'</a></td></tr>';
+  });
+  h += '</tbody></table></details>';
+  document.getElementById('catalog-box').innerHTML = h;
+}
+var UIDX = {}; ALL.forEach(function(u){ UIDX[u.no]=u; });
+function unitBy(no){ return UIDX[no]; }
+// ---- more
+function renderMore(){
+  var rows = [];
+  D.series.forEach(function(s){
+    var inlib = s.videos.filter(function(v){ var u=unitBy(v.unit); return u&&u.lib&&u.lib.length; }).length;
+    if(inlib < s.videos.length){
+      var first = s.videos.map(function(v){return v.unit;}).sort(function(a,b){return parseFloat(a)-parseFloat(b);})[0];
+      var secs = s.videos.reduce(function(a,v){ var u=unitBy(v.unit); return a+(u?u.secs:0); },0);
+      rows.push({t:s.title, n:s.videos.length-inlib, h:Math.round(secs/3600), first:first});
+    }
+  });
+  rows.sort(function(a,b){return parseFloat(a.first)-parseFloat(b.first);});
+  document.getElementById('more-box').innerHTML = '<table><thead><tr><th>הסדרה</th><th>שיעורים בלי דף</th><th>שעות</th><th>מתחילה ביחידה</th></tr></thead><tbody>'+rows.map(function(r){return '<tr><td>'+esc(r.t)+'</td><td>'+r.n+'</td><td>'+r.h+'</td><td><a href="#u-'+r.first+'" class="src">'+r.first+'</a></td></tr>';}).join('')+'</tbody></table><p class="good">בספרייה היום: 16 מתוך 619 השיעורים (יסודות בקבלה מעשית 1–11, קבלה מעשית וקבלת האר"י והרש"ש, מורה הפרישות 1–3 והשקטת הנפש, שיר הספירות). הטבלה ממוינת לפי סדר ההגעה במסלול: זה הסדר המוצע להוספת דפים.</p>';
+}
+// ---- progress
+function refresh(){
+  var done = 0, vdone = 0, firstTodo = null;
+  D.stages.forEach(function(s){
+    var units = s.units.filter(function(u){return u.type!=='head';});
+    var core = units.filter(function(u){return u.core;});
+    var sd = 0, cd = 0;
+    units.forEach(function(u){
+      var li = document.getElementById('u-'+u.no); var d = !!P.done[u.no];
+      if(li){ li.classList.toggle('done', d); li.classList.remove('here'); var cb=li.querySelector('input[type=checkbox]'); if(cb) cb.checked=d; }
+      if(d){ done++; sd++; if(u.core) cd++; if(u.type==='video') vdone++; }
+      else if(u.core && !firstTodo) firstTodo = u;
+    });
+    var pct = core.length ? Math.round(cd/core.length*100) : 0;
+    var st = document.getElementById('stat-'+s.n); if(st) st.textContent = 'סיימת '+sd+' מ־'+units.length+' יחידות ('+cd+' מ־'+core.length+' חובה) · '+(P.gates[s.n]?'השער עבר ✓':'השער עוד לא עבר');
+    var f = document.getElementById('sfill-'+s.n); if(f) f.style.width = pct+'%';
+    var lp = document.getElementById('lprog-'+s.n); if(lp) lp.setAttribute('width', (860*pct/100));
+    var lt = document.getElementById('lpct-'+s.n); if(lt) lt.textContent = pct+'%';
+    var g = document.getElementById('gate-'+s.n); if(g) g.classList.toggle('passed', !!P.gates[s.n]);
+  });
+  var pct = Math.round(done/ALL.length*100);
+  document.getElementById('wa-fill').style.width = pct+'%';
+  document.getElementById('wa-pct').textContent = done+' מ־'+ALL.length+' יחידות ('+pct+'%)';
+  document.getElementById('wa-vid').textContent = vdone+' מ־'+NV+' שיעורים';
+  if(firstTodo){
+    document.getElementById('wa-stage').textContent = 'מדרגה '+firstTodo.no.split('.')[0];
+    document.getElementById('wa-next').textContent = 'היחידה הבאה: '+firstTodo.no+' · '+(firstTodo.title||'').slice(0,60);
+    var li = document.getElementById('u-'+firstTodo.no); if(li) li.classList.add('here');
+  } else { document.getElementById('wa-stage').textContent = 'סיימת את כל יחידות החובה'; document.getElementById('wa-next').textContent=''; }
+  applyFilter();
+}
+var FILTER = 'all';
+function applyFilter(){
+  var n = 0;
+  document.querySelectorAll('ol.units>li').forEach(function(li){
+    if(li.classList.contains('head')){
+      var show = FILTER==='all' || (FILTER==='core' && li.nextElementSibling && li.nextElementSibling.getAttribute('data-core')==='1') || FILTER==='video' || FILTER==='todo';
+      li.classList.toggle('hide', !show); return;
+    }
+    var t = li.getAttribute('data-type'), core = li.getAttribute('data-core')==='1', done = li.classList.contains('done');
+    var show = FILTER==='all' || (FILTER==='core' && core) || (FILTER==='video' && t==='video') || (FILTER==='todo' && !done);
+    li.classList.toggle('hide', !show); if(show) n++;
+  });
+  document.getElementById('f-count').textContent = n+' יחידות מוצגות';
+}
+// ---- events
+document.addEventListener('change', function(e){
+  var t = e.target;
+  if(t.matches('ol.units input[type=checkbox]')){ var no=t.getAttribute('data-no'); if(t.checked) P.done[no]=1; else delete P.done[no]; save(); refresh(); }
+  else if(t.matches('.gate input[data-gk]')){ var k=t.getAttribute('data-gk'); if(t.checked) P.gatechk[k]=1; else delete P.gatechk[k]; save(); }
+});
+document.addEventListener('click', function(e){
+  var t = e.target.closest('button'); if(!t) return;
+  if(t.classList.contains('gate-btn')){ var n=t.getAttribute('data-n'); if(P.gates[n]) delete P.gates[n]; else P.gates[n]=1; save(); t.textContent = P.gates[n]?'✓ עברתי את השער':'עברתי את השער'; t.classList.toggle('on', !!P.gates[n]); t.classList.toggle('dark', !P.gates[n]); refresh(); }
+  else if(t.classList.contains('mark-all')){
+    var head = t.closest('li.head'), li = head.nextElementSibling, all = true, items=[];
+    while(li && !li.classList.contains('head')){ items.push(li); if(!P.done[li.getAttribute('data-no')]) all=false; li = li.nextElementSibling; }
+    items.forEach(function(li){ var no=li.getAttribute('data-no'); if(all) delete P.done[no]; else P.done[no]=1; });
+    save(); refresh();
+  }
+  else if(t.classList.contains('pv-btn')){
+    var box = t.closest('.bk').querySelector('.pv');
+    if(!box.classList.contains('hide') && box.getAttribute('data-id')===t.getAttribute('data-id')){ box.classList.add('hide'); box.innerHTML=''; return; }
+    box.setAttribute('data-id', t.getAttribute('data-id'));
+    box.innerHTML = '<div class="pvh"><span>'+esc(t.getAttribute('data-t'))+'</span><span><a href="https://drive.google.com/file/d/'+esc(t.getAttribute('data-id'))+'/view" target="_blank" rel="noopener">לפתוח בדרייב</a> · <button class="btn pv-close" type="button">סגור</button></span></div><iframe src="https://drive.google.com/file/d/'+esc(t.getAttribute('data-id'))+'/preview" allow="autoplay" loading="lazy" title="'+esc(t.getAttribute('data-t'))+'"></iframe>';
+    box.classList.remove('hide');
+  }
+  else if(t.classList.contains('pv-close')){ var bx=t.closest('.pv'); bx.classList.add('hide'); bx.innerHTML=''; }
+  else if(t.hasAttribute('data-f')){ FILTER = t.getAttribute('data-f'); document.querySelectorAll('.filters .btn').forEach(function(b){ b.classList.toggle('on', b===t); }); applyFilter(); }
+});
+document.getElementById('wa-go').addEventListener('click', function(){
+  var li = document.querySelector('ol.units>li.here'); if(li){ li.classList.remove('hide'); li.scrollIntoView({behavior:'smooth', block:'center'}); }
+});
+document.getElementById('wa-export').addEventListener('click', function(){
+  var blob = new Blob([JSON.stringify(P)], {type:'application/json'}); var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='seder-halimud-progress.json'; a.click();
+});
+document.getElementById('wa-import').addEventListener('click', function(){ document.getElementById('wa-file').click(); });
+document.getElementById('wa-file').addEventListener('change', function(){
+  var f=this.files[0]; if(!f) return; var r=new FileReader(); r.onload=function(){ try{ var j=JSON.parse(r.result); if(j&&j.done){ P=j; P.gates=P.gates||{}; P.gatechk=P.gatechk||{}; save(); refresh(); } }catch(e){ alert('הקובץ אינו קובץ התקדמות'); } }; r.readAsText(f);
+});
+render();
+if(location.hash){ var el=document.getElementById(location.hash.slice(1)); if(el) setTimeout(function(){ el.scrollIntoView({block:'center'}); }, 50); }
+})();
+</script>
+<script src="js/read-aloud.js"></script>
+<script src="js/find.js" defer></script>
+</body>
+</html>

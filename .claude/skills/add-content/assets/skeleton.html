@@ -21,7 +21,7 @@
   The nav labels for those sections may be edited (e.g. "מי הוא הרב" -> "מי הוא המחבר" for a text source); keep the
   .nf/.ns pairs (full label on wide screens, short label on narrow ones) and keep a.nav-home as the first item.
   Keep the whole CSS: it carries the phone nav as one scrolling row, .unc for "[?]" markers, the lw/nf/ns spans and the
-  scroll-padding that keeps anchors below the sticky nav. Keep both script tags (js/read-aloud.js, js/find.js).
+  scroll-padding that keeps anchors below the sticky nav. Keep the three script tags (js/read-aloud.js, js/transcripts.js, js/find.js).
   Never write the four-letter Name anywhere in this file.
 -->
 <html lang="he" dir="rtl">
@@ -250,6 +250,7 @@ body:has(.ra-player:not([hidden])) a.totop{display:none}
 </footer>
 
 <script src="js/read-aloud.js" defer></script>
+<script src="js/transcripts.js"></script>
 <script src="js/find.js" defer></script>
 </body>
 </html>

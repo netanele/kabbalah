@@ -98,6 +98,7 @@ In existing mode they **merge** into the exploded parts, and old content must su
 ```bash
 python3 -I <skill>/scripts/make_transcripts.py --config <ws>/project.json   # appends new tr-N blocks in existing mode
 ```
+Per the repo rule (CLAUDE.md "Transcripts"), video transcripts are not inline: the script writes `<ws>/out/transcripts/<page>-<n>.json` and the page gets only a stub `details.tr` with `data-transcript`; `js/transcripts.js` must be loaded before `js/find.js` (the skeleton has it).
 
 ### 9. Assemble and check (yourself)
 ```bash
@@ -135,6 +136,7 @@ Counts come from grep, never from memory. Word technique counts as "N כרטיס
 ### 12. Finish
 ```bash
 cp <ws>/out/<page> <repo>/<page> && cmp <ws>/out/<page> <repo>/<page>
+cp <ws>/out/transcripts/<page-stem>-*.json <repo>/transcripts/      # the JSON transcripts of the new units
 ```
 Verify that every `href="<page>#…"` in index.html resolves to an id in the page. Ask the reviewer for one last browser pass on the repo copy. Stop caffeinate, then `git status --short`, without committing.
 

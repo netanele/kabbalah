@@ -15,6 +15,7 @@
 ## Step 0: copy the page and compute the counts
 ```bash
 cp <workspace>/out/<page> <repo>/<page>
+cp <workspace>/out/transcripts/<page-stem>-*.json <repo>/transcripts/   # JSON transcripts (CLAUDE.md "Transcripts"); cmp each
 cd <repo>
 grep -c '<article class="card tech"' <page>                          # technique cards
 echo $(( $(grep -o 'class="src"' <page> | wc -l) + $(grep -o 'class="ts"' <page> | wc -l) ))   # source chips
