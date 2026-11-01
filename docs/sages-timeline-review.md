@@ -233,3 +233,132 @@
 - **מקורות שלא נפתחו:** המכלול, YIVO והספרייה היהודית הווירטואלית לא נפתחו מכאן. במקומם נבדקו JE, EJ, חב״ד, דעת ואתר ישיבה.
 - **28 מהחכמים שנוספו לא נמצאו בספריא, או נמצאו בה בלי שנים.** השנים שלהם נבדקו מול ויקיפדיה העברית ומקור יהודי נוסף (JE, EJ, חב״ד, דעת, ישיבה, OU או JVL), ובבדיקה האוטומטית גם מול ויקינתונים. אצל הרב שך ויקינתונים נותן 1898, אבל ויקיפדיה (י״ט בטבת ה׳תרנ״ט) ו־JVL נותנים 1899.
 - **מועמדים נוספים:** בטבלאות "לא נכנסו" למעלה. כל אחד מהם יכול להיכנס אם תרצה.
+
+
+---
+
+# הרחבה שנייה: דור הרמב״ן ומקובלים שחסרו (28.10.2026)
+
+לפני: 153 שורות (151 חכמים), 1380–2012, 12 דורות, 17 אירועים. אחרי: 219 שורות (217 חכמים), 1194–2012, 13 דורות, 20 אירועים.
+
+## בקצרה
+- **הבקשה:** להוסיף את רבי יוסף צייאח, רבי דוד בן יהודה החסיד ורבי אברהם אבולעפיה, ולבדוק אילו מקובלים עוד חסרים.
+- **הציר הורחב אחורה** מ־1370 ל־1190, כי רבי דוד בן יהודה החסיד ורבי אברהם אבולעפיה נולדו בסביבות 1240. נוסף דור ראשון חדש, **"דור הרמב״ן, מגלי הזוהר ובעלי הטורים"** (נולדו 1194–1373), עם 21 חכמים: מקובלי גירונה וקסטיליה ולצדם גדולי ההלכה של הדור (הרשב״א, הרא״ש, בעל הטורים, הר״ן, הריב״ש).
+- **45 מקובלים נוספו לתקופה שכבר הייתה בדף** (1374–2012): ממשיכי קבלת ספרד לפני הגירוש, חכמי צפת שלא היו בדף, מפיצי קבלת האר״י באיטליה ובאשכנז, חכמי בית אל, ומקובלי בגדאד וירושלים במאה העשרים.
+- **שלושה אירועים נוספו:** ויכוח ברצלונה (1263), תחילת התפרסמות הזוהר (1290) והמגפה השחורה (1348). סרגל השנים מתחיל עכשיו ב־1200.
+- **איך נבדק:** כמו בסבב הקודם, שני מקורות לפחות לכל שורה (ספריא, ויקיפדיה העברית, ויקינתונים, האנציקלופדיה היהודית, אנציקלופדיה יודאיקה, המכלול, אתר ישיבה). רוב המקובלים הקדומים אין להם ערך בספריא.
+
+## הערות על שורות מסוימות
+- **רבי יוסף צייאח:** נכתב ~1505–1573, כמו בדף שיר הספירות שלנו (לפי המחקר: נולד כנראה בירושלים ~1505, נפטר בדמשק 1573). ויקיפדיה העברית כותבת רק "חי ככל הנראה בסביבות ר״ס–ש״מ" (1500–1580), והיודאיקה "המאה ה־16" בלבד.
+- **רבי דוד בן יהודה החסיד:** שנים רק בוויקינתונים (1240–1320); היודאיקה "תחילת המאה ה־14". סומן ~.
+- **רבי אברהם אבולעפיה:** ~1240–1291 כמו בדף הכתבים שלו.
+- **רבי טודרוס הלוי אבולעפיה:** ~1225–1283 לפי ויקיפדיה העברית וויקינתונים; היודאיקה נותנת 1220–1298.
+- **הריטב״א:** 1320 לפי ספריא; ויקיפדיה העברית 1330.
+- **רבי שם טוב בן שם טוב:** ~1390–1440; המקורות נעים בין 1380 ל־1390 ללידה ובין 1430 ל־1441 לפטירה.
+- **רבי אברהם גלאנטי:** נולד ברומא בתחילת המאה ה־16 (אחיו הגדול של רבי משה גלאנטי, יליד 1540), לכן ~1510 ולא 1540. שנת הפטירה (~1588) אינה ודאית.
+- **רבי יוסף אבן טבול:** נפטר 1616 לפי ויקיפדיה העברית וויקינתונים (ולא 1610).
+- **רבי ישראל סרוג:** אף מקור לא נותן שנות לידה ופטירה, רק "פעל 1590–1610". ~1550–1610 הוא אומדן. הכתיב "סרוג" הוא הרווח בעברית.
+- **בעל עמק המלך (רבי נפתלי בכרך):** אין שנים באף מקור; ידוע רק שנולד בפרנקפורט במחצית השנייה של המאה ה־16 וספרו נדפס 1648. ~1590–1660 הוא אומדן.
+- **רבי נתן שפירא הירושלמי:** פטירה 1667 (ויקיפדיה) או 1662 (JE, ויקינתונים); לידה לא ידועה.
+- **רבי גדליה חיון:** ~1683 לפי ויקיפדיה והמכלול. **רבי מנחם מנדל משקלוב:** ~1740 לפי ויקיפדיה. **רבי מרדכי שרעבי:** ~1912–1983 לפי ויקיפדיה העברית וויקינתונים (ויקיפדיה האנגלית: 1908–1984).
+- **הרב״ך:** JE כותב "נפטר 1739", כנראה שגיאה; נפטר 1730 בעיצומו של פולמוס הרמח״ל.
+- **רבי חיים די לה רוזה:** הפטירה (1786) ודאית, הלידה (~1720) אומדן.
+
+## הדור החדש: נולדו 1194–1373
+| שם | שנים | קבוצה | מקורות |
+|---|---|---|---|
+| הרמב״ן | 1194–1270 | ספרד, המזרח וא״י | [ספריא](https://www.sefaria.org/topics/ramban) · [ויקיפדיה](https://he.wikipedia.org/wiki/רמב%22ן) · [ויקינתונים](https://www.wikidata.org/wiki/Q355455) |
+| רבינו יונה גירונדי | ~1200–1263 | ספרד, המזרח וא״י | [ספריא](https://www.sefaria.org/topics/rabbeinu-yonah-gerondi) · [ויקיפדיה](https://he.wikipedia.org/wiki/יונה_גירונדי) · [ויקינתונים](https://www.wikidata.org/wiki/Q1371903) |
+| מהר״ם מרוטנבורג | ~1215–1293 | אשכנז ואיטליה | [ספריא](https://www.sefaria.org/topics/maharam-of-rothenburg) · [ויקיפדיה](https://he.wikipedia.org/wiki/מהר%22ם_מרוטנבורג) · [ויקינתונים](https://www.wikidata.org/wiki/Q72163) |
+| רבי טודרוס הלוי אבולעפיה | ~1225–1283 | ספרד, המזרח וא״י | [ויקיפדיה](https://he.wikipedia.org/wiki/טודרוס_בן_יוסף_אבולעפיה) · [ויקינתונים](https://www.wikidata.org/wiki/Q7812883) · [אנציקלופדיה יודאיקה](https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/abulafia-todros-ben-joseph-ha-levi) |
+| הרשב״א | 1235–1310 | ספרד, המזרח וא״י | [ספריא](https://www.sefaria.org/topics/rashba1) · [ויקיפדיה](https://he.wikipedia.org/wiki/רשב%22א) · [ויקינתונים](https://www.wikidata.org/wiki/Q982170) |
+| רבי אברהם אבולעפיה | ~1240–1291 | ספרד, המזרח וא״י | [ספריא](https://www.sefaria.org/topics/abraham-ben-samuel-abulafia) · [ויקיפדיה](https://he.wikipedia.org/wiki/אברהם_אבולעפיה) · [ויקינתונים](https://www.wikidata.org/wiki/Q323448) |
+| רבי משה די ליאון | ~1240–1305 | ספרד, המזרח וא״י | [ספריא](https://www.sefaria.org/topics/moshe-de-leon) · [ויקיפדיה](https://he.wikipedia.org/wiki/משה_די_לאון) · [ויקינתונים](https://www.wikidata.org/wiki/Q456758) |
+| רבי דוד בן יהודה החסיד | ~1240–1320 | ספרד, המזרח וא״י | [ויקיפדיה](https://he.wikipedia.org/wiki/דוד_בן_יהודה_החסיד) · [ויקינתונים](https://www.wikidata.org/wiki/Q107929944) · [אנציקלופדיה יודאיקה](https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/david-ben-judah-he-hasid) |
+| רבי יוסף ג׳יקטיליא | ~1248–1305 | ספרד, המזרח וא״י | [ספריא](https://www.sefaria.org/topics/yosef-giqatillah) · [ויקיפדיה](https://he.wikipedia.org/wiki/יוסף_ג'יקטיליה) · [JE](http://www.jewishencyclopedia.com/articles/6669-gikatilla-joseph-b-abraham) |
+| המאירי | 1249–1315 | ספרד, המזרח וא״י | [ספריא](https://www.sefaria.org/topics/menachem-meiri) · [ויקיפדיה](https://he.wikipedia.org/wiki/מנחם_המאירי) · [ויקינתונים](https://www.wikidata.org/wiki/Q1920221) |
+| רבי יצחק דמן עכו | ~1250–1340 | ספרד, המזרח וא״י | [ויקיפדיה](https://he.wikipedia.org/wiki/יצחק_דמן_עכו) · [ויקינתונים](https://www.wikidata.org/wiki/Q6077420) · [ויקיפדיה אנגלית](https://en.wikipedia.org/wiki/Isaac_ben_Samuel_of_Acre) |
+| רבי מנחם ריקאנטי | ~1250–1310 | אשכנז ואיטליה | [ספריא](https://www.sefaria.org/topics/recanati) · [ויקיפדיה](https://he.wikipedia.org/wiki/מנחם_רקנאטי) · [JE](http://www.jewishencyclopedia.com/articles/10642-menahem-of-recanati) |
+| הרא״ש | ~1250–1327 | אשכנז ואיטליה | [ספריא](https://www.sefaria.org/topics/rosh) · [ויקיפדיה](https://he.wikipedia.org/wiki/רא%22ש) · [ויקינתונים](https://www.wikidata.org/wiki/Q722525) |
+| הריטב״א | ~1250–1320 | ספרד, המזרח וא״י | [ספריא](https://www.sefaria.org/topics/ritva) · [ויקיפדיה](https://he.wikipedia.org/wiki/ריטב%22א) · [ויקינתונים](https://www.wikidata.org/wiki/Q460368) |
+| רבנו בחיי בן אשר | ~1255–1340 | ספרד, המזרח וא״י | [ספריא](https://www.sefaria.org/topics/bachya-ben-asher) · [ויקיפדיה](https://he.wikipedia.org/wiki/בחיי_בן_אשר) · [ויקינתונים](https://www.wikidata.org/wiki/Q458707) |
+| בעל הטורים | ~1269–1343 | אשכנז ואיטליה | [ספריא](https://www.sefaria.org/topics/jacob-ben-asher) · [ויקיפדיה](https://he.wikipedia.org/wiki/יעקב_בן_אשר) · [ויקינתונים](https://www.wikidata.org/wiki/Q1376849) |
+| רבי שם טוב אבן גאון | ~1283–1330 | ספרד, המזרח וא״י | [ספריא](https://www.sefaria.org/topics/shem-tov-ben-avraham-ibn-gaon) · [ויקיפדיה](https://he.wikipedia.org/wiki/שם_טוב_אבן_גאון) · [ויקינתונים](https://www.wikidata.org/wiki/Q7494060) |
+| הרלב״ג | 1288–1344 | ספרד, המזרח וא״י | [ספריא](https://www.sefaria.org/topics/ralbag) · [ויקיפדיה](https://he.wikipedia.org/wiki/רלב%22ג) · [ויקינתונים](https://www.wikidata.org/wiki/Q353633) |
+| הר״ן | ~1320–1376 | ספרד, המזרח וא״י | [ספריא](https://www.sefaria.org/topics/nissim-of-gerona-(ran)) · [ויקיפדיה](https://he.wikipedia.org/wiki/ר%22ן) · [ויקינתונים](https://www.wikidata.org/wiki/Q723531) |
+| הריב״ש | 1326–1408 | ספרד, המזרח וא״י | [ספריא](https://www.sefaria.org/topics/isaac-ben-sheshet-perfet) · [ויקיפדיה](https://he.wikipedia.org/wiki/ריב%22ש) · [ויקינתונים](https://www.wikidata.org/wiki/Q460650) |
+| רבי חסדאי קרשקש | ~1340–1410 | ספרד, המזרח וא״י | [ספריא](https://www.sefaria.org/topics/hasdai-ben-avraham-crescas) · [ויקיפדיה](https://he.wikipedia.org/wiki/חסדאי_קרשקש) · [ויקינתונים](https://www.wikidata.org/wiki/Q528415) |
+
+## מקובלים שנוספו לתקופה שהייתה בדף (1374–2012)
+| שם | שנים | קבוצה | מקורות |
+|---|---|---|---|
+| רבי שם טוב בן שם טוב | ~1390–1440 | ספרד, המזרח וא״י | [ויקיפדיה](https://he.wikipedia.org/wiki/שם_טוב_אבן_שם_טוב_(הראשון)) · [ויקינתונים](https://www.wikidata.org/wiki/Q7494063) · [JE](https://www.jewishencyclopedia.com/articles/8020-ibn-shem-tob-shem-tob-ben-joseph) |
+| רבי יוחנן אלימנו | ~1435–1504 | אשכנז ואיטליה | [ויקיפדיה](https://he.wikipedia.org/wiki/יוחנן_אלימנו) · [ויקינתונים](https://www.wikidata.org/wiki/Q4022814) · [ויקיפדיה אנגלית](https://en.wikipedia.org/wiki/Yohanan_Alemanno) |
+| רבי יהודה אלבוטיני | ~1450–1519 | ספרד, המזרח וא״י | [ויקיפדיה](https://he.wikipedia.org/wiki/יהודה_בן_משה_אלבוטיני) · [אנציקלופדיה יודאיקה](https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/albotini-albutaini-judah-ben-moses) |
+| רבי יהודה חייט | ~1450–1510 | ספרד, המזרח וא״י | [ויקיפדיה](https://he.wikipedia.org/wiki/יהודה_חייט) · [ויקינתונים](https://www.wikidata.org/wiki/Q118913655) · [אנציקלופדיה יודאיקה](https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/hayyat-judah-ben-jacob) |
+| רבי מאיר אבן גבאי | ~1480–1540 | ספרד, המזרח וא״י | [ספריא](https://www.sefaria.org/topics/meir-ben-ezekiel-ibn-gabbai) · [ויקיפדיה](https://he.wikipedia.org/wiki/מאיר_אבן_גבאי) · [ויקינתונים](https://www.wikidata.org/wiki/Q6391090) |
+| רבי שמעון לביא | ~1486–1585 | ספרד, המזרח וא״י | [ספריא](https://www.sefaria.org/topics/shimon-lavi) · [ויקיפדיה](https://he.wikipedia.org/wiki/שמעון_לביא) · [ויקיפדיה אנגלית](https://en.wikipedia.org/wiki/Shimon_Lavi) |
+| רבי שלמה מולכו | ~1500–1532 | ספרד, המזרח וא״י | [ויקיפדיה](https://he.wikipedia.org/wiki/שלמה_מולכו) · [ויקינתונים](https://www.wikidata.org/wiki/Q723526) · [ויקיפדיה אנגלית](https://en.wikipedia.org/wiki/Solomon_Molcho) |
+| רבי יוסף צייאח | ~1505–1573 | ספרד, המזרח וא״י | [ויקיפדיה](https://he.wikipedia.org/wiki/יוסף_צאייח) · [אנציקלופדיה יודאיקה](https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/zayyah-ziyyah-joseph-ben-abraham-ibn) |
+| רבי אברהם הלוי ברוכים | ~1515–1593 | ספרד, המזרח וא״י | [אנציקלופדיה יודאיקה](https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/abraham-ben-eliezer-ha-levi-berukhim) · [JE](https://www.jewishencyclopedia.com/articles/427-abraham-ben-eliezer-ha-levi-berukim) |
+| רבי אברהם גלאנטי | ~1510–1588 | ספרד, המזרח וא״י | [ויקיפדיה](https://he.wikipedia.org/wiki/אברהם_גאלאנטי_(מקובל)) · [אנציקלופדיה יודאיקה](https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/galante-abraham-ben-mordecai) · [ויקיפדיה אנגלית](https://en.wikipedia.org/wiki/Abraham_ben_Mordecai_Galante) |
+| רבי יוסף אבן טבול | ~1545–1616 | ספרד, המזרח וא״י | [ויקיפדיה](https://he.wikipedia.org/wiki/יוסף_אבן_טבול) · [ויקינתונים](https://www.wikidata.org/wiki/Q1706133) |
+| רבי ישראל סרוג | ~1550–1610 | ספרד, המזרח וא״י | [ויקיפדיה](https://he.wikipedia.org/wiki/ישראל_סרוג) · [אנציקלופדיה יודאיקה](https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/sarug-saruk-israel) · [JE](https://www.jewishencyclopedia.com/articles/13211-sarug-saruk-israel) |
+| רבי אהרן ברכיה ממודינא | 1549–1639 | אשכנז ואיטליה | [ספריא](https://www.sefaria.org/topics/aaron-berekhiah-of-modena) · [ויקיפדיה](https://he.wikipedia.org/wiki/אהרן_ברכיה_ממודנה) · [ויקיפדיה אנגלית](https://en.wikipedia.org/wiki/Aaron_Berechiah_of_Modena) |
+| רבי יעקב צמח | ~1584–1667 | ספרד, המזרח וא״י | [ויקיפדיה](https://he.wikipedia.org/wiki/יעקב_צמח_(מקובל)) · [ויקינתונים](https://www.wikidata.org/wiki/Q6119523) · [en.wiki](https://en.wikipedia.org/wiki/Jacob_ben_Hayyim_Zemah) |
+| רבי נתן שפירא הירושלמי | ~1585–1667 | ספרד, המזרח וא״י | [ויקיפדיה](https://he.wikipedia.org/wiki/נתן_שפירא_הירושלמי) · [ויקינתונים](https://www.wikidata.org/wiki/Q16131782) · [JE](https://www.jewishencyclopedia.com/articles/13965-spira-spiro) |
+| רבי חיים הכהן מארם צובא | ~1585–1655 | ספרד, המזרח וא״י | [ויקיפדיה](https://he.wikipedia.org/wiki/חיים_הכהן_(מקובל)) · [ויקינתונים](https://www.wikidata.org/wiki/Q6624808) · [en.wiki](https://en.wikipedia.org/wiki/Hayyim_ben_Abraham_ha-Kohen) |
+| בעל עמק המלך (רבי נפתלי בכרך) | ~1590–1660 | אשכנז ואיטליה | [ויקיפדיה](https://he.wikipedia.org/wiki/נפתלי_הרץ_בכרך) · [JE](https://www.jewishencyclopedia.com/articles/11313-naphtali-herz-ben-jacob-elhanan) · [en.wiki](https://en.wikipedia.org/wiki/Naftali_Hertz_ben_Yaakov_Elchanan) |
+| רבי שמואל ויטאל | 1598–1677 | ספרד, המזרח וא״י | [ויקיפדיה](https://he.wikipedia.org/wiki/שמואל_ויטאל) · [ויקינתונים](https://www.wikidata.org/wiki/Q2897186) |
+| רבי שמשון מאוסטרופולי | ~1600–1648 | אשכנז ואיטליה | [ויקיפדיה](https://he.wikipedia.org/wiki/שמשון_מאוסטרופולי) · [ויקינתונים](https://www.wikidata.org/wiki/Q2907021) |
+| רבי מאיר פופרש | ~1624–1662 | אשכנז ואיטליה | [ויקיפדיה](https://he.wikipedia.org/wiki/מאיר_הכהן_פופרש) · [ויקינתונים](https://www.wikidata.org/wiki/Q2903655) · [en.wiki](https://en.wikipedia.org/wiki/Meir_ben_Judah_Leib_Poppers) · [JE](https://jewishencyclopedia.com/articles/12281-poppers-meir-ben-judah-lob-ha-kohen-ashkenazi) |
+| רבי אברהם רוויגו | ~1650–1714 | אשכנז ואיטליה | [ויקיפדיה](https://he.wikipedia.org/wiki/אברהם_רוויגו) · [המכלול](https://www.hamichlol.org.il/רבי_אברהם_רוויגו) · [ויקינתונים](https://www.wikidata.org/wiki/Q4669158) |
+| הרב״ך (רבי בנימין הכהן ויטאלי) | 1651–1730 | אשכנז ואיטליה | [ויקיפדיה](https://he.wikipedia.org/wiki/בנימין_הכהן_ויטאלי) · [JE](https://www.jewishencyclopedia.com/articles/14716-vitale-coen-benjamin-alessandro) |
+| רבי יהודה החסיד משעדליץ | ~1660–1700 | אשכנז ואיטליה | [ויקיפדיה](https://he.wikipedia.org/wiki/יהודה_החסיד_(ירושלים)) · [ויקינתונים](https://www.wikidata.org/wiki/Q2908900) · [en.wiki](https://en.wikipedia.org/wiki/Judah_HeHasid_(Jerusalem)) |
+| רבי חיים אבולעפיה | ~1660–1744 | ספרד, המזרח וא״י | [ויקיפדיה](https://he.wikipedia.org/wiki/חיים_אבולעפיה_(השני)) · [ויקינתונים](https://www.wikidata.org/wiki/Q5687507) · [en.wiki](https://en.wikipedia.org/wiki/Hayyim_ben_Jacob_Abulafia) |
+| רבי ישעיה באסאן | ~1673–1739 | אשכנז ואיטליה | [ויקיפדיה](https://he.wikipedia.org/wiki/ישעיהו_באסאן) · [ויקינתונים](https://www.wikidata.org/wiki/Q18011654) |
+| בעל שומר אמונים (רבי יוסף אירגס) | 1685–1730 | אשכנז ואיטליה | [ספריא](https://www.sefaria.org/topics/joseph-ben-emanuel-ergas1) · [ויקיפדיה](https://he.wikipedia.org/wiki/יוסף_אירגס) · [ויקינתונים](https://www.wikidata.org/wiki/Q6584811) |
+| בעל משנת חסידים (רבי עמנואל חי ריקי) | 1688–1743 | אשכנז ואיטליה | [ספריא](https://www.sefaria.org/topics/immanuel-hai-ben-avraham-ricchi) · [ויקיפדיה](https://he.wikipedia.org/wiki/עמנואל_חי_ריקי) · [JE](https://www.jewishencyclopedia.com/articles/12736-ricchi-raphael-immanuel-hay-ben-abraham) · [ישיבה](https://www.yeshiva.org.il/wiki/index.php/רבי_עמנואל_חי_ריקי) |
+| רבי גדליה חיון | ~1683–1750 | ספרד, המזרח וא״י | [ויקיפדיה](https://he.wikipedia.org/wiki/גדליה_חיון) · [המכלול](https://www.hamichlol.org.il/גדליה_חיון) · [ישיבה](https://www.yeshiva.org.il/wiki/index.php/רבי_גדליה_חיון) |
+| רבי משה דוד ואלי | 1697–1776 | אשכנז ואיטליה | [ויקיפדיה](https://he.wikipedia.org/wiki/משה_דוד_ואלי) · [ויקינתונים](https://www.wikidata.org/wiki/Q6616438) |
+| רבי אברהם גרשון מקיטוב | ~1701–1761 | חסידות | [ויקיפדיה](https://he.wikipedia.org/wiki/אברהם_גרשון_מקיטוב) · [ויקינתונים](https://www.wikidata.org/wiki/Q2899025) |
+| רבי חיים די לה רוזה | ~1720–1786 | ספרד, המזרח וא״י | [ויקיפדיה](https://he.wikipedia.org/wiki/חיים_די_לה_רוזה) · [ישיבה](https://www.yeshiva.org.il/wiki/index.php/רבי_חיים_די_לה_רוזה) · [המכלול](https://www.hamichlol.org.il/חיים_דילרוזה) |
+| רבי פנחס מקוריץ | 1726–1790 | חסידות | [ספריא](https://www.sefaria.org/topics/pinchas-shapiro) · [ויקיפדיה](https://he.wikipedia.org/wiki/פנחס_שפירא_מקוריץ) · [ויקינתונים](https://www.wikidata.org/wiki/Q2066789) |
+| רבי יום טוב אלגאזי | 1727–1802 | ספרד, המזרח וא״י | [ויקיפדיה](https://he.wikipedia.org/wiki/יום-טוב_אלגאזי) · [ויקינתונים](https://www.wikidata.org/wiki/Q7212832) |
+| רבי מנחם מנדל משקלוב | ~1740–1827 | אשכנז ואיטליה | [ויקיפדיה](https://he.wikipedia.org/wiki/מנחם_מנדל_משקלוב) · [ויקינתונים](https://www.wikidata.org/wiki/Q12409284) |
+| בעל מאור ושמש | 1751–1823 | חסידות | [ספריא](https://www.sefaria.org/topics/kalonymus-kalman-epstein) · [ויקיפדיה](https://he.wikipedia.org/wiki/קלונימוס_קלמן_אפשטיין) · [ויקינתונים](https://www.wikidata.org/wiki/Q964980) |
+| רבי יצחק אייזיק חבר | 1789–1852 | אשכנז ואיטליה | [ספריא](https://www.sefaria.org/topics/yitzchak-isaac-chaver1) · [ויקיפדיה](https://he.wikipedia.org/wiki/יצחק_אייזיק_חבר) · [ויקינתונים](https://www.wikidata.org/wiki/Q7051241) |
+| רבי יצחק אייזיק מקומרנא | 1806–1874 | חסידות | [ספריא](https://www.sefaria.org/topics/yitzchak-aizik-safrin-of-komarna) · [ויקיפדיה](https://he.wikipedia.org/wiki/יצחק_אייזיק_ספרין) · [ויקינתונים](https://www.wikidata.org/wiki/Q6882579) |
+| רבי אליהו מני | 1818–1899 | ספרד, המזרח וא״י | [ויקיפדיה](https://he.wikipedia.org/wiki/אליהו_מני_(רב)) · [ויקינתונים](https://www.wikidata.org/wiki/Q6994526) |
+| בעל הלשם | 1841–1926 | אשכנז ואיטליה | [ויקיפדיה](https://he.wikipedia.org/wiki/שלמה_אלישיב) · [ויקינתונים](https://www.wikidata.org/wiki/Q2239932) |
+| רבי שמעון אגסי | 1852–1914 | ספרד, המזרח וא״י | [ויקיפדיה](https://he.wikipedia.org/wiki/שמעון_אגסי) · [ויקינתונים](https://www.wikidata.org/wiki/Q12411857) |
+| רבי חיים שאול דוויק הכהן | 1857–1933 | ספרד, המזרח וא״י | [ויקיפדיה](https://he.wikipedia.org/wiki/חיים_שאול_הכהן_דוויק) · [ישיבה](https://www.yeshiva.org.il/wiki/index.php/הרב_חיים_שאול_דוויק_הכהן) · [המכלול](https://www.hamichlol.org.il/חיים_שאול_הכהן_דוויק) |
+| רבי עובדיה הדאיה | 1889–1969 | ספרד, המזרח וא״י | [ויקיפדיה](https://he.wikipedia.org/wiki/עובדיה_הדאיה) · [ויקינתונים](https://www.wikidata.org/wiki/Q3959357) |
+| רבי סלמאן מוצפי | 1900–1974 | ספרד, המזרח וא״י | [ויקיפדיה](https://he.wikipedia.org/wiki/סלמאן_מוצפי) · [ויקינתונים](https://www.wikidata.org/wiki/Q6918598) |
+| רבי ברוך שלום אשלג | 1907–1991 | חסידות | [ויקיפדיה](https://he.wikipedia.org/wiki/ברוך_שלום_הלוי_אשלג) · [ויקינתונים](https://www.wikidata.org/wiki/Q809632) |
+| רבי מרדכי שרעבי | ~1912–1983 | ספרד, המזרח וא״י | [ויקיפדיה](https://he.wikipedia.org/wiki/מרדכי_שרעבי) · [ויקינתונים](https://www.wikidata.org/wiki/Q6909679) · [en.wiki](https://en.wikipedia.org/wiki/Mordechai_Sharabi) |
+
+## מי עוד אפשר להוסיף
+- ~~מקובלי גירונה שלפני הרמב״ן, חסידי אשכנז והרמ״ה: נולדו לפני 1190, מחוץ לציר.~~ נוספו בהשלמה שלמטה.
+- בני המאה ה־13 שנשארו בחוץ: רבי יעקב ורבי יצחק הכהן מקסטיליה, רבי יוסף אנג׳לט, רבי יהושע אבן שועיב, הרא״ה.
+- המועמדים מהסבב הקודם (מאור עיניים, מי השילוח, מהר״ם לובלין, מעם לועז, רבי שלמה קלוגר, מהר״ץ חיות, הישמח משה) עדיין לא נכנסו.
+
+## השלמה: הדור שלפני 1190 (28.10.2026)
+לבקשת המשתמש נוסף דור ראשון נוסף, **"דור הראב״ד, הרמב״ם ורבי יהודה החסיד"** (נולדו 1125–1193), והציר מתחיל עכשיו ב־1115 (סרגל השנים מ־1150). אחרי: 227 שורות (225 חכמים), 1125–2012, 14 דורות, 21 אירועים. נוסף אירוע: ספר הבהיר מופיע בפרובנס (סביב 1200; השנה המדויקת אינה ידועה, האזכורים הראשונים הם בראשית המאה ה־13).
+
+| שם | שנים | קבוצה | מקורות |
+|---|---|---|---|
+| הראב״ד | ~1125–1198 | ספרד, המזרח וא״י | [ספריא](https://www.sefaria.org/topics/raavad) · [ויקיפדיה](https://he.wikipedia.org/wiki/אברהם_בן_דוד_מפושקירה) · [ויקינתונים](https://www.wikidata.org/wiki/Q330769) |
+| הרמב״ם | 1138–1204 | ספרד, המזרח וא״י | [ספריא](https://www.sefaria.org/topics/rambam) · [ויקיפדיה](https://he.wikipedia.org/wiki/רמב%22ם) · [ויקינתונים](https://www.wikidata.org/wiki/Q127398) |
+| רבי יהודה החסיד | ~1150–1217 | אשכנז ואיטליה | [ויקיפדיה](https://he.wikipedia.org/wiki/יהודה_החסיד) · [ויקינתונים](https://www.wikidata.org/wiki/Q1391474) |
+| רבי יצחק סגי נהור | ~1160–1235 | ספרד, המזרח וא״י | [ספריא](https://www.sefaria.org/topics/isaac-the-blind) · [ויקיפדיה](https://he.wikipedia.org/wiki/יצחק_סגי_נהור) · [ויקינתונים](https://www.wikidata.org/wiki/Q927296) |
+| רבי עזרא מגירונה | ~1160–1227 | ספרד, המזרח וא״י | [ויקיפדיה](https://he.wikipedia.org/wiki/עזרא_ועזריאל_מגירונה) · [ויקינתונים](https://www.wikidata.org/wiki/Q557882) |
+| רבי עזריאל מגירונה | ~1160–1238 | ספרד, המזרח וא״י | [ספריא](https://www.sefaria.org/topics/azriel-of-gerona) · [ויקיפדיה](https://he.wikipedia.org/wiki/עזרא_ועזריאל_מגירונה) · [ויקינתונים](https://www.wikidata.org/wiki/Q557882) |
+| הרמ״ה | ~1170–1244 | ספרד, המזרח וא״י | [ספריא](https://www.sefaria.org/topics/meir-abulafia) · [ויקיפדיה](https://he.wikipedia.org/wiki/מאיר_הלוי_אבולעפיה) · [ויקינתונים](https://www.wikidata.org/wiki/Q372554) |
+| הרוקח | ~1176–1238 | אשכנז ואיטליה | [ספריא](https://www.sefaria.org/topics/eleazar-of-worms) · [ויקיפדיה](https://he.wikipedia.org/wiki/אלעזר_מגרמייזא) · [ויקינתונים](https://www.wikidata.org/wiki/Q106336) |
+
+הערות:
+- **הרמב״ם:** ספריא כותבת 1137; ויקיפדיה נותנת תאריך עברי (ד׳תתצ״ח) = 1138, ולפי הכלל נבחר 1138.
+- **רבי עזרא מגירונה:** ויקיפדיה העברית: נפטר ד׳תתקפ״ח (1227); האנציקלופדיה יודאיקה: בערך 1238 או 1245. אין לו ערך נפרד בספריא ובוויקינתונים (הערך משותף עם אחיו רבי עזריאל). שנת הלידה ~1160 אומדן לשני האחים.
+- **הרוקח:** ספריא 1176–1238; ויקיפדיה העברית "1160 – 1230 בערך"; ויקינתונים נותן את שתי שנות הפטירה. סומן ~.
+- **הראב״ד:** ויקיפדיה "1114–1125"; ספריא 1125. **הרמ״ה:** ויקיפדיה "בסביבות 1170 או קודם לכן".
