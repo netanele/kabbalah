@@ -52,7 +52,7 @@ section.block>.lead{color:var(--muted);margin:0 0 18px;font-size:1.05rem}
 .chip[aria-pressed="false"] .dot{background:transparent;box-shadow:inset 0 0 0 2px var(--c)}
 
 /* the board: sticky scale + generations */
-.board{background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:0 4px 16px #3a2c1010;padding:0 20px 18px}
+.board{--lab:clamp(220px,27vw,320px);background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:0 4px 16px #3a2c1010;padding:0 20px 18px}
 .axis{position:sticky;top:var(--navh);z-index:5;background:#fffdf8f5;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);margin:0 -20px 4px;padding:12px 20px 6px;border-bottom:1px solid var(--line);border-radius:16px 16px 0 0}
 .status{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:.92rem;min-height:30px;margin-bottom:6px;line-height:1.4}
 .status span{color:var(--muted)}
@@ -61,13 +61,14 @@ section.block>.lead{color:var(--muted);margin:0 0 18px;font-size:1.05rem}
 .clear:hover{background:#efe7d6}
 .ticks,.evs{position:relative;height:18px;font-size:.75rem;color:var(--muted);line-height:18px}
 .ticks span{position:absolute;transform:translateX(50%);top:0;font-variant-numeric:tabular-nums}
+.ticks,.evs{margin-right:var(--lab)}
 .evs{height:22px;margin-top:4px}
 .evs-m{display:none}
-@media(max-width:640px){.ticks span.h50{display:none}.axis .evs{display:none}.evs-m{display:block;margin:10px 0 4px}}
+@media(max-width:640px){.board{--lab:0px}.ticks span.h50{display:none}.axis .evs{display:none}.evs-m{display:block;margin:10px 0 4px}}
 .evs span{position:absolute;transform:translateX(50%);top:1px;width:20px;height:20px;border-radius:50%;background:var(--dark);color:var(--gold2);font-family:"Frank Ruhl Libre",serif;font-size:.74rem;font-weight:700;display:grid;place-items:center;line-height:1;cursor:default}
 
 .chart{position:relative}
-.grid{position:absolute;inset:0;pointer-events:none}
+.grid{position:absolute;inset:0 var(--lab) 0 0;pointer-events:none}
 .grid i{position:absolute;top:0;bottom:0}
 .grid .gl{border-right:1px dashed var(--line)}
 .grid .band{background:var(--band)}
@@ -79,11 +80,15 @@ section.block>.lead{color:var(--muted);margin:0 0 18px;font-size:1.05rem}
 .gen+.gen{margin-top:14px;border-top:1px solid var(--line);padding-top:16px}
 .gen h3{font-size:1.4rem;margin:0;color:#3a2e1d;line-height:1.3}
 .gen .sub{font-size:.85rem;color:var(--gold);margin:2px 0 8px;font-weight:500}
-.row{display:block;width:100%;text-align:right;font:inherit;line-height:1.45;color:inherit;background:none;border:0;padding:5px 0 6px;cursor:pointer;border-radius:6px}
+/* one line per sage: name and years in a column on the right, the life bar beside them, on the scale of the axis */
+.row{display:grid;grid-template-columns:var(--lab) 1fr;align-items:center;width:100%;text-align:right;font:inherit;line-height:1.3;color:inherit;background:none;border:0;padding:4px 0;cursor:pointer;border-radius:6px}
+.who{display:flex;align-items:baseline;justify-content:space-between;gap:8px;padding-left:12px}
 .row:hover .nm{color:#6d511d}
 .nm{font-family:"Frank Ruhl Libre",serif;font-weight:500;font-size:1.03rem}
-.yr{font-size:.8rem;color:var(--muted);margin-inline-start:8px;unicode-bidi:isolate;font-variant-numeric:tabular-nums}
-.track{display:block;position:relative;height:10px;margin-top:3px}
+.yr{flex:none;font-size:.8rem;color:var(--muted);unicode-bidi:isolate;font-variant-numeric:tabular-nums}
+.track{display:block;position:relative;height:10px}
+.track::before{content:"";position:absolute;inset:50% 0 auto;border-top:1px dotted var(--line)}
+@media(max-width:640px){.row{display:block;padding:5px 0 6px}.who{justify-content:flex-start;padding-left:0}.track{margin-top:3px}}
 .bar{position:absolute;top:0;height:100%;border-radius:5px}
 .row.dim{opacity:.22}
 .row.on .nm{font-weight:700}
@@ -127,7 +132,7 @@ footer small{color:#a8a08f}
   <div class="kicker">דורות החכמים</div>
   <h1>חכמי ישראל</h1>
   <p>ארבעה־עשר דורות, מדור הראב״ד והרמב״ם ועד דור השואה והתקומה. הקישו על שם כדי לראות מי חי באותן שנים.</p>
-  <div class="dates">1125–2012 · 14 דורות · 225 חכמים · 21 אירועים בציר</div>
+  <div class="dates">1125–2012 · 14 דורות · 226 חכמים · 21 אירועים בציר</div>
 </header>
 
 <nav class="top" aria-label="ניווט"><div class="in">
@@ -264,6 +269,7 @@ const D=[
 ['רבי יעקב בירב',1474,1541,'s',1],
 ['הרדב״ז',1479,1573,'s',1],
 ['רבי מאיר אבן גבאי',1480,1540,'s',1],
+['רבי יוסף תירשום',1480,1550,'s',1],
 ['הרלב״ח',1485,1545,'s',1],
 ['רבי שמעון לביא',1486,1585,'s',1],
 ['רבי יוסף קארו',1488,1575,'s'],
@@ -564,7 +570,7 @@ function render(){
         else if(!(p.b<=s.d&&p.d>=s.b)) cls+=' dim';
       }
       html+=`<button type="button" class="${cls}" data-id="${p.id}" aria-pressed="${p.id===sel}">
-        <span class="nm">${p.name}</span><span class="yr">${p.approx?'~':''}${p.b}–${p.d}</span>
+        <span class="who"><span class="nm">${p.name}</span><span class="yr">${p.approx?'~':''}${p.b}–${p.d}</span></span>
         <span class="track" dir="rtl"><span class="bar" style="right:${pos(p.b)}%;width:${pos(p.d)-pos(p.b)}%;background:var(--${p.c})"></span></span>
       </button>`;
     });
