@@ -65,7 +65,10 @@ section.block>.lead{color:var(--muted);margin:0 0 18px;font-size:1.05rem}
 .evs{height:22px;margin-top:4px}
 .evs-m{display:none}
 @media(max-width:640px){.board{--lab:0px}.ticks span.h50{display:none}.axis .evs{display:none}.evs-m{display:block;margin:10px 0 4px}}
-.evs span{position:absolute;transform:translateX(50%);top:1px;width:20px;height:20px;border-radius:50%;background:var(--dark);color:var(--gold2);font-family:"Frank Ruhl Libre",serif;font-size:.74rem;font-weight:700;display:grid;place-items:center;line-height:1;cursor:default}
+.evs span{position:absolute;transform:translateX(50%);top:1px;width:20px;height:20px;border-radius:50%;background:var(--dark);color:var(--gold2);font-family:"Frank Ruhl Libre",serif;font-size:.74rem;font-weight:700;display:grid;place-items:center;line-height:1;cursor:help}
+.evtip{position:fixed;z-index:30;max-width:min(300px,calc(100vw - 16px));background:var(--dark);color:#f4ecdc;font-size:.88rem;line-height:1.45;padding:7px 11px;border-radius:8px;box-shadow:0 4px 14px #0004;pointer-events:none}
+.evtip b{color:var(--gold2);margin-left:6px;font-variant-numeric:tabular-nums}
+.evtip[hidden]{display:none}
 
 .chart{position:relative}
 .grid{position:absolute;inset:0 var(--lab) 0 0;pointer-events:none}
@@ -514,7 +517,7 @@ const evlist=document.getElementById('evlist');
 const badges=evBoxes.map(()=>[]);
 EVENTS.forEach(([y,t],i)=>{
   evBoxes.forEach((box,k)=>{
-    const s=document.createElement('span');s.style.right=pos(y)+'%';s.textContent=HEB[i];s.title=`${y}: ${t}`;box.appendChild(s);
+    const s=document.createElement('span');s.style.right=pos(y)+'%';s.textContent=HEB[i];s.dataset.ev=i;s.tabIndex=0;s.setAttribute('aria-label',`${y}: ${t}`);box.appendChild(s);
     badges[k].push([y,s]);
   });
   const li=document.createElement('li');
@@ -535,6 +538,32 @@ function layoutEvents(){
     box.style.height=(lanes.length*step+2)+'px';
   });
 }
+
+// tooltip on the event badges: same year and text as the list below the chart
+const tip=document.createElement('div');
+tip.className='evtip';tip.setAttribute('role','tooltip');tip.hidden=true;
+document.body.appendChild(tip);
+function showTip(s){
+  const [y,t]=EVENTS[+s.dataset.ev];
+  tip.innerHTML=`<b>${y}</b>${t}`;
+  tip.hidden=false;
+  const r=s.getBoundingClientRect(), w=tip.offsetWidth, h=tip.offsetHeight, m=8;
+  const x=Math.max(m,Math.min(r.left+r.width/2-w/2,innerWidth-w-m));
+  const below=r.bottom+6;
+  tip.style.left=x+'px';
+  tip.style.top=(below+h+m>innerHeight?r.top-h-6:below)+'px';
+}
+const hideTip=()=>{tip.hidden=true;};
+evBoxes.forEach(box=>{
+  box.addEventListener('mouseover',e=>{const s=e.target.closest('[data-ev]');if(s)showTip(s);});
+  box.addEventListener('mouseout',hideTip);
+  box.addEventListener('focusin',e=>{const s=e.target.closest('[data-ev]');if(s)showTip(s);});
+  box.addEventListener('focusout',hideTip);
+  box.addEventListener('click',e=>{const s=e.target.closest('[data-ev]');if(s){showTip(s);e.stopPropagation();}});
+});
+document.addEventListener('click',hideTip);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')hideTip();});
+window.addEventListener('scroll',hideTip,{passive:true});
 
 const grid=document.getElementById('grid');
 function drawGrid(){
