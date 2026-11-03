@@ -882,6 +882,69 @@ window.BOOKS = {
 1
 ]
 },
+"likutei-moharan": {
+"title": "ליקוטי מוהר\"ן",
+"author": "רבי נחמן מברסלב",
+"note": "תנינא כה: ההתבודדות; תנינא צז: \"שתיקה\"; דף טראנס עמוק",
+"find": "https://www.sefaria.org.il/Likutei_Moharan",
+"drive": [
+{
+"id": "1xsBUQQQuR3pMU5KqigGsgRq8FG8KIDfX",
+"title": "ליקוטי מוהרן א.pdf",
+"path": "ברסלב",
+"ext": "pdf",
+"sizeKB": 4178
+},
+{
+"id": "1xtHryKUN0cN2Ccwc9XxeLZr6YbvDvM77",
+"title": "ליקוטי מוהרן ב.pdf",
+"path": "ברסלב",
+"ext": "pdf",
+"sizeKB": 1522
+}
+],
+"stages": []
+},
+"tzavaat-harivash": {
+"title": "צוואת הריב\"ש",
+"author": "מתורת הבעל שם טוב",
+"note": "התפללות בדבקות והתפשטות הגשמיות; דף טראנס עמוק",
+"find": "https://www.sefaria.org.il/Tzavaat_HaRivash",
+"drive": [
+{
+"id": "1z_k8SXgU9SJEeoDkquBi-MlDTD9exv7X",
+"title": "צוואת הריבש.djvu",
+"path": "הבעל שם טוב",
+"ext": "djvu",
+"sizeKB": 2122
+}
+],
+"stages": []
+},
+"tanya": {
+"title": "ליקוטי אמרים – תניא",
+"author": "רבי שניאור זלמן מליאדי",
+"note": "התבוננות וביטול; דף טראנס עמוק",
+"find": "https://www.sefaria.org.il/Tanya",
+"drive": [],
+"stages": []
+},
+"kuntres-hahitpaalut": {
+"title": "קונטרס ההתפעלות",
+"author": "רבי דובער שניאורי, האדמו\"ר האמצעי",
+"note": "מדרגות ההתפעלות שבהתבוננות; דף טראנס עמוק",
+"find": "https://hebrewbooks.org/",
+"drive": [],
+"stages": []
+},
+"bnei-machshava-tova": {
+"title": "בני מחשבה טובה; הכשרת האברכים",
+"author": "האדמו\"ר מפיאסצנה",
+"note": "ההשקטה וההתבוננות; דף טראנס עמוק",
+"find": "https://hebrewbooks.org/",
+"drive": [],
+"stages": []
+},
 "chovat-hatalmidim": {
 "title": "חובת התלמידים",
 "author": "האדמו\"ר מפיאסצנה",

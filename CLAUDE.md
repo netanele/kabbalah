@@ -33,7 +33,11 @@ See `README.md` (design tokens, fonts, sefirot colors, and the content rules for
 - The page keeps only the `<details class="tr" id="tr-<n>" data-transcript="transcripts/<page>-<n>.json">` with its `<summary>`, the lead paragraph and an empty `<div class="trbody"><p class="tr-loading">טוען תמלול…</p></div>`; `js/transcripts.js` (loaded before `js/find.js`) fetches and renders the lines. New pages with transcripts follow the same pattern; never paste transcript lines into the HTML.
 - Loading needs HTTP (the site at netanele.github.io/kabbalah, or `python3 -m http.server` locally); from `file://` the loader shows an explanation instead.
 
+## Research sources (מקורות למחקר)
+- **נתיבות שלום – https://netivotshalom26.com** is a standing source for this library: check it whenever researching content or looking up a reference, especially for the Rashash (הרש"ש), kavanot, yichudim, siddurim and practical kabbalah. It offers free downloads of books, siddurim, charts and studies.
+- Treat it like any other source: cite the exact page, and check it against primary texts where they exist.
+
 ## Books (ספרים) – Google Drive
 - The user's book library is the Google Drive folder **"Torah/Books"**: https://drive.google.com/drive/folders/1xseNntc6xbkkVhNdppPMGO_rAaE9Q_0N (id `1xseNntc6xbkkVhNdppPMGO_rAaE9Q_0N`, with sub-folders). Every book that a page offers the learner to read is shown **inside the page as a PDF preview** of the file from this folder (`<iframe src="https://drive.google.com/file/d/<FILE_ID>/preview">`), never as a copy in the repo.
-- If a needed book is not in the folder: find a downloadable PDF online (hebrewbooks, Sefaria, NLI, archive.org, publisher), give the user the link, and the user downloads it into the folder; then add its Drive file id to the page. Do not embed the external PDF directly.
+- If a needed book is not in the folder: find a downloadable PDF online (netivotshalom26.com, hebrewbooks, Sefaria, NLI, archive.org, publisher), give the user the link, and the user downloads it into the folder; then add its Drive file id to the page. Do not embed the external PDF directly.
 - Book ids and titles live in one place, `js/books.js` (Drive file id, title, author, folder); pages reference books by key.
