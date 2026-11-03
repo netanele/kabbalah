@@ -25,7 +25,7 @@ Put the legend at the top of the file. Never cite a page you did not at least se
 
 ### Rules
 - **Jewish sources only.** For the field, the books and the halacha, cite Jewish sources: primary texts (Sefaria, HebrewBooks, the National Library), poskim, Jewish scholarship, and Jewish press or forums for reactions. Never bring in another religion's sources or practices, and never compare to them.
-- Hebrew for the body; Latin only in URLs, ids and foreign titles. The four-letter Name is never written in full, even inside a quoted description that contains it (write הוי"ה or ה' and say the original was changed). Other religions are not named or compared; nations generically.
+- Hebrew for the body; Latin only in URLs, ids and foreign titles. The four-letter Name is written in full as יהוה, never הוי"ה. Other religions are not named or compared; nations generically.
 - Dated snapshot: open with "נאסף ב־DD.MM.YYYY. כל נתוני הצפיות, המנויים והמחירים הם לתאריך זה."
 - Structure the file as `## א. <the teacher or author>`, `## ב. ספרי המקור`, `## ג. תגובות ציבוריות`, `## ד. סיכום פערים`, with tables where the data is tabular (`| פרט | מה נמצא | מקור |`).
 - **Write first, then search.** Your FIRST tool call is a Write that creates `research/background.md` with the header, a section א summarizing what the source itself says about its author (read only that much before writing), and empty headings for the other sections. Then research one section at a time, spend at most about 8 minutes of searching on each, write "לא נמצא" when nothing turns up, and append each section as soon as it is done (under about 1,500 words per append). A researcher that searched for 75 minutes before writing produced nothing and had to be replaced; other agents also read this file for spellings while you work.
@@ -57,7 +57,7 @@ Plain `.card` blocks with `h3`, `ul.plain` or `p`, tables in `.tw`. External lin
 - Keep every existing link and every existing `לא אומת`; `diff` against the exploded part and confirm the change is additions and count updates.
 
 ### Checks
-`python3 -I <skill>/scripts/assemble.py --config <workspace>/project.json` clean for your parts; every `href="#…"` resolves; no full Name (`grep` the three parts); no AI, model or tool names; the Latin in text is only inside URLs, `<bdi>` or foreign titles.
+`python3 -I <skill>/scripts/assemble.py --config <workspace>/project.json` clean for your parts; every `href="#…"` resolves; no stand-in הוי"ה (`grep` the three parts); no AI, model or tool names; the Latin in text is only inside URLs, `<bdi>` or foreign titles.
 
 ## Report back (10 lines or fewer)
 Researcher: the file's size, how many URLs by mark (✅ / ⚠️ / ❓), and the three most important gaps. Writer: the three parts' sizes, the counts and dates you changed, the assemble result.

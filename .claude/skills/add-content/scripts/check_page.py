@@ -9,7 +9,7 @@ PAGE defaults to out/<page> (or <repo>/<page> when out/ has none). Output, for g
   ## stats           page size, link counts, a per-unit summary
   result: E errors, W warnings, R to review        (the last line; exit 1 when E > 0)
 Codes:
-  ERROR   name (the full Name, niqqud-aware) · ai-mention (claude, anthropic, openai, chatgpt, gpt-,
+  ERROR   name (the stand-in for the Name; write it in full) · ai-mention (claude, anthropic, openai, chatgpt, gpt-,
           בינה מלאכותית; whole words, so מסוכן never matches) · split-bdi (</bdi>–<bdi>) · status-tags (a technique
           card without exactly one of נמסר במלואו / נמסר בחלקו / הוזכר בלבד / סופר כמעשה) · red-tags (a red tag other
           than לא נמסר בשיעור / הרב לא מגלה / נדחה לשיעור נפרד / לא ברור בתמלול / לא פורסם) · duplicate-id ·
@@ -100,7 +100,7 @@ def main() -> int:
         R.declare(lvl, key)
 
     # ---- holy names ----
-    for m in C.NAME_ANY.finditer(doc):
+    for m in C.NAME_ABBREV.finditer(doc):
         R.add("ERROR", "name", "%s · …%s…" % (loc.where(m.start()), ctx(m.start())))
     auth = masked[:authored_end]
     for w in ("שדי", "אהיה", "אדני"):

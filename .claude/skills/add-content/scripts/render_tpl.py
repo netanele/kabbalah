@@ -17,7 +17,7 @@ of the closest earlier unit (or after the last unit part; or 20+N when there are
 In existing mode, when the skeleton has no <!-- @@SECTION:<prefix>-N @@ --> yet, one is inserted right after the
 closest earlier unit's placeholder (same spacing as between the earlier units), and a NOTE says so.
 
-Checks (exit 1 on any PROBLEM): leftover macros, tag balance, duplicate ids, the full Name (niqqud-aware), raw "&t=",
+Checks (exit 1 on any PROBLEM): leftover macros, tag balance, duplicate ids, the stand-in for the Name, raw "&t=",
 inline style, forbidden tags (script, style, img, iframe), Latin text outside <bdi> and URLs, timestamps beyond the
 unit's duration. Dangling anchors are only a WARNING (cross-unit links resolve at assembly); anchors to this unit's
 own ids (t<N>-…, l<N>-…, <prefix>-N) get their own warning line, since only this template can define them.
@@ -139,8 +139,8 @@ def main() -> int:
         errs.append("leftover macros (%d): %s" % (len(left), left[:5]))
     elif re.search(r"@(?:SRCS|S|T|P)\(", t):
         errs.append("macro text remains")
-    if C.NAME_ANY.search(t):
-        errs.append("FULL NAME present (%d)" % len(C.NAME_ANY.findall(t)))
+    if C.NAME_ABBREV.search(t):
+        errs.append('stand-in הוי"ה present (%d); write יהוה' % len(C.NAME_ABBREV.findall(t)))
     if "&t=" in t:
         errs.append("raw &t= (%d)" % t.count("&t="))
     if re.search(r'\sstyle="', t):

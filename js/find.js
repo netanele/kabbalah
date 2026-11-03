@@ -29,7 +29,8 @@
   function normQuery(q) {
     var out = '';
     for (var i = 0; i < q.length; i++) { var n = normChar(q[i]); if (n === ' ' && (out === '' || out[out.length - 1] === ' ')) continue; out += n; }
-    return out.trim();
+    /* מי שמחפש הוי"ה (המירכאות כבר ירדו) מוצא את השם כפי שהוא כתוב בדפים */
+    return out.trim().replace(/(^| )([ובלמשכד]{0,2})ה?הויה(?= |$)/g, '$1$2יהוה');
   }
 
   /* ---------- the page's text, in blocks ---------- */

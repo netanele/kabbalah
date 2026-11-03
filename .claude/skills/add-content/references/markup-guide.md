@@ -47,7 +47,7 @@ For a text source the nav labels may change in the skeleton, e.g. "מי הוא �
 ## 2. Rules for every part
 
 1. **Hebrew only.** Latin letters appear only inside attribute values (URLs, ids) and inside `<bdi>`. `check_page.py` flags any other Latin in text.
-2. **The four-letter Name is never written**, in any part, quote, verse, names block, table or transcript. Write הוי"ה, ה' or השם. `assemble.py` fails the build if the four letters ever stand together. The full rule is in §7.1.
+2. **The four-letter Name is written in full as יהוה**, in every part, quote, verse, names block, table and transcript, as plain text. Never הוי"ה. `assemble.py` fails the build if that stand-in appears. The full rule is in §7.1.
 3. **One `.card` is one self-contained unit.** read-aloud.js reads a card as one piece, and find.js groups its search results by card. Never split one technique across two cards, and never nest a card inside a card.
 4. **ids** are unique across the whole page:
    - technique cards are `t<N>-<k>`, where k counts 1, 2, 3… inside unit N, in the notes' order;
@@ -58,7 +58,7 @@ For a text source the nav labels may change in the skeleton, e.g. "מי הוא �
 6. **Every `&` in a URL is `&amp;`**: `href="https://www.youtube.com/watch?v=ID&amp;t=754s"`. External links carry `target="_blank" rel="noopener"`.
 7. **Numbers, times and Latin strings go inside `<bdi>`**: `<bdi>00:12:34</bdi>`, `<bdi>1:30:35</bdi>`, `<bdi>22.8.2024</bdi>`. Hebrew letters, including Hebrew numerals like תקל"ט, need no bdi. **A time range is ONE bdi**: `<bdi>00:04:34–00:05:42</bdi>`. The reason: two bdis joined by a dash, as in `<bdi>a</bdi>–<bdi>b</bdi>`, render in reverse order inside RTL text, so the range reads backwards. Never put a bare "–" between two chips; the chips are enough.
 8. **Headings.** Each section has exactly one `<h2>`, its title. Blocks inside a section and technique titles use `<h3>`. `<h4>` appears only inside `ol.steps`. Never skip a level.
-9. **Typography.** Use straight `"` and `'`, because find.js normalises them and gershayim are typed the same way (ע"ב, הוי"ה). The dash is "–", and "·" separates short items.
+9. **Typography.** Use straight `"` and `'`, because find.js normalises them and gershayim are typed the same way (ע"ב, אהי"ה). The dash is "–", and "·" separates short items.
 10. **Every claim about what the speaker said carries a locator**: a chip to the second (video), or a page chip (text). See §5.1. A detail you cannot locate goes into `.doubt`, not into the body.
 11. **Document; never recommend.** Write what was said. Where the speaker withheld something, say so with a red tag (§6); never fill the gap from other sources inside a unit section. Outside knowledge belongs in `research`, or in at most one `.note` per unit that starts "מהמחקר:" (§5.5).
 12. **No mention of AI, models or tools anywhere.** That includes "תומלל בעזרת", model names and pipeline words. The only exception is the transcript credit already in the skeleton's footer and in the transcripts section, which `make_transcripts.py` writes. Never add another.
@@ -405,8 +405,8 @@ The scripts match these strings exactly. `build_index.py` uses them to fill the 
 ## 7. Content rules
 
 ### 7.1 Holy names
-- **The four-letter Name is never written in full.** Write `הוי"ה`, `ה'` in verses (e.g. "הוֹצִיאָנוּ ה' מִמִּצְרַיִם"), or `השם`. The rule covers every form: plain, with niqqud, inside quotes, inside verses, in tables and in transcripts.
-- **Permutations of the Name are described, never spelled**, e.g. "צירוף הוי"ה של חודש ניסן".
+- **The four-letter Name is written in full as `יהוה`**, never `הוי"ה`. The rule covers every place: inside quotes, inside verses, in tables and in transcripts. A prefix stays attached (ביהוה); the article drops (ההוי"ה becomes יהוה). Write it as plain text: `js/sefirot-methods.js`, which every page showing the Name must load, colors its letters in the תפארת colors.
+- **Permutations of the Name are described, never spelled**, e.g. "צירוף יהוה של חודש ניסן".
 - **The Names שד"י, אהי"ה and אדנ"י are written with gershayim**, never as plain pronounceable words. Watch for שד"י, which is easily typed plain in phrases like "בשם שד"י", "מלכות שד"י" and "שד"י שאמר לעולמו די". The ordinary word "שדי" ("my field") is not a Name and stays as it is.
 - Other holy names and angel names, such as the ע"ב שמות or names of angels, may be written letter by letter as the notes give them, with `[?]` on uncertain spellings.
 
@@ -587,6 +587,6 @@ What to do first:
 - **Filters.** The level filter and the type and time keys read `data-level`, `data-type` and `data-when`.
 - **Previews.** The hover preview, or peek, opens on links to `#m<number>`.
 - **Book covers.** These come from the `books-data` JSON block, keyed by `data-b`.
-- **Page rules.** Its own content rules are in `README.md` and `docs/meditation-page-notes.md`. They include Jewish sources only and no comparison with other religions, the "I" of the page being the user, and the Name never written in full, not even in images.
+- **Page rules.** Its own content rules are in `README.md` and `docs/meditation-page-notes.md`. They include Jewish sources only and no comparison with other religions, the "I" of the page being the user, and the Name written in full as יהוה.
 
 The repo-wide rules still apply on every page: the Name, no AI mention, `&amp;`, and the integration steps in `integration.md`. The rest of this guide does not.

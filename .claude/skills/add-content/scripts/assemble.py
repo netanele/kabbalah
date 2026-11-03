@@ -12,7 +12,7 @@ section becomes <span class="unc" title="קריאה לא ודאית בתמלול
 every unit is a text source (pdf/web/doc). Tags, attributes, comments, <style>,
 <script>, text already inside a .unc span, and the transcripts section are never touched, so it is idempotent.
 
-Checks: duplicate ids (ERROR), the full Name (ERROR), dangling #anchors, raw "&t=", missing sections, parts that
+Checks: duplicate ids (ERROR), the stand-in for the Name (ERROR), dangling #anchors, raw "&t=", missing sections, parts that
 do not start with <section / end with </section> or whose id differs from the file name, inline styles,
 <script>/<style>/<html> inside parts, several parts for one name, parts without a placeholder, ids that start
 with t<digit> but are not t<n>-<k>. The page is always written; the exit code is 1 when there is an ERROR.
@@ -136,9 +136,9 @@ def main() -> int:
         report.append("warning: %d raw '&t=' in URLs (should be '&amp;t=')" % raw_t)
     tech_ids = sorted((i for i in ids if re.fullmatch(r"t\d+-\d+", i)),
                       key=lambda x: tuple(int(v) for v in x[1:].split("-")))
-    names_full = C.NAME_ANY.findall(out)
-    if names_full:
-        report.append("ERROR: the full Name appears %d time(s) in the page" % len(names_full))
+    names_abbrev = C.NAME_ABBREV.findall(out)
+    if names_abbrev:
+        report.append('ERROR: the stand-in הוי"ה appears %d time(s) in the page; write יהוה' % len(names_abbrev))
     bad_tech = [i for i in ids if re.match(r"t\d", i) and not re.fullmatch(r"t\d+-\d+|tr-\d+", i)]
     if bad_tech:
         report.append("warning: ids starting with t<digit> that do not follow t<n>-<k>: %s" % ", ".join(sorted(bad_tech)[:20]))

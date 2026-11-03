@@ -16,14 +16,16 @@
   - the comparison table in `sefirot-colors.html#compare` is generated from it (do not hand-edit a table there);
   - pages paint from it: load `<script src="js/sefirot-methods.js"></script>` and mark colored elements with `data-sef="<keter|chochma|bina|chesed|gevura|tiferet|netzach|hod|yesod|malchut>"` (SVG circles/shapes get a fill, SVG gradients get their stop colors, HTML swatches get `data-sef-as="bg"` or the default dot style; `data-sef-m="<method id>"` for a method other than ours). Inline hex in the HTML is only a fallback;
   - a whole list of swatches for one method: `<ul data-sef-list="<method id>">` is filled from the file (used on the meditation page for the Ramak);
-  - in JS use `SEFIROT.entry(sefira, methodId)`, `SEFIROT.bg(...)`, `SEFIROT.letterCss(...)`, `SEFIROT.pillCss(...)`.
+  - in JS use `SEFIROT.entry(sefira, methodId)`, `SEFIROT.bg(...)`, `SEFIROT.letterCss(...)`.
   - New drawings must use `data-sef` (or these helpers), never new hard-coded hex values. If a color changes, also update the README table.
-- A holy name takes the color of the sefira where it is said in the song: אהי"ה = כתר, י"ה = חכמה, אלקים חיים = בינה, אל = חסד, אלקים = גבורה, הוי"ה = תפארת, ה' צבאות = נצח, אלקים צבאות = הוד, אל חי = יסוד, אדנ"י = מלכות. אין סוף has no sefira color, only light.
+- A holy name takes the color of the sefira where it is said in the song: אהי"ה = כתר, י"ה = חכמה, אלקים חיים = בינה, אל = חסד, אלקים = גבורה, יהוה = תפארת, ה' צבאות = נצח, אלקים צבאות = הוד, אל חי = יסוד, אדנ"י = מלכות. אין סוף has no sefira color, only light.
+- A holy name is colored in its letters (`letterCss`), never as a pill or a background behind the text.
 - In combined (interleaved) names, each letter keeps the color of the name it came from.
 - New yichudim go into `otzar-hayichudim.html`.
 
 ## Holy names
-- Do not write the name הוי"ה in full anywhere (text or images); write הוי"ה instead.
+- The name יהוה is always written in full as יהוה, everywhere: pages, verses, quotes, transcripts, data, tools and images. Never write the stand-ins הוי"ה or הוי״ה. A prefix stays attached (ביהוה, ליהוה, ויהוה); the article drops, because a name takes none (ההוי"ה becomes יהוה). The ordinary word הויה ("being") and interleaved names such as יאההויהה are not this rule.
+- The letters of יהוה are always in its own colors, the colors of תפארת (צהוב וסגול) as the letter color. `js/sefirot-methods.js` does this by itself: write the name as plain text, never in a `span.nm`, and load that script on every page that shows the name, also through transcripts or data. In `.yichud` blocks the color follows the chosen method.
 
 ## Style and content
 See `README.md` (design tokens, fonts, sefirot colors, and the content rules for the meditation page).

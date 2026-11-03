@@ -42,7 +42,8 @@ python3 -I <skill>/scripts/check_page.py --config <workspace>/project.json      
 python3 -I <skill>/scripts/check_page.py --config <workspace>/project.json --all  # every unit on the page
 ```
 Save the output to `qa/check-out.txt`. Classify every finding by the list below, whatever level the script prints. If a finding prints under a name not listed here, classify it by meaning, and quote the name as printed in your report. Findings and what they mean:
-- `holy-name`, `name-permutation`: the four-letter Name, or a permutation of its letters as a standalone word. Blocker, unless the hit is an ordinary word (`והיה`), which you say explicitly.
+- `holy-name`: the stand-in הוי"ה instead of the Name written in full as יהוה. Blocker.
+- `name-permutation`: a permutation of the letters of the Name as a standalone word. Blocker, unless the hit is an ordinary word (`והיה`), which you say explicitly.
 - `plain-אהיה` / `plain-אדני` / `plain-שדי` (and the vocalized variants): a Name written as a pronounced word instead of with gershayim. Should-fix; in transcripts the fix is `make_transcripts.py`'s replacement list.
 - `made-by`: a mention of AI, a model, or a tool anywhere outside the allowed transcript credit. Blocker.
 - `religion`: another religion named in AUTHORED text. Blocker in authored sections; in the verbatim transcripts, report and let the orchestrator decide (the default is to leave the record as spoken and keep every mention out of the cards).
@@ -66,7 +67,7 @@ Also eyeball: the h2 has no series prefix; the closing h3s follow the contract's
 
 ## Part 4: the report, `qa/QA_REPORT.md`
 Header: what was checked (file, timestamp, widths, browser), counts by severity, and a line listing what came out CLEAN (so the fixers do not re-check it). Then three groups:
-- **Blocker**: the page cannot ship. The full Name; an AI or tool mention; another religion named in authored text; a JS error; horizontal scroll at 390 or 320; a dangling link from the index or `.inl`; invented content in a card; a missing section.
+- **Blocker**: the page cannot ship. The stand-in הוי"ה instead of יהוה; an AI or tool mention; another religion named in authored text; a JS error; horizontal scroll at 390 or 320; a dangling link from the index or `.inl`; invented content in a card; a missing section.
 - **Should-fix**: contract violations and fact-check findings that mislead (unhedged claims, wrong tags, reversed times, Latin in text, unverified counts).
 - **Nice-to-have**: polish, weight, wording.
 Each item has: an id (`S3`, `N2`), **where** (part file and line, the card or element id, the width if visual, the screenshot name), **what** (one or two sentences, with the measured numbers), and **the file to fix**: the TEMPLATE `build/tpl/unit-<n>.tpl.html` for anything in a unit section (never the rendered part), the part file for a synthesis section, `build/skeleton.html` for CSS and nav, `make_transcripts.py`'s replacement list for transcripts, and the suggested change. Group items that share one cause under one id with a list of locations. End with "Re-run after the fixes" naming the commands.

@@ -15,7 +15,7 @@ import urllib.parse
 import urllib.request
 
 PAGE = 'pesukim-meyuchadim.html'
-NAME = 'הוי"ה'  # the Name is never written in full, in any line of the page
+NAME = 'יהוה'  # written in full, as plain text: js/sefirot-methods.js colors its letters on every page
 PREFIX = '[ובלכמהש]*'
 RE_NAME = re.compile(f'^{PREFIX}יהוה$')
 RE_ELOHIM = re.compile(f'^{PREFIX}אלה(ים|י|יך|יכם|יכן|ינו|יו|יה|יהם|יהן)$')
@@ -31,7 +31,7 @@ def cons(word):
     return ''.join(c for c in word if 'א' <= c <= 'ת')
 
 
-def pill(sef, text):
+def named(sef, text):
     return f'<span class="nm" data-name-sef="{sef}">{text}</span>'
 
 
@@ -88,17 +88,15 @@ def build(text):
         for part in token.split('־'):
             c = cons(part)
             if RE_NAME.match(c):
-                before, _ = split_prefix(part)
-                parts.append(before + pill('tiferet', NAME))
-                stam.append(cons(before) + pill('tiferet', NAME))
+                before, name = split_prefix(part)
+                parts.append(before + name)  # keeps Sefaria's pointing
+                stam.append(cons(before) + NAME)
             elif RE_ELOHIM.match(c):
                 end = '׃' if part.endswith('׃') else ''
-                parts.append(pill('gevura', part.rstrip('׃')) + end)
-                stam.append(pill('gevura', c))
+                parts.append(named('gevura', part.rstrip('׃')) + end)
+                stam.append(named('gevura', c))
                 ask.append(f'{c}: colored as גבורה; if it may not be a holy name here, ask the user')
             else:
-                if 'יהוה' in c:
-                    sys.exit(f'the full Name is inside an unexpected word: {c}')
                 if c in ASK:
                     ask.append(f'{c}: not colored; expected color if a holy name: {ASK[c]}. If unclear, ask the user')
                 parts.append(rab(part))
@@ -109,7 +107,7 @@ def build(text):
 
 def default_label(stam, source):
     words = [re.sub(r'<[^>]+>', '', w) for w in re.split(r' (?![^<]*>)', stam)[:3]]
-    return ' '.join("ה'" if w.endswith(NAME) else w for w in words) + f' ({source})'
+    return ' '.join(words) + f' ({source})'
 
 
 def sub_once(text, pattern, repl, where):
@@ -166,9 +164,6 @@ def main():
     index = sub_once(index, rf'(<li><a href="{PAGE}#p{last}">[^\n]*\n)', lambda m: m.group(1) + toc, 'index.html')
     readme = sub_once(readme, f'פסוקים מיוחדים: {old} פסוקים', f'פסוקים מיוחדים: {new} פסוקים', 'README.md')
 
-    plain = ''.join(c for c in page if not '֑' <= c <= 'ׇ')
-    if 'יהוה' in plain:
-        sys.exit('the full Name would be written; nothing saved')
     if args.dry_run:
         print('dry run: nothing saved')
         return

@@ -23,7 +23,7 @@
 - `@P(12)` → a page chip for text units, linking to `url#page=12` and labelled `<unit_label> N · עמ' <bdi>12</bdi>`.
 
 In a text unit, `@P(N)` stands wherever this brief says `@S`, `@T` or `@SRCS`. Several page chips in a row go inside a plain `<div class="srcs">…</div>`. Section 9 of `markup-guide.md` shows the self-check.
-Then it checks: leftover macros, tag balance, the full Name, raw `&t=`, inline styles, forbidden tags, Latin outside `<bdi>`, duplicate ids, dangling anchors into your own unit. Fix every PROBLEM line before continuing.
+Then it checks: leftover macros, tag balance, the stand-in הוי"ה, raw `&t=`, inline styles, forbidden tags, Latin outside `<bdi>`, duplicate ids, dangling anchors into your own unit. Fix every PROBLEM line before continuing.
 
 ## How to write: mechanically, in small appends
 Writers lost hours by composing a whole section in one generation and being cut off. Nothing is on disk until a tool call completes, so write in pieces and render often.
@@ -58,7 +58,7 @@ Writers lost hours by composing a whole section in one generation and being cut 
 - **Conjectures outside the quotes**: `"…כנגד הארמה [כנראה: א־רמל]"`.
 - **Cross-unit links** go to EXISTING card ids only. Before writing `href="#t6-1"`, check: `grep -c 'id="t6-1"' <workspace>/build/parts/*.html <repo>/<page>`. When the notes say the technique continues an earlier unit, link to the earlier card in the `p.lead` or in a `.note`, and describe what is new here.
 - **A research appendix** in the notes (`## נספח: הקשר מהמחקר`) is NOT merged into technique cards. At most one short `.note` after the technique cards, starting "מהמחקר:", with its source.
-- **Hebrew only; the four-letter Name never in full** (write הוי"ה or ה'); שד"י and אהי"ה with gershayim; other nations and religions generically ("אומות העולם"); political labels neutralized; no mention of AI, models or tools anywhere; no inline style, script or img; `&amp;` in URLs; ids unique. Document what was said; do not recommend.
+- **Hebrew only; the four-letter Name always in full** (יהוה as plain text, never הוי"ה); שד"י and אהי"ה with gershayim; other nations and religions generically ("אומות העולם"); political labels neutralized; no mention of AI, models or tools anywhere; no inline style, script or img; `&amp;` in URLs; ids unique. Document what was said; do not recommend.
 
 ## Manifest (last step)
 Write `build/parts/unit-<n>.manifest.md`, three parts, so the synthesis writers never have to reopen your HTML:

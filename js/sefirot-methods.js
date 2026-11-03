@@ -158,7 +158,7 @@ var METHODS = [
 ];
 var DATA = {
   sefirot: [{id:'keter',he:'כתר'},{id:'chochma',he:'חכמה'},{id:'bina',he:'בינה'},{id:'chesed',he:'חסד'},{id:'gevura',he:'גבורה'},{id:'tiferet',he:'תפארת'},{id:'netzach',he:'נצח'},{id:'hod',he:'הוד'},{id:'yesod',he:'יסוד'},{id:'malchut',he:'מלכות'}],
-  names: {'אהי"ה':'keter','י"ה':'chochma','אלקים חיים':'bina','אל':'chesed','אלקים':'gevura','הוי"ה':'tiferet',"ה' צבאות":'netzach','אלקים צבאות':'hod','אל חי':'yesod','אדנ"י':'malchut'},
+  names: {'אהי"ה':'keter','י"ה':'chochma','אלקים חיים':'bina','אל':'chesed','אלקים':'gevura','יהוה':'tiferet',"ה' צבאות":'netzach','אלקים צבאות':'hod','אל חי':'yesod','אדנ"י':'malchut'},
   methods: METHODS
 };
 
@@ -219,28 +219,19 @@ function swatch(e){
   if(k==='ring') return 'background:'+e.c[0]+';box-shadow:0 0 0 2px #fdd835,0 0 0 4px #e53935';
   var light=k!=='all'&&e.c.every(function(c){return lum(c)>.8});
   return 'background:'+bg(e)+';border:1px solid '+(light?'#cbbd9c':'#0003');}
-/* CSS לאותיות שם בגוון הספירה */
-function letterCss(e){
+/* CSS לאותיות שם בגוון הספירה. inline: שם בתוך טקסט רץ, ואז לאותיות בהירות קו מתאר כהה כדי שיהיו קריאות; הצבע עצמו לא משתנה */
+var INLINE_EDGE='-webkit-text-stroke:1px #4a3a18;';
+function letterCss(e,inline){
   var k=e.kind||'';
   if(k==='none'||k==='nocol') return 'color:#b3a994;background:none;-webkit-text-stroke:0;text-shadow:none;filter:none';
   if(k==='hidden') return 'color:transparent;background:none;-webkit-text-stroke:1px #9c7a33;text-shadow:none;filter:none;opacity:.85';
-  if(k==='glow') return 'color:#fffdf5;background:none;-webkit-text-stroke:1.1px #b39a5e;text-shadow:0 0 14px #fff3cc,0 0 3px #efe3c2;filter:none';
+  if(k==='glow') return inline?'color:#fffdf5;background:none;'+INLINE_EDGE+'text-shadow:none;filter:none':'color:#fffdf5;background:none;-webkit-text-stroke:1.1px #b39a5e;text-shadow:0 0 14px #fff3cc,0 0 3px #efe3c2;filter:none';
   var cs=k==='all'?RAINBOW:e.c, light=cs.every(function(c){return lum(c)>.8});
-  var stroke=light?'-webkit-text-stroke:1px #b39a5e;':'-webkit-text-stroke:.6px #4a2d0f55;';
+  var pale=cs.some(function(c){return lum(c)>.85});   /* גם צבע אחד בהיר מספיק כדי שהאות תיעלם בטקסט רץ */
+  var stroke=(inline&&pale)?INLINE_EDGE:light?'-webkit-text-stroke:1px #b39a5e;':'-webkit-text-stroke:.6px #4a2d0f55;';
   if(cs.length===1) return 'color:'+cs[0]+';background:none;'+stroke+'text-shadow:none;filter:none';
   var sp=(cs.length===2&&!e.split)?52:e.split;
   return 'background:'+stops(cs,sp,'180deg')+';-webkit-background-clip:text;background-clip:text;color:transparent;'+stroke+'text-shadow:none;filter:none';}
-/* CSS לשם בתוך הטקסט (גלולה בגוון הספירה) */
-function pillCss(e){
-  var k=e.kind||'';
-  if(k==='none'||k==='nocol') return 'background:#ece5d6;color:#8a7f6d;border:1px dashed #c9bda5;text-shadow:none';
-  if(k==='hidden') return 'background:transparent;color:#6f665a;border:1px dashed #9c7a33;text-shadow:none';
-  if(k==='glow') return 'background:radial-gradient(#fff,#f1ebdc);color:#5c4a2a;border:1px dashed #cbbd9c;text-shadow:none';
-  var cs=k==='all'?RAINBOW:e.c;
-  var b=k==='all'?bg(e):cs.length===1?cs[0]:stops(cs,e.split||50,'135deg');
-  var avg=cs.reduce(function(a,c){return a+lum(c)},0)/cs.length;
-  var fg=avg>.62?'color:#3a2e1d;text-shadow:0 0 2px #fff,0 0 2px #fff':'color:#fff;text-shadow:0 0 2px #1d1408,0 0 2px #1d1408,0 0 4px #1d1408';
-  return 'background:'+b+';'+fg+';'+(avg>.8?'border:1px solid #c9bda5':'border:1px solid transparent');}
 
 function method(id){for(var i=0;i<METHODS.length;i++) if(METHODS[i].id===id) return METHODS[i]; return METHODS[0];}
 function entry(f,mid){ var m=method(mid||'shir'); return m.colors[f] || (m.extra && m.extra[f]); }
@@ -295,6 +286,53 @@ function paint(root){
   });
 }
 
+/* ---- שם יהוה: בכל דף אותיות השם בצבעי הספירה שלו (תפארת), כצבע האותיות ולא כגלולה ----
+ * הדף כותב את השם כטקסט רגיל; כאן הוא נעטף ונצבע, גם בתוכן שנטען אחר כך (תמלולים, נתונים).
+ * ב־.yichud הצבע בא מהשיטה שנבחרה (מחלקת t), ב־SVG דרך fill. */
+var NAME_RE=/י[֑-ׇֽֿׁׂׅׄ]*ה[֑-ׇֽֿׁׂׅׄ]*ו[֑-ׇֽֿׁׂׅׄ]*ה[֑-ׇֽֿׁׂׅׄ]*/g;
+var NAME_SKIP='script,style,noscript,template,textarea,select,option,title,input,.shem';
+/* ב־SVG גבול הצבעים אופקי כמו באותיות ב־HTML: ה־tspan מקבל את מידות כל השורה, ואלכסון היה משאיר צבע אחד */
+function nameFill(e){
+  var id='sefg-shem', cs=e.c, sp=.52;
+  if(!document.getElementById(id)){
+    svgFill(e,'shir','tiferet');   /* יוצר את defs אם עדיין אין */
+    var g=document.createElementNS(NS,'linearGradient'); g.id=id; g.setAttribute('x1','0');g.setAttribute('y1','0');g.setAttribute('x2','0');g.setAttribute('y2','1');
+    [[0,cs[0]],[sp,cs[0]],[sp,cs[1]],[1,cs[1]]].forEach(function(p){var s=document.createElementNS(NS,'stop'); s.setAttribute('offset',String(p[0])); s.setAttribute('stop-color',p[1]); g.appendChild(s);});
+    defs.appendChild(g);
+  }
+  return 'url(#'+id+')';}
+function wrapName(node){
+  var p=node.parentElement, s=node.nodeValue; if(!p||!s) return;
+  NAME_RE.lastIndex=0; if(!NAME_RE.test(s)||p.closest(NAME_SKIP)) return;
+  var e=entry('tiferet'), svg=p.namespaceURI===NS, frag=document.createDocumentFragment(), last=0, m;
+  NAME_RE.lastIndex=0;
+  while((m=NAME_RE.exec(s))){
+    if(m.index>last) frag.appendChild(document.createTextNode(s.slice(last,m.index)));
+    var el;
+    if(svg){ el=document.createElementNS(NS,'tspan'); el.setAttribute('class','shem'); el.setAttribute('fill',nameFill(e)); }
+    else{ el=document.createElement('span');
+      if(p.closest('.yichud')) el.className='t shem'; else { el.className='shem'; el.style.cssText=letterCss(e); } }
+    el.textContent=m[0]; frag.appendChild(el); last=m.index+m[0].length;
+  }
+  if(last<s.length) frag.appendChild(document.createTextNode(s.slice(last)));
+  p.replaceChild(frag,node);
+}
+function paintNames(root){
+  if(root.nodeType===3){ wrapName(root); return; }
+  if(root.nodeType!==1) return;
+  var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT), list=[], n;
+  while((n=w.nextNode())) list.push(n);
+  list.forEach(wrapName);
+}
+function initNames(){
+  var st=document.createElement('style');
+  st.textContent='.shem{display:inline-block;padding:.12em 0;margin:-.12em 0;-webkit-print-color-adjust:exact;print-color-adjust:exact}';
+  document.head.appendChild(st);
+  paintNames(document.body);
+  new MutationObserver(function(ms){ ms.forEach(function(r){ Array.prototype.forEach.call(r.addedNodes,paintNames); }); })
+    .observe(document.body,{childList:true,subtree:true});
+}
+
 /* ---- טבלת ההשוואה (sefirot-colors.html#compare) ---- */
 function chipHtml(c){
   if(c.kind==='nocol') return '<span class="ch nocol">'+esc(c.t)+'</span>';
@@ -318,10 +356,10 @@ function compareHtml(){
   });
   return h+'</table>';}
 
-window.SEFIROT = {data:DATA, method:method, entry:entry, bg:bg, dot:dot, swatch:swatch, letterCss:letterCss, pillCss:pillCss,
+window.SEFIROT = {data:DATA, method:method, entry:entry, bg:bg, dot:dot, swatch:swatch, letterCss:letterCss,
   paint:paint, compareHtml:compareHtml, listHtml:listHtml,
   label:function(e){return e.kind==='none'?'המקור אינו אומר דבר על ספירה זו':e.t+(e.alt?' · '+e.alt.join(' · '):'');}};
 if(typeof document!=='undefined'){
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',function(){paint();}); else paint();
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',function(){paint();initNames();}); else {paint();initNames();}
 }
 })();

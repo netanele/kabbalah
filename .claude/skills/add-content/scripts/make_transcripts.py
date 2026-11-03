@@ -5,7 +5,7 @@ Usage:  python3 -I make_transcripts.py --config <ws>/project.json
 
 Input per unit: transcripts/<id>.json (from transcribe.py). Text units without a JSON may have transcripts/<id>.md
 with [עמ' N] markers instead; each line becomes a paragraph and a leading [עמ' N] a link to url#page=N.
-Holy-name rules on the transcript text: the Name with or without niqqud -> הוי"ה; "אהיה אשר אהיה" ->
+Holy-name rules on the transcript text: the Name with or without niqqud -> יהוה; "אהיה אשר אהיה" ->
 אהי"ה אשר אהי"ה; שדי as a Name -> שד"י by phrase rules only, so "יעלות, שדי וחול" and שדים stay as spoken.
 
 Video units follow the repo rule (CLAUDE.md "Transcripts"): the lines are written to <ws>/out/transcripts/<page>-<n>.json
@@ -139,7 +139,7 @@ def new_lead(cfg, total: int) -> str:
                    "כל פרט חשוב כדאי לאמת מול %s עצמו." % (model, "המקור" if texts else "הסרטון"))
     if texts:
         out.append("טקסט המקור חולץ אוטומטית ויש בו שגיאות%s" % ("." if vids else "; כל פרט חשוב כדאי לאמת מול המקור עצמו."))
-    out.append('שמות הקודש נכתבים %s בקיצור (הוי"ה, אהי"ה, שד"י), לפי כללי הספרייה.' % ("בתמלול" if vids else "בטקסט"))
+    out.append('שמות הקודש נכתבים %s בקיצור (אהי"ה, שד"י), לפי כללי הספרייה.' % ("בתמלול" if vids else "בטקסט"))
     if vids:
         out.append("חותמת הזמן בכל שורה פותחת את הסרטון באותה דקה.")
     if texts:

@@ -17,8 +17,8 @@ from pathlib import Path
 # ---- Hebrew / library rules -------------------------------------------------------------------
 MARKS = "\u0591-\u05c7"            # niqqud + te'amim
 HEB = "\u05d0-\u05ea"              # letters alef..tav
-# the four-letter Name, with or without marks between the letters (never written in full in the library)
-NAME_ANY = re.compile("\u05d9[%s]*\u05d4[%s]*\u05d5[%s]*\u05d4" % (MARKS, MARKS, MARKS))
+# the old stand-in for the four-letter Name: the library writes יהוה in full, so this must not appear
+NAME_ABBREV = re.compile('הוי(?:"|״|&quot;)ה')
 STATUS_TAGS = ("נמסר במלואו", "נמסר בחלקו", "הוזכר בלבד", "סופר כמעשה")
 RED_TAGS = ("לא נמסר בשיעור", "הרב לא מגלה", "נדחה לשיעור נפרד", "לא ברור בתמלול", "לא פורסם",
             "לא נמסר בספר", "המחבר לא מגלה", "נוסח משובש")   # the last three: cards built from books, not lectures
@@ -285,12 +285,13 @@ ADONAI_MELECH = re.compile(r'(?<![\w"׳״])אדו?ני(?= מלך\b| ימלוך\b
 
 
 def holy(text: str, count: dict = None) -> str:
-    """Library rule for spoken Names: the Name -> הוי"ה, אהיה אשר אהיה -> אהי"ה אשר אהי"ה, שדי as a Name -> שד"י."""
+    """Library rule for spoken Names: the Name stays יהוה (no niqqud), אהיה אשר אהיה -> אהי"ה אשר אהי"ה, שדי as a Name -> שד"י."""
     count = {} if count is None else count
-    for key in ('הוי"ה', 'אהי"ה', 'שד"י', 'אדנ"י'):
+    for key in ('יהוה', 'אהי"ה', 'שד"י', 'אדנ"י'):
         count.setdefault(key, 0)
-    text, n = NAME_SUB.subn('הוי"ה', text)
-    count['הוי"ה'] += n
+    text, n = NAME_SUB.subn('יהוה', text)
+    count['יהוה'] += n
+    text = NAME_ABBREV.sub('יהוה', text)
     text, n = EHYEH.subn('אהי"ה אשר אהי"ה', text)
     count['אהי"ה'] += n
     text, n = SHADDAI_AFTER_WORD.subn('\\1 שד"י', text)

@@ -112,7 +112,7 @@ python3 -I <skill>/scripts/check_page.py --config <ws>/project.json
 ```
 Stop and fix the following before going further:
 - any ERROR
-- the full Name
+- the stand-in הוי"ה anywhere (the Name is written in full as יהוה)
 - an AI mention
 - a technique card without exactly one primary status tag
 - a split bdi range

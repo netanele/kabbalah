@@ -36,14 +36,14 @@ The user asked for the verses to look as in a Torah scroll, and for every verse 
 
 ## Holy names
 
-- The Name is never written in full, also not inside a verse or the ketav ashurit line: it is `הוי"ה`, colored as תפארת. This makes the line differ from a real scroll on this one point; the repo rule wins.
-- Names are pills painted from `js/sefirot-methods.js`: `<span class="nm" data-name-sef="tiferet">`. No hex colors in the page.
+- The Name is written in full: `יהוה` in the ketav ashurit line, with Sefaria's pointing in the pointed line. It is plain text; `js/sefirot-methods.js` colors its letters in the תפארת colors.
+- Other names are marked `<span class="nm" data-name-sef="gevura">`; the page paints their letters from `js/sefirot-methods.js` (`letterCss`), never a pill. No hex colors in the page.
 - The script colors the אלהים family as גבורה, with its suffixes (אלהיך, אלהינו, האלהים), and reports each one, because the same word can be non-holy (אלהים אחרים).
 - It leaves other names (אדני, אל, יה, אהיה, צבאות, שדי) uncolored and reports them, because these depend on the sense: "אֶל" is usually "to".
 - **When a name's color is unclear, ask the user; don't guess.** The color is clear when the word is plainly a holy name and it appears in the CLAUDE.md list, or when it is plainly not a name (such as the preposition "אל"). Everything else is unclear:
   - the word may or may not be a holy name here (אלהים אחרים, אדני as "my master");
   - the name is not in the list (שדי, אלוה, or any other name);
-  - a form or combination the list doesn't settle, such as הוי"ה אלהים, or a name split across words.
+  - a form or combination the list doesn't settle, such as יהוה אלהים, or a name split across words.
 
   Use AskUserQuestion before saving. Each question gives the whole verse, its source and the word in question, with the candidate colors as options and "no color, not a name here" when that is possible. Ask once per distinct case in one call. Keep the verse's other names as they are, and record what was decided in the final message.
 - A multi-word name from the list takes the color of the whole name: אלקים צבאות is הוד, ה' צבאות is נצח, and אל חי is יסוד. The script colors the parts separately, so fix these by hand.
@@ -54,4 +54,4 @@ The user asked for the verses to look as in a Torah scroll, and for every verse 
 - `index.html`: the count on the card's cover and tag, and a table-of-contents line. Pass `--label` when the default (the first three words plus the source) doesn't name the verse well, e.g. `--label "אין עוד מלבדו (דברים ד, לה)"`.
 - `README.md`: the count in the page's row.
 
-It refuses a ref already on the page (also one linked as part of a stitched phrase; add that verse's card by hand if the user wants it alone) and refuses to save anything containing the full Name. If a count pattern fails after a hand edit, fix the count in the file and rerun.
+It refuses a ref already on the page (also one linked as part of a stitched phrase; add that verse's card by hand if the user wants it alone). If a count pattern fails after a hand edit, fix the count in the file and rerun.

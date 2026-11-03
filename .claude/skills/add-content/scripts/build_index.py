@@ -23,7 +23,7 @@ It never reads manifests (old units on existing pages have none). One row per ca
            <li>, trimmed to about 140 characters at a word boundary. Kept rows in a merge are never re-derived.
 A counts-by-type line precedes the table. When the part exists already,
 its h2 and lead are kept; the rest is regenerated, in the same structure and classes as the turgeman page.
-Checks (exit 1 on any PROBLEM): duplicate card ids, card ids that are not t<n>-<k>, the full Name, raw "&t=",
+Checks (exit 1 on any PROBLEM): duplicate card ids, card ids that are not t<n>-<k>, the stand-in for the Name, raw "&t=",
 Latin text outside <bdi>.
 """
 import html
@@ -120,8 +120,8 @@ def row_html(cfg, r) -> str:
 
 def text_checks(t: str) -> list:
     errs = []
-    if C.NAME_ANY.search(t):
-        errs.append("FULL NAME present")
+    if C.NAME_ABBREV.search(t):
+        errs.append('stand-in הוי"ה present; write יהוה')
     if "&t=" in t:
         errs.append("raw &t=")
     latin = C.latin_outside_bdi(t)
