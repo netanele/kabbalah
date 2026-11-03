@@ -1,6 +1,6 @@
 ---
 name: add-content
-description: Add new study content to this Kabbalah library repo. Turns YouTube lectures, videos, playlists, or text sources such as PDFs and books into a thorough Hebrew HTML study page. It either builds a new page or adds new lessons to an existing one. Every technique is written step by step, every detail links to its source (video second or page), and the page gets full transcripts, a cross-lesson index, QA, and the index.html and README integration. Use it whenever the user shares video links or sources and wants them added to the site, page or library; mentions a new lesson or video in a series already on the site; asks to "make a page from these videos"; or says "add this content", even if they never say "skill" or "HTML".
+description: Add new study content to this Kabbalah library repo. Turns YouTube lectures, videos, playlists, or text sources such as PDFs and books into a thorough Hebrew HTML study page. It either builds a new page or adds new lessons to an existing one. Every technique is written step by step, every detail links to its source (video second or page), and the page gets full transcripts, a cross-lesson index, QA, and the index.html and README integration. Use it whenever the user shares video links or sources and wants them added to the site, page or library; mentions a new lesson or video in a series already on the site; asks to "make a page from these videos"; or says "add this content", even if they never say "skill" or "HTML". Also use it whenever the user sends a Torah verse or a few words of one, usually starting with "פסוק" (e.g. "פסוק אין עוד מלבדו", "וגם הפסוק אחריו"), even with no other instruction: it goes on the verses page, pesukim-meyuchadim.html.
 ---
 
 # Add content to the Kabbalah library
@@ -10,6 +10,10 @@ This skill repeats the workflow that built `turgeman-practical-kabbalah.html` (1
 The result is a local HTML file at the repo root, linked from `index.html` and listed in `README.md`. It is never a claude.ai Artifact, and nothing is committed unless the user asks.
 
 Paths: the skill directory is `.claude/skills/add-content/` (below, `<skill>`). The workspace is `<scratchpad>/<slug>/` (`<ws>`); use the session's scratchpad directory, never the repo. Every script runs as `python3 -I <skill>/scripts/X.py --config <ws>/project.json`. The config format is in `references/config-schema.md`.
+
+## Verses (פסוקים): a short path
+
+If the user sends a verse, or a few words of one, skip everything below, including Step 0. Read `references/verses.md`, add it to `pesukim-meyuchadim.html` yourself with `scripts/add_verse.py`, and report. That file also covers wording that doesn't match a single verse.
 
 ## Step 0: ask first
 
@@ -158,6 +162,7 @@ Lead with what was added and where. Then cover:
 Keep it plain, with no headers under 500 words.
 
 ## Reference files
+- `references/verses.md`: adding a verse to the verses page, with `scripts/add_verse.py`. Separate from the pipeline.
 - `references/config-schema.md`: project.json and the workspace layout. Read it first.
 - `references/extraction-guide.md`: the brief for unit extractors.
 - `references/markup-guide.md`: the HTML contract, the tag vocabulary, the content rules, and pages built another way.
