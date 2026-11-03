@@ -147,7 +147,7 @@ def main():
             f'  <article class="pasuk" id="p{n}">\n'
             f'    <blockquote>{stam}</blockquote>\n'
             f'    <p class="nikud">{pointed}</p>\n'
-            f'    <p class="src"><b>מקור:</b> <a href="https://www.sefaria.org/{ref}?lang=he">{source}</a></p>\n'
+            f'    <p class="src"><b>מקור:</b> <a href="https://www.sefaria.org/{ref}?lang=he" target="_blank" rel="noopener">{source}</a></p>\n'
             f'  </article>\n\n'
         )
         label = html.escape(args.label, quote=False) if args.label else default_label(stam, source)
