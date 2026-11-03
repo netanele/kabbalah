@@ -6,6 +6,7 @@ A ref is a Sefaria ref (Book.Chapter.Verse). --label applies to a single ref onl
 Nothing is written unless every ref succeeds. See ../references/verses.md.
 """
 import argparse
+import html
 import json
 import pathlib
 import re
@@ -21,6 +22,9 @@ RE_ELOHIM = re.compile(f'^{PREFIX}אלה(ים|י|יך|יכם|יכן|ינו|יו|
 # Other names depend on the sense of the word, so a person decides: the script only reports them.
 ASK = {'אדני': 'מלכות', 'אל': 'חסד', 'יה': 'חכמה', 'אהיה': 'כתר', 'צבאות': 'נצח/הוד', 'שדי': '?'}
 RAB_OPEN, RAB_CLOSE = '', ''  # stand-ins for <big> while the text is split into words
+RE_REF = re.compile(r'[A-Za-z_]+\.\d+\.\d+')
+RE_VERSE = re.compile(f'[֑-ׇא-ת {RAB_OPEN}{RAB_CLOSE}]+')  # letters, marks, maqaf, paseq, sof pasuk
+RE_HE_REF = re.compile('[א-ת׳״ :]+')
 
 
 def cons(word):
@@ -41,7 +45,13 @@ def fetch(ref):
     text = text.replace('<big>', RAB_OPEN).replace('</big>', RAB_CLOSE)
     text = re.sub(r'<[^>]+>', '', text)
     text = text.replace('&thinsp;', ' ').replace('&nbsp;', ' ')
-    return re.sub(r'\s+', ' ', text).strip(), data['heRef']
+    text, he_ref = re.sub(r'\s+', ' ', text).strip(), data['heRef']
+    # The API's reply goes into a published page, so anything but verse text stops the run.
+    if not RE_VERSE.fullmatch(text):
+        sys.exit(f'{ref}: unexpected characters in the verse text: {text!r}')
+    if not RE_HE_REF.fullmatch(he_ref):
+        sys.exit(f'{ref}: unexpected characters in the source name: {he_ref!r}')
+    return text, he_ref
 
 
 def source_he(he_ref):
@@ -128,6 +138,8 @@ def main():
     last = max(numbers)
     articles, toc = '', ''
     for offset, ref in enumerate(args.refs, 1):
+        if not RE_REF.fullmatch(ref):
+            sys.exit(f'{ref}: expected a ref like Psalms.86.11 or I_Samuel.2.2')
         if f'/{ref}?' in page:
             sys.exit(f'{ref} is already on the page')
         text, he_ref = fetch(ref)
@@ -140,7 +152,7 @@ def main():
             f'    <p class="src"><b>מקור:</b> <a href="https://www.sefaria.org/{ref}?lang=he">{source}</a></p>\n'
             f'  </article>\n\n'
         )
-        label = args.label or default_label(stam, source)
+        label = html.escape(args.label, quote=False) if args.label else default_label(stam, source)
         toc += f'      <li><a href="{PAGE}#p{n}">{label}</a></li>\n'
         print(f'p{n} {source} | {re.sub(r"<[^>]+>", "", stam)}')
         for line in ask:
