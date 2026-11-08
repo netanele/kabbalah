@@ -279,8 +279,10 @@ def chip_page(cfg: Config, unit: dict, page: int) -> str:
 NAME_SUB = re.compile("\u05d9[%s]*\u05d4[%s]*\u05d5[%s]*\u05d4[%s]*" % (MARKS, MARKS, MARKS, MARKS))
 EHYEH = re.compile("אהיה אשר אהיה")
 # phrase rules only, so the ordinary words שדים / שדיין / "יעלות, שדי וחול" (a book title) stay as spoken
-SHADDAI_AFTER_WORD = re.compile("(בשם|שם|מלכות|של|חותם|אל|כותבים|כל) שדי(?![\u05d0-\u05ea])")
+SHADDAI_AFTER_WORD = re.compile("(בשם|שם|מלכות|של|חותם|אל|כותבים|כל) שדיי?(?![\u05d0-\u05ea])")
 SHADDAI_BEFORE_WORD = re.compile("(?<![\u05d0-\u05ea])שדי (שאמר|הוויה)")
+HAVAYA_AFTER_WORD = re.compile("(בשם|שם|של|את|צירופי|צירוף|אותיות|כוונת) ה?הוויה(?![\u05d0-\u05ea])")  # "שם הוויה" spoken for the Name -> שם יהוה
+BARUCH_ADONAI_LEOLAM = re.compile(r'ברוך אדו?ני לעולם')  # the verse ברוך יהוה לעולם spoken with the kinnuy
 ADONAI_MELECH = re.compile(r'(?<![\w"׳״])אדו?ני(?= מלך\b| ימלוך\b)')  # the Name spoken before מלך / ימלוך -> אדנ"י
 
 
@@ -292,6 +294,10 @@ def holy(text: str, count: dict = None) -> str:
     text, n = NAME_SUB.subn('יהוה', text)
     count['יהוה'] += n
     text = NAME_ABBREV.sub('יהוה', text)
+    text, n = HAVAYA_AFTER_WORD.subn('\\1 יהוה', text)
+    count['יהוה'] += n
+    text, n = BARUCH_ADONAI_LEOLAM.subn('ברוך יהוה לעולם', text)
+    count['יהוה'] += n
     text, n = EHYEH.subn('אהי"ה אשר אהי"ה', text)
     count['אהי"ה'] += n
     text, n = SHADDAI_AFTER_WORD.subn('\\1 שד"י', text)
