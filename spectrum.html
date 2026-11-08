@@ -119,8 +119,13 @@ canvas{display:block;width:100%;border-radius:10px}
 .wb-dim .wb-r{background:#fff3;color:#fff}
 .nonspec td{background:#faf7f0}
 
-.bandline{height:10px;border-radius:999px;border:1px solid #0003;direction:ltr;position:relative;overflow:hidden;background:#eee}
-.bandline i{position:absolute;top:0;height:100%;display:block}
+.bandline{height:16px;border-radius:4px;border:1px solid #0003;direction:ltr;position:relative;background:#eee;margin:4px 0 14px;min-width:150px}
+.bandline b{position:absolute;top:100%;left:0;width:0;height:0;margin-top:3px;border:6px solid transparent;border-bottom:8px solid #26221c;border-top:0;transform:translateX(-50%);display:block}
+.bandline b::after{content:"";position:absolute;left:-7px;top:8px;width:14px;height:2px;background:#26221c;border-radius:1px}
+.bandline.none{opacity:.55}
+.bandline.none::after{content:"לא על הקשת";position:absolute;inset:0;display:grid;place-items:center;font-size:.72rem;color:var(--ink);background:#f4f0e6cc;border-radius:4px;direction:rtl}
+.sef-row td:nth-child(3){min-width:190px}
+.sef-row td:nth-child(3) small{display:block;color:#4b3b22}
 @media(max-width:720px){
   .hero{padding:44px 16px 36px}
   .anim-grid{grid-template-columns:1fr}
@@ -543,11 +548,9 @@ range.addEventListener('input',function(){ readout(parseInt(range.value,10)); })
     var spec=(el.getAttribute('data-range')||'').trim(), ranges=[];
     if(spec) spec.split(',').forEach(function(p){ var q=p.split('-'); ranges.push([+q[0],+q[1]]); });
     ranges.sort(function(a,b){return a[0]-b[0];});
-    var covers=[], at=LMIN;
-    ranges.forEach(function(r){ if(r[0]>at) covers.push([at,r[0]]); at=Math.max(at,r[1]); });
-    if(at<LMAX) covers.push([at,LMAX]);
-    var op=ranges.length?'.9':'.82', h='';
-    covers.forEach(function(c){ h+='<i style="left:'+pct(c[0])+'%;width:'+(pct(c[1])-pct(c[0]))+'%;background:rgba(238,234,224,'+op+')"></i>'; });
+    if(!ranges.length){ el.classList.add('none'); el.innerHTML=''; return; }
+    var h='';
+    ranges.forEach(function(r){ var m=(r[0]+r[1])/2; h+='<b style="left:'+pct(m)+'%" title="'+r[0]+'–'+r[1]+' nm"></b>'; });
     el.innerHTML=h;
   });
 })();
