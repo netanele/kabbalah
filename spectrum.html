@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>הספקטרום המלא של הצבעים</title>
+<meta name="description" content="הספקטרום הרציף של האור הנראה, 380 עד 780 ננומטר, עם אורכי גל, תדירויות ואנרגיית פוטון לכל גוון; אנימציה של גל אור משתנה ומנסרה; הספקטרום האלקטרומגנטי כולו; איך העין רואה צבע; ומיקום צבעי הספירות של שיר הספירות על הספקטרום.">
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#f4f0e6;--paper:#fffdf8;--ink:#26221c;--muted:#6f665a;--gold:#9c7a33;--gold2:#c9a75a;--line:#dcd2c0;--dark:#26221c;--warn:#9b5f58;--ok:#5f7a4a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);direction:rtl;color:var(--ink);font-family:"Heebo","Noto Sans Hebrew",Arial,sans-serif;line-height:1.8;font-size:16.5px}
+h1,h2,h3,h4,.serif{font-family:"Frank Ruhl Libre","David Libre","Times New Roman",serif}
+a{color:#6d511d}
+a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+header.hero{background:radial-gradient(1200px 500px at 80% -10%,#5a4a33 0%,#2b2620 55%,#1e1b17 100%);color:#f4ecdc;padding:56px 22px 48px;text-align:center}
+.hero .emblem{width:220px;height:26px;display:block;margin:0 auto 14px;border-radius:999px;border:1px solid #c9a75a66}
+.hero .kicker{color:var(--gold2);letter-spacing:.14em;font-size:.85rem;font-weight:500}
+.hero h1{font-size:clamp(2.2rem,6vw,4rem);margin:8px 0 14px;line-height:1.15;font-weight:900}
+.hero p{max-width:860px;margin:0 auto;color:#e6dcc8;font-size:1.12rem}
+.hero .dates{margin-top:16px;color:var(--gold2);font-size:.95rem}
+nav.top{position:sticky;top:0;z-index:20;background:#fffdf8f2;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:6px 10px;display:flex;gap:2px;flex-wrap:wrap;justify-content:center}
+nav.top a{color:#5a4423;text-decoration:none;font-size:.84rem;padding:4px 9px;border-radius:999px;border:1px solid transparent}
+nav.top a:hover{border-color:var(--line);background:#f3ecdf}
+nav.top a.nav-home{color:var(--gold);font-weight:700}
+.container{max-width:1100px;margin:auto;padding:26px 18px 60px}
+section{margin-top:46px}
+section>h2{font-size:2rem;border-bottom:2px solid var(--gold2);padding-bottom:8px;margin:0 0 6px;line-height:1.3}
+section>.lead{color:var(--muted);margin:0 0 18px;font-size:1.05rem}
+h3{font-size:1.35rem;margin:26px 0 8px;color:#4b3b22}
+h4{font-size:1.05rem;margin:14px 0 4px;color:#8a6a2a}
+p{margin:0 0 12px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:0 0 14px;box-shadow:0 3px 12px #3a2c100d}
+.card h3{margin-top:0}
+.q{border-right:4px solid var(--gold2);background:#faf6ec;padding:10px 16px;margin:10px 0 12px;border-radius:0 10px 10px 0;font-family:"Frank Ruhl Libre",serif;font-size:1.05rem}
+.q .who{display:block;color:var(--muted);font-family:"Heebo",sans-serif;font-size:.85rem;margin-top:4px}
+.note{border-right:4px solid var(--warn);background:#f8efed;padding:10px 16px;margin:10px 0 14px;border-radius:0 10px 10px 0}
+.good{border-right:4px solid var(--ok);background:#eef3e7;padding:10px 16px;margin:10px 0 14px;border-radius:0 10px 10px 0}
+table{width:100%;border-collapse:collapse;background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:.95rem;margin:8px 0 16px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top;text-align:right}
+th{background:#efe7d6;color:#4b3b22;font-weight:700}
+tr:last-child td{border-bottom:0}
+td small{display:block;color:var(--muted);font-size:.82rem;line-height:1.5}
+.sw{display:inline-block;width:22px;height:22px;border-radius:50%;border:1px solid #0003;vertical-align:-5px;margin-left:8px;flex:none}
+ul.plain{margin:0 0 12px;padding-right:20px}
+ul.plain li{margin:0 0 6px}
+.tag{display:inline-block;background:#efe7d6;padding:1px 10px;border-radius:999px;font-size:.78rem;color:#4b3b22;margin-left:4px}
+.tbl-wrap{overflow:auto;border:1px solid var(--line);border-radius:12px;background:var(--paper);box-shadow:0 3px 12px #3a2c100d;margin:8px 0 16px}
+.tbl-wrap table{margin:0;border:0;border-radius:0;min-width:680px}
+#fineTable{min-width:440px}
+.tbl-wrap td:last-child{min-width:220px}
+footer{margin-top:50px;color:var(--muted);font-size:.9rem;text-align:center;border-top:1px solid var(--line);padding-top:18px}
+bdi,.ltr{direction:ltr;unicode-bidi:isolate}
+code,.mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.92em}
+.formula{direction:ltr;unicode-bidi:isolate;display:inline-block;background:#efe7d6;border-radius:8px;padding:2px 10px;font-family:"Frank Ruhl Libre",serif;font-size:1.05rem;margin:2px 4px}
+.formula i{font-style:italic}
+
+/* spectrum page */
+.fig{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 18px 12px;margin:0 0 14px;box-shadow:0 3px 12px #3a2c100d}
+.fig.ltr{direction:ltr}
+.fig figcaption{direction:rtl;color:var(--muted);font-size:.9rem;margin-top:10px;line-height:1.6}
+.specbox{position:relative;direction:ltr;user-select:none;-webkit-user-select:none;touch-action:pan-y}
+canvas{display:block;width:100%;border-radius:10px}
+#specCanvas{height:120px;cursor:crosshair;background:#111}
+#specMarker{position:absolute;top:-6px;width:0;height:132px;pointer-events:none;border-left:2px solid #fff;box-shadow:0 0 0 1px #0009;left:0}
+#specMarker::after{content:"";position:absolute;left:-7px;top:-6px;border:6px solid transparent;border-top:8px solid #fff}
+.ruler{position:relative;height:34px;direction:ltr;margin-top:4px}
+.ruler .tick{position:absolute;top:0;width:1px;height:6px;background:#8a7a5a;transform:translateX(-.5px)}
+.ruler .tick.maj{height:10px;background:#4b3b22}
+.ruler .lbl{position:absolute;top:12px;transform:translateX(-50%);font-size:.72rem;color:var(--muted);font-family:ui-monospace,Menlo,monospace;white-space:nowrap}
+.bandbar{position:relative;height:22px;direction:ltr;margin-top:2px}
+.bandbar span{position:absolute;top:0;height:100%;font-size:.72rem;color:#4b3b22;text-align:center;border-left:1px solid #c9bda5;overflow:hidden;white-space:nowrap;line-height:22px}
+.bandbar span:last-child{border-right:1px solid #c9bda5}
+.readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin-top:12px;direction:rtl}
+.readout .cell{background:#efe7d6;border-radius:10px;padding:6px 10px;line-height:1.4}
+.readout .cell b{display:block;color:var(--muted);font-size:.74rem;font-weight:500}
+.readout .cell span{font-family:ui-monospace,Menlo,monospace;font-size:1.05rem;color:#26221c}
+.readout .cell.cname span{font-family:"Frank Ruhl Libre",serif;font-size:1.15rem}
+.readout .cell.swatchcell{display:flex;align-items:center;gap:10px}
+.bigsw{width:40px;height:40px;border-radius:10px;border:1px solid #0003;flex:none}
+.rangerow{display:flex;align-items:center;gap:12px;margin-top:12px;direction:rtl;flex-wrap:wrap}
+.rangerow label{font-size:.9rem;color:#4b3b22}
+.rangerow input[type=range]{flex:1;min-width:180px;direction:ltr;accent-color:#9c7a33}
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 12px}
+.controls button,.controls select{font:inherit;font-size:.92rem;background:var(--paper);color:#3a2e1d;border:1px solid var(--line);border-radius:10px;padding:6px 14px;cursor:pointer}
+.controls button:hover,.controls select:hover{background:#f3ecdf}
+.controls button[aria-pressed="true"]{background:var(--dark);color:var(--gold2);border-color:var(--dark)}
+.controls label{display:inline-flex;align-items:center;gap:6px;font-size:.92rem;color:#4b3b22}
+#waveCanvas{height:260px;background:#0d0b09}
+.anim-grid{display:grid;grid-template-columns:1fr 240px;gap:14px;align-items:start}
+.anim-side{background:#1e1b17;color:#f4ecdc;border-radius:12px;padding:12px 14px;font-size:.95rem;line-height:1.6}
+.anim-side b{color:var(--gold2);font-weight:500;font-size:.78rem;display:block}
+.anim-side .v{font-family:ui-monospace,Menlo,monospace;font-size:1.1rem;color:#fff}
+.anim-side .row{display:flex;justify-content:space-between;align-items:center;gap:8px;border-bottom:1px solid #ffffff14;padding:5px 0}
+.anim-side .row:last-child{border-bottom:0}
+.anim-side .bigsw{border-color:#fff3}
+.em-wrap{direction:ltr}
+.em-bar{position:relative;height:48px;border-radius:10px;overflow:hidden;border:1px solid var(--line);margin:8px 0 2px;background:#eee}
+.em-bar span{position:absolute;top:0;height:100%;display:block}
+.em-labels{position:relative;height:34px;font-size:.7rem;color:var(--muted);font-family:ui-monospace,Menlo,monospace}
+.em-labels span{position:absolute;top:0;border-left:1px solid #c9bda5;padding-left:3px;line-height:1.25;white-space:nowrap}
+.em-labels span:nth-child(even){top:17px}
+.em-names{position:relative;height:30px;direction:ltr;margin-top:6px}
+.em-names span{position:absolute;top:0;height:28px;line-height:28px;font-size:.78rem;color:#3a2e1d;text-align:center;border-left:1px solid #c9bda5;white-space:nowrap;overflow:hidden}
+.em-names span.vis{color:#fff;font-weight:700;text-shadow:0 0 3px #000}
+.legend-dots{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:.88rem;margin:8px 0}
+.legend-dots span i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-left:5px;border:1px solid #0003}
+.cones{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.sef-row td:first-child{white-space:nowrap}
+.sef-row .sw{vertical-align:-6px}
+.nohar{font-family:"Frank Ruhl Libre",serif;font-weight:700;font-size:1.25rem}
+.bandline{height:10px;border-radius:999px;border:1px solid #0003;direction:ltr;position:relative;overflow:hidden;background:#eee}
+.bandline i{position:absolute;top:0;height:100%;display:block}
+@media(max-width:720px){
+  .hero{padding:44px 16px 36px}
+  .anim-grid{grid-template-columns:1fr}
+  .fig{padding:12px 12px 10px}
+  .ruler .lbl{font-size:.62rem}
+  .bandbar span{font-size:.62rem}
+  .em-labels{font-size:.56rem}
+}
+@media(max-width:400px){
+  .ruler .lbl:nth-child(odd){display:none}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{nav.top{display:none}.tbl-wrap{overflow:visible}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <canvas class="emblem" id="emblemCanvas" width="440" height="52" aria-hidden="true"></canvas>
+  <div class="kicker">אור וצבע · עיון</div>
+  <h1>הספקטרום המלא של הצבעים</h1>
+  <p>כל הצבעים שהעין רואה הם גלי אור באורכים שונים, מסגול קצר ועד אדום ארוך, בלי קו תפר ביניהם. הדף מציג את הספקטרום הרציף פיקסל אחר פיקסל, עם אורך הגל, התדירות ואנרגיית הפוטון של כל גוון; אנימציה של גל האור ושל מנסרה; מה יש מעבר לנראה; איך העין רואה; ואיפה יושבים צבעי הספירות של שיר הספירות על הקשת הזאת.</p>
+  <div class="dates">380–780 ננומטר · 7 תחומי צבע ו־41 גוונים בטבלאות · 7 תחומים בספקטרום האלקטרומגנטי המלא · נכתב נובמבר 2026</div>
+</header>
+
+<nav class="top" aria-label="ניווט">
+  <a class="nav-home" href="index.html">ספריית הקבלה</a>
+  <a href="#summary">תקציר</a>
+  <a href="#spectrum">הספקטרום הרציף</a>
+  <a href="#animation">האנימציה</a>
+  <a href="#bands">הצבעים ואורכי הגל</a>
+  <a href="#beyond">מעבר לנראה</a>
+  <a href="#eye">איך העין רואה</a>
+  <a href="#sefirot">צבעי הספירות</a>
+  <a href="#sources">מקורות</a>
+</nav>
+
+<main class="container">
+
+<section id="summary">
+  <h2>תקציר</h2>
+  <p class="lead">חמש נקודות שמספיקות כדי לקרוא את כל הדף.</p>
+  <div class="card">
+    <ul class="plain">
+      <li><b>מהו הספקטרום.</b> אור לבן הוא ערבוב של גלים אלקטרומגנטיים באורכי גל שונים. כשמפרידים אותם, במנסרה או בטיפות גשם, כל אורך גל נראה כצבע אחר. רצף הצבעים הזה הוא הספקטרום הנראה, בערך מ־380 ננומטר (סגול) עד 780 ננומטר (אדום). ננומטר אחד הוא מיליארדית המטר.</li>
+      <li><b>הוא רציף, לא שבעה צבעים.</b> בין סגול לאדום יש אינסוף גוונים, ואין גבול טבעי בין "כחול" ל"ירוק". חלוקת הקשת לשבעה צבעים (אדום, כתום, צהוב, ירוק, כחול, אינדיגו, סגול) היא מוסכמה שקבע ניוטון בספרו "אופטיקה" (1704), בין השאר מתוך הקבלה לשבעת צלילי הסולם המוזיקלי. מקורות שונים חותכים את הגבולות במקומות שונים במקצת.</li>
+      <li><b>אורך גל, תדירות ואנרגיה הם שלוש פנים של אותו דבר.</b> ככל שאורך הגל קצר יותר, התדירות גבוהה יותר והפוטון נושא יותר אנרגיה. מהירות האור במרחק של אורך גל אחד כפול התדירות: <span class="formula"><i>c</i> = λ · <i>f</i></span> ואנרגיית הפוטון היא קבוע פלאנק כפול התדירות: <span class="formula"><i>E</i> = <i>h</i> · <i>f</i></span>. לכן סגול (380 ננומטר) הוא גם התדירות הגבוהה ביותר, כ־789 טרה־הרץ, וגם הפוטון האנרגטי ביותר, כ־3.26 אלקטרון־וולט; אדום (780 ננומטר) הוא כ־384 טרה־הרץ וכ־1.59 אלקטרון־וולט.</li>
+      <li><b>הנראה הוא פרוסה דקה.</b> מתחת לסגול יש על־סגול, קרני רנטגן וקרני גמא; מעל לאדום יש תת־אדום, מיקרוגל ורדיו. כולם אותו דבר פיזיקלי, גלים אלקטרומגנטיים, ורק העין האנושית תוחמת את מה שנקרא "אור".</li>
+      <li><b>הצבע נולד בעין.</b> לאור עצמו אין צבע; יש לו אורך גל. שלושה סוגי תאים (קונוסים) ברשתית מגיבים בעוצמות שונות לכל אורך גל, והמוח מתרגם את היחס ביניהם לתחושת צבע. לכן יש צבעים שאינם על הספקטרום כלל, כמו ורוד, סגלגל (מג'נטה), לבן, חום, כסף וזהב: הם ערבובים או דרגות בהירות, לא אורך גל אחד.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="spectrum">
+  <h2>הספקטרום הרציף</h2>
+  <p class="lead">הפס מצויר פיקסל אחר פיקסל: לכל אורך גל מחושב הצבע שהמסך מסוגל להציג לו. מעבירים את העכבר או את האצבע על הפס, או משתמשים במחוון, כדי לקרוא את הנתונים של כל נקודה.</p>
+  <figure class="fig ltr">
+    <div class="specbox" id="specBox">
+      <canvas id="specCanvas" role="img" aria-label="הספקטרום הנראה, מ־380 ננומטר (סגול) בצד שמאל עד 780 ננומטר (אדום) בצד ימין"></canvas>
+      <div id="specMarker" aria-hidden="true"></div>
+    </div>
+    <div class="ruler" id="specRuler" aria-hidden="true"></div>
+    <div class="bandbar" id="specBands" aria-hidden="true"></div>
+    <div class="rangerow">
+      <label for="specRange">אורך גל (ננומטר):</label>
+      <input type="range" id="specRange" min="380" max="780" step="1" value="550" aria-label="בחירת אורך גל בננומטרים">
+    </div>
+    <div class="readout" id="specReadout" aria-live="polite">
+      <div class="cell swatchcell"><div class="bigsw" id="roSw"></div><div><b>גוון</b><span id="roHex" class="ltr">—</span></div></div>
+      <div class="cell cname"><b>צבע</b><span id="roName">—</span></div>
+      <div class="cell"><b>אורך גל λ</b><span id="roNm">—</span></div>
+      <div class="cell"><b>תדירות f</b><span id="roThz">—</span></div>
+      <div class="cell"><b>אנרגיית פוטון E</b><span id="roEv">—</span></div>
+    </div>
+    <figcaption>כיוון הפס קבוע משמאל לימין, כמו בספרי הפיזיקה: <b>380 ננומטר (סגול) בקצה השמאלי, 780 ננומטר (אדום) בקצה הימני</b>, והמספרים בסרגל עולים משמאל לימין. הקצוות מוכהים בכוונה, כי שם רגישות העין נחלשת. הצבעים חושבו מפונקציות ההתאמה של CIE 1931 בקירוב האנליטי של ויימן, סלואן ושירלי (2013), הומרו ל־sRGB ונורמלו לבהירות מלאה. מסך רגיל אינו מסוגל להציג את מלוא הרוויה של צבעי הספקטרום, ולכן זהו הקירוב הקרוב ביותר שהמסך מאפשר.</figcaption>
+  </figure>
+  <div class="note">
+    <p><b>על הדיוק.</b> צבעי הספקטרום הטהורים נמצאים מחוץ למרחב הצבע של מסכים (sRGB). במיוחד התכלת־ירוק (סביב 490–510 ננומטר) והסגול העמוק נראים על המסך דהויים יותר מאשר במנסרה אמיתית. המספרים (אורך גל, תדירות, אנרגיה) מדויקים; הגוון הוא התרגום הטוב ביותר האפשרי למסך.</p>
+  </div>
+</section>
+
+<section id="animation">
+  <h2>האנימציה</h2>
+  <p class="lead">גל אור שאורכו וצבעו משתנים לאט לאורך כל הספקטרום, הלוך ושוב, ולצדו הנתונים החיים. במצב "קשת" רואים קרן לבנה נשברת במנסרה לנפת צבעים.</p>
+  <div class="controls" role="group" aria-label="בקרת האנימציה">
+    <button type="button" id="btnPlay" aria-pressed="true">השהה</button>
+    <label>מהירות
+      <select id="selSpeed" aria-label="מהירות האנימציה">
+        <option value="0.5">0.5×</option>
+        <option value="1" selected>1×</option>
+        <option value="2">2×</option>
+      </select>
+    </label>
+    <label>מצב
+      <select id="selMode" aria-label="מצב האנימציה">
+        <option value="sweep" selected>סריקה</option>
+        <option value="prism">קשת</option>
+      </select>
+    </label>
+    <button type="button" id="btnHold" aria-pressed="false">החזק באורך הגל של המחוון</button>
+  </div>
+  <div class="anim-grid">
+    <figure class="fig ltr" style="margin:0">
+      <canvas id="waveCanvas" role="img" aria-label="אנימציה של גל אור שאורך הגל והצבע שלו משתנים לאורך הספקטרום הנראה"></canvas>
+      <figcaption id="animCaption">במצב סריקה אורך הגל המצויר הוא בקנה מידה קבוע: ננומטר אחד שווה 0.4 פיקסל, כך שגל סגול של 380 ננומטר חוזר על עצמו כל 152 פיקסלים וגל אדום של 780 ננומטר כל 312 פיקסלים. הגל נע ימינה, והצבע והאורך מתעדכנים בכל רגע. סריקה שלמה, מסגול לאדום וחזרה, אורכת כ־24 שניות במהירות 1×.</figcaption>
+    </figure>
+    <aside class="anim-side" aria-live="polite" aria-atomic="false">
+      <div class="row"><div><b>אורך גל</b><span class="v" id="anNm">—</span></div><div class="bigsw" id="anSw"></div></div>
+      <div class="row"><div><b>תדירות</b><span class="v" id="anThz">—</span></div></div>
+      <div class="row"><div><b>אנרגיית פוטון</b><span class="v" id="anEv">—</span></div></div>
+      <div class="row"><div><b>צבע</b><span class="v" id="anName" style="font-family:'Frank Ruhl Libre',serif">—</span></div></div>
+      <div class="row"><div><b>גוון במסך</b><span class="v ltr" id="anHex">—</span></div></div>
+    </aside>
+  </div>
+  <p class="good" id="motionNote" hidden>במערכת שלך מופעלת העדפה להפחתת תנועה, ולכן האנימציה מתחילה עצורה ומציגה תמונה קבועה. אפשר להפעיל אותה בכפתור.</p>
+</section>
+
+<section id="bands">
+  <h2>הצבעים ואורכי הגל</h2>
+  <p class="lead">שתי טבלאות: תחומי הצבע המקובלים, ואחריהן כל הספקטרום בקפיצות של 10 ננומטר. הדוגמיות בשתיהן מחושבות באותה פונקציה שצובעת את הפס למעלה.</p>
+  <h3>שבעת תחומי הצבע</h3>
+  <div class="tbl-wrap">
+    <table id="bandTable">
+      <thead><tr><th>דוגמית</th><th>צבע</th><th>אורכי גל (ננומטר)</th><th>תדירות (טרה־הרץ)</th><th>אנרגיית פוטון (אלקטרון־וולט)</th><th>הערות</th></tr></thead>
+      <tbody>
+        <tr data-band="violet"><td></td><td>סגול <small>violet</small></td><td class="ltr">380–450</td><td class="ltr"></td><td class="ltr"></td><td>הקצה הקצר. מתחת ל־400 ננומטר העין כמעט אינה רואה, ומתחת ל־380 מתחיל העל־סגול.</td></tr>
+        <tr data-band="blue"><td></td><td>כחול <small>blue</small></td><td class="ltr">450–485</td><td class="ltr"></td><td class="ltr"></td><td>הכחול הטהור, סביב 470 ננומטר, קרוב לשיא הרגישות של קונוסי S.</td></tr>
+        <tr data-band="cyan"><td></td><td>תכלת <small>cyan</small></td><td class="ltr">485–500</td><td class="ltr"></td><td class="ltr"></td><td>תחום צר בין כחול לירוק. מסכים מתקשים להציג את רוויתו המלאה.</td></tr>
+        <tr data-band="green"><td></td><td>ירוק <small>green</small></td><td class="ltr">500–565</td><td class="ltr"></td><td class="ltr"></td><td>שיא רגישות העין ביום הוא ב־555 ננומטר, ירוק־צהבהב.</td></tr>
+        <tr data-band="yellow"><td></td><td>צהוב <small>yellow</small></td><td class="ltr">565–590</td><td class="ltr"></td><td class="ltr"></td><td>תחום צר. הצהוב של הנתרן (מנורות רחוב ישנות) הוא 589 ננומטר.</td></tr>
+        <tr data-band="orange"><td></td><td>כתום <small>orange</small></td><td class="ltr">590–625</td><td class="ltr"></td><td class="ltr"></td><td>בין צהוב לאדום.</td></tr>
+        <tr data-band="red"><td></td><td>אדום <small>red</small></td><td class="ltr">625–780</td><td class="ltr"></td><td class="ltr"></td><td>הקצה הארוך. מעל כ־700 ננומטר הרגישות יורדת חדות, ומעל 780 מתחיל התת־אדום.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note"><p><b>הגבולות הם מוסכמה.</b> אין נקודה פיזיקלית שבה כחול הופך לירוק. הטבלה כאן הולכת אחרי החלוקה הנפוצה בספרי האופטיקה (ראו <a href="#sources">מקורות</a>); ספרים אחרים מזיזים כל גבול ב־5 עד 15 ננומטר, ויש המוסיפים "אינדיגו" (כ־425–450 ננומטר) כצבע נפרד, כמו ניוטון. גם גבולות התחום הנראה עצמו ניתנים כ־380–750, 390–700 או 400–700 ננומטר במקורות שונים; הדף הזה משתמש ב־380–780, התחום המלא שלפיו מוגדרות פונקציות CIE 1931.</p></div>
+
+  <h3>כל 10 ננומטר</h3>
+  <noscript><p class="note">הטבלה המפורטת מחושבת בדפדפן ודורשת JavaScript.</p></noscript>
+  <div class="tbl-wrap">
+    <table id="fineTable">
+      <thead><tr><th>דוגמית</th><th>ננומטר</th><th>טרה־הרץ</th><th>אלקטרון־וולט</th><th>גוון (hex)</th><th>תחום</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="beyond">
+  <h2>מעבר לנראה: הספקטרום האלקטרומגנטי</h2>
+  <p class="lead">האור הנראה הוא פרוסה אחת צרה מתוך סולם של כ־17 סדרי גודל, מפיקומטר ועד מאה קילומטר. כל התחומים הם אותו גל אלקטרומגנטי; רק אורך הגל משתנה.</p>
+  <figure class="fig">
+    <div class="em-wrap">
+      <div class="em-bar" id="emBar" role="img" aria-label="הספקטרום האלקטרומגנטי בסולם לוגריתמי, מקרני גמא בשמאל עד גלי רדיו בימין; התחום הנראה הוא פס צבעוני צר"></div>
+      <div class="em-labels" id="emLabels" aria-hidden="true"></div>
+      <div class="em-names" id="emNames" aria-hidden="true"></div>
+    </div>
+    <div class="legend-dots" aria-hidden="true">
+      <span><i style="background:#3a2d4d"></i>קרני גמא</span>
+      <span><i style="background:#4d3f66"></i>קרני רנטגן</span>
+      <span><i style="background:#6a5a99"></i>על־סגול</span>
+      <span><i style="background:linear-gradient(90deg,#7b2fc0,#2a5bd7,#2fa84f,#e0b000,#e5262b)"></i>נראה</span>
+      <span><i style="background:#8a3b2a"></i>תת־אדום</span>
+      <span><i style="background:#6e4a2a"></i>מיקרוגל</span>
+      <span><i style="background:#4b3b22"></i>רדיו</span>
+    </div>
+    <figcaption>סולם לוגריתמי: כל משבצת בסרגל היא פי 10 באורך הגל. הסרגל רץ משמאל לימין, מאורך הגל הקצר (1 פיקומטר, 10<sup>−12</sup> מטר) אל הארוך (100 קילומטר, 10<sup>5</sup> מטר). התחום הנראה, 380–780 ננומטר, הוא הפס הצבעוני היחיד, ורוחבו כשליש משבצת.</figcaption>
+  </figure>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>תחום</th><th>אורך גל</th><th>תדירות</th><th>דוגמה מחיי היומיום</th></tr></thead>
+      <tbody>
+        <tr><td>קרני גמא</td><td class="ltr">&lt; 10 pm</td><td class="ltr">&gt; 30 EHz</td><td>פירוק גרעיני, רפואה גרעינית, התפרצויות בחלל.</td></tr>
+        <tr><td>קרני רנטגן</td><td class="ltr">10 pm – 10 nm</td><td class="ltr">30 PHz – 30 EHz</td><td>צילום רנטגן בבית החולים, בדיקת מזוודות בשדה התעופה.</td></tr>
+        <tr><td>על־סגול (UV)<small>UVC 100–280 · UVB 280–315 · UVA 315–380 ננומטר</small></td><td class="ltr">10 – 380 nm</td><td class="ltr">789 THz – 30 PHz</td><td>שיזוף וכוויות שמש (UVB), מנורות חיטוי (UVC), תאורה "שחורה" (UVA).</td></tr>
+        <tr><td><b>אור נראה</b></td><td class="ltr"><b>380 – 780 nm</b></td><td class="ltr">384 – 789 THz</td><td>כל מה שהעין רואה: שמש, נורות, מסכים, הקשת.</td></tr>
+        <tr><td>תת־אדום (IR)<small>קרוב 0.78–3 µm · בינוני 3–50 µm · רחוק 50 µm–1 mm</small></td><td class="ltr">780 nm – 1 mm</td><td class="ltr">300 GHz – 384 THz</td><td>שלט רחוק, חום הגוף במצלמה תרמית, חימום בתנור.</td></tr>
+        <tr><td>מיקרוגל</td><td class="ltr">1 mm – 1 m</td><td class="ltr">300 MHz – 300 GHz</td><td>תנור מיקרוגל (12 ס"מ), Wi-Fi, טלפון סלולרי, מכ"ם.</td></tr>
+        <tr><td>רדיו</td><td class="ltr">&gt; 1 m</td><td class="ltr">&lt; 300 MHz</td><td>רדיו FM (כ־3 מטר), שידורי טלוויזיה, תקשורת עם צוללות (קילומטרים).</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note"><b>גם כאן הגבולות הם מוסכמה.</b> תקן ISO 21348 מחלק את העל־סגול והתת־אדום כפי שמובא בטבלה; מקורות אחרים מעגלים אחרת (למשל, התת־אדום הקרוב עד 2.5 או 1.4 מיקרומטר, ורנטגן עד 0.01 ננומטר). בקצוות, רנטגן קשה וגמא רכה חופפים ומובחנים לפי מקור הקרינה, לא לפי אורך הגל.</p>
+</section>
+
+<section id="eye">
+  <h2>איך העין רואה</h2>
+  <p class="lead">הספקטרום הוא עובדה פיזיקלית; הצבע הוא מה שהמוח עושה ממנו. כמה עובדות מבוססות, בקצרה.</p>
+  <h3>שלושה סוגי קונוסים</h3>
+  <div class="cones">
+    <div class="card"><h3>S <small style="font-weight:400;color:var(--muted)">(קצר)</small></h3><p>שיא רגישות בסביבות <bdi>420–440</bdi> ננומטר, בכחול־סגול. מעטים יחסית ברשתית, וכמעט נעדרים ממרכז הראייה החד.</p></div>
+    <div class="card"><h3>M <small style="font-weight:400;color:var(--muted)">(בינוני)</small></h3><p>שיא בסביבות <bdi>530–540</bdi> ננומטר, בירוק. עם קונוסי L הוא נותן את רוב תחושת הבהירות.</p></div>
+    <div class="card"><h3>L <small style="font-weight:400;color:var(--muted)">(ארוך)</small></h3><p>שיא בסביבות <bdi>560–580</bdi> ננומטר, בצהוב־ירוק. למרות שמו הוא אחראי לאדום, כי באדום הוא הקונוס היחיד שעדיין מגיב.</p></div>
+  </div>
+  <p>כל אורך גל מעורר את שלושת הסוגים ביחס שונה, והמוח קורא את היחס הזה כצבע. אותו יחס יכול להתקבל גם מערבוב של כמה אורכי גל, ולכן מסך, שיש בו רק אדום, ירוק וכחול, מצליח לחקות כמעט כל צבע: הוא אינו מייצר את אורך הגל, אלא את התגובה של הקונוסים לו. המספרים לעיל הם ערכים מקורבים; שיאי הרגישות משתנים במקצת בין בני אדם ובין שיטות מדידה.</p>
+  <h3>צבעים שאינם על הספקטרום</h3>
+  <ul class="plain">
+    <li><b>סגלגל, מג'נטה, ורוד.</b> אין אורך גל שנראה ורוד. ורוד ומג'נטה נוצרים כשקונוסי L (אדום) וקונוסי S (כחול־סגול) מעוררים יחד, בלי ירוק באמצע. במפת הצבעים של CIE הם יושבים על קו ישר שנמתח בין שני קצות הספקטרום, "קו הסגולים", ולא על הקשת עצמה. ורוד בהיר הוא מג'נטה מעורבת בלבן.</li>
+    <li><b>לבן.</b> לבן הוא תחושה של כל הקונוסים מעוררים יחד באיזון, כמו באור השמש. הוא ערבוב, לא אורך גל.</li>
+    <li><b>חום.</b> חום הוא כתום או אדום כהים: אותו גוון, בבהירות נמוכה ביחס לסביבה. כתם כתום בסביבה בהירה מאוד נראה חום. אין "אור חום".</li>
+    <li><b>כסף וזהב.</b> אלה אינם צבעים אלא אופני החזרה של אור: כסף הוא אפור־לבן מבריק, זהב הוא צהוב־כתום מבריק. הברק נובע מהחזרה מראתית שמשתנה עם זווית המבט, ואי אפשר להציגו כנקודה אחת על הספקטרום.</li>
+    <li><b>סגול וסגלגל אינם אותו דבר.</b> סגול ספקטרלי (380–450 ננומטר) הוא אורך גל אמיתי, שנראה לעין כנוטה מעט לאדום מפני שקונוסי L מגיבים אליו קלות. סגלגל (purple, מג'נטה) הוא ערבוב של אדום וכחול, ואינו ספקטרלי.</li>
+  </ul>
+</section>
+
+<section id="sefirot">
+  <h2>צבעי הספירות על הספקטרום</h2>
+  <p class="lead">צבעי הספירות בדף זה הם צבעי <a href="tzayach-shir-hasefirot.html#song">שיר הספירות</a>, כפי שהם מוגדרים במקום אחד בספרייה. לכל צבע נאמר כאן רק דבר אחד: איפה הגוון שלו יושב על הספקטרום, או שאינו יושב עליו כלל. המקורות דיברו על גוונים, לא על אורכי גל; המיפוי הוא שלנו, מקורב, ונועד להמחשה בלבד.</p>
+  <div class="tbl-wrap">
+    <table id="sefTable">
+      <thead><tr><th>ספירה</th><th>הצבע בשיר הספירות</th><th>על הספקטרום (ננומטר)</th><th>הערה</th></tr></thead>
+      <tbody>
+        <tr class="sef-row"><td><span class="sw" data-sef="keter" data-sef-as="swatch"></span>כתר</td><td>לבן בוהק, כמו אוויר</td><td><div class="bandline" data-range=""></div><small>לא ספקטרלי</small></td><td>לבן הוא כל אורכי הגל יחד, באיזון. אין לו מקום אחד על הפס; הוא הפס כולו כשהוא מתמזג.</td></tr>
+        <tr class="sef-row"><td><span class="sw" data-sef="chochma" data-sef-as="swatch"></span>חכמה</td><td>תכלת, הכולל כל הגוונים</td><td><div class="bandline" data-range="475-490"></div><small>≈ 475–490, מובהר</small></td><td>גוון התכלת הוא כחול־תכול בהיר: אורך גל של כ־480 ננומטר מעורבב באור לבן. הבהירות אינה על הספקטרום, הגוון כן.</td></tr>
+        <tr class="sef-row"><td><span class="sw" data-sef="bina" data-sef-as="swatch"></span>בינה</td><td>צהוב וירוק</td><td><div class="bandline" data-range="500-590"></div><small>≈ 500–590</small></td><td>שני צבעים סמוכים על הפס, ירוק (500–565) וצהוב (565–590). יחד הם התחום שבו העין רגישה ביותר.</td></tr>
+        <tr class="sef-row"><td><span class="sw" data-sef="chesed" data-sef-as="swatch"></span>חסד</td><td>לבן וכסף</td><td><div class="bandline" data-range=""></div><small>לא ספקטרלי</small></td><td>לבן הוא ערבוב מאוזן; כסף הוא אפור־לבן מבריק, כלומר לבן בהחזרה מראתית. לשניהם אין אורך גל.</td></tr>
+        <tr class="sef-row"><td><span class="sw" data-sef="gevura" data-sef-as="swatch"></span>גבורה</td><td>אדום וזהב</td><td><div class="bandline" data-range="625-780,575-595"></div><small>≈ 625–780; הזהב ≈ 575–595 בברק</small></td><td>האדום יושב בקצה הארוך של הפס. גוון הזהב הוא צהוב־כתום (כ־580–590 ננומטר), אך "זהב" כצבע הוא הברק המתכתי שלו, ולכן אינו נקודה אחת על הספקטרום.</td></tr>
+        <tr class="sef-row"><td><span class="sw" data-sef="tiferet" data-sef-as="swatch"></span>תפארת</td><td>צהוב וסגול</td><td><div class="bandline" data-range="565-590,380-450"></div><small>≈ 565–590 ו־380–450</small></td><td>שני קצוות: הצהוב באמצע הפס, הסגול בקצהו הקצר. אלה גם צבעי אותיות השם יהוה בספרייה.</td></tr>
+        <tr class="sef-row"><td><span class="sw" data-sef="netzach" data-sef-as="swatch"></span>נצח</td><td>ורוד בהיר</td><td><div class="bandline" data-range=""></div><small>לא ספקטרלי</small></td><td>ורוד הוא אדום וכחול־סגול יחד, מובהרים בלבן. הוא יושב על "קו הסגולים", מחוץ לקשת.</td></tr>
+        <tr class="sef-row"><td><span class="sw" data-sef="hod" data-sef-as="swatch"></span>הוד</td><td>ורוד כהה</td><td><div class="bandline" data-range=""></div><small>לא ספקטרלי</small></td><td>אותו ערבוב של אדום וכחול, כהה יותר ופחות לבן. גם הוא על קו הסגולים.</td></tr>
+        <tr class="sef-row"><td><span class="sw" data-sef="yesod" data-sef-as="swatch"></span>יסוד</td><td>כתום</td><td><div class="bandline" data-range="590-625"></div><small>≈ 590–625</small></td><td>תחום הכתום, בין הצהוב לאדום.</td></tr>
+        <tr class="sef-row"><td><span class="sw" data-sef="malchut" data-sef-as="swatch"></span>מלכות</td><td>כחול</td><td><div class="bandline" data-range="450-475"></div><small>≈ 450–475</small></td><td>כחול עמוק, בתחום הכחול הקצר, בין הסגול לתכלת.</td></tr>
+        <tr class="sef-row" id="noharRow"><td><span class="sw" id="noharSw"></span><span class="nohar" id="noharName">נוהר</span></td><td>כל הצבעים: מעבר רציף בכל גווני הקשת</td><td><div class="bandline" data-range="380-780"></div><small>380–780, כל הפס</small></td><td>השם נוהר, כפי שמלמד הרב תורג'מן ב<a href="turgeman-chayei-sarah-shemot.html#t1-1">שיעור על שמות הקודש</a>, אינו ספירה אלא שם שצבעו כל הקשת ברצף. זהו בדיוק הספקטרום המלא שהדף הזה מצייר: לא שבעה צבעים נפרדים אלא מעבר רציף מסגול לאדום.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note"><b>מה לא נאמר כאן.</b> הטבלה ממפה גוונים לאורכי גל, ותו לא. היא אינה טוענת שהמקורות ידעו או התכוונו למדידה פיזיקלית, ואינה מכריעה בין השיטות השונות בצבעי הספירות; אלה מוצגות זו לצד זו ב<a href="sefirot-colors.html#compare">טבלת ההשוואה</a>. גם המיפוי של "תכלת", "כחול" ו"סגול" לאורכי גל הוא לפי השימוש המודרני במילים, והמקורות עצמם לא תמיד הבחינו ביניהן כפי שאנו מבחינים.</p>
+</section>
+
+<section id="sources">
+  <h2>מקורות</h2>
+  <p class="lead">הנתונים הפיזיקליים בדף נשענים על מקורות אלה. גבולות תחומי הצבע הם מוסכמה, ומובאים כאן לפי המקובל בספרי האופטיקה.</p>
+  <ul class="plain">
+    <li><b>CIE 1931.</b> Commission Internationale de l'Éclairage, <i>CIE 1931 colour matching functions</i> (2° standard observer), 380–780 nm. פונקציות ההתאמה שמהן מחושב הצבע של כל אורך גל. טבלאות עדכניות: CIE 015:2018, <i>Colorimetry</i>, 4th ed.</li>
+    <li><b>הקירוב האנליטי.</b> Chris Wyman, Peter-Pike Sloan, Peter Shirley, "Simple Analytic Approximations to the CIE XYZ Color Matching Functions", <i>Journal of Computer Graphics Techniques</i> 2(2), 2013, pp. 1–11. ההתאמה הרב־גאוסיאנית לפונקציות x̄, ȳ, z̄ שמשמשת בקוד של הדף. ההמרה ל־sRGB לפי IEC 61966-2-1:1999 (מטריצת XYZ→RGB עם נקודה לבנה D65 ועקומת גמא של sRGB).</li>
+    <li><b>שבעת הצבעים של ניוטון.</b> Isaac Newton, <i>Opticks: or, A Treatise of the Reflexions, Refractions, Inflexions and Colours of Light</i>, London 1704, Book I, Part II, Prop. III and VI (החלוקה לשבעה צבעים וההקבלה לסולם המוזיקלי).</li>
+    <li><b>קבועי הטבע.</b> CODATA 2018 recommended values (NIST): מהירות האור <bdi>c = 299 792 458 m/s</bdi> (ערך מוגדר), קבוע פלאנק <bdi>h = 6.626 070 15 × 10⁻³⁴ J·s</bdi> (ערך מוגדר), ומכאן <bdi>h·c = 1239.841 98 eV·nm</bdi>. מהם מחושבות התדירות (טרה־הרץ = 299 792.458 ÷ ננומטר) ואנרגיית הפוטון (אלקטרון־וולט = 1239.84 ÷ ננומטר) שבדף.</li>
+    <li><b>תחומי הספקטרום האלקטרומגנטי.</b> ISO 21348:2007, <i>Space environment (natural and artificial) — Process for determining solar irradiances</i>: הגדרת התחומים UVC/UVB/UVA, הנראה, ותת־האדום הקרוב, הבינוני והרחוק.</li>
+    <li><b>גבולות תחומי הצבע.</b> Eugene Hecht, <i>Optics</i>, 5th ed., Pearson 2017, Table 3.4 (Approximate frequency and vacuum wavelength ranges for the various colors). החלוקה שם: סגול 390–455, כחול 455–492, ירוק 492–577, צהוב 577–597, כתום 597–622, אדום 622–780 ננומטר. הדף מעגל מעט אחרת (380–450, 450–485, 485–500 לתכלת, 500–565, 565–590, 590–625, 625–780), לפי החלוקה הנפוצה באנציקלופדיות ובספרי לימוד; ההבדלים מעידים על כך שהגבולות הם מוסכמה.</li>
+    <li><b>רגישות הקונוסים וקו הסגולים.</b> Andrew Stockman & Lindsay T. Sharpe, "The spectral sensitivities of the middle- and long-wavelength-sensitive cones", <i>Vision Research</i> 40 (2000), 1711–1737; וכן Stockman, Sharpe & Fach, <i>Vision Research</i> 39 (1999), 2901–2927 לקונוסי S. דיאגרמת הכרומטיות וקו הסגולים: Günter Wyszecki & W. S. Stiles, <i>Color Science</i>, 2nd ed., Wiley 1982, ch. 3.</li>
+    <li><b>צבעי הספירות.</b> שיר הספירות לר' יוסף צייאח, ב<a href="tzayach-shir-hasefirot.html#song">דף השיר</a>; השם נוהר ב<a href="turgeman-chayei-sarah-shemot.html#t1-1">שיעור הרב תורג'מן</a>; השוואת כל השיטות ב<a href="sefirot-colors.html#compare">דף צבעי הספירות</a>.</li>
+  </ul>
+</section>
+
+<footer>
+  <p><a href="index.html">ספריית הקבלה</a> · <a href="sefirot-colors.html">שיטות בצבעי הספירות</a> · <a href="tzayach-shir-hasefirot.html">שיר הספירות</a> · עודכן: נובמבר 2026</p>
+</footer>
+</main>
+
+<script src="js/sefirot-methods.js"></script>
+<script>
+(function(){
+'use strict';
+/* ---------- אורך גל → צבע מסך ----------
+   פונקציות ההתאמה של CIE 1931 בקירוב של Wyman, Sloan & Shirley (JCGT 2013), ואז XYZ → sRGB לינארי (D65),
+   קיצוץ שליליים, נרמול לבהירות מלאה, גמא של sRGB, והכהיה בקצוות. */
+var LMIN=380, LMAX=780;
+function g(l,mu,s1,s2){ var s=l<mu?s1:s2, t=(l-mu)/s; return Math.exp(-0.5*t*t); }
+function cieXYZ(l){
+  var x=1.056*g(l,599.8,37.9,31.0)+0.362*g(l,442.0,16.0,26.7)-0.065*g(l,501.1,20.4,26.2);
+  var y=0.821*g(l,568.8,46.9,40.5)+0.286*g(l,530.9,16.3,31.1);
+  var z=1.217*g(l,437.0,11.8,36.0)+0.681*g(l,459.0,26.0,13.8);
+  return [x,y,z];
+}
+function gammaS(c){ return c<=0.0031308 ? 12.92*c : 1.055*Math.pow(c,1/2.4)-0.055; }
+function fade(l){
+  if(l<400) return 0.40+0.60*(l-LMIN)/(400-LMIN);
+  if(l>700) return 1-0.65*(l-700)/(LMAX-700);
+  return 1;
+}
+function rgbOf(l){
+  l=Math.min(LMAX,Math.max(LMIN,l));
+  /* הגוון נלקח מהתחום 400–680: מעבר לו הזנבות של הקירוב קטנים מכדי לקבוע גוון מהימן, והגוון האמיתי שם כמעט קבוע (סגול בקצה הקצר, אדום בארוך) */
+  var xyz=cieXYZ(Math.min(680,Math.max(400,l)));
+  var X=xyz[0], Y=xyz[1], Z=xyz[2];
+  var r= 3.2406*X-1.5372*Y-0.4986*Z, gg=-0.9689*X+1.8758*Y+0.0415*Z, b= 0.0557*X-0.2040*Y+1.0570*Z;
+  r=Math.max(0,r); gg=Math.max(0,gg); b=Math.max(0,b);
+  var m=Math.max(r,gg,b); if(m>0){ r/=m; gg/=m; b/=m; }
+  var f=fade(l); r*=f; gg*=f; b*=f;
+  return [Math.round(255*gammaS(r)), Math.round(255*gammaS(gg)), Math.round(255*gammaS(b))];
+}
+function hex2(n){ var h=n.toString(16); return h.length<2?'0'+h:h; }
+function hexOf(l){ var c=rgbOf(l); return '#'+hex2(c[0])+hex2(c[1])+hex2(c[2]); }
+function cssOf(l){ var c=rgbOf(l); return 'rgb('+c[0]+','+c[1]+','+c[2]+')'; }
+function thz(l){ return 299792.458/l; }
+function ev(l){ return 1239.84198/l; }
+function f1(n){ return n.toFixed(1); }
+function f2(n){ return n.toFixed(2); }
+
+var BANDS=[
+  {id:'violet',rep:420,he:'סגול',en:'violet',a:380,b:450},
+  {id:'blue',rep:470,he:'כחול',en:'blue',a:450,b:485},
+  {id:'cyan',rep:490,he:'תכלת',en:'cyan',a:485,b:500},
+  {id:'green',rep:530,he:'ירוק',en:'green',a:500,b:565},
+  {id:'yellow',rep:578,he:'צהוב',en:'yellow',a:565,b:590},
+  {id:'orange',rep:600,he:'כתום',en:'orange',a:590,b:625},
+  {id:'red',rep:650,he:'אדום',en:'red',a:625,b:780}
+];
+function bandOf(l){ for(var i=0;i<BANDS.length;i++){ if(l<BANDS[i].b) return BANDS[i]; } return BANDS[BANDS.length-1]; }
+function pct(l){ return (l-LMIN)/(LMAX-LMIN)*100; }
+function spectrumGradient(step){
+  var st=[]; for(var l=LMIN;l<=LMAX;l+=step) st.push(cssOf(l)+' '+pct(l).toFixed(2)+'%');
+  return 'linear-gradient(90deg,'+st.join(',')+')';
+}
+window.SPECTRUM={rgb:rgbOf,hex:hexOf,css:cssOf,thz:thz,ev:ev,band:bandOf,bands:BANDS,min:LMIN,max:LMAX};
+
+/* ---------- ציור פס רציף על קנבס ---------- */
+function paintBar(cv,heightCss){
+  var dpr=window.devicePixelRatio||1, w=Math.max(1,Math.round(cv.clientWidth*dpr)), h=Math.round(heightCss*dpr);
+  if(cv.width!==w||cv.height!==h){ cv.width=w; cv.height=h; }
+  var ctx=cv.getContext('2d'), img=ctx.createImageData(w,1), d=img.data;
+  for(var x=0;x<w;x++){ var l=LMIN+(LMAX-LMIN)*(x+0.5)/w, c=rgbOf(l), i=x*4; d[i]=c[0]; d[i+1]=c[1]; d[i+2]=c[2]; d[i+3]=255; }
+  ctx.putImageData(img,0,0);
+  if(h>1){ ctx.drawImage(cv,0,0,w,1,0,0,w,h); }
+}
+
+/* ---------- הספקטרום הרציף: קנבס, סרגל, סמן, קריאה ---------- */
+var specCv=document.getElementById('specCanvas'), marker=document.getElementById('specMarker'), box=document.getElementById('specBox');
+var range=document.getElementById('specRange'), cur=550;
+function drawSpec(){ paintBar(specCv,120); setMarker(cur); }
+function setMarker(l){ marker.style.left=pct(l)+'%'; }
+function readout(l){
+  cur=l;
+  var hx=hexOf(l), b=bandOf(l);
+  document.getElementById('roSw').style.background=hx;
+  document.getElementById('roHex').textContent=hx;
+  document.getElementById('roName').textContent=b.he+' ('+b.en+')';
+  document.getElementById('roNm').textContent=Math.round(l)+' nm';
+  document.getElementById('roThz').textContent=f1(thz(l))+' THz';
+  document.getElementById('roEv').textContent=f2(ev(l))+' eV';
+  setMarker(l);
+  if(String(Math.round(l))!==range.value) range.value=String(Math.round(l));
+}
+function fromPointer(ev){
+  var r=specCv.getBoundingClientRect(), x=Math.min(r.width,Math.max(0,ev.clientX-r.left));
+  readout(Math.round(LMIN+(LMAX-LMIN)*x/r.width));
+}
+var dragging=false;
+box.addEventListener('pointerdown',function(e){ dragging=true; try{box.setPointerCapture(e.pointerId);}catch(x){} fromPointer(e); });
+box.addEventListener('pointermove',function(e){ if(dragging||e.pointerType==='mouse') fromPointer(e); });
+box.addEventListener('pointerup',function(){ dragging=false; });
+box.addEventListener('pointercancel',function(){ dragging=false; });
+range.addEventListener('input',function(){ readout(parseInt(range.value,10)); });
+
+/* סרגל ננומטרים ותחומים */
+(function(){
+  var ruler=document.getElementById('specRuler'), h='';
+  for(var l=LMIN;l<=LMAX;l+=20){
+    var maj=(l%40===0);
+    h+='<span class="tick'+(maj?' maj':'')+'" style="left:'+pct(l)+'%"></span>';
+    if(maj) h+='<span class="lbl" style="left:'+pct(l)+'%">'+l+'</span>';
+  }
+  ruler.innerHTML=h;
+  var bands=document.getElementById('specBands'), bh='';
+  BANDS.forEach(function(b){
+    var c=rgbOf((b.a+b.b)/2);
+    bh+='<span style="left:'+pct(b.a)+'%;width:'+(pct(b.b)-pct(b.a))+'%;background:rgba('+c[0]+','+c[1]+','+c[2]+',.28)" title="'+b.he+' '+b.a+'–'+b.b+' nm">'+b.he+'</span>';
+  });
+  bands.innerHTML=bh;
+})();
+
+/* ---------- טבלאות ---------- */
+(function(){
+  var rows=document.querySelectorAll('#bandTable tbody tr');
+  Array.prototype.forEach.call(rows,function(tr){
+    var b=BANDS.filter(function(x){return x.id===tr.getAttribute('data-band');})[0]; if(!b) return;
+    var td=tr.children, mid=b.rep||(b.a+b.b)/2;
+    td[0].innerHTML='<span class="sw" style="background:'+hexOf(mid)+'" title="'+hexOf(mid)+' ('+mid+' nm)"></span>';
+    td[3].textContent=f1(thz(b.b))+'–'+f1(thz(b.a));
+    td[4].textContent=f2(ev(b.b))+'–'+f2(ev(b.a));
+  });
+  var tb=document.querySelector('#fineTable tbody'), h='';
+  for(var l=LMIN;l<=LMAX;l+=10){
+    var hx=hexOf(l), b2=bandOf(l);
+    h+='<tr><td><span class="sw" style="background:'+hx+'"></span></td><td class="ltr">'+l+'</td><td class="ltr">'+f1(thz(l))+'</td><td class="ltr">'+f2(ev(l))+'</td><td class="ltr mono">'+hx+'</td><td>'+b2.he+'</td></tr>';
+  }
+  tb.innerHTML=h;
+})();
+
+/* ---------- הספקטרום האלקטרומגנטי בסולם לוגריתמי ---------- */
+(function(){
+  var LO=-12, HI=5, span=HI-LO;
+  function px(m){ return (Math.log10(m)-LO)/span*100; }
+  var regions=[
+    {he:'קרני גמא',a:1e-12,b:1e-11,c:'#3a2d4d'},
+    {he:'רנטגן',a:1e-11,b:1e-8,c:'#4d3f66'},
+    {he:'על־סגול',a:1e-8,b:380e-9,c:'#6a5a99'},
+    {he:'נראה',a:380e-9,b:780e-9,c:spectrumGradient(20),vis:true},
+    {he:'תת־אדום',a:780e-9,b:1e-3,c:'#8a3b2a'},
+    {he:'מיקרוגל',a:1e-3,b:1,c:'#6e4a2a'},
+    {he:'רדיו',a:1,b:1e5,c:'#4b3b22'}
+  ];
+  var bar=document.getElementById('emBar'), names=document.getElementById('emNames'), labels=document.getElementById('emLabels'), h='', n='';
+  regions.forEach(function(r){
+    var l=px(r.a), w=px(r.b)-l;
+    h+='<span style="left:'+l+'%;width:'+w+'%;background:'+r.c+'"></span>';
+    if(r.vis) n+='<span class="vis" style="left:'+l+'%;overflow:visible;border-color:#26221c;border-left-width:2px;color:#26221c;text-shadow:none;padding-left:4px;width:auto">'+r.he+'</span>';
+    else n+='<span style="left:'+l+'%;width:'+w+'%">'+r.he+'</span>';
+  });
+  bar.innerHTML=h; names.innerHTML=n;
+  var units=[[-12,'1 pm'],[-10,'100 pm'],[-9,'1 nm'],[-8,'10 nm'],[-7,'100 nm'],[-6,'1 µm'],[-5,'10 µm'],[-4,'100 µm'],[-3,'1 mm'],[-2,'1 cm'],[-1,'10 cm'],[0,'1 m'],[1,'10 m'],[2,'100 m'],[3,'1 km'],[4,'10 km'],[5,'100 km']];
+  var lh='';
+  units.forEach(function(u){ lh+='<span style="left:'+((u[0]-LO)/span*100)+'%">'+u[1]+'</span>'; });
+  labels.innerHTML=lh;
+})();
+
+/* ---------- צבעי הספירות: פס מיקום על הספקטרום, והשם נוהר ---------- */
+(function(){
+  var grad=spectrumGradient(10);
+  Array.prototype.forEach.call(document.querySelectorAll('.bandline'),function(el){
+    el.style.background=grad;
+    var spec=(el.getAttribute('data-range')||'').trim(), ranges=[];
+    if(spec) spec.split(',').forEach(function(p){ var q=p.split('-'); ranges.push([+q[0],+q[1]]); });
+    ranges.sort(function(a,b){return a[0]-b[0];});
+    var covers=[], at=LMIN;
+    ranges.forEach(function(r){ if(r[0]>at) covers.push([at,r[0]]); at=Math.max(at,r[1]); });
+    if(at<LMAX) covers.push([at,LMAX]);
+    var op=ranges.length?'.9':'.82', h='';
+    covers.forEach(function(c){ h+='<i style="left:'+pct(c[0])+'%;width:'+(pct(c[1])-pct(c[0]))+'%;background:rgba(238,234,224,'+op+')"></i>'; });
+    el.innerHTML=h;
+  });
+  if(window.SEFIROT){
+    var e=SEFIROT.entry('nohar','shir');
+    if(e&&e.c){
+      document.getElementById('noharSw').style.cssText='background:linear-gradient(135deg,'+e.c.join(',')+');border:1px solid #0003';
+      document.getElementById('noharName').style.cssText=SEFIROT.letterCss(e);
+    }
+  }
+})();
+
+/* ---------- סמל הכותרת ---------- */
+var emblem=document.getElementById('emblemCanvas');
+function drawEmblem(){ if(emblem) paintBar(emblem,26); }
+
+/* ---------- ריענון בשינוי גודל ---------- */
+var rt=null;
+function relayout(){ drawSpec(); drawEmblem(); if(window.__waveResize) window.__waveResize(); }
+window.addEventListener('resize',function(){ clearTimeout(rt); rt=setTimeout(relayout,120); });
+drawSpec(); drawEmblem(); readout(550);
+
+/* ---------- האנימציה: גל אור סורק, ומנסרה ---------- */
+(function(){
+  var cv=document.getElementById('waveCanvas'); if(!cv) return;
+  var ctx=cv.getContext('2d');
+  var btnPlay=document.getElementById('btnPlay'), selSpeed=document.getElementById('selSpeed'), selMode=document.getElementById('selMode'), btnHold=document.getElementById('btnHold');
+  var anNm=document.getElementById('anNm'), anThz=document.getElementById('anThz'), anEv=document.getElementById('anEv'), anName=document.getElementById('anName'), anHex=document.getElementById('anHex'), anSw=document.getElementById('anSw');
+  var cap=document.getElementById('animCaption');
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var playing=!reduce, speed=1, hold=false, mode='sweep';
+  var PERIOD=24;                 /* שניות לסריקה מלאה הלוך ושוב במהירות 1× */
+  var t=0, phase=0, lam=550, lastTs=null, raf=null, prismT=0;
+  var W=0, H=0, dpr=1;
+  if(reduce){ document.getElementById('motionNote').hidden=false; btnPlay.textContent='הפעל'; btnPlay.setAttribute('aria-pressed','false'); }
+
+  function size(){
+    dpr=window.devicePixelRatio||1; W=Math.max(1,cv.clientWidth); H=260;
+    var w=Math.round(W*dpr), h=Math.round(H*dpr);
+    if(cv.width!==w||cv.height!==h){ cv.width=w; cv.height=h; }
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+  }
+  function lambdaAt(tt){ /* משולש: 380 → 780 → 380 */
+    var u=(tt/PERIOD)%1, v=u<0.5?u*2:(1-u)*2;
+    return LMIN+(LMAX-LMIN)*v;
+  }
+  function side(l){
+    var b=bandOf(l), hx=hexOf(l);
+    anNm.textContent=Math.round(l)+' nm'; anThz.textContent=f1(thz(l))+' THz'; anEv.textContent=f2(ev(l))+' eV';
+    anName.textContent=b.he+' ('+b.en+')'; anHex.textContent=hx; anSw.style.background=hx;
+  }
+  var sideTimer=0;
+  function drawSweep(){
+    ctx.fillStyle='#0d0b09'; ctx.fillRect(0,0,W,H);
+    var c=rgbOf(lam), col='rgb('+c[0]+','+c[1]+','+c[2]+')';
+    var pxPerNm=0.4, L=lam*pxPerNm, amp=Math.min(70,H*0.27), mid=H*0.5;
+    /* רשת קלה */
+    ctx.strokeStyle='#ffffff10'; ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(0,mid); ctx.lineTo(W,mid); ctx.stroke();
+    /* סימון אורך גל אחד */
+    var x0=W*0.5-L/2;
+    ctx.strokeStyle='#ffffff55'; ctx.setLineDash([4,4]); ctx.beginPath(); ctx.moveTo(x0,mid+amp+26); ctx.lineTo(x0+L,mid+amp+26); ctx.stroke(); ctx.setLineDash([]);
+    ctx.beginPath(); ctx.moveTo(x0,mid+amp+20); ctx.lineTo(x0,mid+amp+32); ctx.moveTo(x0+L,mid+amp+20); ctx.lineTo(x0+L,mid+amp+32); ctx.stroke();
+    ctx.fillStyle='#e6dcc8'; ctx.font='12px ui-monospace,Menlo,monospace'; ctx.textAlign='center'; ctx.textBaseline='top';
+    ctx.fillText('λ = '+Math.round(lam)+' nm', W*0.5, mid+amp+34);
+    /* הגל: זוהר, גוף, ליבה */
+    function wave(width,alpha,strokeCol){
+      ctx.beginPath();
+      for(var x=0;x<=W;x+=2){ var y=mid+amp*Math.sin(2*Math.PI*(x/L)-phase); if(x===0) ctx.moveTo(x,y); else ctx.lineTo(x,y); }
+      ctx.lineWidth=width; ctx.globalAlpha=alpha; ctx.strokeStyle=strokeCol; ctx.stroke(); ctx.globalAlpha=1;
+    }
+    ctx.lineCap='round'; ctx.lineJoin='round';
+    ctx.shadowColor=col; ctx.shadowBlur=28; wave(14,0.35,col);
+    ctx.shadowBlur=10; wave(6,0.9,col);
+    ctx.shadowBlur=0; wave(2,0.95,'rgba(255,255,255,.85)');
+    /* שם הצבע בפינה */
+    ctx.fillStyle=col; ctx.font='bold 16px "Frank Ruhl Libre",serif'; ctx.textAlign='right'; ctx.textBaseline='top';
+    ctx.fillText(bandOf(lam).he, W-14, 12);
+    ctx.fillStyle='#e6dcc8'; ctx.font='12px ui-monospace,Menlo,monospace'; ctx.textAlign='left';
+    ctx.fillText(f1(thz(lam))+' THz · '+f2(ev(lam))+' eV', 14, 12);
+  }
+  function drawPrism(){
+    ctx.fillStyle='#0d0b09'; ctx.fillRect(0,0,W,H);
+    var cx=W*0.5, cy=H*0.55, s=Math.min(H*0.62,W*0.3);
+    var A={x:cx,y:cy-s*0.6}, B={x:cx-s*0.55,y:cy+s*0.4}, C={x:cx+s*0.55,y:cy+s*0.4};
+    /* קרן לבנה נכנסת משמאל */
+    var inX=(A.x+B.x)/2-s*0.02, inY=(A.y+B.y)/2+s*0.05;
+    ctx.lineCap='round';
+    ctx.shadowColor='#fff'; ctx.shadowBlur=18; ctx.strokeStyle='rgba(255,255,255,.95)'; ctx.lineWidth=5;
+    ctx.beginPath(); ctx.moveTo(0,inY+s*0.18); ctx.lineTo(inX,inY); ctx.stroke(); ctx.shadowBlur=0;
+    /* נפת הקרניים היוצאות מהפאה הימנית: מאדום (סטייה קטנה) עד סגול (גדולה) */
+    var outX=(A.x+C.x)/2+s*0.05, outY=(A.y+C.y)/2+s*0.08;
+    var N=120, grow=Math.min(1,prismT/2.2);           /* הנפה נפרשת ב־2.2 שניות */
+    var baseAng=0.10, spread=0.55;
+    /* קרן פנימית (לבן נשבר, בתוך המנסרה) */
+    ctx.strokeStyle='rgba(255,255,255,.55)'; ctx.lineWidth=3; ctx.beginPath(); ctx.moveTo(inX,inY); ctx.lineTo(outX,outY); ctx.stroke();
+    ctx.globalCompositeOperation='lighter';
+    for(var i=0;i<N;i++){
+      var u=i/(N-1);                     /* 0 = אדום, 1 = סגול */
+      if(u>grow+0.01) break;
+      var l=LMAX-(LMAX-LMIN)*u, c=rgbOf(l);
+      var ang=baseAng+spread*u, len=W-outX+40;
+      var a=Math.min(1,(grow-u)*6)*0.55;
+      ctx.strokeStyle='rgba('+c[0]+','+c[1]+','+c[2]+','+a+')'; ctx.lineWidth=Math.max(1.2,W/420);
+      ctx.beginPath(); ctx.moveTo(outX,outY); ctx.lineTo(outX+Math.cos(ang)*len, outY+Math.sin(ang)*len); ctx.stroke();
+    }
+    ctx.globalCompositeOperation='source-over';
+    /* המנסרה */
+    ctx.beginPath(); ctx.moveTo(A.x,A.y); ctx.lineTo(B.x,B.y); ctx.lineTo(C.x,C.y); ctx.closePath();
+    var gr=ctx.createLinearGradient(B.x,A.y,C.x,C.y); gr.addColorStop(0,'rgba(255,255,255,.22)'); gr.addColorStop(1,'rgba(255,255,255,.06)');
+    ctx.fillStyle=gr; ctx.fill(); ctx.strokeStyle='rgba(255,255,255,.75)'; ctx.lineWidth=1.5; ctx.stroke();
+    /* תוויות */
+    ctx.fillStyle='#e6dcc8'; ctx.font='12px Heebo,sans-serif'; ctx.textAlign='left'; ctx.textBaseline='top';
+    ctx.fillText('אור לבן', 10, inY+s*0.18-20);
+    ctx.textAlign='right';
+    var cr=rgbOf(680), cvv=rgbOf(410);
+    ctx.fillStyle='rgb('+cr[0]+','+cr[1]+','+cr[2]+')'; ctx.fillText('אדום 780 nm', W-10, outY+Math.sin(baseAng)*(W-outX)-26);
+    ctx.fillStyle='rgb('+cvv[0]+','+cvv[1]+','+cvv[2]+')'; ctx.fillText('סגול 380 nm', W-10, Math.min(H-18, outY+Math.sin(baseAng+spread)*(W-outX)*0.78));
+  }
+  function frame(ts){
+    raf=null;
+    if(lastTs==null) lastTs=ts;
+    var dt=Math.min(0.1,(ts-lastTs)/1000); lastTs=ts;
+    if(playing){
+      if(mode==='sweep'){
+        if(!hold) t+=dt*speed;
+        phase+=dt*speed*2.6;
+      } else { prismT+=dt*speed; }
+    }
+    if(mode==='sweep'){
+      lam=hold?parseInt(range.value,10):lambdaAt(t);
+      drawSweep();
+      sideTimer+=dt; if(sideTimer>0.12||!playing){ sideTimer=0; side(lam); }
+    } else {
+      drawPrism();
+    }
+    if(playing&&!document.hidden) raf=requestAnimationFrame(frame);
+  }
+  function start(){ if(raf==null){ lastTs=null; raf=requestAnimationFrame(frame); } }
+  function renderOnce(){ if(raf==null){ lastTs=null; raf=requestAnimationFrame(frame); } }
+  btnPlay.addEventListener('click',function(){
+    playing=!playing;
+    btnPlay.textContent=playing?'השהה':'הפעל'; btnPlay.setAttribute('aria-pressed',String(playing));
+    if(playing) start();
+  });
+  selSpeed.addEventListener('change',function(){ speed=parseFloat(selSpeed.value)||1; });
+  selMode.addEventListener('change',function(){
+    mode=selMode.value; prismT=0;
+    cap.textContent = mode==='sweep'
+      ? 'במצב סריקה אורך הגל המצויר הוא בקנה מידה קבוע: ננומטר אחד שווה 0.4 פיקסל, כך שגל סגול של 380 ננומטר חוזר על עצמו כל 152 פיקסלים וגל אדום של 780 ננומטר כל 312 פיקסלים. הגל נע ימינה, והצבע והאורך מתעדכנים בכל רגע. סריקה שלמה, מסגול לאדום וחזרה, אורכת כ־24 שניות במהירות 1×.'
+      : 'במצב קשת קרן אור לבן נכנסת למנסרה משמאל, נשברת פעמיים, ויוצאת כנפה של צבעים: האדום סוטה הכי פחות והסגול הכי הרבה, כי מקדם השבירה של הזכוכית גדל ככל שאורך הגל מתקצר (נפיצה). זהו הניסוי של ניוטון מ־1666, והוא המקור לחלוקת הקשת לשבעה צבעים.';
+    renderOnce(); if(playing) start();
+  });
+  btnHold.addEventListener('click',function(){
+    hold=!hold; btnHold.setAttribute('aria-pressed',String(hold));
+    if(!hold){ /* ממשיכים מאותו אורך גל, בלי קפיצה */ var v=(lam-LMIN)/(LMAX-LMIN); t=PERIOD*v*0.5; }
+    renderOnce();
+  });
+  range.addEventListener('input',function(){ if(hold&&!playing) renderOnce(); });
+  document.addEventListener('visibilitychange',function(){ if(!document.hidden&&playing) start(); });
+  window.__waveResize=function(){ size(); renderOnce(); };
+  size(); side(lambdaAt(0)); start();
+})();
+})();
+</script>
+<script src="js/read-aloud.js" defer></script>
+<script src="js/find.js" defer></script>
+</body>
+</html>

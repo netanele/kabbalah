@@ -18,7 +18,9 @@
  */
 (function(){
 var METHODS = [
-  {id:"shir", name:"שיר הספירות", ref:"ר' יוסף צייאח · הצבעים שלנו", href:"tzayach-shir-hasefirot.html#song", col:"שיר הספירות", colRef:"הצבעים שלנו", ours:true, colors:{
+  {id:"shir", name:"שיר הספירות", ref:"ר' יוסף צייאח · הצבעים שלנו", href:"tzayach-shir-hasefirot.html#song", col:"שיר הספירות", colRef:"הצבעים שלנו", ours:true,
+   extra:{nohar:{chips:[{"kind":"spectrum", "c":["#e5262b","#f08a24","#e0b000","#2fa84f","#00b8c8","#2a5bd7","#8a2fc0"], "title":"כל הצבעים", "t":"מעבר רציף בכל גווני הקשת"}], "t":"השם נוהר (לא ספירה)"}},
+   colors:{
     keter: {"chips": [{"kind": "glow", "c": ["#fff", "#eee8da"], "t": "לבן בוהק, כמו אוויר"}], "t": "לבן בוהק, בלתי נראה, כמו אוויר"},
     chochma: {"chips": [{"kind": "ring", "c": ["#5b9bd5"], "t": "תכלת, כולל כל הגוונים"}], "t": "תכלת, גוון הכולל כל הגוונים"},
     bina: {"chips": [{"c": ["#f2c94c", "#3faa5a"], "t": "צהוב וירוק"}], "t": "צהוב וירוק"},
@@ -226,6 +228,7 @@ function letterCss(e,inline){
   if(k==='none'||k==='nocol') return 'color:#b3a994;background:none;-webkit-text-stroke:0;text-shadow:none;filter:none';
   if(k==='hidden') return 'color:transparent;background:none;-webkit-text-stroke:1px #9c7a33;text-shadow:none;filter:none;opacity:.85';
   if(k==='glow') return inline?'color:#fffdf5;background:none;'+INLINE_EDGE+'text-shadow:none;filter:none':'color:#fffdf5;background:none;-webkit-text-stroke:1.1px #b39a5e;text-shadow:0 0 14px #fff3cc,0 0 3px #efe3c2;filter:none';
+  if(k==='spectrum') return 'line-height:1.1;background:linear-gradient(180deg,'+e.c.map(function(c,i){return c+' '+Math.round(22+51*i/(e.c.length-1))+'%'}).join(',')+');-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:.6px #4a2d0f55;text-shadow:none;filter:none';
   var cs=k==='all'?RAINBOW:e.c, light=cs.every(function(c){return lum(c)>.8});
   var pale=cs.some(function(c){return lum(c)>.85});   /* גם צבע אחד בהיר מספיק כדי שהאות תיעלם בטקסט רץ */
   var stroke=(inline&&pale)?INLINE_EDGE:light?'-webkit-text-stroke:1px #b39a5e;':'-webkit-text-stroke:.6px #4a2d0f55;';
