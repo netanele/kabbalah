@@ -222,12 +222,12 @@ function swatch(e){
   return 'background:'+bg(e)+';border:1px solid '+(light?'#cbbd9c':'#0003');}
 /* CSS לאותיות שם בגוון הספירה. inline: שם בתוך טקסט רץ, ואז לאותיות בהירות קו מתאר כהה כדי שיהיו קריאות; הצבע עצמו לא משתנה */
 var INLINE_EDGE='-webkit-text-stroke:1px #4a3a18;';
-function letterCss(e,inline){
+function letterCss(e,inline,smooth){
   var k=e.kind||'';
   if(k==='none'||k==='nocol') return 'color:#b3a994;background:none;-webkit-text-stroke:0;text-shadow:none;filter:none';
   if(k==='hidden') return 'color:transparent;background:none;-webkit-text-stroke:1px #9c7a33;text-shadow:none;filter:none;opacity:.85';
   if(k==='glow') return inline?'color:#fffdf5;background:none;'+INLINE_EDGE+'text-shadow:none;filter:none':'color:#fffdf5;background:none;-webkit-text-stroke:1.1px #b39a5e;text-shadow:0 0 14px #fff3cc,0 0 3px #efe3c2;filter:none';
-  if(k==='spectrum') return 'line-height:1.1;background:linear-gradient(180deg,'+e.c.map(function(c,i){return c+' '+Math.round(22+51*i/(e.c.length-1))+'%'}).join(',')+');-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:.6px #4a2d0f55;text-shadow:none;filter:none';
+  if(smooth&&e.c&&e.c.length>1) return 'line-height:1.1;background:linear-gradient(180deg,'+e.c.map(function(c,i){return c+' '+Math.round(22+51*i/(e.c.length-1))+'%'}).join(',')+');-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:.6px #4a2d0f55;text-shadow:none;filter:none';
   var cs=k==='all'?RAINBOW:e.c, light=cs.every(function(c){return lum(c)>.8});
   var pale=cs.some(function(c){return lum(c)>.85});   /* גם צבע אחד בהיר מספיק כדי שהאות תיעלם בטקסט רץ */
   var stroke=(inline&&pale)?INLINE_EDGE:light?'-webkit-text-stroke:1px #b39a5e;':'-webkit-text-stroke:.6px #4a2d0f55;';
