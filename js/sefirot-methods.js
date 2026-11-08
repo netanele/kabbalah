@@ -227,6 +227,9 @@ function letterCss(e,inline,smooth){
   if(k==='none'||k==='nocol') return 'color:#b3a994;background:none;-webkit-text-stroke:0;text-shadow:none;filter:none';
   if(k==='hidden') return 'color:transparent;background:none;-webkit-text-stroke:1px #9c7a33;text-shadow:none;filter:none;opacity:.85';
   if(k==='glow') return inline?'color:#fffdf5;background:none;'+INLINE_EDGE+'text-shadow:none;filter:none':'color:#fffdf5;background:none;-webkit-text-stroke:1.1px #b39a5e;text-shadow:0 0 14px #fff3cc,0 0 3px #efe3c2;filter:none';
+  if(smooth==='mix'&&e.c&&e.c.length>1){   /* ערבוב שווה של צבעי הספירה לצבע אחד */
+    var mix=[1,3,5].map(function(i){return Math.round(e.c.reduce(function(n,c){if(c.length===4)c='#'+c[1]+c[1]+c[2]+c[2]+c[3]+c[3];return n+parseInt(c.substr(i,2),16)},0)/e.c.length)});
+    return 'color:rgb('+mix.join(',')+');background:none;-webkit-text-stroke:.6px #4a2d0f55;text-shadow:none;filter:none';}
   if(smooth&&e.c&&e.c.length>1) return 'line-height:1.1;background:linear-gradient(180deg,'+e.c.map(function(c,i){return c+' '+Math.round(22+51*i/(e.c.length-1))+'%'}).join(',')+');-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:.6px #4a2d0f55;text-shadow:none;filter:none';
   var cs=k==='all'?RAINBOW:e.c, light=cs.every(function(c){return lum(c)>.8});
   var pale=cs.some(function(c){return lum(c)>.85});   /* גם צבע אחד בהיר מספיק כדי שהאות תיעלם בטקסט רץ */

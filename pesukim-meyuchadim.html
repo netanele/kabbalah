@@ -124,8 +124,8 @@ footer a{color:var(--gold2)}
   </article>
 
   <article class="pasuk" id="p11">
-    <blockquote>ונהר (<span class="nm" data-name-sef="bina" data-name-smooth>נוהר</span>) יצא מעדן להשקות את הגן ומשם יפרד והיה לארבעה ראשים</blockquote>
-    <p class="nikud">וְנָהָר֙ (<span class="nm" data-name-sef="bina" data-name-smooth>נוהר</span>) יֹצֵ֣א מֵעֵ֔דֶן לְהַשְׁק֖וֹת אֶת־הַגָּ֑ן וּמִשָּׁם֙ יִפָּרֵ֔ד וְהָיָ֖ה לְאַרְבָּעָ֥ה רָאשִֽׁים׃</p>
+    <blockquote>ונהר (<span class="nm" data-name-sef="bina" data-name-smooth="mix">נוהר</span>) יצא מעדן להשקות את הגן ומשם יפרד והיה לארבעה ראשים</blockquote>
+    <p class="nikud">וְנָהָר֙ (<span class="nm" data-name-sef="bina" data-name-smooth="mix">נוהר</span>) יֹצֵ֣א מֵעֵ֔דֶן לְהַשְׁק֖וֹת אֶת־הַגָּ֑ן וּמִשָּׁם֙ יִפָּרֵ֔ד וְהָיָ֖ה לְאַרְבָּעָ֥ה רָאשִֽׁים׃</p>
     <p class="src"><b>מקור:</b> <a href="https://www.sefaria.org/Genesis.2.10?lang=he" target="_blank" rel="noopener">בראשית ב, י</a></p>
   </article>
 
@@ -138,7 +138,7 @@ footer a{color:var(--gold2)}
 <script>
 /* כל שם קדוש נצבע בצבע הספירה שלו מהמקום האחד של הצבעים */
 document.querySelectorAll('[data-name-sef]').forEach(function(el){
-  el.style.cssText = SEFIROT.letterCss(SEFIROT.entry(el.getAttribute('data-name-sef')),true,el.hasAttribute('data-name-smooth'));
+  el.style.cssText = SEFIROT.letterCss(SEFIROT.entry(el.getAttribute('data-name-sef')),true,el.getAttribute('data-name-smooth')||el.hasAttribute('data-name-smooth'));
 });
 </script>
 </body>
