@@ -18,7 +18,7 @@
   - a whole list of swatches for one method: `<ul data-sef-list="<method id>">` is filled from the file (used on the meditation page for the Ramak);
   - in JS use `SEFIROT.entry(sefira, methodId)`, `SEFIROT.bg(...)`, `SEFIROT.letterCss(...)`.
   - New drawings must use `data-sef` (or these helpers), never new hard-coded hex values. If a color changes, also update the README table.
-- A holy name takes the color of the sefira where it is said in the song: אהי"ה = כתר, י"ה = חכמה, אלקים חיים = בינה, אל = חסד, אלקים = גבורה, יהוה = תפארת, ה' צבאות = נצח, אלקים צבאות = הוד, אל חי = יסוד, אדנ"י = מלכות. אין סוף has no sefira color, only light.
+- A holy name takes the color of the sefira where it is said in the song: אהי"ה = כתר, י"ה = חכמה, אלקים חיים = בינה, אל = חסד, אלקים = גבורה, יהוה = תפארת, ה' צבאות = נצח, אלקים צבאות = הוד, אל חי = יסוד, אדנ"י = מלכות; the name נוהר (from ונהר יוצא מעדן) is in בינה, so it takes Binah's colors. אין סוף has no sefira color, only light.
 - A holy name is colored in its letters (`letterCss`), never as a pill or a background behind the text.
 - In combined (interleaved) names, each letter keeps the color of the name it came from.
 - New yichudim go into `otzar-hayichudim.html`.

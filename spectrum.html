@@ -109,7 +109,16 @@ canvas{display:block;width:100%;border-radius:10px}
 .cones{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
 .sef-row td:first-child{white-space:nowrap}
 .sef-row .sw{vertical-align:-6px}
-.nohar{font-family:"Frank Ruhl Libre",serif;font-weight:700;font-size:1.25rem}
+.wbfig{margin:10px 0 18px}
+.wb{position:relative;height:46px;border-radius:10px;border:1px solid var(--line);margin:0 0 8px;overflow:hidden;font-family:"Heebo",sans-serif;font-size:.78rem}
+.wb-add{background:linear-gradient(90deg,#3200aa 0%,#0000ff 11%,#0085ff 20%,#00eeff 27%,#00ff00 37%,#fffe00 48%,#ff7d00 55%,#ff0000 62%,#ff9a80 74%,#ffe9d0 86%,#fff 100%)}
+.wb-dim{background:linear-gradient(90deg,#fff 0%,#9a9a9a 50%,#000 100%)}
+.wb span{position:absolute;top:50%;transform:translateY(-50%);padding:2px 8px;border-radius:999px;background:#0008;color:#fff;direction:rtl}
+.wb-dim .wb-l{background:#0002;color:#000}
+.wb-l{left:8px}.wb-r{right:8px}
+.wb-dim .wb-r{background:#fff3;color:#fff}
+.nonspec td{background:#faf7f0}
+
 .bandline{height:10px;border-radius:999px;border:1px solid #0003;direction:ltr;position:relative;overflow:hidden;background:#eee}
 .bandline i{position:absolute;top:0;height:100%;display:block}
 @media(max-width:720px){
@@ -231,7 +240,7 @@ canvas{display:block;width:100%;border-radius:10px}
 
 <section id="bands">
   <h2>הצבעים ואורכי הגל</h2>
-  <p class="lead">שתי טבלאות: תחומי הצבע המקובלים, ואחריהן כל הספקטרום בקפיצות של 10 ננומטר. הדוגמיות בשתיהן מחושבות באותה פונקציה שצובעת את הפס למעלה.</p>
+  <p class="lead">שתי טבלאות: תחומי הצבע המקובלים, עם לבן ושחור בסופם, ואחריהן כל הספקטרום בקפיצות של 10 ננומטר. הדוגמיות בשתיהן מחושבות באותה פונקציה שצובעת את הפס למעלה.</p>
   <h3>שבעת תחומי הצבע</h3>
   <div class="tbl-wrap">
     <table id="bandTable">
@@ -244,11 +253,20 @@ canvas{display:block;width:100%;border-radius:10px}
         <tr data-band="yellow"><td></td><td>צהוב <small>yellow</small></td><td class="ltr">565–590</td><td class="ltr"></td><td class="ltr"></td><td>תחום צר. הצהוב של הנתרן (מנורות רחוב ישנות) הוא 589 ננומטר.</td></tr>
         <tr data-band="orange"><td></td><td>כתום <small>orange</small></td><td class="ltr">590–625</td><td class="ltr"></td><td class="ltr"></td><td>בין צהוב לאדום.</td></tr>
         <tr data-band="red"><td></td><td>אדום <small>red</small></td><td class="ltr">625–780</td><td class="ltr"></td><td class="ltr"></td><td>הקצה הארוך. מעל כ־700 ננומטר הרגישות יורדת חדות, ומעל 780 מתחיל התת־אדום.</td></tr>
+        <tr class="nonspec"><td><span class="sw" style="background:#fff" title="#ffffff"></span></td><td>לבן <small>white</small></td><td class="ltr">380–780 יחד</td><td class="ltr">כל התדירויות</td><td class="ltr">כל האנרגיות</td><td>אין לו אורך גל אחד: לבן הוא כל הספקטרום יחד, כמו באור השמש (או שלושה צבעים מאוזנים, כמו במסך). ניוטון הראה שמנסרה מפרקת אותו לקשת, ומנסרה שנייה מאחה את הקשת חזרה ללבן.</td></tr>
+        <tr class="nonspec"><td><span class="sw" style="background:#000" title="#000000"></span></td><td>שחור <small>black</small></td><td class="ltr">—</td><td class="ltr">—</td><td class="ltr">—</td><td>היעדר אור: אין גל, אין תדירות ואין פוטון. גוף נראה שחור כשהוא בולע את כל אורכי הגל ואינו מחזיר דבר. בין שחור ללבן נמתחים האפורים: אותו ערבוב מלא, בעוצמה פוחתת.</td></tr>
       </tbody>
     </table>
   </div>
   <div class="note"><p><b>הגבולות הם מוסכמה.</b> אין נקודה פיזיקלית שבה כחול הופך לירוק. הטבלה כאן הולכת אחרי החלוקה הנפוצה בספרי האופטיקה (ראו <a href="#sources">מקורות</a>); ספרים אחרים מזיזים כל גבול ב־5 עד 15 ננומטר, ויש המוסיפים "אינדיגו" (כ־425–450 ננומטר) כצבע נפרד, כמו ניוטון. גם גבולות התחום הנראה עצמו ניתנים כ־380–750, 390–700 או 400–700 ננומטר במקורות שונים; הדף הזה משתמש ב־380–780, התחום המלא שלפיו מוגדרות פונקציות CIE 1931.</p></div>
 
+  <h3 id="white-black">לבן ושחור: שני קצוות שאינם על הקשת</h3>
+  <p>הפס הראשון מראה את הספקטרום מתלכד ללבן: ככל שמוסיפים אורכי גל זה לזה, האור מתבהר עד לבן. הפס השני מראה את הדרך השנייה, לא של אורכי גל אלא של עוצמה: אותו לבן נחלש דרך האפורים עד לשחור, שהוא פשוט אין אור.</p>
+  <figure class="wbfig" dir="ltr" aria-label="שני פסים: מהקשת ללבן, ומלבן לשחור">
+    <div class="wb wb-add"><span class="wb-l">380–780 נפרדים</span><span class="wb-r">כולם יחד = לבן</span></div>
+    <div class="wb wb-dim"><span class="wb-l">לבן, עוצמה מלאה</span><span class="wb-r">שחור = אין אור</span></div>
+    <figcaption>למעלה: ערבוב מצטבר (אדיטיבי) של אורכי הגל. למטה: אותו אור לבן בעוצמה יורדת. הלבן והשחור אינם נקודות על הספקטרום אלא הסכום שלו והיעדרו.</figcaption>
+  </figure>
   <h3>כל 10 ננומטר</h3>
   <noscript><p class="note">הטבלה המפורטת מחושבת בדפדפן ודורשת JavaScript.</p></noscript>
   <div class="tbl-wrap">
@@ -310,6 +328,7 @@ canvas{display:block;width:100%;border-radius:10px}
   <ul class="plain">
     <li><b>סגלגל, מג'נטה, ורוד.</b> אין אורך גל שנראה ורוד. ורוד ומג'נטה נוצרים כשקונוסי L (אדום) וקונוסי S (כחול־סגול) מעוררים יחד, בלי ירוק באמצע. במפת הצבעים של CIE הם יושבים על קו ישר שנמתח בין שני קצות הספקטרום, "קו הסגולים", ולא על הקשת עצמה. ורוד בהיר הוא מג'נטה מעורבת בלבן.</li>
     <li><b>לבן.</b> לבן הוא תחושה של כל הקונוסים מעוררים יחד באיזון, כמו באור השמש. הוא ערבוב, לא אורך גל.</li>
+    <li><b>שחור.</b> שחור אינו צבע של אור אלא היעדרו: אף קונוס אינו מעורר. גוף שחור בולע את כל אורכי הגל. ראו <a href="#white-black">לבן ושחור</a> למעלה.</li>
     <li><b>חום.</b> חום הוא כתום או אדום כהים: אותו גוון, בבהירות נמוכה ביחס לסביבה. כתם כתום בסביבה בהירה מאוד נראה חום. אין "אור חום".</li>
     <li><b>כסף וזהב.</b> אלה אינם צבעים אלא אופני החזרה של אור: כסף הוא אפור־לבן מבריק, זהב הוא צהוב־כתום מבריק. הברק נובע מהחזרה מראתית שמשתנה עם זווית המבט, ואי אפשר להציגו כנקודה אחת על הספקטרום.</li>
     <li><b>סגול וסגלגל אינם אותו דבר.</b> סגול ספקטרלי (380–450 ננומטר) הוא אורך גל אמיתי, שנראה לעין כנוטה מעט לאדום מפני שקונוסי L מגיבים אליו קלות. סגלגל (purple, מג'נטה) הוא ערבוב של אדום וכחול, ואינו ספקטרלי.</li>
@@ -325,7 +344,7 @@ canvas{display:block;width:100%;border-radius:10px}
       <tbody>
         <tr class="sef-row"><td><span class="sw" data-sef="keter" data-sef-as="swatch"></span>כתר</td><td>לבן בוהק, כמו אוויר</td><td><div class="bandline" data-range=""></div><small>לא ספקטרלי</small></td><td>לבן הוא כל אורכי הגל יחד, באיזון. אין לו מקום אחד על הפס; הוא הפס כולו כשהוא מתמזג.</td></tr>
         <tr class="sef-row"><td><span class="sw" data-sef="chochma" data-sef-as="swatch"></span>חכמה</td><td>תכלת, הכולל כל הגוונים</td><td><div class="bandline" data-range="475-490"></div><small>≈ 475–490, מובהר</small></td><td>גוון התכלת הוא כחול־תכול בהיר: אורך גל של כ־480 ננומטר מעורבב באור לבן. הבהירות אינה על הספקטרום, הגוון כן.</td></tr>
-        <tr class="sef-row"><td><span class="sw" data-sef="bina" data-sef-as="swatch"></span>בינה</td><td>צהוב וירוק</td><td><div class="bandline" data-range="500-590"></div><small>≈ 500–590</small></td><td>שני צבעים סמוכים על הפס, ירוק (500–565) וצהוב (565–590). יחד הם התחום שבו העין רגישה ביותר.</td></tr>
+        <tr class="sef-row"><td><span class="sw" data-sef="bina" data-sef-as="swatch"></span>בינה</td><td>צהוב וירוק</td><td><div class="bandline" data-range="500-590"></div><small>≈ 500–590</small></td><td>שני צבעים סמוכים על הפס, ירוק (500–565) וצהוב (565–590). יחד הם התחום שבו העין רגישה ביותר. גם השם נוהר (מ"ונהר יוצא מעדן"), שהוא בבינה, נצבע בשני הצבעים האלה.</td></tr>
         <tr class="sef-row"><td><span class="sw" data-sef="chesed" data-sef-as="swatch"></span>חסד</td><td>לבן וכסף</td><td><div class="bandline" data-range=""></div><small>לא ספקטרלי</small></td><td>לבן הוא ערבוב מאוזן; כסף הוא אפור־לבן מבריק, כלומר לבן בהחזרה מראתית. לשניהם אין אורך גל.</td></tr>
         <tr class="sef-row"><td><span class="sw" data-sef="gevura" data-sef-as="swatch"></span>גבורה</td><td>אדום וזהב</td><td><div class="bandline" data-range="625-780,575-595"></div><small>≈ 625–780; הזהב ≈ 575–595 בברק</small></td><td>האדום יושב בקצה הארוך של הפס. גוון הזהב הוא צהוב־כתום (כ־580–590 ננומטר), אך "זהב" כצבע הוא הברק המתכתי שלו, ולכן אינו נקודה אחת על הספקטרום.</td></tr>
         <tr class="sef-row"><td><span class="sw" data-sef="tiferet" data-sef-as="swatch"></span>תפארת</td><td>צהוב וסגול</td><td><div class="bandline" data-range="565-590,380-450"></div><small>≈ 565–590 ו־380–450</small></td><td>שני קצוות: הצהוב באמצע הפס, הסגול בקצהו הקצר. אלה גם צבעי אותיות השם יהוה בספרייה.</td></tr>
@@ -333,7 +352,6 @@ canvas{display:block;width:100%;border-radius:10px}
         <tr class="sef-row"><td><span class="sw" data-sef="hod" data-sef-as="swatch"></span>הוד</td><td>ורוד כהה</td><td><div class="bandline" data-range=""></div><small>לא ספקטרלי</small></td><td>אותו ערבוב של אדום וכחול, כהה יותר ופחות לבן. גם הוא על קו הסגולים.</td></tr>
         <tr class="sef-row"><td><span class="sw" data-sef="yesod" data-sef-as="swatch"></span>יסוד</td><td>כתום</td><td><div class="bandline" data-range="590-625"></div><small>≈ 590–625</small></td><td>תחום הכתום, בין הצהוב לאדום.</td></tr>
         <tr class="sef-row"><td><span class="sw" data-sef="malchut" data-sef-as="swatch"></span>מלכות</td><td>כחול</td><td><div class="bandline" data-range="450-475"></div><small>≈ 450–475</small></td><td>כחול עמוק, בתחום הכחול הקצר, בין הסגול לתכלת.</td></tr>
-        <tr class="sef-row" id="noharRow"><td><span class="sw" id="noharSw"></span><span class="nohar" id="noharName">נוהר</span></td><td>כל הצבעים: מעבר רציף בכל גווני הקשת</td><td><div class="bandline" data-range="380-780"></div><small>380–780, כל הפס</small></td><td>השם נוהר, כפי שמלמד הרב תורג'מן ב<a href="turgeman-chayei-sarah-shemot.html#t1-1">שיעור על שמות הקודש</a>, אינו ספירה אלא שם שצבעו כל הקשת ברצף. זהו בדיוק הספקטרום המלא שהדף הזה מצייר: לא שבעה צבעים נפרדים אלא מעבר רציף מסגול לאדום.</td></tr>
       </tbody>
     </table>
   </div>
@@ -351,7 +369,7 @@ canvas{display:block;width:100%;border-radius:10px}
     <li><b>תחומי הספקטרום האלקטרומגנטי.</b> ISO 21348:2007, <i>Space environment (natural and artificial) — Process for determining solar irradiances</i>: הגדרת התחומים UVC/UVB/UVA, הנראה, ותת־האדום הקרוב, הבינוני והרחוק.</li>
     <li><b>גבולות תחומי הצבע.</b> Eugene Hecht, <i>Optics</i>, 5th ed., Pearson 2017, Table 3.4 (Approximate frequency and vacuum wavelength ranges for the various colors). החלוקה שם: סגול 390–455, כחול 455–492, ירוק 492–577, צהוב 577–597, כתום 597–622, אדום 622–780 ננומטר. הדף מעגל מעט אחרת (380–450, 450–485, 485–500 לתכלת, 500–565, 565–590, 590–625, 625–780), לפי החלוקה הנפוצה באנציקלופדיות ובספרי לימוד; ההבדלים מעידים על כך שהגבולות הם מוסכמה.</li>
     <li><b>רגישות הקונוסים וקו הסגולים.</b> Andrew Stockman & Lindsay T. Sharpe, "The spectral sensitivities of the middle- and long-wavelength-sensitive cones", <i>Vision Research</i> 40 (2000), 1711–1737; וכן Stockman, Sharpe & Fach, <i>Vision Research</i> 39 (1999), 2901–2927 לקונוסי S. דיאגרמת הכרומטיות וקו הסגולים: Günter Wyszecki & W. S. Stiles, <i>Color Science</i>, 2nd ed., Wiley 1982, ch. 3.</li>
-    <li><b>צבעי הספירות.</b> שיר הספירות לר' יוסף צייאח, ב<a href="tzayach-shir-hasefirot.html#song">דף השיר</a>; השם נוהר ב<a href="turgeman-chayei-sarah-shemot.html#t1-1">שיעור הרב תורג'מן</a>; השוואת כל השיטות ב<a href="sefirot-colors.html#compare">דף צבעי הספירות</a>.</li>
+    <li><b>צבעי הספירות.</b> שיר הספירות לר' יוסף צייאח, ב<a href="tzayach-shir-hasefirot.html#song">דף השיר</a>; השוואת כל השיטות ב<a href="sefirot-colors.html#compare">דף צבעי הספירות</a>.</li>
   </ul>
 </section>
 
@@ -517,7 +535,7 @@ range.addEventListener('input',function(){ readout(parseInt(range.value,10)); })
   labels.innerHTML=lh;
 })();
 
-/* ---------- צבעי הספירות: פס מיקום על הספקטרום, והשם נוהר ---------- */
+/* ---------- צבעי הספירות: פס מיקום על הספקטרום ---------- */
 (function(){
   var grad=spectrumGradient(10);
   Array.prototype.forEach.call(document.querySelectorAll('.bandline'),function(el){
@@ -532,13 +550,6 @@ range.addEventListener('input',function(){ readout(parseInt(range.value,10)); })
     covers.forEach(function(c){ h+='<i style="left:'+pct(c[0])+'%;width:'+(pct(c[1])-pct(c[0]))+'%;background:rgba(238,234,224,'+op+')"></i>'; });
     el.innerHTML=h;
   });
-  if(window.SEFIROT){
-    var e=SEFIROT.entry('nohar','shir');
-    if(e&&e.c){
-      document.getElementById('noharSw').style.cssText='background:linear-gradient(135deg,'+e.c.join(',')+');border:1px solid #0003';
-      document.getElementById('noharName').style.cssText=SEFIROT.letterCss(e);
-    }
-  }
 })();
 
 /* ---------- סמל הכותרת ---------- */

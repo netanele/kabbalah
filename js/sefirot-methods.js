@@ -14,12 +14,11 @@
  *   t = לשון המקור בקצרה, title = שם הגוון.
  *   use = איזה chip צובע את השמות (ברירת מחדל: הראשון שיש לו צבע); t ברמת הספירה = תיאור ארוך יותר.
  *   ספירה בלי chips = המקור אינו אומר עליה דבר.
- * השם הקדוש נשאר תמיד בספירה שלו (names); רק הגוון מתחלף לפי השיטה.
+ * השם הקדוש נשאר תמיד בספירה שלו (names); רק הגוון מתחלף לפי השיטה. השם נוהר (מ"ונהר יוצא מעדן") הוא בבינה, ולכן בצבעיה.
  */
 (function(){
 var METHODS = [
   {id:"shir", name:"שיר הספירות", ref:"ר' יוסף צייאח · הצבעים שלנו", href:"tzayach-shir-hasefirot.html#song", col:"שיר הספירות", colRef:"הצבעים שלנו", ours:true,
-   extra:{nohar:{chips:[{"kind":"spectrum", "c":["#e5262b","#f08a24","#e0b000","#2fa84f","#00b8c8","#2a5bd7","#8a2fc0"], "title":"כל הצבעים", "t":"מעבר רציף בכל גווני הקשת"}], "t":"השם נוהר (לא ספירה)"}},
    colors:{
     keter: {"chips": [{"kind": "glow", "c": ["#fff", "#eee8da"], "t": "לבן בוהק, כמו אוויר"}], "t": "לבן בוהק, בלתי נראה, כמו אוויר"},
     chochma: {"chips": [{"kind": "ring", "c": ["#5b9bd5"], "t": "תכלת, כולל כל הגוונים"}], "t": "תכלת, גוון הכולל כל הגוונים"},
@@ -160,7 +159,7 @@ var METHODS = [
 ];
 var DATA = {
   sefirot: [{id:'keter',he:'כתר'},{id:'chochma',he:'חכמה'},{id:'bina',he:'בינה'},{id:'chesed',he:'חסד'},{id:'gevura',he:'גבורה'},{id:'tiferet',he:'תפארת'},{id:'netzach',he:'נצח'},{id:'hod',he:'הוד'},{id:'yesod',he:'יסוד'},{id:'malchut',he:'מלכות'}],
-  names: {'אהי"ה':'keter','י"ה':'chochma','אלקים חיים':'bina','אל':'chesed','אלקים':'gevura','יהוה':'tiferet',"ה' צבאות":'netzach','אלקים צבאות':'hod','אל חי':'yesod','אדנ"י':'malchut'},
+  names: {'אהי"ה':'keter','י"ה':'chochma','אלקים חיים':'bina','אל':'chesed','אלקים':'gevura','יהוה':'tiferet',"ה' צבאות":'netzach','אלקים צבאות':'hod','אל חי':'yesod','אדנ"י':'malchut','נוהר':'bina'},
   methods: METHODS
 };
 
