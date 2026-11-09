@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>השמות</title>
+<meta name="description" content="שמות בכתב אשורית, כל שם עם עניינו, פירושו והמקורות שבהם הוא נזכר בספרים.">
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#f4f0e6;--paper:#fffdf8;--ink:#26221c;--muted:#6f665a;--gold:#9c7a33;--gold2:#c9a75a;--line:#dcd2c0}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);direction:rtl;color:var(--ink);font-family:"Heebo","Noto Sans Hebrew",Arial,sans-serif;line-height:1.8;font-size:16.5px}
+h1,h2,h3,.serif{font-family:"Frank Ruhl Libre","David Libre","Times New Roman",serif}
+a{color:#6d511d}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+header.hero{background:radial-gradient(1200px 500px at 80% -10%,#5a4a33 0%,#2b2620 55%,#1e1b17 100%);color:#f4ecdc;padding:56px 22px 48px;text-align:center}
+.hero .kicker{color:var(--gold2);letter-spacing:.14em;font-size:.85rem;font-weight:500}
+.hero h1{font-size:clamp(2.2rem,6vw,4rem);margin:8px 0 14px;line-height:1.15;font-weight:900}
+.hero p{max-width:820px;margin:0 auto;color:#e6dcc8;font-size:1.12rem}
+.hero .dates{margin-top:16px;color:var(--gold2);font-size:.95rem}
+nav.top{position:sticky;top:0;z-index:20;background:#fffdf8f2;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:6px 10px;display:flex;gap:2px;flex-wrap:wrap;justify-content:center}
+nav.top a{color:#5a4423;text-decoration:none;font-size:.84rem;padding:4px 9px;border-radius:999px;border:1px solid transparent}
+nav.top a:hover{border-color:var(--line);background:#f3ecdf}
+nav.top a.nav-home{color:var(--gold);font-weight:700}
+.container{max-width:820px;margin:auto;padding:26px 18px 60px}
+section{margin-top:30px}
+section>h2{font-size:2rem;border-bottom:2px solid var(--gold2);padding-bottom:8px;margin:0 0 18px;line-height:1.3}
+
+.shem-card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:24px 26px 18px;margin:0 0 16px;box-shadow:0 3px 12px #3a2c100d}
+/* כתב אשורית (סת"ם): הגופן Stam Sefarad CLM מפרויקט קולמוס, בתיקיית fonts */
+@font-face{font-family:"Stam Sefarad CLM";src:url("fonts/StamSefaradCLM.ttf") format("truetype");font-display:swap}
+.shem-card>blockquote{margin:0;text-align:center;font-family:"Stam Sefarad CLM","Frank Ruhl Libre","David Libre",serif;font-size:clamp(2.4rem,9vw,4rem);line-height:1.6;overflow-wrap:anywhere}
+.shem-card .nikud{margin:8px 0 0;text-align:center;font-family:"Frank Ruhl Libre","David Libre","Times New Roman",serif;font-size:clamp(1.7rem,6vw,2.4rem);line-height:2}
+.shem-card .kind{margin:4px 0 0;text-align:center;color:var(--muted);font-size:.95rem}
+.shem-card h3{font-size:1.3rem;margin:20px 0 6px;padding-top:12px;border-top:1px solid var(--line);color:#4b3b22}
+.shem-card p{margin:0 0 8px}
+.shem-card ul,.shem-card ol{margin:0;padding-inline-start:22px}
+.shem-card li{margin:0 0 10px}
+.shem-card .variants{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px 22px}
+.shem-card .variants li{margin:0}
+.shem-card .variants b{font-family:"Stam Sefarad CLM","Frank Ruhl Libre",serif;font-size:1.5rem;font-weight:400;margin-inline-end:6px}
+.shem-card .variants span{color:var(--muted);font-size:.92rem}
+.shem-card .srcs b{color:var(--gold);font-weight:700}
+.shem-card .srcs q{display:block;margin:4px 0 0;padding:6px 12px;border-inline-start:3px solid var(--gold2);background:#f8f3e7;border-radius:4px;font-family:"Frank Ruhl Libre","David Libre","Times New Roman",serif;font-size:1.08rem;line-height:1.8;quotes:none}
+.shem-card .srcs .about{display:block;color:var(--muted);font-size:.93rem;margin-top:3px}
+.shem-card table{border-collapse:collapse;width:100%;margin:6px 0 4px;font-size:.97rem}
+.shem-card th,.shem-card td{border:1px solid var(--line);padding:5px 8px;text-align:center}
+.shem-card th{background:#f3ecdf;color:#4b3b22;font-weight:500}
+.shem-card td.w{font-family:"Stam Sefarad CLM","Frank Ruhl Libre",serif;font-size:1.5rem;line-height:1.5}
+.shem-card .note{margin:10px 0 0;color:var(--muted);font-size:.92rem}
+/* שם קדוש: האותיות בצבע הספירה, הצבע נקבע מ־js/sefirot-methods.js */
+.nm{display:inline-block;padding:.12em 0;margin:-.12em 0}
+
+footer{background:#26221c;color:#d9d0c1;padding:24px 18px;margin-top:40px;text-align:center}
+footer a{color:var(--gold2)}
+@media (max-width:480px){.shem-card{padding:18px 16px 14px}}
+@media print{nav.top{display:none}.shem-card{box-shadow:none}body{background:#fff}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="kicker">ספריית הקבלה</div>
+  <h1>השמות</h1>
+  <p>שמות בכתב אשורית, כל שם עם עניינו, פירושו והמקורות שבהם הוא נזכר בספרים.</p>
+  <div class="dates">3 שמות</div>
+</header>
+
+<nav class="top" aria-label="ניווט">
+  <a class="nav-home" href="index.html">ספריית הקבלה</a>
+  <a href="#shemot">השמות</a>
+  <a href="#s3">יהוה בניקוד יראה</a>
+  <a href="#s2">שם י"ב</a>
+  <a href="#s1">זגנזגאל</a>
+</nav>
+
+<main class="container">
+<section id="shemot">
+  <h2>השמות</h2>
+
+  <article class="shem-card" id="s3">
+    <blockquote>יהוה</blockquote>
+    <p class="nikud">יִהְוָה</p>
+    <p class="kind">שם יהוה · בניקוד יִרְאָה</p>
+
+    <h3>עניינו</h3>
+    <p>ציור השם יהוה מול העיניים, מנוקד בניקוד של המילה יראה. כך מסרו בשם האר"י: האדם מצייר תמיד את אותיות השם כנגד פניו, וזה סוד הפסוק "שויתי יהוה לנגדי תמיד" (תהילים טז, ח). אין כאן הגייה של השם, אלא ראייה שלו במחשבה.</p>
+    <p>הדבר נכנס לספרי ההלכה בסעיף הראשון של שולחן ערוך אורח חיים, על דברי הרמ"א "שויתי ה' לנגדי תמיד הוא כלל גדול בתורה", ונושאי הכלים מביאים אותו שם בשם האר"י.</p>
+
+    <h3>פירושו</h3>
+    <ul>
+      <li><b>הניקוד.</b> כל אות של השם מקבלת את הניקוד של האות שכנגדה במילה יִרְאָה:
+        <table>
+          <tr><th>האות בשם</th><th>האות ביראה</th><th>הניקוד</th></tr>
+          <tr><td class="w">יִ</td><td class="w">יִ</td><td>חיריק</td></tr>
+          <tr><td class="w">הְ</td><td class="w">רְ</td><td>שווא</td></tr>
+          <tr><td class="w">וָ</td><td class="w">אָ</td><td>קמץ</td></tr>
+          <tr><td class="w">ה</td><td class="w">ה</td><td>בלי ניקוד</td></tr>
+        </table></li>
+      <li><b>התועלת.</b> בפרי עץ חיים: "וזהו הגורם להביא יראה גדולה בלב אדם, ולזכך נפש הטהורה".</li>
+      <li><b>הכתב.</b> בפלא יועץ: מציירים את השם "כתוב נגדו בכתיבה אשורית". הוא מביא גם ניקוד אחר לאותו ציור, ניקוד המילה שכינה.</li>
+    </ul>
+
+    <h3>מקורות</h3>
+    <ol class="srcs">
+      <li><b>פרי עץ חיים, שער הנהגת הלימוד</b> · <a href="https://www.sefaria.org/Pri_Etz_Chaim,_Gate_of_Conduct_While_Learning.1.8?lang=he" target="_blank" rel="noopener">לנוסח בספריא</a>
+        <q>טוב לאדם שיצייר אותיות יהוה נגד פניו בניקוד יראה... וזה סוד שויתי יהוה לנגדי תמיד, וזהו הגורם להביא יראה גדולה בלב אדם, ולזכך נפש הטהורה</q></li>
+      <li><b>שער רוח הקודש, ייחוד כ"א</b> · <a href="https://www.sefaria.org/Sha'ar_Ruach_HaKodesh.128?lang=he" target="_blank" rel="noopener">לנוסח בספריא</a>
+        <q>טוב לאדם שיצייר אותיות שם יהוה תמיד בציורם לנגד עיניו, ודבר זה גורם להביא בלב האדם יראתו יתברך, וגם לזכך הנפש. וזה שאמר דוד המלך עליו השלום: שויתי יהוה לנגדי תמיד כי מימיני בל אמוט</q>
+        <span class="about">כאן הציור נזכר בלי הניקוד; ניקוד יראה כתוב בפרי עץ חיים.</span></li>
+      <li><b>באר היטב, אורח חיים א, ג</b> · <a href="https://www.sefaria.org/Ba'er_Hetev_on_Shulchan_Arukh,_Orach_Chayim.1.3?lang=he" target="_blank" rel="noopener">לנוסח בספריא</a>
+        <q>שיצייר שם יהוה תמיד נגד עיניו, כזה: יִהְוָה. וזהו סוד שויתי יהוה לנגדי, וזה תועלת גדול לענין היראה. האר"י ז"ל</q></li>
+      <li><b>משנה ברורה א, ד</b> · <a href="https://www.sefaria.org/Mishnah_Berurah.1.4?lang=he" target="_blank" rel="noopener">לנוסח בספריא</a>
+        <q>וכתבו בשם האר"י ז"ל, שיצייר שם יהוה תמיד נגד עיניו בניקוד יִרְאָה, כזה: יִהְוָה. וזהו סוד "שויתי יהוה לנגדי תמיד", וזה תועלת גדול לענין היראה</q>
+        <span class="about">בהמשך הוא מביא את המנהג לעשות לוחות "שויתי" ולהניחם בסידורים, ואת דברי האחרונים שיש להיזהר בהם משום כבוד השם.</span></li>
+      <li><b>כף החיים, אורח חיים א, ב</b> · <a href="https://www.sefaria.org/Kaf_HaChayim_on_Shulchan_Arukh,_Orach_Chayim.1.2.1?lang=he" target="_blank" rel="noopener">לנוסח בספריא</a>
+        <q>יצייר שם יהוה תמיד נגד עיניו, שזה תועלת גדול ליראת ה', וגם לזכך הנפש. שער רוח הקודש, יחוד כ"א</q></li>
+      <li><b>פלא יועץ, ערך יראה</b> · <a href="https://www.sefaria.org/Pele_Yoetz.159.4?lang=he" target="_blank" rel="noopener">לנוסח בספריא</a>
+        <q>ויציר את השם נגד עיניו נקוד בנקוד יראה או בנקוד שכינה, כי כן כתבו משם האר"י ז"ל שהוא מסגל ליראה</q></li>
+      <li><b>פלא יועץ, ערך ציור</b> · <a href="https://www.sefaria.org/Pele_Yoetz.308.1?lang=he" target="_blank" rel="noopener">לנוסח בספריא</a>
+        <q>כתבו משם האר"י ז"ל, שכדי לקים שויתי יהוה לנגדי תמיד יציר תמיד נגד עיניו כאלו שם יהוה כתוב נגדו בכתיבה אשורית בנקוד יראה... וזה מועיל מאד ליראת שמים</q></li>
+    </ol>
+  </article>
+
+  <article class="shem-card" id="s2">
+    <blockquote><span data-comb="tiferet keter malchut">יאא ההד וינ ההי</span></blockquote>
+    <p class="nikud"><span data-comb="tiferet keter malchut">יְאֶאֲ הָהְדֹ וֹיֶנָ הְהְיְ</span></p>
+    <p class="note" style="text-align:center">הניקוד לפי הציור שנמסר לדף; מקורו בספרים עוד לא נבדק.</p>
+    <p class="kind">שם בן י"ב אותיות · שילוב השמות יהוה, <span class="nm" data-name-sef="keter">אהיה</span>, <span class="nm" data-name-sef="malchut">אדני</span></p>
+
+    <h3>עניינו</h3>
+    <p>שם בן שתים עשרה אותיות, עשוי משלושה שמות משולבים: יהוה, <span class="nm" data-name-sef="keter">אהיה</span> ו<span class="nm" data-name-sef="malchut">אדני</span>. לוקחים את האות הראשונה של כל שם, אחריה את השנייה, וכן הלאה, וכך יוצאות ארבע תיבות של שלוש אותיות. כל אות כאן צבועה בצבע השם שממנו באה.</p>
+    <p>בגמרא נאמר ששם בן שתים עשרה אותיות היו מוסרים בתחילה לכל אדם, ואחר כך רק לצנועים שבכהונה; הגמרא אינה מפרשת את אותיותיו. בזוהר זהו השם החקוק שנמסר לאליהו במערה, השם השולט באוויר, ובו היה אליהו טס. בעל מקדש מלך ובעל אור החמה כותבים שהוא השילוב הזה. בכוונות האר"י הוא נמצא בווידוי של קריאת שמע שעל המיטה, ובייחוד שבשער רוח הקודש.</p>
+
+    <h3>פירושו</h3>
+    <ul>
+      <li><b>שלושה שמות בקו אחד.</b> <span class="nm" data-name-sef="keter">אהיה</span> בכתר, יהוה בתפארת, <span class="nm" data-name-sef="malchut">אדני</span> במלכות. בכתם פז: שלושת השמות "במשך הספירות", זה כנגד זה לאורך חוט השדרה.</li>
+      <li><b>יב"ק.</b> שלושת השמות יחד עולים 112, כמניין יב"ק, "ויעבר את מעבר יבק" (כתם פז).</li>
+      <li><b>ארבע התיבות.</b> בווידוי שבפרי עץ חיים כל תיבה היא כנגד אחת מארבע מיתות בית דין, ובייחודה מאיר שם אחד בעולם אחד:
+        <table>
+          <tr><th>התיבה</th><th>המיתה</th><th>המילוי המאיר</th><th>העולם</th></tr>
+          <tr><td class="w"><span data-comb="tiferet keter malchut">יאא</span></td><td>סקילה</td><td>ד' יודין</td><td>אצילות</td></tr>
+          <tr><td class="w"><span data-comb="tiferet keter malchut">ההד</span></td><td>שריפה</td><td>ג' יודין ואלף</td><td>בריאה</td></tr>
+          <tr><td class="w"><span data-comb="tiferet keter malchut">וינ</span></td><td>הרג</td><td>אלפין</td><td>יצירה</td></tr>
+          <tr><td class="w"><span data-comb="tiferet keter malchut">ההי</span></td><td>חנק</td><td>ההין</td><td>עשיה</td></tr>
+        </table></li>
+      <li><b>קבלת התפילה.</b> מקדש מלך מביא בשם התיקונים: "שם בן י"ב, כל היודעו והזהיר בו, כל תפילותיו מתקבלות".</li>
+    </ul>
+
+    <h3>זיהויים אחרים של שם י"ב</h3>
+    <ul>
+      <li><b>שלוש פעמים יהוה.</b> <a href="https://www.sefaria.org/Sefer_HaBahir.107?lang=he" target="_blank" rel="noopener">ספר הבהיר, קז</a>, על ברכת כהנים: "זה שמו של הקב"ה המפורש, והוא שם בן שתים עשרה אותיות, דכתיב יהוה יהוה יהוה". כך גם ב<a href="https://www.sefaria.org/Sulam_on_Zohar,_Bereshit_I.27.1?lang=he" target="_blank" rel="noopener">פירוש הסולם</a>, וכך הפירוש הראשון באור החמה, "בנקודת מלך מלך ימלוך".</li>
+      <li><b>שניים או שלושה שמות.</b> <a href="https://www.sefaria.org/Shem_Tov_on_Guide_for_the_Perplexed,_Part_1.62.2?lang=he" target="_blank" rel="noopener">שם טוב על מורה נבוכים א, סב</a> מביא את לשון הרמב"ם: "והקרוב אצלי שלא היה שם אחד, אלא שתי שמות או שלשה, כלל אותיותיהם שתים עשרה אותיות".</li>
+    </ul>
+
+    <h3>מקורות</h3>
+    <ol class="srcs">
+      <li><b>קידושין עא, א</b> · <a href="https://www.sefaria.org/Kiddushin.71a.12?lang=he" target="_blank" rel="noopener">לנוסח בספריא</a>
+        <q>תנו רבנן: בראשונה שם בן שתים עשרה אותיות היו מוסרין אותו לכל אדם. משרבו הפריצים היו מוסרים אותו לצנועים שבכהונה, והצנועים שבכהונה מבליעים אותו בנעימת אחיהם הכהנים</q>
+        <span class="about">הגמרא אינה מפרשת מה אותיות השם.</span></li>
+      <li><b>זוהר, בראשית טז, א</b> · <a href="https://www.sefaria.org/Zohar,_Bereshit.4.27?lang=he" target="_blank" rel="noopener">לנוסח בספריא</a>
+        <q>והכא שמא גליפא דתריסר אתוון, דאתמסר לאליהו במערה</q></li>
+      <li><b>מקדש מלך על הזוהר א, טז א, ד"ה שמא גליפא דתריסר אתוון</b> · <a href="https://www.sefaria.org/Mikdash_Melekh_on_Zohar.1.16a.29?lang=he" target="_blank" rel="noopener">לנוסח בספריא</a>
+        <q>מצאתי בגליוני הראשונים: הוא השם השולט באויר, ובו היה טס אליהו. ובזוהר ויקהל דר"א ע"ב וז"ל: כדין פרחין אתוון דקיימין באוירא דבשמא קדישא דתריסר אתוון, וההוא שמא שליט באוירא, דהוה טס ביה אליהו עד לא אסתלק לשמיא</q>
+        <span class="about">מביא את לשון הזוהר בפרשת ויקהל (רא, ב).</span></li>
+      <li><b>מקדש מלך על הזוהר א, טז א, ד"ה שמא גליפא</b> · <a href="https://www.sefaria.org/Mikdash_Melekh_on_Zohar.1.16a.48?lang=he" target="_blank" rel="noopener">לנוסח בספריא</a>
+        <q>מן י"ב צירופים הנזכרים יוצא שם בן י"ב, הוא יהוה <span class="nm" data-name-sef="keter">אהי"ה</span> <span class="nm" data-name-sef="malchut">אדנ"י</span> משולבים כזה: <span data-comb="tiferet keter malchut">יא"א הה"ד וי"נ הה"י</span>. וכן כתב בספר שבר יוסף, שבו היה טס אליהו כמו שכתוב בפרשת ויקהל. וכן כתב הרב ז"ל בוידוי של קריאת שמע שעל המטה</q></li>
+      <li><b>אור החמה על הזוהר ג, קעב ב</b> · <a href="https://www.sefaria.org/Ohr_HaChammah_on_Zohar.3.172b.2?lang=he" target="_blank" rel="noopener">לנוסח בספריא</a>
+        <q>יהוה יהוה יהוה בנקודת מלך מלך ימלוך כנודע... וכן יהוה <span class="nm" data-name-sef="keter">אהי"ה</span> <span class="nm" data-name-sef="malchut">אדנ"י</span>, ויצטרפו לד' תיבות כזה: <span data-comb="tiferet keter malchut">יא"א הה"ד וי"נ הה"י</span></q>
+        <span class="about">על "שמא דתריסר אתוון" שבזוהר שם.</span></li>
+      <li><b>כתם פז על הזוהר, כ ב</b> · <a href="https://www.sefaria.org/Ketem_Paz_on_Zohar.20b.7?lang=he" target="_blank" rel="noopener">לנוסח בספריא</a>
+        <q>ושלשה שמות שהם <span class="nm" data-name-sef="keter">אהי"ה</span> יהוה <span class="nm" data-name-sef="malchut">אדנ"י</span>, שהם במשך הספירות, עולה יב"ק... והוא שם בן י"ב, שהוא שם חקוק בעטרת, כי היא נקראת <span class="nm" data-name-sef="malchut">אדנ"י</span>: האלף הראשונה רומזת לאלף ד<span class="nm" data-name-sef="keter">אהי"ה</span>, והיוד האחרונה רומזת ליהוה דתפארת</q></li>
+      <li><b>פרי עץ חיים, שער קריאת שמע שעל המיטה, פרק ט</b> · <a href="https://www.sefaria.org/Pri_Etz_Chaim,_Gate_of_the_Recitation_of_the_Shema_Before_Retiring.9.1?lang=he" target="_blank" rel="noopener">לנוסח בספריא</a>
+        <q>וישים לפניו כל מיתות בית דין: י"א סקילה, ה"ד שריפה, ו"נ הרג, ה"י חנק</q>
+        <q>ואתה ברחמיך הרבים תשוב ותיחד ג' אותיות ראשונים של ג' שמותיך היקרים, יהוה <span class="nm" data-name-sef="keter">אהיה</span> <span class="nm" data-name-sef="malchut">אדני</span>, <span data-comb="tiferet keter malchut">יא"א</span>. ושם קדשיך במלוי ד' יודין יאיר בעולם אצילות</q>
+        <span class="about">וכן בשלוש התיבות האחרות, כל אחת במיתה אחרת ובעולם אחר.</span></li>
+      <li><b>שער רוח הקודש, ייחוד כ'</b> · <a href="https://www.sefaria.org/Sha'ar_Ruach_HaKodesh.127.2?lang=he" target="_blank" rel="noopener">לנוסח בספריא</a>
+        <q><span data-comb="tiferet keter malchut">יאאההדוינההי</span></q>
+        <span class="about">כאן השם כתוב כתיבה אחת, ובמקור הוא מנוקד. הייחוד קשור לנפילת אפיים, אבל המעתיק כותב בראשו: "אלו היחודים מצאתי מצויירים כך, ואיני זוכר היטיב כונתם".</span></li>
+    </ol>
+  </article>
+
+  <article class="shem-card" id="s1">
+    <blockquote>זגנזגאל</blockquote>
+    <p class="kind">שם מלאך · בגימטריה 101</p>
+
+    <h3>עניינו</h3>
+    <p>מלאך, שר של תורה וחכמה, ורבו של משה רבנו. התרגום המיוחס ליונתן אומר שהוא המלאך שנגלה אל משה בלבת האש מתוך הסנה. במדרש משה למד ממנו את השם המפורש, והוא נקרא שם "רב סופר של בני מרום". בפטירת משה הוא אחד משלושת מלאכי השרת שירדו עם הקדוש ברוך הוא, עם מיכאל וגבריאל, ועמד למרגלות מיטתו.</p>
+    <p>בעל מגלה עמוקות כותב שזגנזגאל הוא מטטרון, והוא הראשון בשבעים שמותיו. גם הרקנאטי מביא "יש אומרים" שרבו של משה הוא מטטרון.</p>
+
+    <h3>פירושו</h3>
+    <ul>
+      <li><b>לשון גניזה.</b> במגלה עמוקות: נקרא כך "לפי שמסר לו הקב"ה כל גנזי אוצרות", והוא "ממונה על אוצר רב של גנזי אוצרות".</li>
+      <li><b>מאה ואחד.</b> השם עולה 101, כמניין "מאין" שבפסוק "והחכמה מאין תמצא" (איוב כח, יב), וכן כנגד מי ששונה פרקו מאה פעמים ואחת (חגיגה ט, ב). כך בשל"ה. במגלה עמוקות מוסיף שגם מיכאל עולה 101, ושניהם יחד עולים ר"ב, כלשון "רב לך" שנאמר למשה.</li>
+      <li><b>לשון זכות ובהירות.</b> במילון יסטרוב הכתיב זגזגאל מתפרש מן השורש זגזג, "Divine Clearness", בדומה לאספקלריה. זהו פירוש של מילון, לא של ספרי הקבלה.</li>
+    </ul>
+
+    <h3>הכתיבים</h3>
+    <ul class="variants">
+      <li><b>זגנזגאל</b><span>רקנאטי, של"ה, מגלה עמוקות</span></li>
+      <li><b>זגנוגאל</b><span>תרגום יונתן שבדפוס</span></li>
+      <li><b>זגזגאל</b><span>דברים רבה, מדרש כתפוח</span></li>
+      <li><b>זגזאל</b><span>ילקוט שמעוני</span></li>
+    </ul>
+    <p class="note">השל"ה מעיר שהכתיב בלי הנו"ן הוא טעות: "חסר אות אחת", ורק עם הנו"ן השם עולה מאה ואחד.</p>
+
+    <h3>מקורות</h3>
+    <ol class="srcs">
+      <li><b>תרגום יונתן, שמות ג, ב</b> · <a href="https://www.sefaria.org/Targum_Jonathan_on_Exodus.3.2?lang=he" target="_blank" rel="noopener">לנוסח בספריא</a>
+        <q>וְאִתְגְלֵי זַגְנוּגָאֵל מַלְאָכָא דַיְיָ לֵיהּ בְּלַהֲבֵי אֵישָׁתָא מִגוֹ סַנְיָא</q>
+        <span class="about">על הפסוק "וירא מלאך ה' אליו בלבת אש מתוך הסנה". בדפוס שלפנינו השם כתוב בו"ו; הרקנאטי והשל"ה מביאים את התרגום בכתיב זגנזגאל.</span></li>
+      <li><b>דברים רבה יא, י</b> · <a href="https://www.sefaria.org/Devarim_Rabbah.11.10?lang=he" target="_blank" rel="noopener">לנוסח בספריא</a>
+        <q>שהיתה תפילתו מעין שם המפורש שלמד מן זגזגאל רב סופר של בני מרום</q>
+        <q>וירד הקדוש ברוך הוא משמי שמים העליונים ליטול נשמתו של משה, ושלושה מלאכי השרת עמו, מיכאל וגבריאל וזגזגאל. מיכאל הציע מיטתו של משה, וגבריאל פרס בגד של בוץ מראשותיו, וזגזגאל מרגלותיו</q>
+        <span class="about">הציטוט כאן בלי ניקוד; בנוסח שבספריא הוא מנוקד.</span></li>
+      <li><b>ילקוט שמעוני, תורה, רמז תתק"מ</b> · <a href="https://www.sefaria.org/Yalkut_Shimoni_on_Torah.940?lang=he" target="_blank" rel="noopener">לנוסח בספריא</a>
+        <q>שלמד מן זגזאל רבו סופר כל בני מרום</q>
+        <span class="about">אותו מדרש בשינוי לשון: כאן נאמר במפורש "רבו".</span></li>
+      <li><b>אוצר מדרשים, מדרש "כתפוח בעצי היער"</b> · <a href="https://www.sefaria.org/Otzar_Midrashim,_Midrash_'As_an_Apple_Tree_Among_the_Trees_of_the_Forest'.1.4?lang=he" target="_blank" rel="noopener">לנוסח בספריא</a>
+        <q>אחר כך ראה משה מלאך אחד שמו זגזגא"ל, והוא מלמד תורה לנשמות בשבעים לשון, והכל אומרים הלכה למשה מסיני... ואין דיין אלא זגזגאל שהוא שר של תורה וחכמה, ויש לו קרני הכבוד, וישב משה לפניו ולמד כל עשר סודות</q>
+        <span class="about">בתיאור עליית משה למרום.</span></li>
+      <li><b>רקנאטי על התורה, שמות</b> · <a href="https://www.sefaria.org/Recanati_on_the_Torah,_Shemot.9?lang=he" target="_blank" rel="noopener">לנוסח בספריא</a>
+        <q>והתימה מיונתן בן עוזיאל שתירגם ואתגלי זגנזגאל מלאכא דיי'. ויראה לי כי הביאו לזה שהוא שר של תורה והוא רבו של משה רבינו ע"ה. וכן אמרו בעלי הקבלה ז"ל: רבו של אדם רזיא"ל, רבו של שם יופיא"ל, רבו של אברהם צדקיא"ל, רבו של יעקב רפא"ל, רבו של יוסף גבריא"ל, רבו של משה זגנזגא"ל, רבו של אליהו מלתיא"ל. ויש אומרים כי רבו של משה מטטרו"ן</q></li>
+      <li><b>של"ה, מסכת שבועות, נר מצוה (הגהה)</b> · <a href="https://www.sefaria.org/Shenei_Luchot_HaBerit,_Aseret_HaDibrot,_Shevuot,_Ner_Mitzva.58?lang=he" target="_blank" rel="noopener">לנוסח בספריא</a>
+        <q>וכן בא הרמז החכמה מאין תמצא, מאין עולה ק"א... וכן זגנזגאל רבו של משה הנגלה לו בסנה כמבואר בתרגום יוחנן עולה ק"א</q>
+        <span class="about">"תרגום יוחנן" כך בנוסח שבספריא; הכוונה לתרגום יונתן.</span></li>
+      <li><b>של"ה, תורה שבכתב, שמות, תורה אור</b> · <a href="https://www.sefaria.org/Shenei_Luchot_HaBerit,_Torah_Shebikhtav,_Shemot,_Torah_Ohr.24?lang=he" target="_blank" rel="noopener">לנוסח בספריא</a>
+        <q>וכן רבו של משה רבינו ע"ה כתבו שהיה זגזגאל המלאך, והוזכר גם בתרגום יונתן במראה הסנה. אבל יש טעות חסר אות אחת, כי שם האמיתי הוא זנגזגאל, עולה גם כן מאה ואחד כמו מאין</q>
+        <span class="about">בנוסח שבספריא כתוב כאן "זנגזגאל", בחילוף סדר האותיות; המניין שווה.</span></li>
+      <li><b>מגלה עמוקות, ואתחנן, אופן נ"ז</b> · <a href="https://www.sefaria.org/Megalleh_Amukkot_on_Parashat_VaEtchanan.57.1?lang=he" target="_blank" rel="noopener">לנוסח בספריא</a>
+        <q>השיב לו הקב"ה רב לך, הרב שלך שהוא זגנזגא"ל הוא יבא עליך... באו ג' מלאכים, מיכאל מימין, גבריאל משמאל, זגנזגאל מלפניו, וסימנם אל יחסר המז"ג</q>
+        <q>במלת זמי"ר נוטריקון זגנזגא"ל מיכא"ל יופיא"ל רזיא"ל... מיכא"ל זגנזגא"ל בגימטריא ר"ב, שכל אחד מהם עולה מספר ק"א</q>
+        <span class="about">ארבעה שרי התורה, וראשי התיבות שלהם "זמיר".</span></li>
+      <li><b>מגלה עמוקות, ואתחנן, אופן ק"ח</b> · <a href="https://www.sefaria.org/Megalleh_Amukkot_on_Parashat_VaEtchanan.108.1?lang=he" target="_blank" rel="noopener">לנוסח בספריא</a>
+        <q>זגנזגאל באמצע, שהוא מטטרון, שיש לו ע' שמות של הקב"ה כדאיתא בפסיקתא, שם הראשון שלו נקרא זגנזגא"ל, לפי שמסר לו הקב"ה כל גנזי אוצרות. על זה אמר הקב"ה רב ל"ך, דייקא רבן של כל המלאכים הוא רב שלך שהוא זגנזגא"ל, שממונה על אוצר רב של גנזי אוצרות</q></li>
+      <li><b>מגלה עמוקות, ואתחנן, אופן קי"א</b> · <a href="https://www.sefaria.org/Megalleh_Amukkot_on_Parashat_VaEtchanan.111.1?lang=he" target="_blank" rel="noopener">לנוסח בספריא</a>
+        <q>וירא אליו מלאך ה', שזה היה מטטרון, כדמתרגמינן בתרגום יהונתן זגנזגאל, שהוא שם ראשון של מטטרון</q></li>
+      <li><b>מגלה עמוקות, ואתחנן, אופן רמ"ה</b> · <a href="https://www.sefaria.org/Megalleh_Amukkot_on_Parashat_VaEtchanan.245.1?lang=he" target="_blank" rel="noopener">לנוסח בספריא</a>
+        <q>ה' שרי פנים נרמזין במלת גזרי"ם: גליצור, זגנזגאל, רזיאל, יופיאל, מיכאל</q>
+        <span class="about">כנגד חמישה חומשי תורה.</span></li>
+      <li><b>מילון יסטרוב, ערך זַגְזַגְאֵל</b> · <a href="https://www.sefaria.org/Jastrow,_זַגְזַגְאֵל.1?lang=he" target="_blank" rel="noopener">לערך בספריא</a>
+        <span class="about">שם מלאך; מפנה לדברים רבה סוף פרשה יא ולתרגום ירושלמי שמות ג, ב, ומפרש את השם כזכות ובהירות.</span></li>
+    </ol>
+  </article>
+
+</section>
+</main>
+
+<footer><a href="index.html">חזרה לספריית הקבלה</a></footer>
+
+<script src="js/sefirot-methods.js"></script>
+<script>
+/* כל שם קדוש נצבע בצבע הספירה שלו מהמקום האחד של הצבעים */
+document.querySelectorAll('[data-name-sef]').forEach(function(el){
+  el.style.cssText = SEFIROT.letterCss(SEFIROT.entry(el.getAttribute('data-name-sef')),true,el.getAttribute('data-name-smooth')||el.hasAttribute('data-name-smooth'));
+});
+/* שם משולב: כל אות בצבע השם שממנו באה, לפי סדר הספירות שב־data-comb */
+document.querySelectorAll('[data-comb]').forEach(function(el){
+  var sef=el.getAttribute('data-comb').split(' '), i=0, txt=el.textContent; el.textContent='';
+  Array.prototype.forEach.call(txt,function(ch){
+    if(/[א-ת]/.test(ch)){ var s=document.createElement('span'); s.className='nm'; s.textContent=ch;
+      s.style.cssText=SEFIROT.letterCss(SEFIROT.entry(sef[i++%sef.length]),true); el.appendChild(s); }
+    else if(/[\u0591-\u05C7]/.test(ch)&&el.lastChild&&el.lastChild.nodeType===1) el.lastChild.textContent+=ch;   /* ניקוד נשאר עם האות שלו */
+    else el.appendChild(document.createTextNode(ch)); });
+});
+</script>
+</body>
+</html>
