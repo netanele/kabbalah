@@ -32,6 +32,7 @@ section>h2{font-size:2rem;border-bottom:2px solid var(--gold2);padding-bottom:8p
 @font-face{font-family:"Stam Sefarad CLM";src:url("fonts/StamSefaradCLM.ttf") format("truetype");font-display:swap}
 .shem-card>blockquote{margin:0;text-align:center;font-family:"Stam Sefarad CLM","Frank Ruhl Libre","David Libre",serif;font-size:clamp(2.4rem,9vw,4rem);line-height:1.6;overflow-wrap:anywhere}
 .shem-card .nikud{margin:8px 0 0;text-align:center;font-family:"Frank Ruhl Libre","David Libre","Times New Roman",serif;font-size:clamp(1.7rem,6vw,2.4rem);line-height:2}
+.shem-card .pair{display:inline-block;margin:0 .35em;white-space:nowrap}
 .shem-card .kind{margin:4px 0 0;text-align:center;color:var(--muted);font-size:.95rem}
 .shem-card h3{font-size:1.3rem;margin:20px 0 6px;padding-top:12px;border-top:1px solid var(--line);color:#4b3b22}
 .shem-card p{margin:0 0 8px}
@@ -79,9 +80,10 @@ footer a{color:var(--gold2)}
   <h2>השמות</h2>
 
   <article class="shem-card" id="s3">
-    <blockquote>יהוה</blockquote>
+    <blockquote><span class="pair">יהוה</span> <span class="pair" data-comb="tiferet malchut">יאהדונהי</span></blockquote>
     <p class="nikud">יִהְוָה</p>
     <p class="kind">שם יהוה · בניקוד יִרְאָה</p>
+    <p class="note" style="text-align:center">לצידו הצירוף יאהדונהי: שילוב השמות יהוה ו<span class="nm" data-name-sef="malchut">אדני</span>, אות מזה ואות מזה, וכל אות בצבע השם שממנו באה.</p>
 
     <h3>עניינו</h3>
     <p>ציור השם יהוה מול העיניים, מנוקד בניקוד של המילה יראה. כך מסרו בשם האר"י: האדם מצייר תמיד את אותיות השם כנגד פניו, וזה סוד הפסוק "שויתי יהוה לנגדי תמיד" (תהילים טז, ח). אין כאן הגייה של השם, אלא ראייה שלו במחשבה.</p>
@@ -188,6 +190,9 @@ footer a{color:var(--gold2)}
     <p>מלאך, שר של תורה וחכמה, ורבו של משה רבנו. התרגום המיוחס ליונתן אומר שהוא המלאך שנגלה אל משה בלבת האש מתוך הסנה. במדרש משה למד ממנו את השם המפורש, והוא נקרא שם "רב סופר של בני מרום". בפטירת משה הוא אחד משלושת מלאכי השרת שירדו עם הקדוש ברוך הוא, עם מיכאל וגבריאל, ועמד למרגלות מיטתו.</p>
     <p>בעל מגלה עמוקות כותב שזגנזגאל הוא מטטרון, והוא הראשון בשבעים שמותיו. גם הרקנאטי מביא "יש אומרים" שרבו של משה הוא מטטרון.</p>
 
+    <h3>סגולתו</h3>
+    <p>בספר שימושי תורה כתוב שהשם הזה הוא סגולה גדולה לזיכרון, ושכוחו לגלות את פנימיות התורה: לגלות את הגנוזות, על שם הפסוק שבפרשת ניצבים, "הנסתרות ליהוה <span class="nm" data-name-sef="gevura">אלהינו</span>" (<a href="https://www.sefaria.org/Deuteronomy.29.28?lang=he" target="_blank" rel="noopener">דברים כט, כח</a>). עוד כתוב שם שהשם עצמו יוצא מן הפסוק שבראש אותה פרשה, "אתם נצבים היום" (<a href="https://www.sefaria.org/Deuteronomy.29.9?lang=he" target="_blank" rel="noopener">דברים כט, ט</a>).</p>
+
     <h3>פירושו</h3>
     <ul>
       <li><b>לשון גניזה.</b> במגלה עמוקות: נקרא כך "לפי שמסר לו הקב"ה כל גנזי אוצרות", והוא "ממונה על אוצר רב של גנזי אוצרות".</li>
@@ -238,6 +243,8 @@ footer a{color:var(--gold2)}
       <li><b>מגלה עמוקות, ואתחנן, אופן רמ"ה</b> · <a href="https://www.sefaria.org/Megalleh_Amukkot_on_Parashat_VaEtchanan.245.1?lang=he" target="_blank" rel="noopener">לנוסח בספריא</a>
         <q>ה' שרי פנים נרמזין במלת גזרי"ם: גליצור, זגנזגאל, רזיאל, יופיאל, מיכאל</q>
         <span class="about">כנגד חמישה חומשי תורה.</span></li>
+      <li><b>ספר שימושי תורה</b>
+        <span class="about">סגולה גדולה לזיכרון; כוחו לגלות את פנימיות התורה; השם יוצא מן הפסוק "אתם נצבים היום". נמסר לדף כך, ולשון הספר עוד לא נבדקה בפנים.</span></li>
       <li><b>מילון יסטרוב, ערך זַגְזַגְאֵל</b> · <a href="https://www.sefaria.org/Jastrow,_זַגְזַגְאֵל.1?lang=he" target="_blank" rel="noopener">לערך בספריא</a>
         <span class="about">שם מלאך; מפנה לדברים רבה סוף פרשה יא ולתרגום ירושלמי שמות ג, ב, ומפרש את השם כזכות ובהירות.</span></li>
     </ol>
