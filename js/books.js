@@ -300,9 +300,9 @@ window.BOOKS = {
 "find": "https://he.wikisource.org/wiki/דרכי_השגה",
 "drive": [
 {
-"id": "1A62M3Al4MvuyAyQjDOj7I8fktnAZAMis",
+"id": "1CjSOK9NnuUaeFrmJHGoR4Zblo9ORRtEa",
 "title": "DarkeyHasagaHaravYorovits.pdf",
-"path": "(Desktop)",
+"path": "רבי אברהם יורוביץ",
 "ext": "pdf",
 "sizeKB": 276
 }
@@ -771,9 +771,9 @@ window.BOOKS = {
 "find": "",
 "drive": [
 {
-"id": "1dtNOalS-hmAgAoKfJekX-DG1jQGzRznP",
+"id": "1wAh82dqYYVbRT-xur_fa-BOnZJOcV1hJ",
 "title": "שמוש-תהילים.pdf",
-"path": "(Desktop)",
+"path": "קבלה מעשית – שימושים",
 "ext": "pdf",
 "sizeKB": 549
 }
@@ -1097,16 +1097,16 @@ window.BOOKS = {
 "find": "https://www.sefaria.org.il/Heichalot_Rabbati",
 "drive": [
 {
-"id": "1ZQ0anzXeu-OgMod75o0cRtQUB95kmw6t",
+"id": "1pWFDWfujQXB2N4uKf_aZdeI_eRWntWfl",
 "title": "פרקי-היכלות.pdf",
-"path": "(Desktop)",
+"path": "ספרי המרכבה",
 "ext": "pdf",
 "sizeKB": 1355
 },
 {
-"id": "1L33KhmIu6MoOz2RsxEKU3VBEGQi-eGla",
+"id": "1YUE3Lsj_Cd55C36YY5P4kmZ1UAF2w6R1",
 "title": "פרקי-היכלות-דפןס-ישן.pdf",
-"path": "(Desktop)",
+"path": "ספרי המרכבה",
 "ext": "pdf",
 "sizeKB": 4949
 },

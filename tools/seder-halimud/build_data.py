@@ -97,10 +97,10 @@ for st in stages.STAGES:
 
 # books table -> js/books.js (the single place for Drive file ids)
 EXTRA = {  # files outside the inventory (Desktop sync folder), known from the pages
- '1A62M3Al4MvuyAyQjDOj7I8fktnAZAMis': dict(title='DarkeyHasagaHaravYorovits.pdf', path='(Desktop)', ext='pdf', sizeKB=276),
- '1dtNOalS-hmAgAoKfJekX-DG1jQGzRznP': dict(title='שמוש-תהילים.pdf', path='(Desktop)', ext='pdf', sizeKB=549),
- '1ZQ0anzXeu-OgMod75o0cRtQUB95kmw6t': dict(title='פרקי-היכלות.pdf', path='(Desktop)', ext='pdf', sizeKB=1355),
- '1L33KhmIu6MoOz2RsxEKU3VBEGQi-eGla': dict(title='פרקי-היכלות-דפןס-ישן.pdf', path='(Desktop)', ext='pdf', sizeKB=4949),
+ '1CjSOK9NnuUaeFrmJHGoR4Zblo9ORRtEa': dict(title='DarkeyHasagaHaravYorovits.pdf', path='רבי אברהם יורוביץ', ext='pdf', sizeKB=276),
+ '1wAh82dqYYVbRT-xur_fa-BOnZJOcV1hJ': dict(title='שמוש-תהילים.pdf', path='קבלה מעשית – שימושים', ext='pdf', sizeKB=549),
+ '1pWFDWfujQXB2N4uKf_aZdeI_eRWntWfl': dict(title='פרקי-היכלות.pdf', path='ספרי המרכבה', ext='pdf', sizeKB=1355),
+ '1YUE3Lsj_Cd55C36YY5P4kmZ1UAF2w6R1': dict(title='פרקי-היכלות-דפןס-ישן.pdf', path='ספרי המרכבה', ext='pdf', sizeKB=4949),
 }
 books = {}
 missing_ids = []
