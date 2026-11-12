@@ -101,6 +101,11 @@ EXTRA = {  # files outside the inventory (Desktop sync folder), known from the p
  '1wAh82dqYYVbRT-xur_fa-BOnZJOcV1hJ': dict(title='שמוש-תהילים.pdf', path='קבלה מעשית – שימושים', ext='pdf', sizeKB=549),
  '1pWFDWfujQXB2N4uKf_aZdeI_eRWntWfl': dict(title='פרקי-היכלות.pdf', path='ספרי המרכבה', ext='pdf', sizeKB=1355),
  '1YUE3Lsj_Cd55C36YY5P4kmZ1UAF2w6R1': dict(title='פרקי-היכלות-דפןס-ישן.pdf', path='ספרי המרכבה', ext='pdf', sizeKB=4949),
+ '1rtG4w-FEOi9YwVOx-uaAl4BOWFdywlUJ': dict(title='babylonianoilmag00daiciala.pdf', path='קבלה מעשית – שימושים', ext='pdf', sizeKB=3510),
+ '1YtpX5QU_AsxgqQgzaWL0lfyyhv7V7uOy': dict(title='שרי כוס ושרי בוהן - יוסף דן.pdf', path='קבלה מעשית – שימושים', ext='pdf', sizeKB=2778),
+ # the next two sit in a shared drive, not under Torah/Books (sarei-habohen.html)
+ '1qIm-JjO5XJpiNU10fPuacYNOgGVRkxel': dict(title='נשמת חיים רבי מנשה בן ישראל.pdf', path='ספרי קבלה אחרונים', ext='pdf', sizeKB=17065),
+ '1O5a6MSv28ss2O1vga1VGw5ngqVzqtXMn': dict(title="ספר ציוני - פירושעל התורה בדרך האמת, ר' מנחם ציוני, 172 עמ', לעמבערג 1882.pdf", path="ספרי קבלה אחרונים/על התנ''ך", ext='pdf', sizeKB=10956),
 }
 books = {}
 missing_ids = []

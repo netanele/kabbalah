@@ -85,6 +85,11 @@ BOOKS = {
  'pirkei-heichalot': dict(title='פרקי היכלות רבתי', author='ספרות ההיכלות', find='https://www.sefaria.org.il/Heichalot_Rabbati', note='אבולעפיה: "מה שקבלתי מסתרי השמות הכתובים בפרקי ר\' ישמעאל"'),
  'sefer-hagoralot': dict(title='ספר הגורלות', author='ר\' חיים ויטאל', find='https://hebrewbooks.org/', note='הטקסט של שיעור 8 ביסודות'),
  'chesed-leavraham': dict(title='חסד לאברהם', author='ר\' אברהם אזולאי', find='https://www.sefaria.org.il/Chesed_LeAvraham', note='הרב תורג\'מן (שיעור 11): "להורידו מהאינטרנט וללמוד"'),
+ # sarei-habohen.html (the #reader takes its Drive file from 'daiches-oil-magic')
+ 'daiches-oil-magic': dict(title='Babylonian Oil Magic in the Talmud and in the Later Jewish Literature', author='Samuel Daiches (שמואל דייכס)', find='https://archive.org/details/babylonianoilmag00daiciala', note='לונדון 1913, 46 עמודים: אחד עשר נוסחים עבריים מכתבי היד של משה גסטר (שרי בוהן, שרי כף, שרי כוס, שרי בדולח)'),
+ 'nishmat-chayim': dict(title='נשמת חיים', author='ר\' מנשה בן ישראל', find='https://www.sefaria.org/Nishmat_Chayyim,_Third_Treatise.19.4', note='מאמר שלישי, פרק יט: שרי בוהן ושרי כוס'),
+ 'dan-sarei-kos': dict(title='שרי כוס ושרי בוהן', author='יוסף דן', find='', note='מאמר: תרביץ לב (תשכ"ג), עמ\' 359–369'),
+ 'sefer-tziyuni': dict(title='ספר ציוני, פירוש על התורה בדרך האמת', author='ר\' מנחם ציוני', find='https://hebrewbooks.org/', note='דפוס למברג 1882; שרי כוס (לפי טרכטנברג, דף י ע"ג; לא אומת בקובץ)'),
 }
 
 GATE_SRC = {

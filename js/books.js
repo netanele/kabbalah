@@ -1157,5 +1157,69 @@ window.BOOKS = {
 "stages": [
 7
 ]
+},
+"daiches-oil-magic": {
+"title": "Babylonian Oil Magic in the Talmud and in the Later Jewish Literature",
+"author": "Samuel Daiches (שמואל דייכס)",
+"note": "לונדון 1913, 46 עמודים: אחד עשר נוסחים עבריים מכתבי היד של משה גסטר (שרי בוהן, שרי כף, שרי כוס, שרי בדולח)",
+"find": "https://archive.org/details/babylonianoilmag00daiciala",
+"drive": [
+{
+"id": "1rtG4w-FEOi9YwVOx-uaAl4BOWFdywlUJ",
+"title": "babylonianoilmag00daiciala.pdf",
+"path": "קבלה מעשית – שימושים",
+"ext": "pdf",
+"sizeKB": 3510
+}
+],
+"stages": []
+},
+"nishmat-chayim": {
+"title": "נשמת חיים",
+"author": "ר' מנשה בן ישראל",
+"note": "מאמר שלישי, פרק יט: שרי בוהן ושרי כוס",
+"find": "https://www.sefaria.org/Nishmat_Chayyim,_Third_Treatise.19.4",
+"drive": [
+{
+"id": "1qIm-JjO5XJpiNU10fPuacYNOgGVRkxel",
+"title": "נשמת חיים רבי מנשה בן ישראל.pdf",
+"path": "ספרי קבלה אחרונים",
+"ext": "pdf",
+"sizeKB": 17065
+}
+],
+"stages": []
+},
+"dan-sarei-kos": {
+"title": "שרי כוס ושרי בוהן",
+"author": "יוסף דן",
+"note": "מאמר: תרביץ לב (תשכ\"ג), עמ' 359–369",
+"find": "",
+"drive": [
+{
+"id": "1YtpX5QU_AsxgqQgzaWL0lfyyhv7V7uOy",
+"title": "שרי כוס ושרי בוהן - יוסף דן.pdf",
+"path": "קבלה מעשית – שימושים",
+"ext": "pdf",
+"sizeKB": 2778
+}
+],
+"stages": []
+},
+"sefer-tziyuni": {
+"title": "ספר ציוני, פירוש על התורה בדרך האמת",
+"author": "ר' מנחם ציוני",
+"note": "דפוס למברג 1882; שרי כוס (לפי טרכטנברג, דף י ע\"ג; לא אומת בקובץ)",
+"find": "https://hebrewbooks.org/",
+"drive": [
+{
+"id": "1O5a6MSv28ss2O1vga1VGw5ngqVzqtXMn",
+"title": "ספר ציוני - פירושעל התורה בדרך האמת, ר' מנחם ציוני, 172 עמ', לעמבערג 1882.pdf",
+"path": "ספרי קבלה אחרונים/על התנ''ך",
+"ext": "pdf",
+"sizeKB": 10956
+}
+],
+"stages": []
 }
 };
