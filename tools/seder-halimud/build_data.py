@@ -106,6 +106,8 @@ EXTRA = {  # files outside the inventory (Desktop sync folder), known from the p
  # the next two sit in a shared drive, not under Torah/Books (sarei-habohen.html)
  '1qIm-JjO5XJpiNU10fPuacYNOgGVRkxel': dict(title='נשמת חיים רבי מנשה בן ישראל.pdf', path='ספרי קבלה אחרונים', ext='pdf', sizeKB=17065),
  '1O5a6MSv28ss2O1vga1VGw5ngqVzqtXMn': dict(title="ספר ציוני - פירושעל התורה בדרך האמת, ר' מנחם ציוני, 172 עמ', לעמבערג 1882.pdf", path="ספרי קבלה אחרונים/על התנ''ך", ext='pdf', sizeKB=10956),
+ # nezirut-bazman-haze.html: one chapter of the book (Torah/Books sub-folder, added after the inventory dump)
+ '1T_o-eGIN7Zt0tHi8pbczElLWSv4SWQRc': dict(title='נזירות בזמן הזה.pdf', path='', ext='pdf', sizeKB=179),
 }
 books = {}
 missing_ids = []

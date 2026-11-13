@@ -254,6 +254,11 @@ def time_href(unit: dict, secs: int) -> str:
 
 
 def page_href(unit: dict, page: int) -> str:
+    # A unit made of several files (e.g. a book published chapter by chapter) lists them in
+    # "parts": [{"from": 65, "to": 86, "url": "…pdf"}], with from/to in the book's printed page numbers.
+    for part in unit.get("parts") or []:
+        if int(part["from"]) <= page <= int(part["to"]):
+            return attr(part["url"]) + "#page=%d" % (page - int(part["from"]) + 1)
     return attr(unit_url(unit)) + "#page=%d" % page
 
 

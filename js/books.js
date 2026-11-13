@@ -1221,5 +1221,21 @@ window.BOOKS = {
 }
 ],
 "stages": []
+},
+"nazir-elohim-nezirut-bazman-haze": {
+"title": "נזיר אלהים – הפרק \"נזירות בזמן הזה\"",
+"author": "הרב יהושע פרידמן",
+"note": "מכון המקדש, תש\"פ; שער ב', עמ' 65–86 בספר. שאר המאמרים באתר ספריית אסיף",
+"find": "https://asif.co.il/wp-content/uploads/2022/10/21.pdf",
+"drive": [
+{
+"id": "1T_o-eGIN7Zt0tHi8pbczElLWSv4SWQRc",
+"title": "נזירות בזמן הזה.pdf",
+"path": "",
+"ext": "pdf",
+"sizeKB": 179
+}
+],
+"stages": []
 }
 };

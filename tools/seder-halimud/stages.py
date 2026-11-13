@@ -90,6 +90,8 @@ BOOKS = {
  'nishmat-chayim': dict(title='נשמת חיים', author='ר\' מנשה בן ישראל', find='https://www.sefaria.org/Nishmat_Chayyim,_Third_Treatise.19.4', note='מאמר שלישי, פרק יט: שרי בוהן ושרי כוס'),
  'dan-sarei-kos': dict(title='שרי כוס ושרי בוהן', author='יוסף דן', find='', note='מאמר: תרביץ לב (תשכ"ג), עמ\' 359–369'),
  'sefer-tziyuni': dict(title='ספר ציוני, פירוש על התורה בדרך האמת', author='ר\' מנחם ציוני', find='https://hebrewbooks.org/', note='דפוס למברג 1882; שרי כוס (לפי טרכטנברג, דף י ע"ג; לא אומת בקובץ)'),
+ # nezirut-bazman-haze.html (the #reader takes its Drive file from 'nazir-elohim-nezirut-bazman-haze')
+ 'nazir-elohim-nezirut-bazman-haze': dict(title='נזיר אלהים – הפרק "נזירות בזמן הזה"', author='הרב יהושע פרידמן', find='https://asif.co.il/wp-content/uploads/2022/10/21.pdf', note='מכון המקדש, תש"פ; שער ב\', עמ\' 65–86 בספר. שאר המאמרים באתר ספריית אסיף'),
 }
 
 GATE_SRC = {
