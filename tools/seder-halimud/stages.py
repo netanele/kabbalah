@@ -92,6 +92,10 @@ BOOKS = {
  'sefer-tziyuni': dict(title='ספר ציוני, פירוש על התורה בדרך האמת', author='ר\' מנחם ציוני', find='https://hebrewbooks.org/', note='דפוס למברג 1882; שרי כוס (לפי טרכטנברג, דף י ע"ג; לא אומת בקובץ)'),
  # nezirut-bazman-haze.html (the #reader takes its Drive file from 'nazir-elohim-nezirut-bazman-haze')
  'nazir-elohim-nezirut-bazman-haze': dict(title='נזיר אלהים – הפרק "נזירות בזמן הזה"', author='הרב יהושע פרידמן', find='https://asif.co.il/wp-content/uploads/2022/10/21.pdf', note='מכון המקדש, תש"פ; שער ב\', עמ\' 65–86 בספר. שאר המאמרים באתר ספריית אסיף'),
+ # levona-yichudim.html (the previews in #vavin and #hafked take their Drive files from these keys)
+ 'benayahu-ben-yehoyada-2': dict(title='סידור בניהו בן יהוידע, חלק ב\' "זיכוך הנפש"', author='ר\' חיים שאול דוויך הכהן ור\' אליהו יעקב לעגימי', find='', note='ירושלים תרע"א; "סדר יחוד החיוורתי בקצרה", דף כ"ב ע"א – כ"ה ע"א. הקובץ בכונן המשותף "תקיית מאגר ספרים", לא בתיקיית Torah/Books'),
+ 'yichud-hachivarti': dict(title='חוברת "יחוד החיוורתי"', author='', find='', note='סידור מצויר של ייחוד הווי"ן, שמונה עמודים; המחבר לא אומת. הקובץ בכונן המשותף "תקיית מאגר ספרים", לא בתיקיית Torah/Books'),
+ 'hafked-alav-rasha-netivot': dict(title='"הפקד עליו רשע" לפי הרב פתיה', author='נתיבות שלום, הרב תורג\'מן', find='https://netivotshalom26.com/pdf_products/%D7%94%D7%A4%D7%A7%D7%93-%D7%A2%D7%9C%D7%99%D7%95-%D7%91%D7%A6%D7%91%D7%A2-%D7%97%D7%97%D7%9F-%D7%91%D7%92%D7%94-%D7%93%D7%AA%D7%99/', note='ארבעה עמודים. הקובץ בדרייב של נתיבות שלום, לא בתיקיית Torah/Books'),
 }
 
 GATE_SRC = {

@@ -108,6 +108,11 @@ EXTRA = {  # files outside the inventory (Desktop sync folder), known from the p
  '1O5a6MSv28ss2O1vga1VGw5ngqVzqtXMn': dict(title="ספר ציוני - פירושעל התורה בדרך האמת, ר' מנחם ציוני, 172 עמ', לעמבערג 1882.pdf", path="ספרי קבלה אחרונים/על התנ''ך", ext='pdf', sizeKB=10956),
  # nezirut-bazman-haze.html: one chapter of the book (Torah/Books sub-folder, added after the inventory dump)
  '1T_o-eGIN7Zt0tHi8pbczElLWSv4SWQRc': dict(title='נזירות בזמן הזה.pdf', path='', ext='pdf', sizeKB=179),
+ # levona-yichudim.html: none of the three is under Torah/Books. The first two sit in the shared drive "תקיית מאגר ספרים"
+ # (path = the folders inside it); the third is a file of Netivot Shalom's own Drive, shared by link (no folder).
+ '1yEcC49FuXw_0iG8AlnFRbKH3WuLKbpoe': dict(title='בניהו בן יהוידע-חלק ב.pdf', path='קבלת הרש"ש/סידורי הרש"ש/רבי שאול דוויק הכהן', ext='pdf', sizeKB=2471),
+ '1lVng-tROxqNIx-Av4toWaTBvg2oihqCZ': dict(title='חיוורתי הרב מרדכי ניסים.pdf', path='ספרים בנושאים מגוונים/יחודים ודרכי השגה', ext='pdf', sizeKB=906),
+ '1bW6upF6vGa6ZMxvROWrkkhOFjQ2VzGsv': dict(title='הפקד עליו בצבע - חחן בגה דתי .pdf', path='', ext='pdf', sizeKB=167),
 }
 books = {}
 missing_ids = []

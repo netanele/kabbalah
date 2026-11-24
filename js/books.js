@@ -1237,5 +1237,53 @@ window.BOOKS = {
 }
 ],
 "stages": []
+},
+"benayahu-ben-yehoyada-2": {
+"title": "סידור בניהו בן יהוידע, חלק ב' \"זיכוך הנפש\"",
+"author": "ר' חיים שאול דוויך הכהן ור' אליהו יעקב לעגימי",
+"note": "ירושלים תרע\"א; \"סדר יחוד החיוורתי בקצרה\", דף כ\"ב ע\"א – כ\"ה ע\"א. הקובץ בכונן המשותף \"תקיית מאגר ספרים\", לא בתיקיית Torah/Books",
+"find": "",
+"drive": [
+{
+"id": "1yEcC49FuXw_0iG8AlnFRbKH3WuLKbpoe",
+"title": "בניהו בן יהוידע-חלק ב.pdf",
+"path": "קבלת הרש\"ש/סידורי הרש\"ש/רבי שאול דוויק הכהן",
+"ext": "pdf",
+"sizeKB": 2471
+}
+],
+"stages": []
+},
+"yichud-hachivarti": {
+"title": "חוברת \"יחוד החיוורתי\"",
+"author": "",
+"note": "סידור מצויר של ייחוד הווי\"ן, שמונה עמודים; המחבר לא אומת. הקובץ בכונן המשותף \"תקיית מאגר ספרים\", לא בתיקיית Torah/Books",
+"find": "",
+"drive": [
+{
+"id": "1lVng-tROxqNIx-Av4toWaTBvg2oihqCZ",
+"title": "חיוורתי הרב מרדכי ניסים.pdf",
+"path": "ספרים בנושאים מגוונים/יחודים ודרכי השגה",
+"ext": "pdf",
+"sizeKB": 906
+}
+],
+"stages": []
+},
+"hafked-alav-rasha-netivot": {
+"title": "\"הפקד עליו רשע\" לפי הרב פתיה",
+"author": "נתיבות שלום, הרב תורג'מן",
+"note": "ארבעה עמודים. הקובץ בדרייב של נתיבות שלום, לא בתיקיית Torah/Books",
+"find": "https://netivotshalom26.com/pdf_products/%D7%94%D7%A4%D7%A7%D7%93-%D7%A2%D7%9C%D7%99%D7%95-%D7%91%D7%A6%D7%91%D7%A2-%D7%97%D7%97%D7%9F-%D7%91%D7%92%D7%94-%D7%93%D7%AA%D7%99/",
+"drive": [
+{
+"id": "1bW6upF6vGa6ZMxvROWrkkhOFjQ2VzGsv",
+"title": "הפקד עליו בצבע - חחן בגה דתי .pdf",
+"path": "",
+"ext": "pdf",
+"sizeKB": 167
+}
+],
+"stages": []
 }
 };
